@@ -1,0 +1,40 @@
+<dialog #dialog aria-labelledby="study-title" (cancel)="close($event)">
+  <header>
+    <div><p class="eyebrow">{{ question.prova }} · Q{{ question.q }}</p><h2 id="study-title">Material de estudo</h2></div>
+    <button type="button" class="close" autofocus (click)="close()" aria-label="Fechar material de estudo">Fechar ×</button>
+  </header>
+  <div class="tabs" role="tablist" aria-label="Conteúdo da questão" (keydown)="navigateTabs($event)">
+    <button type="button" id="study-tab-theory" role="tab" aria-controls="study-panel" [attr.aria-selected]="tab === 'theory'" [tabIndex]="tab === 'theory' ? 0 : -1" (click)="selectTab('theory')">Teoria</button>
+    <button type="button" id="study-tab-solution" role="tab" aria-controls="study-panel" [attr.aria-selected]="tab === 'solution'" [tabIndex]="tab === 'solution' ? 0 : -1" (click)="selectTab('solution')">Resolução</button>
+    <a [href]="question.link" target="_blank" rel="noopener noreferrer">Abrir questão ↗</a>
+  </div>
+  <div #content id="study-panel" class="content" role="tabpanel" tabindex="0" [attr.aria-labelledby]="'study-tab-' + tab" [attr.aria-busy]="loading">
+    @if (loading) {
+      <p role="status">Carregando material…</p>
+    } @else if (error) {
+      <p role="alert">Não foi possível carregar o material desta questão.</p>
+      <button type="button" (click)="load()">Tentar novamente</button>
+    } @else if (material) {
+      <h3>{{ material.title }}</h3>
+      @for (section of (tab === 'theory' ? material.theory : material.steps); track $index) {
+        <section>
+          <h4>@if (tab === 'solution') { <span class="step">{{ $index + 1 }}.</span> }{{ section.title }}</h4>
+          @for (paragraph of section.paragraphs; track $index) { <p>{{ paragraph }}</p> }
+          @if (section.formula) { <p class="formula">{{ section.formula }}</p> }
+          @if (section.code) { <pre><code>{{ section.code }}</code></pre> }
+          @if (section.table; as table) {
+            <div class="table-wrap"><table>
+              <caption>{{ section.title }}</caption>
+              <thead><tr>@for (heading of table.headers; track $index) { <th scope="col">{{ heading }}</th> }</tr></thead>
+              <tbody>@for (row of table.rows; track $index) { <tr>@for (cell of row; track $index) { <td>{{ cell }}</td> }</tr> }</tbody>
+            </table></div>
+          }
+        </section>
+      }
+      @if (tab === 'solution') { <p class="answer"><strong>Gabarito: {{ material.answer }}</strong></p> }
+      <footer><h4>Fontes para consulta</h4><ul>
+        @for (source of material.sources; track source.url) { <li><a [href]="source.url" target="_blank" rel="noopener noreferrer">{{ source.label }}</a></li> }
+      </ul></footer>
+    }
+  </div>
+</dialog>

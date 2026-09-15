@@ -803,56 +803,64 @@
             "qid": "2697782",
             "url": "https://www.tecconcursos.com.br/questoes/2697782",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697782.pdf"
+            "pdfUrl": "assets/questoes/2697782.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json"
           },
           {
             "num": 49,
             "qid": "2697789",
             "url": "https://www.tecconcursos.com.br/questoes/2697789",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697789.pdf"
+            "pdfUrl": "assets/questoes/2697789.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json"
           },
           {
             "num": 50,
             "qid": "640403",
             "url": "https://www.tecconcursos.com.br/questoes/640403",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640403.pdf"
+            "pdfUrl": "assets/questoes/640403.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json"
           },
           {
             "num": 51,
             "qid": "640405",
             "url": "https://www.tecconcursos.com.br/questoes/640405",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640405.pdf"
+            "pdfUrl": "assets/questoes/640405.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json"
           },
           {
             "num": 52,
             "qid": "640448",
             "url": "https://www.tecconcursos.com.br/questoes/640448",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640448.pdf"
+            "pdfUrl": "assets/questoes/640448.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json"
           },
           {
             "num": 53,
             "qid": "356724",
             "url": "https://www.tecconcursos.com.br/questoes/356724",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356724.pdf"
+            "pdfUrl": "assets/questoes/356724.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json"
           },
           {
             "num": 54,
             "qid": "356728",
             "url": "https://www.tecconcursos.com.br/questoes/356728",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356728.pdf"
+            "pdfUrl": "assets/questoes/356728.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json"
           },
           {
             "num": 55,
             "qid": "2712634",
             "url": "https://www.tecconcursos.com.br/questoes/2712634",
             "ano": "2006",
-            "pdfUrl": "assets/questoes/2712634.pdf"
+            "pdfUrl": "assets/questoes/2712634.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json"
           }
         ],
         "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"

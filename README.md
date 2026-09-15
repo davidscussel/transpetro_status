@@ -36,3 +36,11 @@ Para verificar os PDFs existentes, inclusive comparando cada trecho renderizado 
 ```bash
 /tmp/transpetro-pdf-venv/bin/python layout/gerar_recortes.py --check --render-check
 ```
+
+### Teoria e resolução
+
+As oito questões de Microcontroladores / Sist. Microprocessados têm ações **Questão**, **Teoria** e **Resolução**. A questão abre o PDF; o material abre em um modal com abas, navegação por teclado e fechamento por Escape, sem alterar o progresso salvo.
+
+O conteúdo está em `public/data/microcontroladores_estudo.json`, associado pelo `qid` original. Cada entrada contém teoria, etapas da resolução, gabarito e fontes; os blocos aceitam parágrafos, fórmulas, código e tabelas. `materialUrl`, opcional em cada questão de `materias.json`, habilita os botões. O arquivo é carregado sob demanda e compartilhado entre as questões, com nova tentativa em caso de falha.
+
+Os gabaritos foram conferidos com o caderno. Na Q54, a resolução distingue o trecho que provoca o defeito do código corrigido. Na Q55, explicita que a banca chama de “resposta” o tempo até a conclusão, diferente da definição usual de primeira resposta.

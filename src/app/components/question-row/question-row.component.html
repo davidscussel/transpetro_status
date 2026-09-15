@@ -1,1 +1,19 @@
-<div class="question" [class.done]="done"><input type="checkbox" [checked]="done" (change)="doneChange.emit($any($event.target).checked)" [attr.aria-label]="'Concluir questão ' + question.q"><a [href]="question.link" target="_blank" rel="noreferrer">{{ question.prova }} · Q{{ question.q }}</a><div class="difficulty" aria-label="Dificuldade"><button title="Fácil" [class.selected]="selectedDifficulty === 'facil'" (click)="difficultyChange.emit(selectedDifficulty === 'facil' ? undefined : 'facil')"></button><button title="Média" [class.selected]="selectedDifficulty === 'medio'" (click)="difficultyChange.emit(selectedDifficulty === 'medio' ? undefined : 'medio')"></button><button title="Difícil" [class.selected]="selectedDifficulty === 'dificil'" (click)="difficultyChange.emit(selectedDifficulty === 'dificil' ? undefined : 'dificil')"></button></div></div>
+<div class="question" [class.done]="done">
+  <input type="checkbox" [checked]="done" (change)="doneChange.emit($any($event.target).checked)" [attr.aria-label]="'Concluir questão ' + question.q">
+  <a class="question-title" [href]="question.link" target="_blank" rel="noopener noreferrer">{{ question.prova }} · Q{{ question.q }}</a>
+  <div class="difficulty" aria-label="Dificuldade">
+    <button type="button" title="Fácil" [attr.aria-label]="'Questão ' + question.q + ': fácil'" [attr.aria-pressed]="selectedDifficulty === 'facil'" [class.selected]="selectedDifficulty === 'facil'" (click)="difficultyChange.emit(selectedDifficulty === 'facil' ? undefined : 'facil')"></button>
+    <button type="button" title="Média" [attr.aria-label]="'Questão ' + question.q + ': média'" [attr.aria-pressed]="selectedDifficulty === 'medio'" [class.selected]="selectedDifficulty === 'medio'" (click)="difficultyChange.emit(selectedDifficulty === 'medio' ? undefined : 'medio')"></button>
+    <button type="button" title="Difícil" [attr.aria-label]="'Questão ' + question.q + ': difícil'" [attr.aria-pressed]="selectedDifficulty === 'dificil'" [class.selected]="selectedDifficulty === 'dificil'" (click)="difficultyChange.emit(selectedDifficulty === 'dificil' ? undefined : 'dificil')"></button>
+  </div>
+  @if (question.materialUrl) {
+    <div class="question-actions" role="group" [attr.aria-label]="'Conteúdo da questão ' + question.q">
+      <a [href]="question.link" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Abrir questão ' + question.q + ' em PDF'">Questão</a>
+      <button type="button" aria-haspopup="dialog" [attr.aria-label]="'Abrir teoria da questão ' + question.q" (click)="studyTab = 'theory'">Teoria</button>
+      <button type="button" aria-haspopup="dialog" [attr.aria-label]="'Abrir resolução da questão ' + question.q" (click)="studyTab = 'solution'">Resolução</button>
+    </div>
+  }
+</div>
+@if (studyTab) {
+  <app-question-study [question]="question" [tab]="studyTab" (dismissed)="studyTab = undefined"></app-question-study>
+}

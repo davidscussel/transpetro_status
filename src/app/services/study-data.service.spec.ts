@@ -11,7 +11,7 @@ describe('StudyDataService', () => {
       const topic = materias[0].assuntos[0];
       expect(topic.pdfUrl).toBe('assets/assuntos/sinais.pdf');
       expect(topic.questions[0]).toEqual({
-        prova: 'Transpetro 2023', ano: 2023, q: 66, d: 'medio', link: 'assets/questoes/2697791.pdf',
+        qid: '2697791', prova: 'Transpetro 2023', ano: 2023, q: 66, d: 'medio', link: 'assets/questoes/2697791.pdf',
       });
       expect(topic.nome).toBe('Análise de Sinais e Sistemas');
       expect(topic.freq).toBe(1);

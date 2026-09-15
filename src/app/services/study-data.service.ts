@@ -3,7 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { Observable, map, shareReplay } from 'rxjs';
 import { Materia } from '../models/study.models';
 
-interface RawQuestion { num: number; qid: string; url: string; pdfUrl: string; ano: string; }
+interface RawQuestion { num: number; qid: string; url: string; pdfUrl: string; ano: string; materialUrl?: string; }
 interface RawTopic { name: string; count: number; pdfUrl: string; questions: RawQuestion[]; }
 interface RawSubject { materia: string; assuntos: RawTopic[]; }
 
@@ -18,11 +18,13 @@ export class StudyDataService {
         freq: assunto.count,
         pdfUrl: assunto.pdfUrl,
         questions: assunto.questions.map((questao) => ({
+          qid: questao.qid,
           prova: 'Transpetro ' + questao.ano,
           ano: Number(questao.ano),
           q: questao.num,
           d: 'medio' as const,
           link: questao.pdfUrl,
+          ...(questao.materialUrl ? { materialUrl: questao.materialUrl } : {}),
         })),
       })),
     }))),

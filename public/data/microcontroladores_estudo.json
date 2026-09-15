@@ -1,0 +1,688 @@
+[
+  {
+    "qid": "2697782",
+    "title": "PWM: do registrador ao ciclo de trabalho",
+    "answer": "B — 25%",
+    "theory": [
+      {
+        "title": "O que o PWM controla",
+        "paragraphs": [
+          "PWM significa modulação por largura de pulso. A saída alterna entre nível alto e nível baixo. O ciclo de trabalho C mede a fração do período em que ela permanece em nível alto: C = t_alto/T. Multiplique C por 100 para expressá-lo em porcentagem.",
+          "Em uma aplicação de iluminação, aumentar essa fração aumenta o tempo de alimentação do LED em cada período. O brilho percebido depende também do circuito e da resposta visual; o PWM não transforma o pino em uma saída analógica contínua."
+        ]
+      },
+      {
+        "title": "Contagem de 8 bits",
+        "paragraphs": [
+          "Um contador de 8 bits admite 2⁸ = 256 estados, de 0 a 255. Para o modo descrito na questão, o valor REG determina a duração da parte ativa. Use exatamente a fórmula fornecida, inclusive o termo +1."
+        ],
+        "formula": "C = (REG + 1)/256\nC (%) = 100 × (REG + 1)/256"
+      },
+      {
+        "title": "Fração, porcentagem e registrador",
+        "paragraphs": [
+          "REG é um número inteiro armazenado no registrador; C é uma razão sem unidade. C = 0 significa 0% e C = 1 significa 100%. Isso não significa que escrever REG = 0 gere exatamente 0% pela fórmula dada: ela fornece 1/256. Configurações e valores extremos do PWM exigem consultar o modo do temporizador."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar os dados",
+        "paragraphs": [
+          "O enunciado fornece REG = 63 e C = (REG + 1)/256. A pergunta pede o ciclo de trabalho, não a frequência."
+        ]
+      },
+      {
+        "title": "Substituir o valor",
+        "paragraphs": [
+          "Somamos 1 ao conteúdo do registrador antes de dividir pelo número de estados."
+        ],
+        "formula": "C = (63 + 1)/256 = 64/256 = 1/4 = 0,25"
+      },
+      {
+        "title": "Converter em porcentagem",
+        "paragraphs": [
+          "A saída fica em nível alto durante um quarto de cada período e em nível baixo durante os outros três quartos."
+        ],
+        "formula": "C (%) = 0,25 × 100 = 25%"
+      },
+      {
+        "title": "Conferir a alternativa",
+        "paragraphs": [
+          "A alternativa B corresponde a 25%. Usar 63% confundiria o valor do registrador com a porcentagem; usar 75% calcularia a parcela inativa do período."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Caderno de questões — Microcontroladores (enunciados e gabarito)",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+      },
+      {
+        "label": "Microchip — exemplo de temporizadores e modos PWM em AVR",
+        "url": "https://developerhelp.microchip.com/xwiki/bin/view/products/mcu-mpu/8-bit-avr/peripherals/timers-counters/example-project/"
+      }
+    ]
+  },
+  {
+    "qid": "2697789",
+    "title": "Memória Flash: capacidade e último endereço",
+    "answer": "A — 0x3FFFF",
+    "theory": [
+      {
+        "title": "Endereçamento por byte",
+        "paragraphs": [
+          "Um endereço identifica uma posição da memória. Quando cada posição guarda um byte, uma memória com N bytes ocupa N endereços. Se começa em zero, termina em N − 1, porque o endereço zero também conta."
+        ],
+        "formula": "Endereço final = endereço inicial + quantidade de bytes − 1"
+      },
+      {
+        "title": "Potências de dois e hexadecimal",
+        "paragraphs": [
+          "Para a capacidade de memória indicada nesta questão, 1 kB corresponde a 1024 bytes (2¹⁰). Logo, 256 kB equivalem a 2¹⁸ bytes. Cada dígito hexadecimal representa quatro bits; o prefixo 0x apenas identifica a base 16.",
+          "O mapa de memória do TM4C123GH6PM confirma a Flash de 0x00000000 a 0x0003FFFF. Os zeros à esquerda podem ser omitidos."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Converter a capacidade em bytes",
+        "paragraphs": [
+          "O acesso é de um byte, portanto devemos contar posições de byte, sem dividir a capacidade pela largura do processador."
+        ],
+        "formula": "N = 256 × 1024 = 262144 bytes = 2¹⁸ bytes"
+      },
+      {
+        "title": "Descontar o endereço inicial zero",
+        "paragraphs": [
+          "Existem 262144 posições, numeradas de 0 a 262143."
+        ],
+        "formula": "Endereço final = 0 + 262144 − 1 = 262143"
+      },
+      {
+        "title": "Converter para hexadecimal",
+        "paragraphs": [
+          "A capacidade 2¹⁸ é 0x40000. Subtraindo um, obtemos o último endereço válido."
+        ],
+        "formula": "0x40000 − 1 = 0x3FFFF"
+      },
+      {
+        "title": "Conferir o limite",
+        "paragraphs": [
+          "A alternativa A é correta. 0x40000 seria o primeiro endereço depois dessa região de Flash; incluí-lo produziria uma posição a mais."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Caderno de questões — Microcontroladores (enunciados e gabarito)",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+      },
+      {
+        "label": "Texas Instruments — TM4C123GH6PM, mapa de memória (tabela 2-4)",
+        "url": "https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640403",
+    "title": "GPIO: acender LEDs com uma máscara de bits",
+    "answer": "E — 01100100",
+    "theory": [
+      {
+        "title": "Pinos e registradores",
+        "paragraphs": [
+          "GPIO são pinos digitais de entrada e saída. No enunciado, toda a PORTA B já está configurada como saída, e cada bit do registrador controla o pino de mesmo índice. B0 é o bit menos significativo, à direita; B7 é o mais significativo, à esquerda.",
+          "Escrever 1 produz +5 V na saída e escrever 0 produz 0 V, conforme o modelo da questão. Não é preciso configurar a direção da porta novamente."
+        ]
+      },
+      {
+        "title": "Polaridade dos LEDs",
+        "paragraphs": [
+          "A barra do símbolo do LED identifica o cátodo. Na figura, os cátodos estão no terra, enquanto os ânodos recebem alimentação pelos resistores de 330 Ω ligados a B2, B5 e B6. Assim, esses LEDs são ativos em nível alto.",
+          "Quando a saída está em +5 V, há polarização direta e corrente pelo resistor e LED até o terra. Com saída em 0 V, não há tensão para acendê-lo. O resistor limita a corrente."
+        ]
+      },
+      {
+        "title": "Máscara de bits",
+        "paragraphs": [
+          "O peso do bit Bx é 2ˣ. Para ativar várias saídas, combine os bits desejados com OU lógico. Os pinos sem LEDs não determinam se os três LEDs acendem; podemos deixá-los em zero ao construir uma resposta."
+        ],
+        "formula": "Máscara = (1 << 2) | (1 << 5) | (1 << 6)"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler as conexões da figura",
+        "paragraphs": [
+          "LED1 está em B2, LED2 em B5 e LED3 em B6. Como todos têm o cátodo no terra, os três bits precisam receber 1."
+        ]
+      },
+      {
+        "title": "Posicionar os bits de B7 até B0",
+        "paragraphs": [
+          "Colocamos 1 nas posições B6, B5 e B2. As demais ficam em zero."
+        ],
+        "table": {
+          "headers": [
+            "B7",
+            "B6",
+            "B5",
+            "B4",
+            "B3",
+            "B2",
+            "B1",
+            "B0"
+          ],
+          "rows": [
+            [
+              "0",
+              "1",
+              "1",
+              "0",
+              "0",
+              "1",
+              "0",
+              "0"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Ler e conferir a máscara",
+        "paragraphs": [
+          "Lendo da esquerda para a direita, o resultado é 01100100. A soma dos pesos também confirma o valor."
+        ],
+        "formula": "2⁶ + 2⁵ + 2² = 64 + 32 + 4 = 100 = 0x64 = 01100100₂"
+      },
+      {
+        "title": "Comparar as alternativas",
+        "paragraphs": [
+          "A alternativa E ativa os três pinos. 00000111 ativa B0, B1 e B2; 00100000 ativa apenas B5; 00100100 ativa B5 e B2; 01000000 ativa apenas B6."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Caderno de questões — Microcontroladores (enunciados e gabarito)",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640405",
+    "title": "Autonomia: corrente média e capacidade da bateria",
+    "answer": "B — 50 dias",
+    "theory": [
+      {
+        "title": "O que significa mAh",
+        "paragraphs": [
+          "A capacidade em miliampère-hora mede carga elétrica. No modelo ideal de corrente constante, uma bateria de capacidade Q pode fornecer uma corrente I por t = Q/I horas, usando Q em mAh e I em mA.",
+          "Os 3 V não precisam entrar no cálculo por carga. Se calcularmos por energia, 3 V × 1200 mAh = 3600 mWh e a tensão também aparecerá na potência, cancelando-se na divisão."
+        ]
+      },
+      {
+        "title": "Corrente média em dois modos",
+        "paragraphs": [
+          "Um microcontrolador alterna entre o modo ativo e um modo de economia. A corrente média é a soma das correntes de cada modo multiplicadas pela fração do tempo em que ele permanece nesse modo.",
+          "O enunciado pede para desprezar a corrente em economia e o consumo dos demais componentes. Essas simplificações definem a autonomia ideal solicitada."
+        ],
+        "formula": "I_média = f_ativo × I_ativo + (1 − f_ativo) × I_economia\nt (h) = Q (mAh)/I_média (mA)\nt (dias) = t (h)/24"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Separar capacidade e corrente",
+        "paragraphs": [
+          "A bateria tem 1200 mAh. O consumo ativo é 2 mA e o microcontrolador fica ativo em 50% do tempo, isto é, f_ativo = 0,5."
+        ]
+      },
+      {
+        "title": "Calcular a corrente média",
+        "paragraphs": [
+          "Seguindo a instrução de desprezar a corrente em economia, usamos zero nesse modo."
+        ],
+        "formula": "I_média = 0,5 × 2 + 0,5 × 0 = 1 mA"
+      },
+      {
+        "title": "Calcular a duração em horas",
+        "paragraphs": [
+          "Dividimos a carga disponível pela corrente média."
+        ],
+        "formula": "t = 1200 mAh / 1 mA = 1200 h"
+      },
+      {
+        "title": "Converter em dias",
+        "paragraphs": [
+          "A alternativa B é correta. O valor 600 h resultaria de supor consumo ativo durante todo o tempo; a atividade de 50% dobra essa duração."
+        ],
+        "formula": "t = 1200/24 = 50 dias"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Caderno de questões — Microcontroladores (enunciados e gabarito)",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640448",
+    "title": "Controle de injeção: de rpm à largura do pulso",
+    "answer": "A — 5 ms",
+    "theory": [
+      {
+        "title": "Rotação e frequência",
+        "paragraphs": [
+          "rpm significa rotações por minuto. Para obter rotações por segundo, dividimos por 60. A frequência f, em hertz, informa quantas rotações ocorrem por segundo; o período T informa quanto dura uma rotação."
+        ],
+        "formula": "f (Hz) = rotação (rpm)/60\nT (s) = 1/f"
+      },
+      {
+        "title": "Tempo de abertura",
+        "paragraphs": [
+          "O ciclo de trabalho C é a fração do período em que o atuador fica ligado. Para um bico que abre uma vez por rotação, o tempo de abertura é C vezes o período da rotação.",
+          "Use a hipótese explícita de uma abertura por rotação. Não é necessário introduzir ciclos de dois giros ou outras particularidades de motores que o enunciado não pede."
+        ],
+        "formula": "t_aberto = C × T\n1 s = 1000 ms"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Converter a rotação",
+        "paragraphs": [
+          "A velocidade de 2400 rpm corresponde a 40 rotações por segundo."
+        ],
+        "formula": "f = 2400/60 = 40 Hz"
+      },
+      {
+        "title": "Encontrar o período de uma rotação",
+        "paragraphs": [
+          "Cada volta dura 25 milissegundos."
+        ],
+        "formula": "T = 1/40 = 0,025 s = 25 ms"
+      },
+      {
+        "title": "Aplicar a fração de abertura",
+        "paragraphs": [
+          "O bico fica aberto em 20% de cada período: C = 0,20."
+        ],
+        "formula": "t_aberto = 0,20 × 25 ms = 5 ms"
+      },
+      {
+        "title": "Conferir o restante do período",
+        "paragraphs": [
+          "A alternativa A é correta. O bico fica fechado durante 25 − 5 = 20 ms. Esse tempo fechado explica a alternativa B; 25 ms é o período inteiro."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Caderno de questões — Microcontroladores (enunciados e gabarito)",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356724",
+    "title": "Conversão A/D: faixa de entrada e alinhamento à esquerda",
+    "answer": "B — 170",
+    "theory": [
+      {
+        "title": "Resolução e faixa de conversão",
+        "paragraphs": [
+          "Um conversor analógico-digital (A/D ou ADC) de n bits representa a entrada por um entre 2ⁿ códigos. Com 10 bits, há 1024 códigos de 0 a 1023. A posição relativa da tensão deve ser calculada dentro da faixa configurada, descontando o limite inferior.",
+          "Para uma faixa de 1 a 4 V, a amplitude útil é 3 V. Não se deve dividir a tensão de entrada simplesmente por 4 V, pois o início da faixa não é zero."
+        ],
+        "formula": "r = (V_entrada − V_mín)/(V_máx − V_mín)\nPasso ideal ≈ (V_máx − V_mín)/2ⁿ"
+      },
+      {
+        "title": "Quantização",
+        "paragraphs": [
+          "No modelo ideal por intervalos, o código é a parte inteira de r × 1024, limitado ao intervalo 0…1023. A aproximação pelos extremos usa r × 1023. A questão não especifica todos os detalhes da transferência do ADC; neste caso, as duas contas levam ao mesmo valor do registrador superior."
+        ]
+      },
+      {
+        "title": "Alinhamento à esquerda",
+        "paragraphs": [
+          "O resultado tem 10 bits, mas o par ADHI:ADLO tem 16. Alinhar à esquerda coloca os oito bits mais significativos em ADHI e os dois restantes nos bits 7 e 6 de ADLO. Os seis bits inferiores não carregam informação da conversão.",
+          "Assim, ADHI é o código de 10 bits deslocado duas posições à direita, descartando os dois bits menos significativos."
+        ],
+        "formula": "ADHI = código >> 2 = parte inteira(código/4)\nADLO = (código & 3) << 6"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Normalizar a tensão de entrada",
+        "paragraphs": [
+          "Subtraímos o início da faixa antes de dividir pela amplitude de 3 V."
+        ],
+        "formula": "r = (3 − 1)/(4 − 1) = 2/3"
+      },
+      {
+        "title": "Obter o código de 10 bits",
+        "paragraphs": [
+          "No modelo por intervalos, truncamos 682,666… para 682. Pela aproximação dos extremos, (2/3) × 1023 também resulta em 682."
+        ],
+        "formula": "código = parte inteira((2/3) × 1024) = 682\n682 = 1010101010₂"
+      },
+      {
+        "title": "Distribuir os bits nos registradores",
+        "paragraphs": [
+          "Os oito primeiros bits vão para ADHI e os dois últimos para o início de ADLO."
+        ],
+        "code": "Resultado:  1010101010\nADHI:       10101010\nADLO:       10000000"
+      },
+      {
+        "title": "Converter ADHI para decimal",
+        "paragraphs": [
+          "A alternativa B é correta. Mesmo que um arredondamento produzisse código 683, os oito bits superiores continuariam iguais."
+        ],
+        "formula": "ADHI = 128 + 32 + 8 + 2 = 170\nou: parte inteira(682/4) = 170"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Caderno de questões — Microcontroladores (enunciados e gabarito)",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356728",
+    "title": "Displays multiplexados: por que 15 pode aparecer como 19",
+    "answer": "D — a unidade é ligada antes de carregar o dígito 5",
+    "theory": [
+      {
+        "title": "Como funciona a varredura",
+        "paragraphs": [
+          "Em um mostrador multiplexado, os dígitos compartilham as linhas dos segmentos e têm habilitações separadas. O programa mostra um dígito por vez e repete o ciclo rapidamente, dando a percepção de que ambos estão acesos.",
+          "Carrega(n) define o padrão dos segmentos; LigaDezena() e LigaUnidade() habilitam cada display; Aguarda() mantém a exibição; Desliga…() desabilita o dígito correspondente."
+        ]
+      },
+      {
+        "title": "Trocar o padrão com os dígitos desligados",
+        "paragraphs": [
+          "A sequência adequada é desabilitar o dígito anterior, carregar o novo padrão, ligar o próximo dígito, aguardar e desligá-lo. Habilitar um dígito antes de atualizar os segmentos pode exibir momentaneamente o padrão anterior.",
+          "Esse acendimento indevido pode causar uma imagem fantasma. A intensidade percebida depende do tempo de execução e do circuito; a interpretação da questão identifica a sequência capaz de produzir o defeito."
+        ]
+      },
+      {
+        "title": "Segmentos de 1, 5 e 9",
+        "paragraphs": [
+          "Na nomenclatura usual, a é o segmento superior; b e c são os da direita; d é o inferior; e e f são os da esquerda; g é o central. A união dos segmentos de 1 e 5 forma o padrão de 9."
+        ],
+        "table": {
+          "headers": [
+            "Dígito",
+            "Segmentos acesos"
+          ],
+          "rows": [
+            [
+              "1",
+              "b, c"
+            ],
+            [
+              "5",
+              "a, f, g, c, d"
+            ],
+            [
+              "9",
+              "a, b, c, d, f, g"
+            ]
+          ]
+        }
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar o que a pergunta procura",
+        "paragraphs": [
+          "A questão pede o trecho que explica o defeito observado, e não o programa correto para exibir 15. Isso é essencial para distinguir as alternativas A e D."
+        ]
+      },
+      {
+        "title": "Seguir a exibição da dezena na alternativa D",
+        "paragraphs": [
+          "Carrega(1) prepara os segmentos. LigaDezena(), Aguarda() e DesligaDezena() exibem corretamente o algarismo 1 na dezena. Após o desligamento, as linhas compartilhadas ainda contêm o padrão de 1."
+        ]
+      },
+      {
+        "title": "Encontrar a inversão na unidade",
+        "paragraphs": [
+          "O trecho liga a unidade quando o padrão ainda é 1. Só depois carrega 5. Assim, a unidade pode mostrar brevemente 1 antes de mostrar 5."
+        ],
+        "code": "// Trecho que causa o problema (alternativa D)\nLigaUnidade();\nCarrega(5);\nAguarda();\nDesligaUnidade();"
+      },
+      {
+        "title": "Relacionar a sequência ao número observado",
+        "paragraphs": [
+          "O padrão de 1 acende b e c. O padrão de 5 já contém c; o segmento extra b completa o desenho de 9 quando os padrões são percebidos em sobreposição. A dezena permanece em 1, explicando a leitura 19 na interpretação do gabarito.",
+          "A alternativa D é a indicada. Sem tempos de execução, não é possível quantificar o brilho do segmento extra, mas a ordem incorreta de habilitação está explícita."
+        ]
+      },
+      {
+        "title": "Mostrar a correção",
+        "paragraphs": [
+          "Carregar 5 antes de ligar a unidade elimina a exposição ao padrão anterior. Essa ordem aparece na alternativa A, que representa o funcionamento correto, e por isso não responde à pergunta sobre o defeito."
+        ],
+        "code": "// Com a dezena já desligada:\nCarrega(5);\nLigaUnidade();\nAguarda();\nDesligaUnidade();"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Caderno de questões — Microcontroladores (enunciados e gabarito)",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+      },
+      {
+        "label": "Microchip — AN590: exemplo de aplicação com displays multiplexados",
+        "url": "https://www.microchip.com/en-us/application-notes/an590"
+      }
+    ]
+  },
+  {
+    "qid": "2712634",
+    "title": "Round-robin: sequência de execução e tempo médio de conclusão",
+    "answer": "D — 10,2 s",
+    "theory": [
+      {
+        "title": "Fila circular e fatia de tempo",
+        "paragraphs": [
+          "No escalonamento round-robin, cada processo recebe no máximo um quantum (fatia de tempo) por turno. Se ainda precisa de CPU, retorna ao fim da fila; se termina, sai dela. Aqui o quantum é 1 s e a ordem inicial é A, B, C, D, E.",
+          "As diferenças entre as chegadas são desprezíveis, portanto consideramos todos disponíveis em t = 0. Como não é informado custo de troca de contexto, usamos custo zero."
+        ]
+      },
+      {
+        "title": "Distinguir as medidas de tempo",
+        "paragraphs": [
+          "Tempo de retorno (turnaround) é o intervalo da chegada até a conclusão. Tempo de espera é o tempo acumulado sem executar. Tempo de resposta, na terminologia usual de sistemas operacionais, mede da chegada até a primeira execução.",
+          "Nesta questão, o termo “tempo médio de resposta” é usado pelo gabarito no sentido de tempo médio até a conclusão. A resolução explicita essa convenção para não confundir as medidas."
+        ],
+        "formula": "Retorno = instante de conclusão − instante de chegada\nEspera = retorno − tempo total de CPU\nResposta inicial = primeira execução − chegada"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Organizar a fila inicial",
+        "paragraphs": [
+          "Os processos chegam na ordem A, B, C, D e E. Seus tempos de CPU são 5, 3, 1, 2 e 4 segundos, respectivamente."
+        ],
+        "table": {
+          "headers": [
+            "Processo",
+            "CPU necessária"
+          ],
+          "rows": [
+            [
+              "A",
+              "5 s"
+            ],
+            [
+              "B",
+              "3 s"
+            ],
+            [
+              "C",
+              "1 s"
+            ],
+            [
+              "D",
+              "2 s"
+            ],
+            [
+              "E",
+              "4 s"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Executar os turnos de 1 segundo",
+        "paragraphs": [
+          "Ao final de cada intervalo, retiramos os processos concluídos e devolvemos os demais ao fim da fila. C termina no primeiro giro; D, no segundo; B, no terceiro."
+        ],
+        "table": {
+          "headers": [
+            "Intervalo (s)",
+            "CPU",
+            "Restante após o turno"
+          ],
+          "rows": [
+            [
+              "0–1",
+              "A",
+              "4 s"
+            ],
+            [
+              "1–2",
+              "B",
+              "2 s"
+            ],
+            [
+              "2–3",
+              "C",
+              "0 s — termina"
+            ],
+            [
+              "3–4",
+              "D",
+              "1 s"
+            ],
+            [
+              "4–5",
+              "E",
+              "3 s"
+            ],
+            [
+              "5–6",
+              "A",
+              "3 s"
+            ],
+            [
+              "6–7",
+              "B",
+              "1 s"
+            ],
+            [
+              "7–8",
+              "D",
+              "0 s — termina"
+            ],
+            [
+              "8–9",
+              "E",
+              "2 s"
+            ],
+            [
+              "9–10",
+              "A",
+              "2 s"
+            ],
+            [
+              "10–11",
+              "B",
+              "0 s — termina"
+            ],
+            [
+              "11–12",
+              "E",
+              "1 s"
+            ],
+            [
+              "12–13",
+              "A",
+              "1 s"
+            ],
+            [
+              "13–14",
+              "E",
+              "0 s — termina"
+            ],
+            [
+              "14–15",
+              "A",
+              "0 s — termina"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Anotar os instantes de conclusão",
+        "paragraphs": [
+          "Como todos chegaram em t = 0, os instantes de conclusão são também seus tempos de retorno."
+        ],
+        "table": {
+          "headers": [
+            "Processo",
+            "Conclusão / retorno"
+          ],
+          "rows": [
+            [
+              "A",
+              "15 s"
+            ],
+            [
+              "B",
+              "11 s"
+            ],
+            [
+              "C",
+              "3 s"
+            ],
+            [
+              "D",
+              "8 s"
+            ],
+            [
+              "E",
+              "14 s"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Calcular a média usada pelo gabarito",
+        "paragraphs": [
+          "Somamos os cinco tempos de retorno e dividimos pelo número de processos. A alternativa D corresponde a esse resultado."
+        ],
+        "formula": "Média = (15 + 11 + 3 + 8 + 14)/5 = 51/5 = 10,2 s"
+      },
+      {
+        "title": "Conferir a interpretação",
+        "paragraphs": [
+          "Pela definição usual de resposta inicial, os tempos seriam 0, 1, 2, 3 e 4 s, com média de 2 s, valor ausente das alternativas. Já a média de espera seria (10 + 8 + 2 + 6 + 10)/5 = 7,2 s. Isso confirma qual medida o gabarito adotou."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Caderno de questões — Microcontroladores (enunciados e gabarito)",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+      },
+      {
+        "label": "OSTEP — Scheduling: Introduction (resposta, retorno e round-robin)",
+        "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf"
+      }
+    ]
+  }
+]
