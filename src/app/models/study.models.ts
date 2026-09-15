@@ -3,7 +3,7 @@ export type DifficultyFilter = DifficultyLevel | 'todas' | 'none';
 export type SortMode = 'area' | 'freq';
 
 export interface Questao { prova: string; ano: number; q: number; d: DifficultyLevel; link: string; }
-export interface Assunto { nome: string; freq: number; questions: Questao[]; }
+export interface Assunto { nome: string; freq: number; pdfUrl: string; questions: Questao[]; }
 export interface Materia { materia: string; assuntos: Assunto[]; }
 export interface TopicView extends Assunto { materiaName: string; fullCount: number; }
 export interface SubjectGroupView extends Materia { assuntos: TopicView[]; }

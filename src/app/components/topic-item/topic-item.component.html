@@ -1,1 +1,13 @@
-<div class="topic"><label class="topic-title"><input type="checkbox" [checked]="progress.topics[key] && progress.topics[key].done" (change)="topicDone.emit($any($event.target).checked)"><span [innerHTML]="topic.nome | highlight: search"></span><small>{{ topic.questions.length }} questões · frequência {{ topic.freq }}</small></label><div class="qgrid">@for (question of topic.questions; track question.prova + question.q) {<app-question-row [question]="question" [done]="isQuestionDone(question)" [selectedDifficulty]="difficulty(question)" (doneChange)="questionDone.emit({ key: questionKey(question), done: $event })" (difficultyChange)="difficultyChanged.emit({ key: questionKey(question), difficulty: $event })"></app-question-row>}</div></div>
+<div class="topic">
+  <label class="topic-title">
+    <input type="checkbox" [checked]="progress.topics[key] && progress.topics[key].done" (change)="topicDone.emit($any($event.target).checked)">
+    <span [innerHTML]="topic.nome | highlight: search"></span>
+    <small>{{ topic.questions.length }} questões · frequência {{ topic.freq }}</small>
+  </label>
+  <a class="topic-pdf" [href]="topic.pdfUrl" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Abrir PDF do assunto: ' + topic.nome">Abrir PDF do assunto</a>
+  <div class="qgrid">
+    @for (question of topic.questions; track question.prova + question.q) {
+      <app-question-row [question]="question" [done]="isQuestionDone(question)" [selectedDifficulty]="difficulty(question)" (doneChange)="questionDone.emit({ key: questionKey(question), done: $event })" (difficultyChange)="difficultyChanged.emit({ key: questionKey(question), difficulty: $event })"></app-question-row>
+    }
+  </div>
+</div>
