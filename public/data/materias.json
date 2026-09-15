@@ -1,0 +1,1538 @@
+[
+  {
+    "materia": "Engenharia Elétrica e Eletrônica",
+    "count": 187,
+    "assuntos": [
+      {
+        "name": "Análise de Sinais e Sistemas",
+        "count": 49,
+        "questions": [
+          {
+            "num": 66,
+            "qid": "2697791",
+            "url": "https://www.tecconcursos.com.br/questoes/2697791",
+            "ano": "2023"
+          },
+          {
+            "num": 67,
+            "qid": "2697793",
+            "url": "https://www.tecconcursos.com.br/questoes/2697793",
+            "ano": "2023"
+          },
+          {
+            "num": 68,
+            "qid": "2697795",
+            "url": "https://www.tecconcursos.com.br/questoes/2697795",
+            "ano": "2023"
+          },
+          {
+            "num": 69,
+            "qid": "2697796",
+            "url": "https://www.tecconcursos.com.br/questoes/2697796",
+            "ano": "2023"
+          },
+          {
+            "num": 70,
+            "qid": "2697799",
+            "url": "https://www.tecconcursos.com.br/questoes/2697799",
+            "ano": "2023"
+          },
+          {
+            "num": 71,
+            "qid": "2697859",
+            "url": "https://www.tecconcursos.com.br/questoes/2697859",
+            "ano": "2023"
+          },
+          {
+            "num": 72,
+            "qid": "640398",
+            "url": "https://www.tecconcursos.com.br/questoes/640398",
+            "ano": "2018"
+          },
+          {
+            "num": 73,
+            "qid": "640400",
+            "url": "https://www.tecconcursos.com.br/questoes/640400",
+            "ano": "2018"
+          },
+          {
+            "num": 74,
+            "qid": "640401",
+            "url": "https://www.tecconcursos.com.br/questoes/640401",
+            "ano": "2018"
+          },
+          {
+            "num": 75,
+            "qid": "640402",
+            "url": "https://www.tecconcursos.com.br/questoes/640402",
+            "ano": "2018"
+          },
+          {
+            "num": 76,
+            "qid": "640415",
+            "url": "https://www.tecconcursos.com.br/questoes/640415",
+            "ano": "2018"
+          },
+          {
+            "num": 77,
+            "qid": "640417",
+            "url": "https://www.tecconcursos.com.br/questoes/640417",
+            "ano": "2018"
+          },
+          {
+            "num": 78,
+            "qid": "640425",
+            "url": "https://www.tecconcursos.com.br/questoes/640425",
+            "ano": "2018"
+          },
+          {
+            "num": 79,
+            "qid": "640426",
+            "url": "https://www.tecconcursos.com.br/questoes/640426",
+            "ano": "2018"
+          },
+          {
+            "num": 80,
+            "qid": "640427",
+            "url": "https://www.tecconcursos.com.br/questoes/640427",
+            "ano": "2018"
+          },
+          {
+            "num": 81,
+            "qid": "640429",
+            "url": "https://www.tecconcursos.com.br/questoes/640429",
+            "ano": "2018"
+          },
+          {
+            "num": 82,
+            "qid": "640436",
+            "url": "https://www.tecconcursos.com.br/questoes/640436",
+            "ano": "2018"
+          },
+          {
+            "num": 83,
+            "qid": "640438",
+            "url": "https://www.tecconcursos.com.br/questoes/640438",
+            "ano": "2018"
+          },
+          {
+            "num": 84,
+            "qid": "352786",
+            "url": "https://www.tecconcursos.com.br/questoes/352786",
+            "ano": "2012"
+          },
+          {
+            "num": 85,
+            "qid": "352788",
+            "url": "https://www.tecconcursos.com.br/questoes/352788",
+            "ano": "2012"
+          },
+          {
+            "num": 86,
+            "qid": "352792",
+            "url": "https://www.tecconcursos.com.br/questoes/352792",
+            "ano": "2012"
+          },
+          {
+            "num": 87,
+            "qid": "352793",
+            "url": "https://www.tecconcursos.com.br/questoes/352793",
+            "ano": "2012"
+          },
+          {
+            "num": 88,
+            "qid": "352796",
+            "url": "https://www.tecconcursos.com.br/questoes/352796",
+            "ano": "2012"
+          },
+          {
+            "num": 89,
+            "qid": "352801",
+            "url": "https://www.tecconcursos.com.br/questoes/352801",
+            "ano": "2012"
+          },
+          {
+            "num": 90,
+            "qid": "352889",
+            "url": "https://www.tecconcursos.com.br/questoes/352889",
+            "ano": "2012"
+          },
+          {
+            "num": 91,
+            "qid": "352895",
+            "url": "https://www.tecconcursos.com.br/questoes/352895",
+            "ano": "2012"
+          },
+          {
+            "num": 92,
+            "qid": "352903",
+            "url": "https://www.tecconcursos.com.br/questoes/352903",
+            "ano": "2012"
+          },
+          {
+            "num": 93,
+            "qid": "352905",
+            "url": "https://www.tecconcursos.com.br/questoes/352905",
+            "ano": "2012"
+          },
+          {
+            "num": 94,
+            "qid": "352906",
+            "url": "https://www.tecconcursos.com.br/questoes/352906",
+            "ano": "2012"
+          },
+          {
+            "num": 95,
+            "qid": "352910",
+            "url": "https://www.tecconcursos.com.br/questoes/352910",
+            "ano": "2012"
+          },
+          {
+            "num": 96,
+            "qid": "356710",
+            "url": "https://www.tecconcursos.com.br/questoes/356710",
+            "ano": "2011"
+          },
+          {
+            "num": 97,
+            "qid": "356711",
+            "url": "https://www.tecconcursos.com.br/questoes/356711",
+            "ano": "2011"
+          },
+          {
+            "num": 98,
+            "qid": "356712",
+            "url": "https://www.tecconcursos.com.br/questoes/356712",
+            "ano": "2011"
+          },
+          {
+            "num": 99,
+            "qid": "356713",
+            "url": "https://www.tecconcursos.com.br/questoes/356713",
+            "ano": "2011"
+          },
+          {
+            "num": 100,
+            "qid": "356714",
+            "url": "https://www.tecconcursos.com.br/questoes/356714",
+            "ano": "2011"
+          },
+          {
+            "num": 101,
+            "qid": "356719",
+            "url": "https://www.tecconcursos.com.br/questoes/356719",
+            "ano": "2011"
+          },
+          {
+            "num": 102,
+            "qid": "356742",
+            "url": "https://www.tecconcursos.com.br/questoes/356742",
+            "ano": "2011"
+          },
+          {
+            "num": 103,
+            "qid": "356746",
+            "url": "https://www.tecconcursos.com.br/questoes/356746",
+            "ano": "2011"
+          },
+          {
+            "num": 104,
+            "qid": "356748",
+            "url": "https://www.tecconcursos.com.br/questoes/356748",
+            "ano": "2011"
+          },
+          {
+            "num": 105,
+            "qid": "356754",
+            "url": "https://www.tecconcursos.com.br/questoes/356754",
+            "ano": "2011"
+          },
+          {
+            "num": 106,
+            "qid": "356756",
+            "url": "https://www.tecconcursos.com.br/questoes/356756",
+            "ano": "2011"
+          },
+          {
+            "num": 107,
+            "qid": "356766",
+            "url": "https://www.tecconcursos.com.br/questoes/356766",
+            "ano": "2011"
+          },
+          {
+            "num": 108,
+            "qid": "356769",
+            "url": "https://www.tecconcursos.com.br/questoes/356769",
+            "ano": "2011"
+          },
+          {
+            "num": 109,
+            "qid": "356770",
+            "url": "https://www.tecconcursos.com.br/questoes/356770",
+            "ano": "2011"
+          },
+          {
+            "num": 110,
+            "qid": "356772",
+            "url": "https://www.tecconcursos.com.br/questoes/356772",
+            "ano": "2011"
+          },
+          {
+            "num": 111,
+            "qid": "2684134",
+            "url": "https://www.tecconcursos.com.br/questoes/2684134",
+            "ano": "2008"
+          },
+          {
+            "num": 112,
+            "qid": "2684164",
+            "url": "https://www.tecconcursos.com.br/questoes/2684164",
+            "ano": "2008"
+          },
+          {
+            "num": 113,
+            "qid": "2712559",
+            "url": "https://www.tecconcursos.com.br/questoes/2712559",
+            "ano": "2006"
+          },
+          {
+            "num": 114,
+            "qid": "2712589",
+            "url": "https://www.tecconcursos.com.br/questoes/2712589",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Controles Lógicos Programáveis - CLP e SCADA",
+        "count": 17,
+        "questions": [
+          {
+            "num": 121,
+            "qid": "2697769",
+            "url": "https://www.tecconcursos.com.br/questoes/2697769",
+            "ano": "2023"
+          },
+          {
+            "num": 122,
+            "qid": "2697776",
+            "url": "https://www.tecconcursos.com.br/questoes/2697776",
+            "ano": "2023"
+          },
+          {
+            "num": 123,
+            "qid": "640443",
+            "url": "https://www.tecconcursos.com.br/questoes/640443",
+            "ano": "2018"
+          },
+          {
+            "num": 124,
+            "qid": "640447",
+            "url": "https://www.tecconcursos.com.br/questoes/640447",
+            "ano": "2018"
+          },
+          {
+            "num": 125,
+            "qid": "352791",
+            "url": "https://www.tecconcursos.com.br/questoes/352791",
+            "ano": "2012"
+          },
+          {
+            "num": 126,
+            "qid": "356729",
+            "url": "https://www.tecconcursos.com.br/questoes/356729",
+            "ano": "2011"
+          },
+          {
+            "num": 127,
+            "qid": "356731",
+            "url": "https://www.tecconcursos.com.br/questoes/356731",
+            "ano": "2011"
+          },
+          {
+            "num": 128,
+            "qid": "356732",
+            "url": "https://www.tecconcursos.com.br/questoes/356732",
+            "ano": "2011"
+          },
+          {
+            "num": 129,
+            "qid": "356733",
+            "url": "https://www.tecconcursos.com.br/questoes/356733",
+            "ano": "2011"
+          },
+          {
+            "num": 130,
+            "qid": "356734",
+            "url": "https://www.tecconcursos.com.br/questoes/356734",
+            "ano": "2011"
+          },
+          {
+            "num": 131,
+            "qid": "356736",
+            "url": "https://www.tecconcursos.com.br/questoes/356736",
+            "ano": "2011"
+          },
+          {
+            "num": 132,
+            "qid": "2684203",
+            "url": "https://www.tecconcursos.com.br/questoes/2684203",
+            "ano": "2008"
+          },
+          {
+            "num": 133,
+            "qid": "2684237",
+            "url": "https://www.tecconcursos.com.br/questoes/2684237",
+            "ano": "2008"
+          },
+          {
+            "num": 134,
+            "qid": "2684245",
+            "url": "https://www.tecconcursos.com.br/questoes/2684245",
+            "ano": "2008"
+          },
+          {
+            "num": 135,
+            "qid": "2712544",
+            "url": "https://www.tecconcursos.com.br/questoes/2712544",
+            "ano": "2006"
+          },
+          {
+            "num": 136,
+            "qid": "2712961",
+            "url": "https://www.tecconcursos.com.br/questoes/2712961",
+            "ano": "2006"
+          },
+          {
+            "num": 137,
+            "qid": "2712963",
+            "url": "https://www.tecconcursos.com.br/questoes/2712963",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Tópicos Mesclados de Controle e Automação",
+        "count": 11,
+        "questions": [
+          {
+            "num": 159,
+            "qid": "2697778",
+            "url": "https://www.tecconcursos.com.br/questoes/2697778",
+            "ano": "2023"
+          },
+          {
+            "num": 160,
+            "qid": "2697803",
+            "url": "https://www.tecconcursos.com.br/questoes/2697803",
+            "ano": "2023"
+          },
+          {
+            "num": 161,
+            "qid": "2697804",
+            "url": "https://www.tecconcursos.com.br/questoes/2697804",
+            "ano": "2023"
+          },
+          {
+            "num": 162,
+            "qid": "2697806",
+            "url": "https://www.tecconcursos.com.br/questoes/2697806",
+            "ano": "2023"
+          },
+          {
+            "num": 163,
+            "qid": "2697810",
+            "url": "https://www.tecconcursos.com.br/questoes/2697810",
+            "ano": "2023"
+          },
+          {
+            "num": 164,
+            "qid": "2697887",
+            "url": "https://www.tecconcursos.com.br/questoes/2697887",
+            "ano": "2023"
+          },
+          {
+            "num": 165,
+            "qid": "640407",
+            "url": "https://www.tecconcursos.com.br/questoes/640407",
+            "ano": "2018"
+          },
+          {
+            "num": 166,
+            "qid": "640422",
+            "url": "https://www.tecconcursos.com.br/questoes/640422",
+            "ano": "2018"
+          },
+          {
+            "num": 167,
+            "qid": "640424",
+            "url": "https://www.tecconcursos.com.br/questoes/640424",
+            "ano": "2018"
+          },
+          {
+            "num": 168,
+            "qid": "352901",
+            "url": "https://www.tecconcursos.com.br/questoes/352901",
+            "ano": "2012"
+          },
+          {
+            "num": 169,
+            "qid": "356721",
+            "url": "https://www.tecconcursos.com.br/questoes/356721",
+            "ano": "2011"
+          }
+        ]
+      },
+      {
+        "name": "Instrumentação Industrial",
+        "count": 10,
+        "questions": [
+          {
+            "num": 138,
+            "qid": "2697770",
+            "url": "https://www.tecconcursos.com.br/questoes/2697770",
+            "ano": "2023"
+          },
+          {
+            "num": 139,
+            "qid": "2697798",
+            "url": "https://www.tecconcursos.com.br/questoes/2697798",
+            "ano": "2023"
+          },
+          {
+            "num": 140,
+            "qid": "640410",
+            "url": "https://www.tecconcursos.com.br/questoes/640410",
+            "ano": "2018"
+          },
+          {
+            "num": 141,
+            "qid": "640428",
+            "url": "https://www.tecconcursos.com.br/questoes/640428",
+            "ano": "2018"
+          },
+          {
+            "num": 142,
+            "qid": "640444",
+            "url": "https://www.tecconcursos.com.br/questoes/640444",
+            "ano": "2018"
+          },
+          {
+            "num": 143,
+            "qid": "352900",
+            "url": "https://www.tecconcursos.com.br/questoes/352900",
+            "ano": "2012"
+          },
+          {
+            "num": 144,
+            "qid": "356707",
+            "url": "https://www.tecconcursos.com.br/questoes/356707",
+            "ano": "2011"
+          },
+          {
+            "num": 145,
+            "qid": "356716",
+            "url": "https://www.tecconcursos.com.br/questoes/356716",
+            "ano": "2011"
+          },
+          {
+            "num": 146,
+            "qid": "356725",
+            "url": "https://www.tecconcursos.com.br/questoes/356725",
+            "ano": "2011"
+          },
+          {
+            "num": 147,
+            "qid": "356743",
+            "url": "https://www.tecconcursos.com.br/questoes/356743",
+            "ano": "2011"
+          }
+        ]
+      },
+      {
+        "name": "Redes de Comunicação Industrial",
+        "count": 10,
+        "questions": [
+          {
+            "num": 148,
+            "qid": "352787",
+            "url": "https://www.tecconcursos.com.br/questoes/352787",
+            "ano": "2012"
+          },
+          {
+            "num": 149,
+            "qid": "352789",
+            "url": "https://www.tecconcursos.com.br/questoes/352789",
+            "ano": "2012"
+          },
+          {
+            "num": 150,
+            "qid": "352790",
+            "url": "https://www.tecconcursos.com.br/questoes/352790",
+            "ano": "2012"
+          },
+          {
+            "num": 151,
+            "qid": "356703",
+            "url": "https://www.tecconcursos.com.br/questoes/356703",
+            "ano": "2011"
+          },
+          {
+            "num": 152,
+            "qid": "356705",
+            "url": "https://www.tecconcursos.com.br/questoes/356705",
+            "ano": "2011"
+          },
+          {
+            "num": 153,
+            "qid": "356706",
+            "url": "https://www.tecconcursos.com.br/questoes/356706",
+            "ano": "2011"
+          },
+          {
+            "num": 154,
+            "qid": "356708",
+            "url": "https://www.tecconcursos.com.br/questoes/356708",
+            "ano": "2011"
+          },
+          {
+            "num": 155,
+            "qid": "356726",
+            "url": "https://www.tecconcursos.com.br/questoes/356726",
+            "ano": "2011"
+          },
+          {
+            "num": 156,
+            "qid": "356727",
+            "url": "https://www.tecconcursos.com.br/questoes/356727",
+            "ano": "2011"
+          },
+          {
+            "num": 157,
+            "qid": "356735",
+            "url": "https://www.tecconcursos.com.br/questoes/356735",
+            "ano": "2011"
+          }
+        ]
+      },
+      {
+        "name": "Outros Temas de Eng. Elétrica",
+        "count": 10,
+        "questions": [
+          {
+            "num": 178,
+            "qid": "2697771",
+            "url": "https://www.tecconcursos.com.br/questoes/2697771",
+            "ano": "2023"
+          },
+          {
+            "num": 179,
+            "qid": "2697775",
+            "url": "https://www.tecconcursos.com.br/questoes/2697775",
+            "ano": "2023"
+          },
+          {
+            "num": 180,
+            "qid": "2697777",
+            "url": "https://www.tecconcursos.com.br/questoes/2697777",
+            "ano": "2023"
+          },
+          {
+            "num": 181,
+            "qid": "2697787",
+            "url": "https://www.tecconcursos.com.br/questoes/2697787",
+            "ano": "2023"
+          },
+          {
+            "num": 182,
+            "qid": "2697788",
+            "url": "https://www.tecconcursos.com.br/questoes/2697788",
+            "ano": "2023"
+          },
+          {
+            "num": 183,
+            "qid": "2697808",
+            "url": "https://www.tecconcursos.com.br/questoes/2697808",
+            "ano": "2023"
+          },
+          {
+            "num": 184,
+            "qid": "2697811",
+            "url": "https://www.tecconcursos.com.br/questoes/2697811",
+            "ano": "2023"
+          },
+          {
+            "num": 185,
+            "qid": "2697812",
+            "url": "https://www.tecconcursos.com.br/questoes/2697812",
+            "ano": "2023"
+          },
+          {
+            "num": 186,
+            "qid": "2697865",
+            "url": "https://www.tecconcursos.com.br/questoes/2697865",
+            "ano": "2023"
+          },
+          {
+            "num": 187,
+            "qid": "2697878",
+            "url": "https://www.tecconcursos.com.br/questoes/2697878",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Microcontroladores / Sist. Microprocessados",
+        "count": 8,
+        "questions": [
+          {
+            "num": 48,
+            "qid": "2697782",
+            "url": "https://www.tecconcursos.com.br/questoes/2697782",
+            "ano": "2023"
+          },
+          {
+            "num": 49,
+            "qid": "2697789",
+            "url": "https://www.tecconcursos.com.br/questoes/2697789",
+            "ano": "2023"
+          },
+          {
+            "num": 50,
+            "qid": "640403",
+            "url": "https://www.tecconcursos.com.br/questoes/640403",
+            "ano": "2018"
+          },
+          {
+            "num": 51,
+            "qid": "640405",
+            "url": "https://www.tecconcursos.com.br/questoes/640405",
+            "ano": "2018"
+          },
+          {
+            "num": 52,
+            "qid": "640448",
+            "url": "https://www.tecconcursos.com.br/questoes/640448",
+            "ano": "2018"
+          },
+          {
+            "num": 53,
+            "qid": "356724",
+            "url": "https://www.tecconcursos.com.br/questoes/356724",
+            "ano": "2011"
+          },
+          {
+            "num": 54,
+            "qid": "356728",
+            "url": "https://www.tecconcursos.com.br/questoes/356728",
+            "ano": "2011"
+          },
+          {
+            "num": 55,
+            "qid": "2712634",
+            "url": "https://www.tecconcursos.com.br/questoes/2712634",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Circuitos de Excitação Senoidal / Fasores",
+        "count": 7,
+        "questions": [
+          {
+            "num": 11,
+            "qid": "640432",
+            "url": "https://www.tecconcursos.com.br/questoes/640432",
+            "ano": "2018"
+          },
+          {
+            "num": 12,
+            "qid": "640440",
+            "url": "https://www.tecconcursos.com.br/questoes/640440",
+            "ano": "2018"
+          },
+          {
+            "num": 13,
+            "qid": "352810",
+            "url": "https://www.tecconcursos.com.br/questoes/352810",
+            "ano": "2012"
+          },
+          {
+            "num": 14,
+            "qid": "352812",
+            "url": "https://www.tecconcursos.com.br/questoes/352812",
+            "ano": "2012"
+          },
+          {
+            "num": 15,
+            "qid": "352814",
+            "url": "https://www.tecconcursos.com.br/questoes/352814",
+            "ano": "2012"
+          },
+          {
+            "num": 16,
+            "qid": "356741",
+            "url": "https://www.tecconcursos.com.br/questoes/356741",
+            "ano": "2011"
+          },
+          {
+            "num": 17,
+            "qid": "2712564",
+            "url": "https://www.tecconcursos.com.br/questoes/2712564",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Circuitos de Primeira e Segunda Ordem",
+        "count": 6,
+        "questions": [
+          {
+            "num": 5,
+            "qid": "2697785",
+            "url": "https://www.tecconcursos.com.br/questoes/2697785",
+            "ano": "2023"
+          },
+          {
+            "num": 6,
+            "qid": "352797",
+            "url": "https://www.tecconcursos.com.br/questoes/352797",
+            "ano": "2012"
+          },
+          {
+            "num": 7,
+            "qid": "352909",
+            "url": "https://www.tecconcursos.com.br/questoes/352909",
+            "ano": "2012"
+          },
+          {
+            "num": 8,
+            "qid": "2684146",
+            "url": "https://www.tecconcursos.com.br/questoes/2684146",
+            "ano": "2008"
+          },
+          {
+            "num": 9,
+            "qid": "2712585",
+            "url": "https://www.tecconcursos.com.br/questoes/2712585",
+            "ano": "2006"
+          },
+          {
+            "num": 10,
+            "qid": "2712588",
+            "url": "https://www.tecconcursos.com.br/questoes/2712588",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Amplificadores Operacionais / Potência",
+        "count": 6,
+        "questions": [
+          {
+            "num": 33,
+            "qid": "2697779",
+            "url": "https://www.tecconcursos.com.br/questoes/2697779",
+            "ano": "2023"
+          },
+          {
+            "num": 34,
+            "qid": "640439",
+            "url": "https://www.tecconcursos.com.br/questoes/640439",
+            "ano": "2018"
+          },
+          {
+            "num": 35,
+            "qid": "352854",
+            "url": "https://www.tecconcursos.com.br/questoes/352854",
+            "ano": "2012"
+          },
+          {
+            "num": 36,
+            "qid": "352855",
+            "url": "https://www.tecconcursos.com.br/questoes/352855",
+            "ano": "2012"
+          },
+          {
+            "num": 37,
+            "qid": "352902",
+            "url": "https://www.tecconcursos.com.br/questoes/352902",
+            "ano": "2012"
+          },
+          {
+            "num": 38,
+            "qid": "356709",
+            "url": "https://www.tecconcursos.com.br/questoes/356709",
+            "ano": "2011"
+          }
+        ]
+      },
+      {
+        "name": "Transformadas (Laplace, Fourier, Dirac)",
+        "count": 6,
+        "questions": [
+          {
+            "num": 170,
+            "qid": "2697807",
+            "url": "https://www.tecconcursos.com.br/questoes/2697807",
+            "ano": "2023"
+          },
+          {
+            "num": 171,
+            "qid": "2697843",
+            "url": "https://www.tecconcursos.com.br/questoes/2697843",
+            "ano": "2023"
+          },
+          {
+            "num": 172,
+            "qid": "2684169",
+            "url": "https://www.tecconcursos.com.br/questoes/2684169",
+            "ano": "2008"
+          },
+          {
+            "num": 173,
+            "qid": "2712621",
+            "url": "https://www.tecconcursos.com.br/questoes/2712621",
+            "ano": "2006"
+          },
+          {
+            "num": 174,
+            "qid": "2712630",
+            "url": "https://www.tecconcursos.com.br/questoes/2712630",
+            "ano": "2006"
+          },
+          {
+            "num": 175,
+            "qid": "2712645",
+            "url": "https://www.tecconcursos.com.br/questoes/2712645",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Conversores AD e DAC",
+        "count": 4,
+        "questions": [
+          {
+            "num": 56,
+            "qid": "2697781",
+            "url": "https://www.tecconcursos.com.br/questoes/2697781",
+            "ano": "2023"
+          },
+          {
+            "num": 57,
+            "qid": "2697792",
+            "url": "https://www.tecconcursos.com.br/questoes/2697792",
+            "ano": "2023"
+          },
+          {
+            "num": 58,
+            "qid": "640433",
+            "url": "https://www.tecconcursos.com.br/questoes/640433",
+            "ano": "2018"
+          },
+          {
+            "num": 59,
+            "qid": "640453",
+            "url": "https://www.tecconcursos.com.br/questoes/640453",
+            "ano": "2018"
+          }
+        ]
+      },
+      {
+        "name": "Diodos (Retificador, Zener, Schottky, LED)",
+        "count": 3,
+        "questions": [
+          {
+            "num": 27,
+            "qid": "640412",
+            "url": "https://www.tecconcursos.com.br/questoes/640412",
+            "ano": "2018"
+          },
+          {
+            "num": 28,
+            "qid": "356722",
+            "url": "https://www.tecconcursos.com.br/questoes/356722",
+            "ano": "2011"
+          },
+          {
+            "num": 29,
+            "qid": "2684248",
+            "url": "https://www.tecconcursos.com.br/questoes/2684248",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Filtros Ativos e Passivos",
+        "count": 3,
+        "questions": [
+          {
+            "num": 39,
+            "qid": "352795",
+            "url": "https://www.tecconcursos.com.br/questoes/352795",
+            "ano": "2012"
+          },
+          {
+            "num": 40,
+            "qid": "352817",
+            "url": "https://www.tecconcursos.com.br/questoes/352817",
+            "ano": "2012"
+          },
+          {
+            "num": 41,
+            "qid": "356715",
+            "url": "https://www.tecconcursos.com.br/questoes/356715",
+            "ano": "2011"
+          }
+        ]
+      },
+      {
+        "name": "Leis de Ohm, Kirchhoff, Potência",
+        "count": 2,
+        "questions": [
+          {
+            "num": 1,
+            "qid": "2697780",
+            "url": "https://www.tecconcursos.com.br/questoes/2697780",
+            "ano": "2023"
+          },
+          {
+            "num": 2,
+            "qid": "356720",
+            "url": "https://www.tecconcursos.com.br/questoes/356720",
+            "ano": "2011"
+          }
+        ]
+      },
+      {
+        "name": "Teoremas (Thevenin, Norton, Estrela)",
+        "count": 2,
+        "questions": [
+          {
+            "num": 3,
+            "qid": "2697786",
+            "url": "https://www.tecconcursos.com.br/questoes/2697786",
+            "ano": "2023"
+          },
+          {
+            "num": 4,
+            "qid": "2684143",
+            "url": "https://www.tecconcursos.com.br/questoes/2684143",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Medidas Elétricas / Instrumentos",
+        "count": 2,
+        "questions": [
+          {
+            "num": 20,
+            "qid": "2697783",
+            "url": "https://www.tecconcursos.com.br/questoes/2697783",
+            "ano": "2023"
+          },
+          {
+            "num": 21,
+            "qid": "2697784",
+            "url": "https://www.tecconcursos.com.br/questoes/2697784",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Acionamentos Pneumáticos e Hidráulicos",
+        "count": 2,
+        "questions": [
+          {
+            "num": 22,
+            "qid": "2697768",
+            "url": "https://www.tecconcursos.com.br/questoes/2697768",
+            "ano": "2023"
+          },
+          {
+            "num": 23,
+            "qid": "2697773",
+            "url": "https://www.tecconcursos.com.br/questoes/2697773",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Máquinas de Corrente Contínua",
+        "count": 2,
+        "questions": [
+          {
+            "num": 25,
+            "qid": "2697790",
+            "url": "https://www.tecconcursos.com.br/questoes/2697790",
+            "ano": "2023"
+          },
+          {
+            "num": 26,
+            "qid": "2697801",
+            "url": "https://www.tecconcursos.com.br/questoes/2697801",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Álgebra Booleana e Circuitos Lógicos",
+        "count": 2,
+        "questions": [
+          {
+            "num": 43,
+            "qid": "356723",
+            "url": "https://www.tecconcursos.com.br/questoes/356723",
+            "ano": "2011"
+          },
+          {
+            "num": 44,
+            "qid": "2712539",
+            "url": "https://www.tecconcursos.com.br/questoes/2712539",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Semicondutores de Potência (DIAC, TRIAC...)",
+        "count": 2,
+        "questions": [
+          {
+            "num": 60,
+            "qid": "352856",
+            "url": "https://www.tecconcursos.com.br/questoes/352856",
+            "ano": "2012"
+          },
+          {
+            "num": 61,
+            "qid": "2712562",
+            "url": "https://www.tecconcursos.com.br/questoes/2712562",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Diagrama de Blocos / Funções Transferência",
+        "count": 2,
+        "questions": [
+          {
+            "num": 115,
+            "qid": "2697802",
+            "url": "https://www.tecconcursos.com.br/questoes/2697802",
+            "ano": "2023"
+          },
+          {
+            "num": 116,
+            "qid": "2697805",
+            "url": "https://www.tecconcursos.com.br/questoes/2697805",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Resposta Temporal / Transitórios",
+        "count": 2,
+        "questions": [
+          {
+            "num": 119,
+            "qid": "2697797",
+            "url": "https://www.tecconcursos.com.br/questoes/2697797",
+            "ano": "2023"
+          },
+          {
+            "num": 120,
+            "qid": "2697809",
+            "url": "https://www.tecconcursos.com.br/questoes/2697809",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Análise de Potência em C.A.",
+        "count": 1,
+        "questions": [
+          {
+            "num": 18,
+            "qid": "352813",
+            "url": "https://www.tecconcursos.com.br/questoes/352813",
+            "ano": "2012"
+          }
+        ]
+      },
+      {
+        "name": "Circuitos Trifásicos",
+        "count": 1,
+        "questions": [
+          {
+            "num": 19,
+            "qid": "352816",
+            "url": "https://www.tecconcursos.com.br/questoes/352816",
+            "ano": "2012"
+          }
+        ]
+      },
+      {
+        "name": "Transformadores Monofásicos",
+        "count": 1,
+        "questions": [
+          {
+            "num": 24,
+            "qid": "640411",
+            "url": "https://www.tecconcursos.com.br/questoes/640411",
+            "ano": "2018"
+          }
+        ]
+      },
+      {
+        "name": "Outros Componentes Eletrônicos",
+        "count": 1,
+        "questions": [
+          {
+            "num": 30,
+            "qid": "2697774",
+            "url": "https://www.tecconcursos.com.br/questoes/2697774",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Retificadores Onda Completa / Meia Onda",
+        "count": 1,
+        "questions": [
+          {
+            "num": 31,
+            "qid": "640451",
+            "url": "https://www.tecconcursos.com.br/questoes/640451",
+            "ano": "2018"
+          }
+        ]
+      },
+      {
+        "name": "Circuitos Reguladores de Tensão",
+        "count": 1,
+        "questions": [
+          {
+            "num": 32,
+            "qid": "640409",
+            "url": "https://www.tecconcursos.com.br/questoes/640409",
+            "ano": "2018"
+          }
+        ]
+      },
+      {
+        "name": "Sistemas de Numeração",
+        "count": 1,
+        "questions": [
+          {
+            "num": 42,
+            "qid": "352871",
+            "url": "https://www.tecconcursos.com.br/questoes/352871",
+            "ano": "2012"
+          }
+        ]
+      },
+      {
+        "name": "Circuitos Multiplexadores / Demultiplexadores",
+        "count": 1,
+        "questions": [
+          {
+            "num": 45,
+            "qid": "352866",
+            "url": "https://www.tecconcursos.com.br/questoes/352866",
+            "ano": "2012"
+          }
+        ]
+      },
+      {
+        "name": "Contadores e Registradores",
+        "count": 1,
+        "questions": [
+          {
+            "num": 46,
+            "qid": "352858",
+            "url": "https://www.tecconcursos.com.br/questoes/352858",
+            "ano": "2012"
+          }
+        ]
+      },
+      {
+        "name": "Memórias",
+        "count": 1,
+        "questions": [
+          {
+            "num": 47,
+            "qid": "2684127",
+            "url": "https://www.tecconcursos.com.br/questoes/2684127",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Circuitos Conversores (CC-CC)",
+        "count": 1,
+        "questions": [
+          {
+            "num": 62,
+            "qid": "2684141",
+            "url": "https://www.tecconcursos.com.br/questoes/2684141",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Circuitos Inversores (CC-CA)",
+        "count": 1,
+        "questions": [
+          {
+            "num": 63,
+            "qid": "352884",
+            "url": "https://www.tecconcursos.com.br/questoes/352884",
+            "ano": "2012"
+          }
+        ]
+      },
+      {
+        "name": "Tópicos Mesclados de Eletrônica",
+        "count": 1,
+        "questions": [
+          {
+            "num": 64,
+            "qid": "640536",
+            "url": "https://www.tecconcursos.com.br/questoes/640536",
+            "ano": "2018"
+          }
+        ]
+      },
+      {
+        "name": "Automação - Definições",
+        "count": 1,
+        "questions": [
+          {
+            "num": 65,
+            "qid": "2697772",
+            "url": "https://www.tecconcursos.com.br/questoes/2697772",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Controladores (P, PI, PD, PID, etc)",
+        "count": 1,
+        "questions": [
+          {
+            "num": 117,
+            "qid": "2697800",
+            "url": "https://www.tecconcursos.com.br/questoes/2697800",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Estabilidade (Routh-Hurwitz, LGR, etc.)",
+        "count": 1,
+        "questions": [
+          {
+            "num": 118,
+            "qid": "2697794",
+            "url": "https://www.tecconcursos.com.br/questoes/2697794",
+            "ano": "2023"
+          }
+        ]
+      },
+      {
+        "name": "Redes de Dados e Comunicação",
+        "count": 1,
+        "questions": [
+          {
+            "num": 158,
+            "qid": "640445",
+            "url": "https://www.tecconcursos.com.br/questoes/640445",
+            "ano": "2018"
+          }
+        ]
+      },
+      {
+        "name": "Modulação por Codificação de Pulso (PCM)",
+        "count": 1,
+        "questions": [
+          {
+            "num": 176,
+            "qid": "640544",
+            "url": "https://www.tecconcursos.com.br/questoes/640544",
+            "ano": "2018"
+          }
+        ]
+      },
+      {
+        "name": "Transmissão Guiada (Fibra Óptica / Guias)",
+        "count": 1,
+        "questions": [
+          {
+            "num": 177,
+            "qid": "352803",
+            "url": "https://www.tecconcursos.com.br/questoes/352803",
+            "ano": "2012"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Matemática",
+    "count": 7,
+    "assuntos": [
+      {
+        "name": "Definição, Subconjuntos e Operações",
+        "count": 1,
+        "questions": [
+          {
+            "num": 194,
+            "qid": "2683872",
+            "url": "https://www.tecconcursos.com.br/questoes/2683872",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Análise Combinatória",
+        "count": 1,
+        "questions": [
+          {
+            "num": 195,
+            "qid": "2683766",
+            "url": "https://www.tecconcursos.com.br/questoes/2683766",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Equações Logarítmicas",
+        "count": 1,
+        "questions": [
+          {
+            "num": 196,
+            "qid": "2683846",
+            "url": "https://www.tecconcursos.com.br/questoes/2683846",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Razões e Funções Trigonométricas",
+        "count": 1,
+        "questions": [
+          {
+            "num": 197,
+            "qid": "2683831",
+            "url": "https://www.tecconcursos.com.br/questoes/2683831",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Sistemas Lineares",
+        "count": 1,
+        "questions": [
+          {
+            "num": 198,
+            "qid": "2683825",
+            "url": "https://www.tecconcursos.com.br/questoes/2683825",
+            "ano": "2008"
+          }
+        ]
+      },
+      {
+        "name": "Números Complexos",
+        "count": 1,
+        "questions": [
+          {
+            "num": 199,
+            "qid": "640434",
+            "url": "https://www.tecconcursos.com.br/questoes/640434",
+            "ano": "2018"
+          }
+        ]
+      },
+      {
+        "name": "Métodos Numéricos",
+        "count": 1,
+        "questions": [
+          {
+            "num": 200,
+            "qid": "2683875",
+            "url": "https://www.tecconcursos.com.br/questoes/2683875",
+            "ano": "2008"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Engenharia Mecânica",
+    "count": 6,
+    "assuntos": [
+      {
+        "name": "Controle e Automação (Mecânica)",
+        "count": 3,
+        "questions": [
+          {
+            "num": 191,
+            "qid": "2684219",
+            "url": "https://www.tecconcursos.com.br/questoes/2684219",
+            "ano": "2008"
+          },
+          {
+            "num": 192,
+            "qid": "2712661",
+            "url": "https://www.tecconcursos.com.br/questoes/2712661",
+            "ano": "2006"
+          },
+          {
+            "num": 193,
+            "qid": "2712673",
+            "url": "https://www.tecconcursos.com.br/questoes/2712673",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Resistência dos Materiais",
+        "count": 1,
+        "questions": [
+          {
+            "num": 188,
+            "qid": "2712944",
+            "url": "https://www.tecconcursos.com.br/questoes/2712944",
+            "ano": "2006"
+          }
+        ]
+      },
+      {
+        "name": "Máquinas de Fluxo e Instalações",
+        "count": 1,
+        "questions": [
+          {
+            "num": 189,
+            "qid": "352805",
+            "url": "https://www.tecconcursos.com.br/questoes/352805",
+            "ano": "2012"
+          }
+        ]
+      },
+      {
+        "name": "Sistemas Hidráulicos e Pneumáticos (Mecânica)",
+        "count": 1,
+        "questions": [
+          {
+            "num": 190,
+            "qid": "640430",
+            "url": "https://www.tecconcursos.com.br/questoes/640430",
+            "ano": "2018"
+          }
+        ]
+      }
+    ]
+  }
+]
