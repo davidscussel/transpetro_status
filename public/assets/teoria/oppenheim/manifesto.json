@@ -1,0 +1,160 @@
+{
+  "source": "Sinais e Sistemas — Oppenheim e Willsky, com Nawab, 2ª edição, tradução brasileira, 2010",
+  "sourcePath": "livros/Sinais e Sistemas/Sinais e Sistemas; Oppenheim.compressed.pdf",
+  "printedToPdfOffset": 21,
+  "excerpts": [
+    {
+      "name": "modelos_equacoes",
+      "pages": [
+        25,
+        26,
+        27,
+        70,
+        71,
+        74,
+        75
+      ],
+      "sections": "1.5 e 2.4: sistemas, equações e diagramas",
+      "pdfPages": [
+        46,
+        47,
+        48,
+        91,
+        92,
+        95,
+        96
+      ],
+      "file": "modelos_equacoes.pdf"
+    },
+    {
+      "name": "primeira_segunda_ordem",
+      "pages": [
+        262,
+        264,
+        265,
+        266,
+        267
+      ],
+      "sections": "6.5.1 e 6.5.2: respostas de primeira e segunda ordem",
+      "pdfPages": [
+        283,
+        285,
+        286,
+        287,
+        288
+      ],
+      "file": "primeira_segunda_ordem.pdf"
+    },
+    {
+      "name": "bode",
+      "pages": [
+        255,
+        268,
+        269
+      ],
+      "sections": "6.2.3 e 6.5.3: magnitude, fase e diagramas de Bode",
+      "pdfPages": [
+        276,
+        289,
+        290
+      ],
+      "file": "bode.pdf"
+    },
+    {
+      "name": "laplace_fourier",
+      "pages": [
+        391,
+        392
+      ],
+      "sections": "9.1: transformada de Laplace e relação com Fourier",
+      "pdfPages": [
+        412,
+        413
+      ],
+      "file": "laplace_fourier.pdf"
+    },
+    {
+      "name": "laplace_valores_limites",
+      "pages": [
+        412,
+        413
+      ],
+      "sections": "9.5.10: teoremas dos valores inicial e final",
+      "pdfPages": [
+        433,
+        434
+      ],
+      "file": "laplace_valores_limites.pdf"
+    },
+    {
+      "name": "polos_estabilidade",
+      "pages": [
+        415,
+        416,
+        417
+      ],
+      "sections": "9.7.2 e 9.7.3: estabilidade e equações diferenciais",
+      "pdfPages": [
+        436,
+        437,
+        438
+      ],
+      "file": "polos_estabilidade.pdf"
+    },
+    {
+      "name": "transformada_z",
+      "pages": [
+        442,
+        443,
+        458,
+        465,
+        474
+      ],
+      "sections": "10.1, 10.5.2, 10.7.3 e 10.9.3: definição, atraso e equações de diferenças",
+      "pdfPages": [
+        463,
+        464,
+        479,
+        486,
+        495
+      ],
+      "file": "transformada_z.pdf"
+    },
+    {
+      "name": "realimentacao",
+      "pages": [
+        488,
+        489
+      ],
+      "sections": "11.1: sistemas com realimentação linear",
+      "pdfPages": [
+        509,
+        510
+      ],
+      "file": "realimentacao.pdf"
+    },
+    {
+      "name": "lugar_raizes",
+      "pages": [
+        497,
+        498,
+        499,
+        500,
+        501,
+        502,
+        503
+      ],
+      "sections": "11.3: análise do lugar das raízes",
+      "pdfPages": [
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524
+      ],
+      "file": "lugar_raizes.pdf"
+    }
+  ]
+}

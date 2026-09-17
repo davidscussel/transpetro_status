@@ -1,0 +1,3388 @@
+[
+  {
+    "qid": "2697791",
+    "title": "Q66 — Integradores, estados e malhas algébricas",
+    "theory": [
+      {
+        "title": "Estado e memória de um sistema dinâmico",
+        "paragraphs": [
+          "O estado x(t) reúne as variáveis cujo valor atual, junto com a entrada futura, permite determinar a evolução do sistema. Em uma realização por integradores, a saída de cada integrador é um estado. O modelo explícito tem a forma ẋ = f(x,u).",
+          "Um integrador calcula sua saída acumulando a entrada ao longo do tempo. Seu valor em um instante é determinado pelo estado acumulado, e não por uma relação algébrica instantânea com a entrada daquele mesmo instante."
+        ],
+        "formula": "x(t) = x(0) + ∫₀ᵗ v(τ) dτ\nẋ(t) = v(t)"
+      },
+      {
+        "title": "Passagem direta e dependência circular",
+        "paragraphs": [
+          "Um ganho y(t)=k·u(t) e um somador y(t)=u₁(t)+u₂(t) têm passagem direta: a saída depende imediatamente das entradas. Se uma cadeia composta só por esses blocos retorna ao próprio ponto de partida, o simulador precisa resolver simultaneamente as variáveis dessa malha.",
+          "Essa dependência circular é uma malha algébrica. Um integrador no percurso interrompe a dependência instantânea. Em sistemas discretos, um atraso também pode cumprir esse papel."
+        ],
+        "formula": "Exemplo: y = k(r − y)\n(1 + k)y = kr"
+      },
+      {
+        "title": "Quando a malha é um problema",
+        "paragraphs": [
+          "Uma malha algébrica não é necessariamente impossível: no exemplo, há solução única se 1+k ≠ 0. Porém, ela deixa de ser resolvida apenas propagando sinais e pode exigir um solucionador algébrico, falhar por singularidade ou dificultar a simulação.",
+          "No contexto da questão — representação contínua do modelo de estados por ganhos, somadores e integradores — recomenda-se evitar ciclos sem integradores. A ausência de integrador em um ramo aberto, por si só, não caracteriza uma malha algébrica."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar o que está sendo evitado",
+        "paragraphs": [
+          "O enunciado trata de inconsistências ao implementar diagramas de blocos para simular um modelo de estados. O problema é uma dependência circular sem elemento de memória."
+        ]
+      },
+      {
+        "title": "Relacionar a estrutura à definição",
+        "paragraphs": [
+          "Ao fechar uma malha formada por ganhos e somadores, a saída depende de si própria no mesmo instante. Sem um integrador nesse ciclo, precisamos resolver uma equação algébrica simultânea, conforme a teoria."
+        ]
+      },
+      {
+        "title": "Avaliar as alternativas",
+        "paragraphs": [
+          "Dois integradores em série apenas representam duas acumulações; ganhos e integradores em paralelo são admissíveis; um somador pode ter três ou mais entradas. Nenhuma dessas estruturas, isoladamente, implica inconsistência.",
+          "A descrição que identifica a malha algébrica no contexto dado é “sem integradores”. A menção adicional a ganhos em série na alternativa E não define o problema."
+        ]
+      }
+    ],
+    "answer": "D — malhas sem integradores",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 1.5 e 2.4 — modelos, equações e diagramas; p. 74 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/modelos_equacoes.pdf#page=6"
+      },
+      {
+        "label": "MathWorks — malhas algébricas e passagem direta",
+        "url": "https://www.mathworks.com/help/simulink/ug/algebraic-loops.html"
+      }
+    ]
+  },
+  {
+    "qid": "2697793",
+    "title": "Q67 — Amortecimento obtido do diagrama de realimentação",
+    "theory": [
+      {
+        "title": "Função de transferência em malha fechada",
+        "paragraphs": [
+          "A função de transferência relaciona saída e entrada no domínio de Laplace sob condições iniciais nulas. Em realimentação negativa, o comparador produz E=U−H·X e o ramo direto produz X=G·E.",
+          "Resolver essas duas relações fornece a transferência fechada. Os zeros do denominador são os polos que determinam os modos da resposta."
+        ],
+        "formula": "X/U = G/(1 + GH)"
+      },
+      {
+        "title": "Modelo padrão de segunda ordem",
+        "paragraphs": [
+          "Depois de tornar unitário o coeficiente de s², compare o denominador com s²+2ζωₙs+ωₙ². A frequência natural ωₙ é positiva, em rad/s, e a razão de amortecimento ζ é adimensional.",
+          "Para ωₙ>0: 0<ζ<1 caracteriza polos complexos estáveis e oscilação amortecida; ζ=1 caracteriza dois polos reais coincidentes; ζ>1 caracteriza dois polos reais distintos."
+        ],
+        "formula": "D(s) = s² + 2ζωₙs + ωₙ²\nSe D(s)=s²+a₁s+a₀: ωₙ=√a₀ e ζ=a₁/(2√a₀)"
+      },
+      {
+        "title": "Hipótese sobre o ganho",
+        "paragraphs": [
+          "A identificação usual de frequência natural real pressupõe k>0. Não se deve identificar ζ diretamente com o coeficiente de s: esse coeficiente é o produto 2ζωₙ."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Transcrever os blocos",
+        "paragraphs": [
+          "Na figura, k e 1/s² estão em série no ramo direto. O bloco de retorno é s+1 e entra com sinal negativo no somador."
+        ],
+        "formula": "G(s)=k/s²\nH(s)=s+1"
+      },
+      {
+        "title": "Fechar a malha usando as equações de sinais",
+        "paragraphs": [
+          "Aplicamos a expressão deduzida para realimentação negativa e multiplicamos numerador e denominador por s²."
+        ],
+        "formula": "X/U = (k/s²)/[1 + k(s+1)/s²]\nX/U = k/[s² + ks + k]"
+      },
+      {
+        "title": "Comparar os coeficientes",
+        "paragraphs": [
+          "O termo independente fornece ωₙ²=k. O coeficiente de s fornece 2ζωₙ=k."
+        ],
+        "formula": "ωₙ=√k\n2ζ√k=k"
+      },
+      {
+        "title": "Isolar o amortecimento",
+        "paragraphs": [
+          "Dividimos os dois lados por 2√k. A razão procurada é √k/2, correspondente à alternativa E."
+        ],
+        "formula": "ζ = k/(2√k) = √k/2"
+      }
+    ],
+    "answer": "E — ζ = √k/2",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.1 — realimentação linear; p. 489 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/realimentacao.pdf#page=2"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.5 — sistemas de primeira e segunda ordem; p. 265 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/primeira_segunda_ordem.pdf#page=3"
+      }
+    ]
+  },
+  {
+    "qid": "2697795",
+    "title": "Q68 — Ganho e zero de um controlador PD ideal",
+    "theory": [
+      {
+        "title": "Ações proporcional e derivativa",
+        "paragraphs": [
+          "O controlador recebe o erro e(t), diferença entre referência e medição, e gera a ação de controle u(t). A parcela proporcional responde ao valor atual do erro; a derivativa responde à sua taxa de variação.",
+          "Com condições iniciais nulas, derivar no tempo corresponde a multiplicar por s em Laplace."
+        ],
+        "formula": "u(t)=Kₚe(t)+K_d·de/dt\nC(s)=U(s)/E(s)=Kₚ+K_ds"
+      },
+      {
+        "title": "Polos, zeros e fatoração",
+        "paragraphs": [
+          "Zeros são raízes do numerador da função de transferência; polos são raízes do denominador, após eventuais cancelamentos. Para K_d≠0, podemos escrever o PD como um ganho multiplicando um fator de primeiro grau."
+        ],
+        "formula": "C(s)=K_d(s+Kₚ/K_d)\nzero: s_z=−Kₚ/K_d"
+      },
+      {
+        "title": "Idealização utilizada na prova",
+        "paragraphs": [
+          "O PD ideal não tem polo finito, pois o denominador é constante. Seu ganho e a posição do zero são ajustáveis pelos parâmetros.",
+          "Um PD realizável costuma incluir um filtro no termo derivativo, K_ds/(T_fs+1), que acrescenta um polo. Esse filtro não foi especificado na questão e não deve ser acrescentado ao modelo ideal."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Escrever a transferência do PD",
+        "paragraphs": [
+          "Somamos as ações proporcional e derivativa, C(s)=Kₚ+K_ds."
+        ]
+      },
+      {
+        "title": "Encontrar o zero",
+        "paragraphs": [
+          "Igualamos o numerador a zero. Para ganhos positivos, o zero fica no eixo real negativo."
+        ],
+        "formula": "Kₚ+K_ds=0 ⇒ s=−Kₚ/K_d"
+      },
+      {
+        "title": "Contar os parâmetros estruturais",
+        "paragraphs": [
+          "A forma K_d(s+Kₚ/K_d) mostra um ganho multiplicativo e um zero ajustável. Não há dois zeros nem dois polos no PD ideal."
+        ]
+      },
+      {
+        "title": "Selecionar a alternativa",
+        "paragraphs": [
+          "O efeito descrito é “ganho e um zero ajustáveis”, alternativa B."
+        ]
+      }
+    ],
+    "answer": "B — um ganho e um zero ajustáveis",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 417 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=3"
+      },
+      {
+        "label": "MathWorks — formas matemáticas dos controladores PID",
+        "url": "https://www.mathworks.com/help/control/ug/proportional-integral-derivative-pid-controllers.html"
+      }
+    ]
+  },
+  {
+    "qid": "2697796",
+    "title": "Q69 — Estabilidade de uma planta de terceira ordem com PI",
+    "theory": [
+      {
+        "title": "Polos e estabilidade contínua",
+        "paragraphs": [
+          "Para uma realização sem modos ocultos instáveis, um sistema linear contínuo é assintoticamente estável quando todos os polos estão no semiplano esquerdo: Re(s)<0. Um polo com parte real positiva gera um modo exponencial crescente.",
+          "Podemos representar os polos da planta por −a e −a±jb, com a>0 e b>0. O zero do PI está à esquerda deles: −z, com z>a."
+        ]
+      },
+      {
+        "title": "Como o PI altera a malha aberta",
+        "paragraphs": [
+          "O PI soma uma ação proporcional e uma integral. Ele introduz um polo na origem e um zero real. Absorvendo constantes positivas em K, a malha aberta tem quatro polos e um zero."
+        ],
+        "formula": "C_PI(s)=K(s+z)/s\nL(s)=K(s+z)/{s(s+a)[(s+a)²+b²]}"
+      },
+      {
+        "title": "Lugar das raízes e ganho",
+        "paragraphs": [
+          "O lugar das raízes descreve os polos de malha fechada que satisfazem 1+L(s)=0 quando K varia de 0 a infinito. Os ramos partem dos polos abertos; um termina no zero finito e os demais vão ao infinito.",
+          "Com n polos e m zeros finitos, os n−m ramos ao infinito seguem ângulos θℓ=(2ℓ+1)180°/(n−m). Para decidir a estabilidade em ganhos grandes, importa se algum desses ramos caminha para a direita."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Contar polos e zeros após inserir o PI",
+        "paragraphs": [
+          "A planta contribui com −a e −a±jb. O PI acrescenta o polo 0 e o zero −z. Portanto, n=4 e m=1."
+        ]
+      },
+      {
+        "title": "Examinar ganhos pequenos e positivos",
+        "paragraphs": [
+          "Três polos começam estritamente à esquerda e permanecem próximos de suas posições para K pequeno. Para o polo que parte da origem, expandimos a equação característica perto de s=0."
+        ],
+        "formula": "s(s+a)[(s+a)²+b²]+K(s+z)=0\ns·a(a²+b²)+Kz≈0\ns≈−Kz/[a(a²+b²)]<0"
+      },
+      {
+        "title": "Examinar ganhos elevados",
+        "paragraphs": [
+          "Há três ramos indo ao infinito. Dois têm componente real positiva porque cos(60°)=cos(300°)=1/2."
+        ],
+        "formula": "n−m=3\nθ=60°, 180°, 300°"
+      },
+      {
+        "title": "Concluir a mudança de estabilidade",
+        "paragraphs": [
+          "Com K positivo suficientemente pequeno, todos os polos ficam à esquerda. Para ganhos suficientemente altos, dois ramos avançam ao semiplano direito, tornando a malha instável. A alternativa A expressa essa conclusão; não é preciso conhecer a, b e z para classificar os dois regimes."
+        ]
+      }
+    ],
+    "answer": "A — estável para pequenos ganhos e instável para elevados ganhos",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.3 — lugar das raízes; p. 499 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/lugar_raizes.pdf#page=3"
+      },
+      {
+        "label": "MIT — lugar das raízes e relação entre polos e amortecimento",
+        "url": "https://ocw.mit.edu/courses/2-004-systems-modeling-and-control-ii-fall-2007/acd3e1336b6d99552479a33651561b49_lecture20.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697799",
+    "title": "Q70 — Observabilidade e posto da matriz",
+    "theory": [
+      {
+        "title": "O que significa observar os estados",
+        "paragraphs": [
+          "No modelo ẋ=Ax+Bu e y=Cx+Du, o vetor x possui n estados, u possui m entradas e y possui r saídas. Observabilidade é a possibilidade de reconstruir o estado inicial a partir das entradas conhecidas e das saídas observadas durante um intervalo.",
+          "Não é necessário medir diretamente cada estado: sua influência na evolução das saídas pode permitir a reconstrução."
+        ]
+      },
+      {
+        "title": "Construção da matriz de observabilidade",
+        "paragraphs": [
+          "Com entrada conhecida, sua contribuição pode ser descontada. Em particular, para u=0, as derivadas de y envolvem Cx, CAx, CA²x e assim por diante. Empilhar essas relações fornece uma matriz com rn linhas e n colunas."
+        ],
+        "formula": "O = [ C ; CA ; CA² ; … ; CAⁿ⁻¹ ]\n[y ; ẏ ; … ; y⁽ⁿ⁻¹⁾] = O·x"
+      },
+      {
+        "title": "Posto e informação independente",
+        "paragraphs": [
+          "O posto conta direções linearmente independentes. Para determinar n componentes de x, a matriz precisa de n colunas independentes. Logo, a condição necessária e suficiente é posto(O)=n.",
+          "rn é o número de linhas, não o posto exigido. Uma matriz A invertível não garante observabilidade: essa propriedade depende de como A e C se combinam."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar a dimensão do estado",
+        "paragraphs": [
+          "Como A tem dimensão n×n, o sistema possui n estados."
+        ]
+      },
+      {
+        "title": "Identificar a matriz correta",
+        "paragraphs": [
+          "A observabilidade é testada com O=[C;CA;…;CAⁿ⁻¹], não apenas com A ou C."
+        ]
+      },
+      {
+        "title": "Aplicar a condição de reconstrução",
+        "paragraphs": [
+          "A equação empilhada precisa distinguir qualquer estado inicial de outro. Isso exige núcleo nulo de O, equivalente a posto igual ao número de colunas."
+        ],
+        "formula": "posto(O)=n"
+      },
+      {
+        "title": "Conferir a alternativa",
+        "paragraphs": [
+          "A alternativa D fornece n. O número de saídas r pode ser menor que n e ainda haver observabilidade completa graças à evolução temporal."
+        ]
+      }
+    ],
+    "answer": "D — posto da matriz de observabilidade igual a n",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "MathWorks — matriz de observabilidade e condição de posto completo",
+        "url": "https://www.mathworks.com/help/control/ref/statespacemodel.obsv.html"
+      }
+    ]
+  },
+  {
+    "qid": "2697859",
+    "title": "Q71 — Transformada Z do degrau unitário causal",
+    "theory": [
+      {
+        "title": "Sequência degrau e transformada Z",
+        "paragraphs": [
+          "O degrau unitário discreto u[n] vale 0 para n<0 e 1 para n≥0. A transformada Z associa à sequência uma série ponderada por potências de z⁻¹, onde z é uma variável complexa.",
+          "Para uma sequência causal, os termos de índice negativo são nulos e a soma começa em n=0."
+        ],
+        "formula": "X(z)=Σₙ₌₋∞^∞ x[n]z⁻ⁿ\nZ{u[n]}=Σₙ₌₀^∞ z⁻ⁿ"
+      },
+      {
+        "title": "Série geométrica e região de convergência",
+        "paragraphs": [
+          "A soma infinita 1+r+r²+… vale 1/(1−r) somente quando |r|<1. Na transformada do degrau, a razão é r=z⁻¹.",
+          "A região de convergência faz parte da transformada: a mesma expressão racional pode representar sequências diferentes quando se altera a região."
+        ],
+        "formula": "Σₙ₌₀^∞ rⁿ=1/(1−r), |r|<1\n|z⁻¹|<1 ⇔ |z|>1"
+      },
+      {
+        "title": "Importância da amostra inicial",
+        "paragraphs": [
+          "O termo n=0 é 1. Se a sequência começasse apenas em n=1, faltaria esse termo, e sua transformada seria 1/(z−1). É por isso que o instante de aplicação do degrau importa."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Substituir os valores do degrau na definição",
+        "paragraphs": [
+          "Como todas as amostras a partir de zero valem 1, obtemos uma série geométrica."
+        ],
+        "formula": "U(z)=1+z⁻¹+z⁻²+…"
+      },
+      {
+        "title": "Somar a série",
+        "paragraphs": [
+          "Usamos r=z⁻¹ e exigimos |z|>1 para a convergência."
+        ],
+        "formula": "U(z)=1/(1−z⁻¹)"
+      },
+      {
+        "title": "Escrever na forma das alternativas",
+        "paragraphs": [
+          "Multiplicamos numerador e denominador por z, obtendo a expressão da alternativa D."
+        ],
+        "formula": "U(z)=z/(z−1), |z|>1"
+      },
+      {
+        "title": "Distinguir da alternativa B",
+        "paragraphs": [
+          "A expressão 1/(z−1) corresponde ao degrau atrasado em uma amostra, u[n−1], e não ao degrau iniciado em n=0."
+        ]
+      }
+    ],
+    "answer": "D — z/(z−1), com |z|>1",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 10.1, 10.5, 10.7 e 10.9 — transformada Z; p. 442 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/transformada_z.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "640398",
+    "title": "Q72 — Estabilidade pela leitura do lugar das raízes",
+    "theory": [
+      {
+        "title": "O que um LGR representa",
+        "paragraphs": [
+          "O lugar geométrico das raízes mostra onde ficam os polos de malha fechada ao variar um ganho K≥0, para uma configuração de realimentação definida. O símbolo × marca um polo de malha aberta e ○ marca um zero de malha aberta.",
+          "Quando K parte de zero, cada ramo começa em um ×. Quando K cresce indefinidamente, os ramos terminam em zeros finitos ou vão ao infinito."
+        ]
+      },
+      {
+        "title": "Critério geométrico de estabilidade",
+        "paragraphs": [
+          "No plano s=σ+jω, o eixo vertical divide os semiplanos. Todos os polos devem ter σ<0 para estabilidade assintótica. A presença de um único polo à direita torna a malha instável.",
+          "Não se avalia a estabilidade pela posição dos zeros. Os zeros orientam o destino dos ramos, mas quem determina o crescimento dos modos são os polos fechados."
+        ]
+      },
+      {
+        "title": "Como ler o desenho desta questão",
+        "paragraphs": [
+          "O gráfico mostra dois polos reais: um negativo e um positivo. Há um zero real negativo, à esquerda do polo negativo. O arco circular está no semiplano esquerdo.",
+          "O desenho é qualitativo, sem escala numérica. Ele permite decidir os regimes de estabilidade, mas não calcular um valor exato de ganho de cruzamento."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Analisar K próximo de zero",
+        "paragraphs": [
+          "Os polos fechados começam próximos dos dois ×. Como um × está à direita do eixo imaginário, para ganhos positivos pequenos ainda existe um polo com parte real positiva."
+        ]
+      },
+      {
+        "title": "Seguir o deslocamento dos ramos",
+        "paragraphs": [
+          "Com o aumento do ganho, os ramos reais se encontram à esquerda, percorrem o arco como par complexo conjugado e voltam ao eixo real. O trecho circular mostrado não invade o semiplano direito."
+        ]
+      },
+      {
+        "title": "Examinar o destino em ganho elevado",
+        "paragraphs": [
+          "Um ramo termina no zero negativo ○; como há um polo a mais que zeros, o outro segue para −∞ pelo eixo real. Ambos ficam no semiplano esquerdo."
+        ]
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "A malha é instável para pequenos ganhos e estável para ganhos suficientemente elevados. Essa é a alternativa E. O ponto exato de transição não pode ser extraído de um desenho sem escala."
+        ]
+      }
+    ],
+    "answer": "E — estável para elevados ganhos e instável para pequenos ganhos",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.3 — lugar das raízes; p. 497 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/lugar_raizes.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "640400",
+    "title": "Q73 — Dois ganhos de amortecimento crítico no LGR",
+    "theory": [
+      {
+        "title": "Amortecimento crítico",
+        "paragraphs": [
+          "No sistema padrão de segunda ordem, ζ=1 caracteriza amortecimento crítico: os dois polos são reais, negativos e coincidentes. Para ζ<1, há um par complexo conjugado; para ζ>1, há dois polos reais negativos distintos."
+        ],
+        "formula": "D(s)=s²+2ζωₙs+ωₙ²\nζ=1 ⇒ D(s)=(s+ωₙ)²"
+      },
+      {
+        "title": "Raiz dupla e pontos de encontro",
+        "paragraphs": [
+          "Em um LGR, a passagem de dois polos reais para um par complexo ocorre quando eles se encontram sobre o eixo real. Um retorno do par complexo ao eixo real também ocorre em uma raiz dupla.",
+          "Se o ponto de encontro está no semiplano esquerdo e representa os dois polos do sistema, ele corresponde ao caso criticamente amortecido."
+        ]
+      },
+      {
+        "title": "Critério algébrico equivalente",
+        "paragraphs": [
+          "Para um denominador quadrático s²+a₁(K)s+a₀(K), os polos coincidem quando o discriminante é zero. Como os coeficientes variam com K, essa condição pode ocorrer para mais de um ganho."
+        ],
+        "formula": "Δ(K)=a₁(K)²−4a₀(K)=0\nPolo duplo: s=−a₁(K)/2"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Localizar as duas interseções do arco com o eixo real",
+        "paragraphs": [
+          "A figura mostra um ponto de saída do eixo real na extremidade direita do círculo e um ponto de retorno na extremidade esquerda. Ambos estão à esquerda da origem."
+        ]
+      },
+      {
+        "title": "Interpretar a primeira interseção",
+        "paragraphs": [
+          "Nesse ganho, dois polos reais se encontram e passam a formar um par complexo conjugado. No encontro, os polos são reais, negativos e coincidentes: ζ=1."
+        ]
+      },
+      {
+        "title": "Interpretar a segunda interseção",
+        "paragraphs": [
+          "Em outro ganho, o par complexo se reencontra no eixo real, antes de se separar em dois polos reais. Esse segundo encontro também é uma raiz dupla negativa."
+        ]
+      },
+      {
+        "title": "Contar os ganhos",
+        "paragraphs": [
+          "Há duas ocorrências de amortecimento crítico. Os valores numéricos não são dados, mas sua quantidade é determinada pelo desenho. A alternativa E é correta."
+        ]
+      }
+    ],
+    "answer": "E — dois valores de ganho distintos",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.3 — lugar das raízes; p. 501 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/lugar_raizes.pdf#page=5"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.5 — sistemas de primeira e segunda ordem; p. 266 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/primeira_segunda_ordem.pdf#page=4"
+      }
+    ]
+  },
+  {
+    "qid": "640401",
+    "title": "Q74 — Teste de controlabilidade pelo posto",
+    "theory": [
+      {
+        "title": "Definição de controlabilidade",
+        "paragraphs": [
+          "Um sistema de n estados é completamente controlável se uma entrada adequada consegue levá-lo de qualquer estado inicial a qualquer estado final em tempo finito.",
+          "Essa propriedade depende tanto da dinâmica A quanto da forma como os atuadores entram no sistema, descrita por B. Conhecer apenas os autovalores de A não informa se o atuador alcança todos os modos."
+        ]
+      },
+      {
+        "title": "Matriz de controlabilidade",
+        "paragraphs": [
+          "No modelo linear ẋ=Ax+Bu, o efeito da entrada alcança direções dadas por B, AB, A²B e assim por diante. A matriz de controlabilidade reúne essas direções em colunas.",
+          "Com m entradas, ela tem n linhas e nm colunas. O posto precisa ser n, o número de estados."
+        ],
+        "formula": "C_ctrl=[B  AB  A²B  …  Aⁿ⁻¹B]\nSistema controlável ⇔ posto(C_ctrl)=n"
+      },
+      {
+        "title": "Por que não usar inversa ou autovalores dessa matriz",
+        "paragraphs": [
+          "A matriz pode ser retangular quando há várias entradas, portanto uma inversa usual pode nem existir e autovalores não são definidos para uma matriz retangular. O posto continua sendo o teste adequado.",
+          "No caso particular de uma entrada, C_ctrl é quadrada e determinante não nulo equivale ao posto n. Essa é uma forma particular do mesmo critério, não uma regra diferente."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Reconhecer a propriedade solicitada",
+        "paragraphs": [
+          "A questão pergunta se a entrada consegue atuar sobre todas as direções do estado, isto é, controlabilidade."
+        ]
+      },
+      {
+        "title": "Escolher a matriz que inclui a atuação da entrada",
+        "paragraphs": [
+          "A matriz A sozinha descreve a dinâmica natural. É preciso combinar A com B por meio de C_ctrl=[B AB … Aⁿ⁻¹B]."
+        ]
+      },
+      {
+        "title": "Aplicar o critério",
+        "paragraphs": [
+          "O teste consiste em calcular o posto dessa matriz e compará-lo com n. Entre as alternativas, B é a única que identifica esse critério geral."
+        ]
+      }
+    ],
+    "answer": "B — posto da matriz de controlabilidade",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "MathWorks — definição e teste de controlabilidade",
+        "url": "https://www.mathworks.com/help/control/ref/statespacemodel.ctrb.html"
+      }
+    ]
+  },
+  {
+    "qid": "640402",
+    "title": "Q75 — Controlabilidade e realimentação de estados",
+    "theory": [
+      {
+        "title": "Lei de realimentação de estados",
+        "paragraphs": [
+          "A realimentação de estados usa as componentes de x para definir a entrada: u=−Kx+v. O vetor ou matriz K contém os ganhos de realimentação; v pode representar um comando externo.",
+          "Substituir a lei no modelo mostra que a nova dinâmica é governada por A−BK."
+        ],
+        "formula": "ẋ=Ax+Bu\nu=−Kx+v ⇒ ẋ=(A−BK)x+Bv"
+      },
+      {
+        "title": "Alocação de polos",
+        "paragraphs": [
+          "Projetar K permite escolher os autovalores de A−BK, que são os modos de malha fechada. A capacidade de alocar todos esses polos arbitrariamente, em posições compatíveis com matrizes reais, exige controlabilidade completa.",
+          "O teste é posto([B AB … Aⁿ⁻¹B])=n. Uma A invertível ou estável não garante que B permita mover todos os polos."
+        ]
+      },
+      {
+        "title": "Controlabilidade versus estabilizabilidade",
+        "paragraphs": [
+          "Para apenas estabilizar o sistema, pode bastar que os modos não controláveis já sejam estáveis; essa condição mais fraca é chamada estabilizabilidade. A garantia completa mencionada pela questão é a de controlar todos os modos.",
+          "A aplicação direta de u=−Kx também pressupõe que os estados estejam disponíveis; quando não são medidos, um observador pode ser necessário."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar a matriz de malha fechada",
+        "paragraphs": [
+          "Com u=−Kx, a equação passa a ẋ=(A−BK)x. O projeto precisa ter liberdade para alterar todos os modos dessa matriz."
+        ]
+      },
+      {
+        "title": "Associar essa liberdade à controlabilidade",
+        "paragraphs": [
+          "Se existir um modo não controlável, mudar K não permite deslocá-lo livremente. Controlabilidade completa remove essa limitação."
+        ]
+      },
+      {
+        "title": "Escrever o teste de posto",
+        "paragraphs": [
+          "O posto deve igualar o número de estados, exatamente como diz a alternativa C."
+        ],
+        "formula": "posto([B AB … Aⁿ⁻¹B])=n"
+      },
+      {
+        "title": "Distinguir das demais condições",
+        "paragraphs": [
+          "Posto cheio de A, inversa de A e autovalores estáveis de A não substituem o teste que inclui B. Estabilidade natural e capacidade de controle são propriedades diferentes."
+        ]
+      }
+    ],
+    "answer": "C — posto da matriz de controlabilidade igual ao número de estados",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "MathWorks — matriz de controlabilidade e teste de posto",
+        "url": "https://www.mathworks.com/help/control/ref/statespacemodel.ctrb.html"
+      }
+    ]
+  },
+  {
+    "qid": "640415",
+    "title": "Q76 — Capacitância fluídica: relação entre pressão e vazão",
+    "theory": [
+      {
+        "title": "Analogia entre domínio elétrico e fluídico",
+        "paragraphs": [
+          "Um capacitor armazena carga elétrica Q, enquanto um tanque ou acumulador armazena fluido ou energia por compressão. Na analogia: tensão corresponde à pressão P; corrente corresponde à vazão q; capacitância elétrica corresponde à capacitância fluídica C_F.",
+          "A vazão é a taxa de variação de volume. Adotamos q como vazão líquida que entra no acumulador: entrada menos saída. Se q<0, o acumulador perde fluido."
+        ],
+        "formula": "i=dQ/dt ↔ q=dV/dt\nv ↔ P"
+      },
+      {
+        "title": "Definição de capacitância fluídica",
+        "paragraphs": [
+          "Em um modelo linear, C_F=dV/dP é a variação de volume armazenado por variação de pressão. Sua unidade SI é m³/Pa. Aplicando a regra da cadeia a q=dV/dt, obtemos a relação dinâmica.",
+          "Para gases ou acumuladores reais, C_F pode depender do ponto de operação; a relação da questão é uma aproximação linear com C_F constante."
+        ],
+        "formula": "q = (dV/dP)(dP/dt) = C_F·dP/dt\nP(t)=P(0)+(1/C_F)∫₀ᵗ q(τ)dτ"
+      },
+      {
+        "title": "Interpretação física",
+        "paragraphs": [
+          "Uma vazão líquida constante faz a pressão variar com taxa constante. Um acumulador com C_F maior precisa armazenar mais volume para atingir a mesma variação de pressão e, portanto, sua pressão muda mais lentamente."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Partir da relação do capacitor",
+        "paragraphs": [
+          "Para um capacitor ideal, i=C·dv/dt. Substituímos corrente por vazão, tensão por pressão e C por C_F."
+        ]
+      },
+      {
+        "title": "Escrever a equação do acumulador",
+        "paragraphs": [
+          "A relação linear é q=C_F·dP/dt. Isolamos a derivada da pressão."
+        ],
+        "formula": "dP/dt=q/C_F"
+      },
+      {
+        "title": "Conferir unidades e alternativa",
+        "paragraphs": [
+          "(m³/s)/(m³/Pa)=Pa/s, a unidade correta de dP/dt. A alternativa D contém essa relação. Uma relação P=q/C_F sem derivada confundiria armazenamento com um elemento resistivo."
+        ]
+      }
+    ],
+    "answer": "D — dP/dt = q/C_F",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 1.5 e 2.4 — modelos, equações e diagramas; p. 25 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/modelos_equacoes.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "640417",
+    "title": "Q77 — Teorema do valor inicial de Laplace",
+    "theory": [
+      {
+        "title": "Transformada unilateral e derivação",
+        "paragraphs": [
+          "Para um sinal causal, a transformada unilateral usa a evolução a partir de t=0. O valor x(0⁺) é o limite imediatamente após esse instante, podendo diferir do valor antes de uma comutação.",
+          "A propriedade da derivada relaciona sX(s) com a condição inicial. Ela explica por que o produto por s aparece no teorema."
+        ],
+        "formula": "L{ẋ(t)} = sX(s)−x(0⁺)"
+      },
+      {
+        "title": "Enunciado e condições do teorema",
+        "paragraphs": [
+          "Se o sinal possui valor inicial finito e não contém um impulso ou singularidade de ordem superior na origem, o limite de sX(s) para s real positivo tendendo ao infinito fornece x(0⁺).",
+          "Esse resultado permite encontrar o valor inicial sem inverter toda a transformada."
+        ],
+        "formula": "x(0⁺)=limₛ→∞ sX(s)"
+      },
+      {
+        "title": "Diferença em relação ao valor final",
+        "paragraphs": [
+          "O valor final usa s→0, não s→∞, e requer convergência para um limite finito. Para funções racionais causais, uma condição usual é que todos os polos de sX(s) estejam estritamente no semiplano esquerdo.",
+          "Não se pode trocar os dois limites. O comportamento em s grande identifica o início; o comportamento em s pequeno pode identificar o regime permanente, sob as condições adequadas."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar a grandeza pedida",
+        "paragraphs": [
+          "O enunciado pede o valor inicial, x(0⁺). Logo, usamos o limite em s→∞."
+        ]
+      },
+      {
+        "title": "Aplicar a forma correta",
+        "paragraphs": [
+          "Multiplicamos a transformada X(s) por s antes de tomar o limite. A alternativa A corresponde exatamente a essa expressão."
+        ],
+        "formula": "x(0⁺)=limₛ→∞ sX(s)"
+      },
+      {
+        "title": "Verificar com um exemplo",
+        "paragraphs": [
+          "Para x(t)=e⁻²ᵗu(t), temos X(s)=1/(s+2). O limite fornece 1, que é o valor de e⁻²ᵗ em t=0⁺. Sem o fator s, o limite seria zero e estaria errado."
+        ],
+        "formula": "limₛ→∞ s/(s+2)=1"
+      }
+    ],
+    "answer": "A — x(0⁺) = limₛ→∞ sX(s)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.5.10 — valores inicial e final; p. 412 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/laplace_valores_limites.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "640425",
+    "title": "Q78 — Polos de funções de transferência com denominador comum",
+    "theory": [
+      {
+        "title": "O que é um polo",
+        "paragraphs": [
+          "Para uma função racional G(s)=N(s)/D(s), os polos são os zeros de D(s) que não se cancelam com N(s). Um polo real +p, com p>0, corresponde a um modo eᵖᵗ crescente e indica instabilidade de uma realização causal que contenha esse modo.",
+          "Se várias saídas dependem da mesma entrada, um polo comum às duas transferências não se transforma em dois polos positivos distintos apenas por aparecer nas duas expressões."
+        ]
+      },
+      {
+        "title": "Fatoração e multiplicidade",
+        "paragraphs": [
+          "A identidade da diferença de quadrados é a²−b²=(a−b)(a+b). Ela permite reconhecer os polos reais ±p no fator s²−p².",
+          "O fator s² no denominador indica um polo na origem com multiplicidade dois. Não é um par de polos complexos conjugados não reais."
+        ],
+        "formula": "s²−p²=(s−p)(s+p)\ns²(s²−p²)=s·s·(s−p)(s+p)"
+      },
+      {
+        "title": "Hipóteses usuais da expressão",
+        "paragraphs": [
+          "A leitura pretendida considera p real, positivo e não nulo, ganhos não nulos e ausência de cancelamentos especiais. Como X₁/U tem numerador constante não nulo, seus polos ±p não são cancelados."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler as duas transferências",
+        "paragraphs": [
+          "O enunciado fornece X₁/U=K₁/(s²−p²) e X₂/U=K₂(s²−z²)/[s²(s²−p²)]."
+        ]
+      },
+      {
+        "title": "Fatorar os denominadores",
+        "paragraphs": [
+          "Na primeira saída, os polos são +p e −p. Na segunda, aparecem também dois polos na origem."
+        ],
+        "formula": "X₁/U: polos {+p,−p}\nX₂/U: polos {0,0,+p,−p}, salvo cancelamentos"
+      },
+      {
+        "title": "Contar os polos positivos",
+        "paragraphs": [
+          "O único polo de valor positivo é +p. O mesmo fator s−p nas duas saídas corresponde ao polo compartilhado; não deve ser contado como dois valores positivos."
+        ]
+      },
+      {
+        "title": "Comparar com as alternativas",
+        "paragraphs": [
+          "A alternativa A afirma “um polo positivo”. Os dois polos nulos não são três; os polos ±p são reais, e não quatro polos complexos nem quatro negativos."
+        ]
+      }
+    ],
+    "answer": "A — um polo positivo",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 415 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "640426",
+    "title": "Q79 — Zeros e polos da segunda saída",
+    "theory": [
+      {
+        "title": "Zeros versus polos",
+        "paragraphs": [
+          "Zeros são raízes do numerador e polos são raízes do denominador de uma função racional simplificada. Um zero em +z está no semiplano direito, mas não produz por si só um modo natural instável; essa classificação pertence aos polos.",
+          "Zeros no semiplano direito podem impor limitações à resposta e ao controle. É importante não trocar as funções do numerador e do denominador."
+        ]
+      },
+      {
+        "title": "Origem e multiplicidade",
+        "paragraphs": [
+          "Um fator s² no denominador produz dois polos coincidentes em s=0, desde que o numerador não os cancele. O numerador s²−z² não se anula em zero quando z≠0."
+        ],
+        "formula": "s²−z²=(s−z)(s+z)\ns²−p²=(s−p)(s+p)"
+      },
+      {
+        "title": "Hipóteses de identificação",
+        "paragraphs": [
+          "Consideramos p,z>0, ganho K₂≠0 e nenhum cancelamento especial entre numerador e denominador. Essa é a interpretação estrutural das alternativas."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Escrever a função da saída X₂",
+        "paragraphs": [
+          "A função dada é K₂(s²−z²)/[s²(s²−p²)]."
+        ]
+      },
+      {
+        "title": "Encontrar os zeros",
+        "paragraphs": [
+          "Igualando o numerador a zero, s²=z², encontramos +z e −z. Portanto, apenas um deles é positivo."
+        ],
+        "formula": "zeros: s=+z e s=−z"
+      },
+      {
+        "title": "Encontrar os polos",
+        "paragraphs": [
+          "Os fatores do denominador fornecem 0 com multiplicidade dois e os valores ±p."
+        ],
+        "formula": "polos: 0, 0, +p, −p"
+      },
+      {
+        "title": "Identificar a descrição compatível",
+        "paragraphs": [
+          "A alternativa A menciona um zero positivo e dois polos nulos. As demais alteram a quantidade de zeros positivos ou a natureza dos polos."
+        ]
+      }
+    ],
+    "answer": "A — um zero positivo e dois polos nulos",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 417 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=3"
+      }
+    ]
+  },
+  {
+    "qid": "640427",
+    "title": "Q80 — Fourier como caso particular de Laplace",
+    "theory": [
+      {
+        "title": "Definições bilaterais",
+        "paragraphs": [
+          "A transformada de Laplace usa s=σ+jω, com σ e ω reais. Separar a parte real da parte imaginária revela um fator de ponderação exponencial multiplicando o sinal.",
+          "A transformada de Fourier corresponde ao mesmo cálculo sem essa ponderação real."
+        ],
+        "formula": "X(s)=∫₋∞^∞ x(t)e⁻ˢᵗdt\nX(σ+jω)=∫₋∞^∞ [x(t)e⁻σᵗ]e⁻ʲωᵗdt\nX_F(jω)=∫₋∞^∞ x(t)e⁻ʲωᵗdt"
+      },
+      {
+        "title": "Região de convergência",
+        "paragraphs": [
+          "A região de convergência (RDC) é o conjunto dos valores de s para os quais a integral de Laplace converge. Para obter Fourier por avaliação direta em s=jω, o eixo imaginário precisa estar nessa região.",
+          "Laplace pode existir em outro semiplano mesmo quando a integral ordinária de Fourier não converge. Por exemplo, eᵃᵗu(t), com a>0, tem Laplace para Re(s)>a, mas não tem Fourier ordinária."
+        ]
+      },
+      {
+        "title": "Relação entre as transformadas",
+        "paragraphs": [
+          "Impor σ=0 faz e⁻σᵗ=1. Portanto, Fourier é uma restrição da transformada de Laplace ao eixo imaginário quando existe essa convergência.",
+          "Para sinais com impulsos no espectro, pode-se trabalhar com Fourier no sentido de distribuições; isso exige um tratamento além da simples convergência ordinária."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Substituir a variável complexa",
+        "paragraphs": [
+          "Usamos s=σ+jω na exponencial do núcleo de Laplace: e⁻ˢᵗ=e⁻σᵗe⁻ʲωᵗ."
+        ]
+      },
+      {
+        "title": "Zerar a parte real",
+        "paragraphs": [
+          "Fazendo σ=0, sobra exatamente o núcleo e⁻ʲωᵗ da transformada de Fourier."
+        ]
+      },
+      {
+        "title": "Registrar a condição e concluir",
+        "paragraphs": [
+          "Quando a RDC contém o eixo imaginário, X_F(jω)=X(s)|ₛ₌ⱼω. Assim, a alternativa D é correta: Fourier é um caso particular de Laplace, e não sua generalização."
+        ]
+      }
+    ],
+    "answer": "D — um caso particular da transformada de Laplace",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.1 — Laplace e Fourier; p. 391 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/laplace_fourier.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "640429",
+    "title": "Q81 — Polos e zeros de um controlador PID ideal",
+    "theory": [
+      {
+        "title": "Três ações de controle",
+        "paragraphs": [
+          "O PID reúne as ações proporcional, integral e derivativa sobre o erro. Kₚ atua no valor atual; Kᵢ acumula o erro; K_d reage à variação do erro.",
+          "Sob condições iniciais nulas, integrar corresponde a dividir por s e derivar corresponde a multiplicar por s."
+        ],
+        "formula": "u(t)=Kₚe(t)+Kᵢ∫₀ᵗe(τ)dτ+K_d·de/dt\nC(s)=Kₚ+Kᵢ/s+K_ds"
+      },
+      {
+        "title": "Escrita como função racional",
+        "paragraphs": [
+          "Ao colocar os termos no mesmo denominador, aparece um numerador quadrático e um denominador s. Para um PID completo, K_d≠0 e Kᵢ≠0.",
+          "As duas raízes do numerador são zeros ajustáveis. Elas podem ser reais ou complexas conjugadas e até coincidir, conforme os parâmetros."
+        ],
+        "formula": "C(s)=(K_ds²+Kₚs+Kᵢ)/s\nzeros: K_ds²+Kₚs+Kᵢ=0\npolo: s=0"
+      },
+      {
+        "title": "Modelo ideal e modelo filtrado",
+        "paragraphs": [
+          "O polo na origem vem da ação integral. O derivador ideal não acrescenta polo finito. Um filtro derivativo acrescentaria outro polo, mas a questão considera a forma ideal do PID."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Reunir P, I e D",
+        "paragraphs": [
+          "Escrevemos C(s)=Kₚ+Kᵢ/s+K_ds e colocamos tudo sobre s."
+        ]
+      },
+      {
+        "title": "Contar os zeros",
+        "paragraphs": [
+          "O numerador tem grau dois, portanto há dois zeros contados com multiplicidade. Suas posições dependem dos ganhos e não são necessariamente nulas."
+        ]
+      },
+      {
+        "title": "Contar os polos",
+        "paragraphs": [
+          "O denominador s fornece um polo na origem. Como Kᵢ≠0, o numerador não contém um fator s que o cancele."
+        ]
+      },
+      {
+        "title": "Selecionar a descrição",
+        "paragraphs": [
+          "Dois zeros ajustáveis e um polo nulo: alternativa E."
+        ]
+      }
+    ],
+    "answer": "E — dois zeros ajustáveis e um polo nulo",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 417 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=3"
+      }
+    ]
+  },
+  {
+    "qid": "640436",
+    "title": "Q82 — Acelerômetro: filtragem, banda útil e ressonância",
+    "theory": [
+      {
+        "title": "Resposta em frequência de um sistema LIT",
+        "paragraphs": [
+          "Em regime senoidal, uma entrada de frequência ω produz uma saída da mesma frequência com amplitude e fase modificadas. A função H(jω) descreve essas modificações.",
+          "Para o acelerômetro, a entrada é aceleração e a saída é tensão. A magnitude expressa a sensibilidade nessa conversão, com a referência de unidades adotada no gráfico."
+        ],
+        "formula": "x(t)=A cos(ωt)\ny_ss(t)=A|H(jω)|cos[ωt+arg H(jω)]"
+      },
+      {
+        "title": "Leitura dos diagramas de Bode",
+        "paragraphs": [
+          "O gráfico de magnitude usa 20log₁₀|H|, referido à unidade adotada, e o gráfico de fase mostra arg H. O eixo de frequência é logarítmico: cada década multiplica ω por dez.",
+          "Um patamar significa sensibilidade aproximadamente constante; uma subida ou descida significa tratamento diferente das componentes de frequência. Um pico pronunciado caracteriza ressonância."
+        ]
+      },
+      {
+        "title": "Filtragem e banda de passagem",
+        "paragraphs": [
+          "Um filtro modifica a distribuição de amplitudes e fases de um sinal ao longo das frequências. Uma banda de passagem não significa ausência de filtragem: é a faixa preservada relativamente às demais.",
+          "O gráfico permite reconhecer forte rejeição em baixas e altas frequências, uma faixa intermediária aproximadamente plana e um pico de ressonância antes da queda em altas frequências."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler a região de baixas frequências",
+        "paragraphs": [
+          "A magnitude parte de aproximadamente −130 dB em 0,1 rad/s e aumenta em direção à faixa intermediária. Componentes lentas são mais atenuadas que as da banda útil."
+        ]
+      },
+      {
+        "title": "Ler o patamar e o pico",
+        "paragraphs": [
+          "Entre cerca de 10² e 10³ rad/s, há um patamar próximo de −92 dB. Perto de alguns milhares de rad/s aparece um pico, evidenciando ressonância."
+        ]
+      },
+      {
+        "title": "Ler as altas frequências",
+        "paragraphs": [
+          "Após a ressonância, a magnitude cai fortemente, chegando perto de −140 dB em 10⁵ rad/s. Isso não caracteriza amplificação crescente de altas frequências."
+        ]
+      },
+      {
+        "title": "Relacionar o gráfico às alternativas",
+        "paragraphs": [
+          "O transdutor atua como um filtro em sua relação entrada–saída, inclusive quando opera na banda de passagem; a alternativa A é a indicada no caderno.",
+          "A alternativa B descreve a rejeição nas extremidades, mas, se interpretada como filtragem apenas nessas regiões, é incompleta. D contradiz o pico de ressonância; E contradiz o patamar. Como entrada e saída têm unidades diferentes, o valor em dB deve ser entendido segundo a normalização do gráfico."
+        ]
+      }
+    ],
+    "answer": "A — sempre atua como um filtro",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.2.3 e 6.5.3 — magnitude e diagramas de Bode; p. 255 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/bode.pdf#page=1"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.5 — sistemas de primeira e segunda ordem; p. 267 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/primeira_segunda_ordem.pdf#page=5"
+      }
+    ]
+  },
+  {
+    "qid": "640438",
+    "title": "Q83 — Ganho adicional a partir de um diagrama de Bode",
+    "theory": [
+      {
+        "title": "Magnitude em decibéis",
+        "paragraphs": [
+          "Para uma razão de amplitudes A normalizada à referência adotada, o ganho em dB é 20log₁₀A. A operação inversa transforma dB em razão linear.",
+          "A regra de 10log é usada para razão de potências. Para amplitudes, empregamos o fator 20."
+        ],
+        "formula": "G_dB=20log₁₀ A\nA=10^(G_dB/20)"
+      },
+      {
+        "title": "Associação em cascata",
+        "paragraphs": [
+          "Se o sensor é seguido de um amplificador, as funções de transferência se multiplicam. Em dB, as magnitudes se somam. Para compensar uma sensibilidade de −M dB e obter 0 dB na referência escolhida, acrescenta-se aproximadamente +M dB.",
+          "Isso é um dimensionamento de magnitude na banda útil, não uma correção completa da fase nem da ressonância fora dessa banda."
+        ],
+        "formula": "H_total=H_sensor·A\nG_total,dB=G_sensor,dB+G_amplificador,dB"
+      },
+      {
+        "title": "Leitura aproximada",
+        "paragraphs": [
+          "O patamar entre 100 e 1000 rad/s está perto de −92 dB. A escala e as opções são aproximadas; a escolha deve ser o ganho positivo mais próximo da compensação necessária."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Selecionar a faixa indicada",
+        "paragraphs": [
+          "A questão pede operação entre 100 e 1000 rad/s. Devemos ler o patamar dessa faixa, e não o pico de ressonância perto de 10⁴ rad/s."
+        ]
+      },
+      {
+        "title": "Determinar a compensação ideal aproximada",
+        "paragraphs": [
+          "Tomando a magnitude do sensor perto de −92 dB, um ganho perto de +92 dB faria a magnitude total aproximar-se de 0 dB."
+        ],
+        "formula": "G_amp≈0−(−92)=+92 dB"
+      },
+      {
+        "title": "Comparar os valores oferecidos",
+        "paragraphs": [
+          "As opções são −100, 0, 50, 100 e 200 dB. O valor mais próximo é +100 dB, alternativa D. A escolha é aproximada: ela deixa cerca de +8 dB de ganho total para uma leitura de −92 dB."
+        ]
+      },
+      {
+        "title": "Interpretar a razão linear",
+        "paragraphs": [
+          "Um amplificador de 100 dB tem ganho de amplitude 100000. Ganho de −100 dB aumentaria a atenuação, enquanto 0 dB não compensaria o sensor."
+        ],
+        "formula": "A=10^(100/20)=10⁵"
+      }
+    ],
+    "answer": "D — aproximadamente +100 dB",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.2.3 e 6.5.3 — magnitude e diagramas de Bode; p. 255 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/bode.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "352786",
+    "title": "Q84 — Da equação diferencial à função de transferência",
+    "theory": [
+      {
+        "title": "Definição de função de transferência",
+        "paragraphs": [
+          "Para um sistema linear invariante no tempo, a função de transferência é a razão entre as transformadas da saída e da entrada com condições iniciais nulas. Aqui a entrada é u(t), tensão, e a saída é i(t), corrente.",
+          "Se condições iniciais não nulas fossem incluídas, apareceriam termos adicionais que representam a resposta livre e não pertencem à função de transferência."
+        ]
+      },
+      {
+        "title": "Derivadas em Laplace",
+        "paragraphs": [
+          "A primeira derivada gera sF(s)−f(0⁻); a segunda gera s²F(s)−sf(0⁻)−ḟ(0⁻). Com repouso inicial, só os termos em s permanecem."
+        ],
+        "formula": "L{ḟ}=sF(s), em repouso inicial\nL{f̈}=s²F(s), em repouso inicial"
+      },
+      {
+        "title": "Como organizar a equação",
+        "paragraphs": [
+          "Os coeficientes que multiplicam a saída e suas derivadas formam o denominador. Os que multiplicam a entrada e suas derivadas formam o numerador.",
+          "É preciso usar a equação exatamente como fornecida. Identificar letras R, L e C não autoriza substituir coeficientes por uma equação de outro circuito."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Transcrever o modelo dado",
+        "paragraphs": [
+          "O enunciado fornece a equação abaixo; i(t) é a variável de saída."
+        ],
+        "formula": "RC·ï+L·i̇+R·i=LC·ü+u"
+      },
+      {
+        "title": "Aplicar Laplace termo a termo",
+        "paragraphs": [
+          "Usando condições iniciais nulas, as derivadas de ordem um e dois são substituídas por s e s²."
+        ],
+        "formula": "RCs²I(s)+LsI(s)+RI(s)=LCs²U(s)+U(s)"
+      },
+      {
+        "title": "Colocar as transformadas em evidência",
+        "paragraphs": [
+          "Agrupamos os termos da corrente no lado esquerdo e os termos da tensão no direito."
+        ],
+        "formula": "(RCs²+Ls+R)I(s)=(LCs²+1)U(s)"
+      },
+      {
+        "title": "Isolar a razão saída/entrada",
+        "paragraphs": [
+          "Dividimos por U(s) e pelo polinômio que multiplica I(s). O resultado corresponde à alternativa A."
+        ],
+        "formula": "G(s)=I(s)/U(s)=(LCs²+1)/(RCs²+Ls+R)"
+      }
+    ],
+    "answer": "A — (LCs²+1)/(RCs²+Ls+R)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 417 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=3"
+      }
+    ]
+  },
+  {
+    "qid": "352788",
+    "title": "Q85 — Modelagem: escolher ferramentas adequadas ao sistema",
+    "theory": [
+      {
+        "title": "O que um modelo representa",
+        "paragraphs": [
+          "Um modelo matemático é uma descrição de relações relevantes entre variáveis, construída para um objetivo. Pode partir de leis físicas, de dados experimentais ou de uma combinação das duas abordagens.",
+          "Escolher variáveis, fronteiras, hipóteses e uma faixa de validade faz parte da modelagem. Não se busca reproduzir todos os detalhes do objeto real indiscriminadamente."
+        ]
+      },
+      {
+        "title": "Escolha do método",
+        "paragraphs": [
+          "A natureza do sistema orienta o método: equações diferenciais para dinâmicas contínuas; equações de diferenças para atualizações discretas; modelos não lineares para grandes variações; linearização para pequenas perturbações em torno de um ponto de operação.",
+          "Por exemplo, um circuito RC pode ser descrito por uma lei de conservação de corrente; uma planta com dinâmica pouco conhecida pode exigir identificação a partir de ensaios."
+        ]
+      },
+      {
+        "title": "Validação e revisão",
+        "paragraphs": [
+          "Um modelo útil reproduz os aspectos essenciais com precisão suficiente para sua aplicação. Seus parâmetros podem e devem ser atualizados quando medições ou condições de operação justificam a revisão.",
+          "A qualidade depende da adequação entre a ferramenta escolhida, as hipóteses e o fenômeno, e não de uma correspondência perfeita impossível entre representação e realidade."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar o desafio central",
+        "paragraphs": [
+          "A pergunta trata da escolha de uma abordagem capaz de representar adequadamente o sistema físico."
+        ]
+      },
+      {
+        "title": "Examinar as opções restritivas",
+        "paragraphs": [
+          "Impedir mudanças nos parâmetros, como propõe B, prejudica a identificação e a validação. Exigir correspondência perfeita, como em C, inviabiliza o uso de aproximações úteis."
+        ]
+      },
+      {
+        "title": "Distinguir objetivo de apresentação e escolha técnica",
+        "paragraphs": [
+          "Incluir alguns elementos reais e tornar a representação acessível podem ser aspectos do trabalho, mas não expressam o critério central de adequação do método ao sistema."
+        ]
+      },
+      {
+        "title": "Selecionar a alternativa",
+        "paragraphs": [
+          "A opção E afirma que é preciso adotar ferramentas e procedimentos adequados ao sistema, reunindo a escolha do modelo, as hipóteses e a finalidade de uso."
+        ]
+      }
+    ],
+    "answer": "E — adotar ferramentas e procedimentos adequados ao sistema",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 1.5 e 2.4 — modelos, equações e diagramas; p. 25 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/modelos_equacoes.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "352792",
+    "title": "Q86 — Linearização de uma força eletromagnética",
+    "theory": [
+      {
+        "title": "Aproximação local por Taylor",
+        "paragraphs": [
+          "Linearizar uma função diferenciável F(i) em torno de i₀ significa aproximá-la pela reta tangente nesse ponto. A aproximação preserva o valor F(i₀) e a inclinação F′(i₀).",
+          "Ela é válida para pequenas variações Δi=i−i₀, quando os termos de ordem dois ou superior têm influência pequena."
+        ],
+        "formula": "F(i)≈F(i₀)+F′(i₀)(i−i₀)"
+      },
+      {
+        "title": "Forma incremental e forma afim",
+        "paragraphs": [
+          "Na forma incremental, ΔF≈BΔi, com B=F′(i₀). Na forma pedida pela questão, F_L(i)=A+Bi, há também um termo constante A.",
+          "A é o intercepto da reta no eixo da força; não é, em geral, o valor da força no ponto de operação. B é a sensibilidade local, em N/A."
+        ],
+        "formula": "B=F′(i₀)\nA=F(i₀)−i₀F′(i₀)"
+      },
+      {
+        "title": "Derivação do polinômio",
+        "paragraphs": [
+          "Usamos d(iⁿ)/di=n·iⁿ⁻¹ para encontrar a inclinação. É necessário avaliar tanto a função quanto sua derivada em i₀; calcular apenas a derivada não determina A."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Calcular a força no ponto nominal",
+        "paragraphs": [
+          "A função é F(i)=4i³−6i²+2i e i₀=1 A."
+        ],
+        "formula": "F(1)=4−6+2=0 N"
+      },
+      {
+        "title": "Calcular a inclinação",
+        "paragraphs": [
+          "Derivamos termo a termo e substituímos i=1."
+        ],
+        "formula": "F′(i)=12i²−12i+2\nB=F′(1)=12−12+2=2 N/A"
+      },
+      {
+        "title": "Montar a reta tangente",
+        "paragraphs": [
+          "Usamos a expansão de primeira ordem da teoria e reorganizamos na forma A+Bi."
+        ],
+        "formula": "F_L(i)=0+2(i−1)=−2+2i"
+      },
+      {
+        "title": "Conferir os coeficientes",
+        "paragraphs": [
+          "A=−2 e B=2, alternativa E. Como verificação, F_L(1)=0 e sua inclinação é 2, exatamente os valores da função no ponto nominal."
+        ]
+      }
+    ],
+    "answer": "E — A = −2 e B = 2",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352793",
+    "title": "Q87 — Determinante de uma matriz 4×4 por cofatores",
+    "theory": [
+      {
+        "title": "Determinante e cofator",
+        "paragraphs": [
+          "O determinante é um escalar associado a uma matriz quadrada. Ele é nulo quando as linhas ou colunas são linearmente dependentes e não nulo quando a matriz é invertível.",
+          "O menor Mᵢⱼ é a matriz obtida removendo a linha i e a coluna j. O cofator é Cᵢⱼ=(−1)ⁱ⁺ʲdet(Mᵢⱼ)."
+        ]
+      },
+      {
+        "title": "Expansão de Laplace",
+        "paragraphs": [
+          "Podemos expandir o determinante por qualquer linha ou coluna. Convém escolher uma com muitos zeros, pois os termos multiplicados por zero desaparecem.",
+          "A regra de Sarrus serve diretamente para matrizes 3×3, não para 4×4. Aqui vamos reduzir o problema a dois determinantes 3×3."
+        ],
+        "formula": "det(M)=Σᵢ mᵢⱼ(−1)ⁱ⁺ʲdet(Mᵢⱼ)"
+      },
+      {
+        "title": "Determinante 3×3",
+        "paragraphs": [
+          "Após a expansão, cada determinante 3×3 pode ser calculado por Sarrus ou por nova expansão. Os sinais dos cofatores devem ser mantidos separados dos sinais dos próprios menores."
+        ],
+        "formula": "det([a b c; d e f; g h i])\n= a(ei−fh) − b(di−fg) + c(dh−eg)"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Transcrever os dados na ordem da figura",
+        "paragraphs": [
+          "Mantemos as quatro linhas e quatro colunas como apresentadas."
+        ],
+        "code": "M = [ 1  3  2  0 ]\n    [ 3  1  0  2 ]\n    [ 2  3  0  1 ]\n    [ 0  2  1  3 ]"
+      },
+      {
+        "title": "Expandir pela terceira coluna",
+        "paragraphs": [
+          "Essa coluna é [2,0,0,1]. Só contribuem as posições (1,3) e (4,3). Seus sinais de cofator são positivo e negativo, respectivamente."
+        ],
+        "formula": "det(M)=2·det(M₁₃)−det(M₄₃)"
+      },
+      {
+        "title": "Calcular o primeiro menor",
+        "paragraphs": [
+          "Removemos a primeira linha e a terceira coluna. Aplicamos a expressão do determinante 3×3."
+        ],
+        "formula": "M₁₃=[3 1 2; 2 3 1; 0 2 3]\ndet(M₁₃)=3(9−2)−1(6−0)+2(4−0)\n=21−6+8=23"
+      },
+      {
+        "title": "Calcular o segundo menor",
+        "paragraphs": [
+          "Removemos a quarta linha e a terceira coluna. O termo da terceira posição da primeira linha é zero."
+        ],
+        "formula": "M₄₃=[1 3 0; 3 1 2; 2 3 1]\ndet(M₄₃)=1(1−6)−3(3−4)+0\n=−5+3=−2"
+      },
+      {
+        "title": "Combinar os resultados",
+        "paragraphs": [
+          "O sinal negativo do cofator multiplica um menor que também é negativo. Por isso, a contribuição final é +2."
+        ],
+        "formula": "det(M)=2·23−(−2)=48"
+      }
+    ],
+    "answer": "D — 48",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352796",
+    "title": "Q88 — Faixa de ganho para estabilidade de segunda ordem",
+    "theory": [
+      {
+        "title": "Estabilidade e polos",
+        "paragraphs": [
+          "Um sistema racional causal contínuo é BIBO estável quando todos os seus polos estão estritamente no semiplano esquerdo. Polos na origem ou no eixo imaginário não atendem a esse critério.",
+          "Para G(s)=10/(s²+s+K), o numerador constante não cancela polos. Basta analisar as raízes do denominador."
+        ]
+      },
+      {
+        "title": "Critério de Hurwitz para grau dois",
+        "paragraphs": [
+          "Um polinômio real s²+a₁s+a₀, com coeficiente líder positivo, possui ambas as raízes com parte real negativa se, e somente se, a₁>0 e a₀>0.",
+          "Isso também segue de Routh: a primeira coluna é 1, a₁, a₀. Todos os termos precisam ter o mesmo sinal."
+        ],
+        "formula": "s²+a₁s+a₀ estável ⇔ a₁>0 e a₀>0"
+      },
+      {
+        "title": "Efeito do termo constante",
+        "paragraphs": [
+          "Se K<0, o produto das raízes é negativo, de modo que uma raiz real é positiva. Se K=0, há um polo em zero. Portanto, não basta impor K≥0."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Expandir o denominador",
+        "paragraphs": [
+          "A forma apresentada é K+s(s+1). Desenvolvendo o produto, encontramos s²+s+K."
+        ]
+      },
+      {
+        "title": "Comparar com o critério de segunda ordem",
+        "paragraphs": [
+          "Aqui a₁=1, que já é positivo, e a₀=K. A única condição restante é K>0."
+        ],
+        "formula": "1>0 e K>0"
+      },
+      {
+        "title": "Conferir a fronteira",
+        "paragraphs": [
+          "Em K=0, o denominador é s(s+1) e um polo fica na origem. Esse caso não é estável no sentido BIBO."
+        ]
+      },
+      {
+        "title": "Concluir necessidade e suficiência",
+        "paragraphs": [
+          "Qualquer K>0 satisfaz o teste; não é preciso exigir K>3 nem K>4. A alternativa E é a condição exata."
+        ]
+      }
+    ],
+    "answer": "E — K > 0",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 415 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "352801",
+    "title": "Q89 — Identificação do controlador PID na malha",
+    "theory": [
+      {
+        "title": "Elementos de uma malha de controle",
+        "paragraphs": [
+          "A referência r indica o valor desejado. O sensor fornece uma medição y_m. O comparador forma o erro e=r−y_m. O controlador calcula uma ação u que, por meio do atuador, altera o comportamento da planta.",
+          "Sensor e controlador têm funções diferentes: medir uma grandeza não é o mesmo que decidir a ação de controle."
+        ]
+      },
+      {
+        "title": "Lei do PID",
+        "paragraphs": [
+          "O controlador proporcional–integral–derivativo combina três informações sobre o erro. A ação P responde ao valor atual, I acumula o erro e D responde à taxa de variação.",
+          "Em uma malha estável e adequadamente projetada, a ação integral pode eliminar erro estacionário constante; a derivativa pode ajudar a moldar o transitório, mas amplifica ruído se não for filtrada."
+        ],
+        "formula": "u(t)=Kₚe(t)+Kᵢ∫e(τ)dτ+K_d·de(t)/dt"
+      },
+      {
+        "title": "Papel das demais opções",
+        "paragraphs": [
+          "Tacômetro mede velocidade de rotação; acelerômetro mede aceleração; giroscópio fornece informação de movimento angular, conforme o tipo. Um filtro passa-altas trata faixas de frequência, mas seu nome não designa o controlador industrial de três ações."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar o elemento solicitado",
+        "paragraphs": [
+          "A pergunta busca um controlador empregado em malha fechada, isto é, o elemento que transforma erro em ação."
+        ]
+      },
+      {
+        "title": "Reconhecer as três ações",
+        "paragraphs": [
+          "A denominação proporcional-integral-derivativo corresponde precisamente à lei de controle PID."
+        ]
+      },
+      {
+        "title": "Eliminar sensores e filtro",
+        "paragraphs": [
+          "As alternativas A, D e E indicam instrumentos/sensores. A alternativa C indica um filtro, não o controlador PID."
+        ]
+      },
+      {
+        "title": "Selecionar a opção",
+        "paragraphs": [
+          "A alternativa B é o controlador proporcional-integral-derivativo."
+        ]
+      }
+    ],
+    "answer": "B — proporcional-integral-derivativo (PID)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.1 — realimentação linear; p. 488 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/realimentacao.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "352889",
+    "title": "Q90 — Leitura de polos em uma transferência fatorada",
+    "theory": [
+      {
+        "title": "Raízes do denominador",
+        "paragraphs": [
+          "Polos são os valores de s que anulam o denominador depois de verificar cancelamentos com o numerador. Se um fator é s+a, sua raiz é s=−a.",
+          "Para coeficientes reais, polos complexos não reais aparecem em pares conjugados σ±jω. O sinal da parte real determina decaimento ou crescimento do modo."
+        ]
+      },
+      {
+        "title": "Zeros do numerador",
+        "paragraphs": [
+          "O numerador 10s³ fornece três zeros na origem, contados com multiplicidade. O expoente 3 não é um polo em −3 e tampouco um zero no valor 3.",
+          "Como os fatores do denominador não se anulam em s=0, não há cancelamento com esses zeros."
+        ]
+      },
+      {
+        "title": "Sinais nos fatores complexos",
+        "paragraphs": [
+          "É preciso resolver cada equação de fator igual a zero. Por exemplo, s+2+j4=0 leva a s=−2−j4; o fator conjugado produz a outra raiz."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Listar os fatores do denominador",
+        "paragraphs": [
+          "Eles são (s+5), (s+2+j4), (s+2−j4), (s+8+j8) e (s+8−j8)."
+        ]
+      },
+      {
+        "title": "Igualar cada fator a zero",
+        "paragraphs": [
+          "Movemos os termos constantes para o outro lado, invertendo seus sinais."
+        ],
+        "formula": "s₁=−5\ns₂,₃=−2±j4\ns₄,₅=−8±j8"
+      },
+      {
+        "title": "Conferir ausência de cancelamentos",
+        "paragraphs": [
+          "Nenhum desses polos é zero, enquanto o numerador só se anula em s=0. Portanto, todos os cinco polos permanecem."
+        ]
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "A lista corresponde à alternativa D. Todas as partes reais são negativas, coerentes com estabilidade da transferência causal."
+        ]
+      }
+    ],
+    "answer": "D — −5; −2±j4; −8±j8",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 415 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "352895",
+    "title": "Q91 — Equivalência de diagramas pela álgebra de blocos",
+    "theory": [
+      {
+        "title": "Série e paralelo",
+        "paragraphs": [
+          "Um bloco G multiplica o sinal de entrada pela sua transferência. Em série, a saída de um bloco alimenta o seguinte, então os ganhos se multiplicam. Em paralelo, as saídas são somadas ou subtraídas conforme os sinais do somador."
+        ],
+        "formula": "Série: Y=G₂(G₁X) ⇒ G_eq=G₁G₂\nParalelo aditivo: Y=G₁X+G₂X ⇒ G_eq=G₁+G₂"
+      },
+      {
+        "title": "Realimentação negativa",
+        "paragraphs": [
+          "Se E=X−HY e Y=GE, substituímos a equação do erro na da saída. O denominador 1+GH é resultado dessa eliminação algébrica.",
+          "Alterar a posição de um somador em relação a um bloco exige compensar o ganho dos ramos afetados. Não basta mover o desenho."
+        ],
+        "formula": "Y=G(X−HY)\n(1+GH)Y=GX\nY/X=G/(1+GH)"
+      },
+      {
+        "title": "Teste geral de equivalência",
+        "paragraphs": [
+          "Dois diagramas são equivalentes quando produzem a mesma relação entre todos os sinais externos. A forma mais segura de verificar é escrever as equações dos nós e comparar as transferências resultantes."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Aplicar a regra à alternativa C",
+        "paragraphs": [
+          "O ramo direto é G₁ e a realimentação negativa é H₁. Eliminando o erro, encontramos exatamente o bloco equivalente desenhado."
+        ],
+        "formula": "Y=G₁(X−H₁Y)\nY/X=G₁/(1+G₁H₁)"
+      },
+      {
+        "title": "Verificar por que A e B falham",
+        "paragraphs": [
+          "Em A, blocos em série foram substituídos por uma soma; em série deve haver produto. Em B, as três contribuições de retorno chegam subtraindo sinais proporcionais à mesma saída, por isso o retorno equivalente é H₁+H₂+H₃, não H₁H₂H₃."
+        ]
+      },
+      {
+        "title": "Verificar a mudança indevida em D",
+        "paragraphs": [
+          "No original, G₁ está antes do somador da malha com G₂. Assim, Y/X=G₁G₂/(1+G₂H₁). No equivalente proposto, G₁ também entra no ganho de malha, produzindo denominador diferente."
+        ],
+        "formula": "Original: G₁G₂/(1+G₂H₁)\nProposto: G₁G₂/(1+G₁G₂H₁)"
+      },
+      {
+        "title": "Verificar os dois sinais externos em E",
+        "paragraphs": [
+          "No original, Y=G₂(K₁X−K₂Z). No proposto, Y=K₂[(K₁/K₂)X−Z]=K₁X−K₂Z. O fator G₂ foi perdido."
+        ]
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "Somente C preserva a relação entre entrada e saída para blocos genéricos."
+        ]
+      }
+    ],
+    "answer": "C — G₁/(1+G₁H₁)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.1 — realimentação linear; p. 489 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/realimentacao.pdf#page=2"
+      }
+    ]
+  },
+  {
+    "qid": "352903",
+    "title": "Q92 — Hipóteses e qualidade de um modelo matemático",
+    "theory": [
+      {
+        "title": "Modelo e finalidade",
+        "paragraphs": [
+          "Um modelo representa os aspectos relevantes de um sistema para uma tarefa: analisar estabilidade, prever respostas, projetar controle ou estimar estados. Ele não precisa reproduzir todos os detalhes físicos.",
+          "Uma simplificação é adequada quando preserva os fenômenos importantes na faixa de operação e na escala de tempo consideradas."
+        ]
+      },
+      {
+        "title": "Linearização em torno de um ponto",
+        "paragraphs": [
+          "Para um componente não linear y=f(x), a aproximação de primeira ordem usa a derivada no ponto de operação x₀. Ela é local: se a perturbação cresce muito, os termos desprezados podem se tornar relevantes."
+        ],
+        "formula": "y≈f(x₀)+f′(x₀)(x−x₀)\nΔy≈f′(x₀)Δx"
+      },
+      {
+        "title": "Precisão e validação",
+        "paragraphs": [
+          "As previsões devem ser comparadas com dados ou com o comportamento físico esperado. “Razoavelmente precisas” significa suficientemente precisas para a finalidade especificada, não idênticas em qualquer situação.",
+          "A validade limitada de um modelo linearizado deve ser registrada; fora dessa faixa, pode ser necessário recalcular o ponto de operação ou empregar o modelo não linear."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Avaliar a afirmativa I",
+        "paragraphs": [
+          "Ela trata da linearização de relações entrada–saída em torno de pontos de operação. Na análise linear, isso permite representar muitos componentes não lineares dentro de uma faixa limitada de variações. A afirmativa é correta nesse contexto."
+        ]
+      },
+      {
+        "title": "Avaliar a afirmativa II",
+        "paragraphs": [
+          "Preservar os aspectos essenciais do componente é justamente a finalidade de um modelo útil. A afirmativa é correta."
+        ]
+      },
+      {
+        "title": "Avaliar a afirmativa III",
+        "paragraphs": [
+          "Um modelo precisa prever o comportamento com precisão adequada ao uso; de outro modo, não sustenta a análise ou o projeto. A afirmativa é correta."
+        ]
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "As três afirmativas são compatíveis com a teoria de modelagem: alternativa E. A linearização de I é uma aproximação local, não uma afirmação de que todos os sistemas sejam globalmente lineares."
+        ]
+      }
+    ],
+    "answer": "E — I, II e III",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 1.5 e 2.4 — modelos, equações e diagramas; p. 25 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/modelos_equacoes.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "352905",
+    "title": "Q93 — Erro estacionário causado por uma perturbação",
+    "theory": [
+      {
+        "title": "Superposição de entradas",
+        "paragraphs": [
+          "Em uma malha linear com referência R(s) e perturbação D(s), o erro total pode ser separado em duas parcelas. Para calcular a parcela causada pela perturbação, colocamos R(s)=0.",
+          "A posição de entrada de D importa. Na figura, D é somada depois do controlador e antes do processo."
+        ]
+      },
+      {
+        "title": "Equações da malha",
+        "paragraphs": [
+          "O retorno é unitário e negativo. Chamando a saída de C(s), temos E=R−C. O processo recebe G₁E+D, de modo que C=G₂(G₁E+D).",
+          "Resolver essas equações separa a contribuição de cada entrada."
+        ],
+        "formula": "E=R/(1+G₁G₂) − [G₂/(1+G₁G₂)]D"
+      },
+      {
+        "title": "Valor final e hipótese de perturbação",
+        "paragraphs": [
+          "Para um degrau de perturbação de amplitude D₀, D(s)=D₀/s. Se a malha resultante for estável, o erro estacionário é limₛ→₀sE(s).",
+          "O recorte não explicita a amplitude nem a forma de D. O valor numérico do gabarito corresponde à hipótese usual de perturbação degrau unitário. Para outra amplitude, o erro se escala por D₀."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Substituir os blocos da figura",
+        "paragraphs": [
+          "O controlador é G₁=1000 e o processo é G₂=1/[s(s+25)]."
+        ]
+      },
+      {
+        "title": "Isolar a parcela do erro devida a D",
+        "paragraphs": [
+          "Com R=0, a equação geral fornece a transferência abaixo."
+        ],
+        "formula": "E_D/D = −G₂/(1+1000G₂)\nE_D/D = −1/(s²+25s+1000)"
+      },
+      {
+        "title": "Verificar a estabilidade necessária ao limite",
+        "paragraphs": [
+          "O denominador é de segunda ordem com coeficientes 25 e 1000 positivos, logo seus polos têm parte real negativa. Podemos aplicar o teorema do valor final."
+        ]
+      },
+      {
+        "title": "Aplicar o degrau unitário",
+        "paragraphs": [
+          "Usamos D(s)=1/s, hipótese que reproduz a resposta numérica oferecida."
+        ],
+        "formula": "e_D(∞)=limₛ→₀ s·[−1/(s(s²+25s+1000))]\n=−1/1000"
+      },
+      {
+        "title": "Interpretar o sinal",
+        "paragraphs": [
+          "A perturbação positiva tende a aumentar a saída; como e=r−c, a parcela do erro é negativa. A alternativa A é correta sob a hipótese de degrau unitário; em geral, e_D(∞)=−D₀/1000."
+        ]
+      }
+    ],
+    "answer": "A — −1/1000 para uma perturbação degrau unitário",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.1 — realimentação linear; p. 489 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/realimentacao.pdf#page=2"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.5.10 — valores inicial e final; p. 412 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/laplace_valores_limites.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "352906",
+    "title": "Q94 — Especificações de desempenho e a frequência da rede",
+    "theory": [
+      {
+        "title": "Desempenho transitório e estacionário",
+        "paragraphs": [
+          "Especificações de controle descrevem o comportamento desejado da malha. Amortecimento caracteriza a oscilação e o decaimento; velocidade de resposta pode ser medida por tempos de subida e acomodação; precisão em regime permanente pode ser medida pelo erro final.",
+          "Para o sistema padrão de segunda ordem, ζ é a razão de amortecimento e ωₙ é a frequência natural. O tempo de acomodação depende do critério de tolerância usado."
+        ],
+        "formula": "D(s)=s²+2ζωₙs+ωₙ²\ne_ss=limₜ→∞[r(t)−y(t)]"
+      },
+      {
+        "title": "Confiabilidade",
+        "paragraphs": [
+          "Confiabilidade trata da probabilidade de o sistema cumprir sua função durante determinado intervalo e sob determinadas condições. Ela pode ser modelada matematicamente, inclusive por distribuições de falha.",
+          "Portanto, a presença de uma análise probabilística, em vez de uma equação de dinâmica, não retira seu caráter matemático."
+        ]
+      },
+      {
+        "title": "Leitura contextual da questão",
+        "paragraphs": [
+          "A frequência da rede de alimentação costuma ser uma condição externa de operação. No contexto das alternativas, ela é distinguida das especificações de desempenho do sistema de controle.",
+          "Isso não significa que a frequência da rede seja impossível de modelar. Uma senoide de entrada tem uma expressão matemática direta. O enunciado é amplo, e a resposta do caderno só é defensável por essa interpretação contextual."
+        ],
+        "formula": "v(t)=V_m sen(2πf_rede t+φ)"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar as especificações de controle listadas",
+        "paragraphs": [
+          "Amortecimento, velocidade de resposta e precisão estacionária descrevem comportamentos que o projeto busca alcançar. As alternativas B, C e D se enquadram nesse grupo."
+        ]
+      },
+      {
+        "title": "Reconhecer a possibilidade de modelar confiabilidade",
+        "paragraphs": [
+          "Confiabilidade pode ser avaliada por um modelo estatístico, portanto E não é a exclusão pretendida."
+        ]
+      },
+      {
+        "title": "Distinguir condição externa de requisito de desempenho",
+        "paragraphs": [
+          "A frequência de entrada da rede é tratada como uma condição imposta ao equipamento, e não como uma qualidade da resposta a ser ajustada pelo controlador."
+        ]
+      },
+      {
+        "title": "Registrar a resposta e o limite da afirmação",
+        "paragraphs": [
+          "O gabarito indica A. A conclusão deve ser entendida no contexto de especificações de projeto; a alegação literal de que frequência não admite modelo matemático seria incorreta."
+        ]
+      }
+    ],
+    "answer": "A — frequência de entrada da rede, no contexto das especificações de desempenho",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352910",
+    "title": "Q95 — Função de transferência de massa, mola e amortecedor",
+    "theory": [
+      {
+        "title": "Forças do modelo mecânico",
+        "paragraphs": [
+          "A massa m apresenta inércia; a mola de rigidez K exerce força restauradora proporcional ao deslocamento x; o amortecedor viscoso de coeficiente b exerce força oposta à velocidade ẋ.",
+          "Consideramos x medido a partir do equilíbrio e adotamos o sentido da força externa f como positivo. As forças da mola e do amortecedor entram com sinais negativos."
+        ],
+        "formula": "F_mola=−Kx\nF_amortecedor=−bẋ\nΣF=mẍ"
+      },
+      {
+        "title": "Equação diferencial",
+        "paragraphs": [
+          "Aplicar a segunda lei de Newton fornece mẍ=f−bẋ−Kx. Reunindo os termos da saída, temos a equação padrão de segunda ordem.",
+          "As unidades são: m em kg, b em N·s/m, K em N/m, x em m e f em N."
+        ],
+        "formula": "mẍ+bẋ+Kx=f(t)"
+      },
+      {
+        "title": "Passagem para a função de transferência",
+        "paragraphs": [
+          "A razão X(s)/F(s) pressupõe condições iniciais nulas. Nesse caso, derivadas de primeira e segunda ordem geram sX e s²X.",
+          "A ordem dos coeficientes tem significado físico: a massa acompanha s², o amortecimento acompanha s e a rigidez acompanha o termo constante."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Equilibrar as forças",
+        "paragraphs": [
+          "O termo forçante precisa vencer a inércia, a força viscosa e a força elástica. Logo, f=mẍ+bẋ+Kx."
+        ]
+      },
+      {
+        "title": "Aplicar Laplace",
+        "paragraphs": [
+          "Usando repouso inicial, agrupamos os fatores de X(s)."
+        ],
+        "formula": "ms²X(s)+bsX(s)+KX(s)=F(s)"
+      },
+      {
+        "title": "Isolar a saída por unidade de força",
+        "paragraphs": [
+          "Dividimos pelo polinômio da dinâmica e por F(s)."
+        ],
+        "formula": "G(s)=X(s)/F(s)=1/(ms²+bs+K)"
+      },
+      {
+        "title": "Conferir o regime estático",
+        "paragraphs": [
+          "Para s→0, G(0)=1/K: uma força constante desloca a mola de f/K no equilíbrio. Essa verificação também confirma a posição de K no denominador. A alternativa E é correta."
+        ]
+      }
+    ],
+    "answer": "E — 1/(ms²+bs+K)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.5 — sistemas de primeira e segunda ordem; p. 265 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/primeira_segunda_ordem.pdf#page=3"
+      }
+    ]
+  },
+  {
+    "qid": "356710",
+    "title": "Q96 — A planta e as variáveis de uma malha de controle",
+    "theory": [
+      {
+        "title": "Planta ou processo",
+        "paragraphs": [
+          "A planta é o objeto físico ou processo cujo comportamento se deseja controlar: por exemplo, um motor, um tanque ou um forno. Ela contém as grandezas de interesse, como velocidade, nível ou temperatura.",
+          "Um modelo G(s) da planta relaciona uma entrada manipulada a uma saída controlada, dentro de hipóteses e condições de operação."
+        ],
+        "formula": "Y(s)=G(s)U(s)"
+      },
+      {
+        "title": "Variáveis de referência, controle e medição",
+        "paragraphs": [
+          "A referência r é o valor desejado. A variável controlada y é a grandeza física que se procura regular. A variável manipulada u é ajustada pelo controlador/atuador para influenciar y.",
+          "A medição y_m é a informação devolvida pelo sensor; o erro e é obtido no comparador. Mesmo que o sensor tenha ganho unitário, os papéis conceituais continuam distintos."
+        ],
+        "formula": "e(t)=r(t)−y_m(t)"
+      },
+      {
+        "title": "Exemplo concreto",
+        "paragraphs": [
+          "No controle de temperatura de um forno, a planta é o forno; a temperatura é a variável controlada; a potência de aquecimento é a variável manipulada; o termopar fornece a medição; a referência é a temperatura programada."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar o elemento descrito",
+        "paragraphs": [
+          "O enunciado pergunta o que caracteriza a planta dentro da malha fechada."
+        ]
+      },
+      {
+        "title": "Relacionar o elemento ao objetivo do controle",
+        "paragraphs": [
+          "É na planta que existem as grandezas físicas cujo comportamento desejamos regular. Elas são as variáveis a serem controladas."
+        ]
+      },
+      {
+        "title": "Distinguir das demais opções",
+        "paragraphs": [
+          "Erro e referência pertencem à comparação com o objetivo. Medição descreve a função do sensor, e variável manipulada descreve o meio de atuação."
+        ]
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "A alternativa D define a planta pelo papel correto: possuir as variáveis a serem controladas."
+        ]
+      }
+    ],
+    "answer": "D — a(s) variável(eis) a ser(em) controlada(s)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.1 — realimentação linear; p. 488 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/realimentacao.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "356711",
+    "title": "Q97 — Ganho de malha e transferência de malha fechada",
+    "theory": [
+      {
+        "title": "Caminho direto e caminho de retorno",
+        "paragraphs": [
+          "No diagrama, C(s) representa o controlador, G(s) a planta e H(s) o bloco de medição/retorno. O produto C(s)G(s) é a transferência do caminho direto, do erro até a saída.",
+          "O ganho de malha L(s) é o produto dos blocos percorridos em uma volta completa. A expressão “função de transferência de malha aberta” é usada nesta questão nesse sentido."
+        ],
+        "formula": "G_direto(s)=C(s)G(s)\nL(s)=C(s)G(s)H(s)"
+      },
+      {
+        "title": "Relação com a malha fechada",
+        "paragraphs": [
+          "Com realimentação negativa, E=R−HY e Y=CG·E. A transferência entre referência e saída contém um denominador 1+L.",
+          "A equação característica 1+L=0 mostra por que o sensor também participa da análise de estabilidade da malha."
+        ],
+        "formula": "Y/R=CG/(1+CGH)"
+      },
+      {
+        "title": "Cuidado com a terminologia",
+        "paragraphs": [
+          "Em alguns contextos, “malha aberta” pode designar apenas o ramo direto após retirar o retorno. É preciso verificar a convenção da pergunta. Aqui, as alternativas e o gabarito adotam o produto de laço CGH."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Percorrer uma volta no diagrama",
+        "paragraphs": [
+          "Partimos da saída do somador, passamos por C(s), por G(s) e retornamos através de H(s)."
+        ]
+      },
+      {
+        "title": "Multiplicar os blocos em série no percurso",
+        "paragraphs": [
+          "Cada bloco multiplica o sinal que recebe. Assim, o produto da volta é C(s)G(s)H(s)."
+        ]
+      },
+      {
+        "title": "Distinguir o produto do ramo direto",
+        "paragraphs": [
+          "C(s)G(s), alternativa A, não inclui o bloco de retorno. Ele é apenas a transferência do caminho direto."
+        ]
+      },
+      {
+        "title": "Distinguir da transferência fechada",
+        "paragraphs": [
+          "C(s)G(s)/[1+C(s)G(s)H(s)], alternativa E, já resolve a realimentação e relaciona Y com R. A FTMA solicitada é a alternativa B."
+        ]
+      }
+    ],
+    "answer": "B — C(s)G(s)H(s)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.1 — realimentação linear; p. 489 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/realimentacao.pdf#page=2"
+      }
+    ]
+  },
+  {
+    "qid": "356712",
+    "title": "Q98 — Valor final da resposta ao degrau de primeira ordem",
+    "theory": [
+      {
+        "title": "Modelo de primeira ordem",
+        "paragraphs": [
+          "A transferência K/(τs+1), com τ>0, tem ganho estático K e um polo real em −1/τ. A constante de tempo τ controla a rapidez do transitório, enquanto K controla a relação de amplitudes em regime permanente."
+        ],
+        "formula": "G(s)=K/(τs+1)\nG(0)=K"
+      },
+      {
+        "title": "Entrada degrau e resposta",
+        "paragraphs": [
+          "O degrau unitário vale 1 a partir de t=0 e tem transformada 1/s. A saída em repouso inicial é o produto G(s)R(s). Decompor esse produto permite identificar um termo constante e um exponencial decrescente."
+        ],
+        "formula": "R(s)=1/s\nY(s)=K/[s(τs+1)]\ny(t)=K(1−exp(−t/τ)), t≥0"
+      },
+      {
+        "title": "Teorema do valor final",
+        "paragraphs": [
+          "Como τ>0, o polo de sY(s) está à esquerda, e o valor final existe. Podemos calcular limₛ→₀sY(s) sem obter toda a resposta temporal.",
+          "Se a entrada tivesse amplitude A, o valor final seria KA; aqui a amplitude é unitária."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Multiplicar a transferência pela entrada",
+        "paragraphs": [
+          "Para o degrau unitário, Y(s)=K/[s(τs+1)]."
+        ]
+      },
+      {
+        "title": "Aplicar o valor final",
+        "paragraphs": [
+          "Multiplicamos por s, cancelamos o fator do degrau e fazemos s tender a zero."
+        ],
+        "formula": "y(∞)=limₛ→₀ K/(τs+1)=K"
+      },
+      {
+        "title": "Conferir pela resposta no tempo",
+        "paragraphs": [
+          "Na expressão K(1−exp(−t/τ)), o termo exponencial tende a zero para τ>0. Resta K."
+        ]
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "A alternativa A é correta. τ muda quanto tempo leva para a saída aproximar-se do valor final; não muda esse valor."
+        ]
+      }
+    ],
+    "answer": "A — K",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.5 — sistemas de primeira e segunda ordem; p. 262 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/primeira_segunda_ordem.pdf#page=1"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.5.10 — valores inicial e final; p. 412 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/laplace_valores_limites.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "356713",
+    "title": "Q99 — Por que o regime permanente é aproximado por 5τ",
+    "theory": [
+      {
+        "title": "Resposta de primeira ordem ao degrau",
+        "paragraphs": [
+          "Para G(s)=K/(τs+1), τ>0 e repouso inicial, a resposta ao degrau unitário é K(1−exp(−t/τ)). A diferença para o valor final K decai exponencialmente.",
+          "Em sentido matemático, o valor final só é atingido exatamente no limite t→∞. “Atingir o regime permanente” em engenharia significa entrar e permanecer em uma faixa de tolerância."
+        ],
+        "formula": "y(t)=K(1−exp(−t/τ))\n|K−y(t)|/|K|=exp(−t/τ), para K≠0"
+      },
+      {
+        "title": "Tempo de acomodação por tolerância",
+        "paragraphs": [
+          "Se aceitamos erro relativo de no máximo ε, resolvemos exp(−t/τ)≤ε. Isso fornece o tempo mínimo correspondente àquela tolerância."
+        ],
+        "formula": "t_s≥−τ ln ε\n2%: t_s≈3,91τ\n1%: t_s≈4,61τ"
+      },
+      {
+        "title": "Regra prática de cinco constantes de tempo",
+        "paragraphs": [
+          "Em 5τ, resta apenas e⁻⁵≈0,00674 do erro inicial, ou cerca de 0,67%. A saída atingiu aproximadamente 99,33% do valor final.",
+          "A regra de 5τ é uma aproximação prática. Ela não significa que o transitório se tornou matematicamente zero."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar a constante que define a rapidez",
+        "paragraphs": [
+          "A constante de tempo do denominador é τ. K é o ganho, não uma unidade de duração."
+        ]
+      },
+      {
+        "title": "Calcular o erro remanescente em 5τ",
+        "paragraphs": [
+          "Substituímos t=5τ na expressão do erro relativo."
+        ],
+        "formula": "exp(−5τ/τ)=e⁻⁵≈0,00674=0,674%"
+      },
+      {
+        "title": "Comparar com 2τ",
+        "paragraphs": [
+          "Em 2τ, o erro ainda é e⁻²≈13,5%, muito grande para considerar o regime estabelecido. Em 20τ, o erro seria minúsculo, mas a espera é muito além da aproximação usual."
+        ]
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "Entre as opções, 5τ é a aproximação prática adotada pela questão: alternativa B."
+        ]
+      }
+    ],
+    "answer": "B — aproximadamente 5τ",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.5 — sistemas de primeira e segunda ordem; p. 262 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/primeira_segunda_ordem.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "356714",
+    "title": "Q100 — Valor inicial da resposta ao impulso de primeira ordem",
+    "theory": [
+      {
+        "title": "Impulso versus degrau",
+        "paragraphs": [
+          "O impulso unitário δ(t) tem transformada de Laplace igual a 1. Por isso, a resposta ao impulso de um sistema em repouso inicial tem transformada igual à própria função de transferência.",
+          "O degrau tem transformada 1/s e gera uma saída diferente. Não se deve acrescentar esse fator ao resolver uma entrada impulsiva."
+        ]
+      },
+      {
+        "title": "Par de Laplace da exponencial",
+        "paragraphs": [
+          "A função causal e⁻ᵃᵗu(t) tem transformada 1/(s+a). Reescrever o denominador de primeira ordem nessa forma permite inverter a resposta ao impulso."
+        ],
+        "formula": "G(s)=K/(τs+1)=(K/τ)/(s+1/τ)\nh(t)=(K/τ)exp(−t/τ)u(t)"
+      },
+      {
+        "title": "Significado de t=0⁺",
+        "paragraphs": [
+          "Como a resposta pode saltar na origem, usamos o limite imediatamente após a aplicação do impulso. Para essa transferência estritamente própria, não há termo impulsivo direto na saída; o valor h(0⁺) é finito.",
+          "O teorema do valor inicial fornece o mesmo resultado: h(0⁺)=limₛ→∞sG(s)."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Escrever a saída no domínio de Laplace",
+        "paragraphs": [
+          "A entrada impulsiva tem R(s)=1. Logo, Y(s)=G(s)=K/(τs+1)."
+        ]
+      },
+      {
+        "title": "Aplicar o valor inicial",
+        "paragraphs": [
+          "Multiplicamos Y(s) por s e dividimos numerador e denominador por s."
+        ],
+        "formula": "y(0⁺)=limₛ→∞ Ks/(τs+1)\n=limₛ→∞ K/(τ+1/s)=K/τ"
+      },
+      {
+        "title": "Conferir pela inversa",
+        "paragraphs": [
+          "Na expressão (K/τ)exp(−t/τ), a exponencial vale 1 em t=0⁺. O valor é novamente K/τ."
+        ]
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "A alternativa A é correta. K é o valor final da resposta ao degrau; K/τ é o valor inicial da resposta ao impulso."
+        ]
+      }
+    ],
+    "answer": "A — K/τ",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.5 — sistemas de primeira e segunda ordem; p. 262 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/primeira_segunda_ordem.pdf#page=1"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.5.10 — valores inicial e final; p. 412 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/laplace_valores_limites.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "356719",
+    "title": "Q101 — Cancelamento de polo e polos da malha fechada",
+    "theory": [
+      {
+        "title": "Transferência em cascata e cancelamento",
+        "paragraphs": [
+          "Blocos em série têm transferência igual ao produto. Se um fator do denominador de um bloco coincide com um fator do numerador de outro, a transferência pode ser reduzida por cancelamento.",
+          "Esse procedimento descreve a relação externa ideal. Cancelar um polo instável pode esconder um modo interno perigoso; na questão, o fator cancelado corresponde ao polo estável −8."
+        ]
+      },
+      {
+        "title": "Planta e compensador",
+        "paragraphs": [
+          "A planta é G(s)=1/(s²−64), com polos +8 e −8. O compensador é H(s)=K(s+8)/(s+12), com zero em −8 e polo em −12.",
+          "O zero do compensador cancela o fator s+8 da planta. O polo instável +8 permanece e deve ser estabilizado pela realimentação."
+        ],
+        "formula": "s²−64=(s−8)(s+8)\nG(s)H(s)=K/[(s−8)(s+12)]"
+      },
+      {
+        "title": "Equação característica",
+        "paragraphs": [
+          "Para retorno unitário negativo, a transferência fechada é GH/(1+GH). Seus polos externos são as raízes do denominador resultante.",
+          "Um par complexo em um modelo com coeficientes reais deve aparecer junto com seu conjugado."
+        ],
+        "formula": "D_fechado(s)=(s−8)(s+12)+K"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Efetuar o cancelamento indicado",
+        "paragraphs": [
+          "Cancelamos s+8 entre numerador e denominador, obtendo GH=K/[(s−8)(s+12)]."
+        ]
+      },
+      {
+        "title": "Formar o denominador fechado",
+        "paragraphs": [
+          "Expandimos o produto e acrescentamos K, conforme 1+GH=0."
+        ],
+        "formula": "D_fechado(s)=s²+4s−96+K"
+      },
+      {
+        "title": "Substituir K=125",
+        "paragraphs": [
+          "O termo constante passa a −96+125=29."
+        ],
+        "formula": "D_fechado(s)=s²+4s+29"
+      },
+      {
+        "title": "Calcular as raízes",
+        "paragraphs": [
+          "Completando o quadrado, obtemos (s+2)²+25=0."
+        ],
+        "formula": "(s+2)²=−25\ns=−2±j5"
+      },
+      {
+        "title": "Interpretar o resultado",
+        "paragraphs": [
+          "A parte real −2 indica decaimento, e a parte imaginária ±5 indica oscilação. A alternativa A apresenta o representante −2+j5; o conjugado −2−j5 também faz parte do par.",
+          "Na realização completa pode permanecer o modo interno estável cancelado em −8. A questão pede os polos da transferência reduzida de malha fechada."
+        ]
+      }
+    ],
+    "answer": "A — polos da transferência reduzida em −2±j5",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.3 — lugar das raízes; p. 498 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/lugar_raizes.pdf#page=2"
+      }
+    ]
+  },
+  {
+    "qid": "356742",
+    "title": "Q102 — Valor estacionário de uma transformada racional",
+    "theory": [
+      {
+        "title": "Teorema do valor final",
+        "paragraphs": [
+          "Para um sinal causal que converge a um valor finito, v(∞)=limₛ→₀sV(s). Uma condição suficiente usual para o caso racional é que todos os polos de sV(s) estejam estritamente no semiplano esquerdo.",
+          "Um polo simples em zero de V(s) pode representar uma componente constante. O fator s do teorema remove esse polo antes de avaliar o limite."
+        ]
+      },
+      {
+        "title": "Condições precisam ser verificadas",
+        "paragraphs": [
+          "Não basta substituir s=0 mecanicamente. Um sinal com polos em parte real positiva ou com oscilações persistentes pode não ter valor final, mesmo quando a manipulação formal produz um número.",
+          "A fatoração do denominador permite verificar rapidamente se o limite corresponde a um comportamento estacionário real."
+        ]
+      },
+      {
+        "title": "Fatoração útil",
+        "paragraphs": [
+          "As identidades s³+9s²+20s=s(s+4)(s+5) e s²+5s+4=(s+1)(s+4) permitem ver os polos e um cancelamento comum."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Fatorar a expressão dada",
+        "paragraphs": [
+          "Partimos de V(s)=180(s²+5s+4)/[(s³+9s²+20s)(s+3)]."
+        ],
+        "formula": "V(s)=180(s+1)(s+4)/[s(s+4)(s+5)(s+3)]"
+      },
+      {
+        "title": "Simplificar e verificar estabilidade",
+        "paragraphs": [
+          "Cancelamos s+4. Os polos de sV(s) restantes são −5 e −3, ambos à esquerda. O teorema do valor final é aplicável."
+        ],
+        "formula": "sV(s)=180(s+1)/[(s+5)(s+3)]"
+      },
+      {
+        "title": "Avaliar o limite",
+        "paragraphs": [
+          "Substituímos s=0 na expressão simplificada."
+        ],
+        "formula": "v(∞)=180·1/(5·3)=180/15=12"
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "O valor estacionário é 12, alternativa D. O polo na origem de V(s) é compatível com essa componente final constante."
+        ]
+      }
+    ],
+    "answer": "D — 12",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.5.10 — valores inicial e final; p. 412 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/laplace_valores_limites.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "356746",
+    "title": "Q103 — Solução de uma EDO e condições iniciais ausentes",
+    "theory": [
+      {
+        "title": "Equação homogênea de segunda ordem",
+        "paragraphs": [
+          "Uma equação a₂ẍ+a₁ẋ+a₀x=0 descreve a resposta livre de um sistema linear. Procurar soluções x=eʳᵗ transforma a equação diferencial em uma equação algébrica característica.",
+          "Se as raízes r₁ e r₂ forem reais e distintas, a solução geral é uma combinação linear de duas exponenciais."
+        ],
+        "formula": "a₂r²+a₁r+a₀=0\nx(t)=A eʳ¹ᵗ+B eʳ²ᵗ"
+      },
+      {
+        "title": "Por que são necessárias duas condições iniciais",
+        "paragraphs": [
+          "Uma equação de segunda ordem possui duas constantes livres. Para determinar A e B, normalmente são fornecidos x(0) e ẋ(0). A validade para t≥0 não determina esses valores.",
+          "Dizer que um sinal é definido apenas após t=0 também não autoriza presumir automaticamente repouso inicial."
+        ]
+      },
+      {
+        "title": "Limitação do enunciado fornecido",
+        "paragraphs": [
+          "Tanto o recorte quanto o caderno original apresentam “Considerando ,” sem informar as condições iniciais. Assim, os dados disponíveis não selecionam uma única alternativa.",
+          "A resolução abaixo encontra a família de soluções e mostra quais condições fazem a alternativa C, indicada pelo caderno, resultar. Essas condições são uma reconstrução compatível com o gabarito, não dados presentes no PDF."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Normalizar a equação",
+        "paragraphs": [
+          "Dividimos 2ẍ+18ẋ+40x=0 por 2."
+        ],
+        "formula": "ẍ+9ẋ+20x=0"
+      },
+      {
+        "title": "Resolver a equação característica",
+        "paragraphs": [
+          "Substituímos x=eʳᵗ e fatoramos."
+        ],
+        "formula": "r²+9r+20=(r+4)(r+5)=0\nr₁=−4; r₂=−5"
+      },
+      {
+        "title": "Escrever a solução geral",
+        "paragraphs": [
+          "Os dois modos são exponenciais decrescentes. As constantes ainda dependem das condições iniciais."
+        ],
+        "formula": "x(t)=A e⁻⁴ᵗ+B e⁻⁵ᵗ\nx(0)=A+B\nẋ(0)=−4A−5B"
+      },
+      {
+        "title": "Verificar a alternativa indicada pelo gabarito",
+        "paragraphs": [
+          "Na alternativa C, A=5 e B=−4. Isso implica x(0)=1 e ẋ(0)=0. Se essas fossem as condições fornecidas, o sistema abaixo determinaria C de forma única."
+        ],
+        "formula": "A+B=1\n−4A−5B=0\n⇒ A=5 e B=−4\nx(t)=5e⁻⁴ᵗ−4e⁻⁵ᵗ"
+      },
+      {
+        "title": "Conferir e registrar o que os dados permitem",
+        "paragraphs": [
+          "Para C, ẋ=−20e⁻⁴ᵗ+20e⁻⁵ᵗ e ẍ=80e⁻⁴ᵗ−100e⁻⁵ᵗ. A substituição em ẍ+9ẋ+20x cancela cada exponencial.",
+          "As alternativas B, D e E também combinam os mesmos modos e satisfazem a EDO, mas com outras condições iniciais. Portanto, C é o gabarito do caderno; a escolha única depende dos dados que faltam."
+        ]
+      }
+    ],
+    "answer": "C — 5e⁻⁴ᵗ−4e⁻⁵ᵗ; corresponde a x(0)=1 e ẋ(0)=0, omitidos no PDF",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 1.5 e 2.4 — modelos, equações e diagramas; p. 70 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/modelos_equacoes.pdf#page=4"
+      }
+    ]
+  },
+  {
+    "qid": "356748",
+    "title": "Q104 — Polos a partir da matriz de estados",
+    "theory": [
+      {
+        "title": "Modos naturais e autovalores",
+        "paragraphs": [
+          "No modelo ẋ=Ax+Bu, a resposta livre depende de eᴬᵗ. Os autovalores de A determinam os modos naturais. Eles são encontrados pela equação det(sI−A)=0.",
+          "Para uma matriz 2×2, o polinômio característico também pode ser escrito s²−tr(A)s+det(A). Os elementos da diagonal não são, em geral, os autovalores."
+        ],
+        "formula": "det(sI−A)=0"
+      },
+      {
+        "title": "Relação com polos da transferência",
+        "paragraphs": [
+          "A função de transferência é G(s)=C(sI−A)⁻¹B+D, sob repouso inicial. Autovalores podem desaparecer da transferência se houver modos não controláveis ou não observáveis.",
+          "Quando a realização é mínima, os autovalores são os polos da transferência. Nesta questão é possível conferir diretamente que não há cancelamentos."
+        ]
+      },
+      {
+        "title": "Determinante de ordem dois",
+        "paragraphs": [
+          "Para [a b; c d], o determinante é ad−bc. Ao montar sI−A, subtraímos todos os elementos de A, incluindo os que estão fora da diagonal."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Montar sI−A",
+        "paragraphs": [
+          "A matriz dada é A=[−4 2; −1 −1]. Subtraindo-a de sI, encontramos:"
+        ],
+        "code": "sI − A = [ s+4   −2  ]\n         [  1    s+1 ]"
+      },
+      {
+        "title": "Calcular o determinante",
+        "paragraphs": [
+          "Multiplicamos a diagonal principal e subtraímos o produto da outra diagonal."
+        ],
+        "formula": "det(sI−A)=(s+4)(s+1)−(−2)(1)\n=s²+5s+6"
+      },
+      {
+        "title": "Fatorar o polinômio",
+        "paragraphs": [
+          "Procuramos dois números que somem 5 e cujo produto seja 6: 2 e 3."
+        ],
+        "formula": "s²+5s+6=(s+2)(s+3)\ns=−2 ou s=−3"
+      },
+      {
+        "title": "Conferir a transferência",
+        "paragraphs": [
+          "Com B=[1;0] e C=[1 −4], obtemos G(s)=(s+5)/[(s+2)(s+3)]. O zero −5 não cancela nenhum polo. A alternativa D é correta."
+        ]
+      }
+    ],
+    "answer": "D — polos em −2 e −3",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 415 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "356754",
+    "title": "Q105 — Mapeamento do semiplano esquerdo para o plano z",
+    "theory": [
+      {
+        "title": "Transformação racional entre variáveis",
+        "paragraphs": [
+          "A questão define w=(z−1)/(Tz), com T>0 e z≠0. Precisamos determinar quais pontos z produzem Re(w)<0.",
+          "A região procurada é a imagem inversa do semiplano esquerdo por essa transformação específica. Não se deve substituir automaticamente pela região usual |z|<1 dos polos discretos."
+        ]
+      },
+      {
+        "title": "Parte real de um quociente complexo",
+        "paragraphs": [
+          "Escrevemos z=x+jy, com x e y reais. Para obter 1/z, multiplicamos pelo conjugado: 1/z=(x−jy)/(x²+y²).",
+          "Como T é positivo, multiplicar uma desigualdade por T não altera seu sentido."
+        ],
+        "formula": "w=(1/T)(1−1/z)\nRe(w)=(1/T)[1−x/(x²+y²)]"
+      },
+      {
+        "title": "Equação de uma circunferência",
+        "paragraphs": [
+          "Uma região (x−a)²+(y−b)²<R² descreve o interior de uma circunferência de centro (a,b) e raio R. Completar o quadrado permite reconhecer esse formato."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Impor a condição de estabilidade contínua",
+        "paragraphs": [
+          "Usamos a expressão da parte real, lembrando que x²+y²>0 para z≠0."
+        ],
+        "formula": "1−x/(x²+y²)<0\nx²+y²<x"
+      },
+      {
+        "title": "Reorganizar a desigualdade",
+        "paragraphs": [
+          "Passamos x para o lado esquerdo e acrescentamos 1/4 para completar o quadrado."
+        ],
+        "formula": "x²−x+y²<0\n(x−1/2)²+y²<1/4"
+      },
+      {
+        "title": "Identificar centro e raio",
+        "paragraphs": [
+          "O centro é (1/2,0) e o raio é √(1/4)=1/2. A desigualdade é estrita, portanto a borda não pertence à região."
+        ]
+      },
+      {
+        "title": "Conferir um ponto e concluir",
+        "paragraphs": [
+          "Para z=1/2, w=−1/T<0, então o centro pertence à região, como esperado. A alternativa B é correta. O ponto z=0 fica na borda e já está excluído pela transformação."
+        ]
+      }
+    ],
+    "answer": "B — interior do círculo de raio 1/2 e centro (1/2, 0)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356756",
+    "title": "Q106 — Fechar a malha antes do bloco de saída",
+    "theory": [
+      {
+        "title": "Ponto de tomada da realimentação",
+        "paragraphs": [
+          "A fórmula G/(1+GK) vale para uma malha negativa cuja saída realimentada é a saída de G. Se outro bloco H aparece depois do ponto de tomada, ele não participa do denominador dessa malha.",
+          "Identificar onde a linha de retorno começa é tão importante quanto ler o valor dos blocos. Incluir H indevidamente no produto de laço muda os polos."
+        ]
+      },
+      {
+        "title": "Equações com um sinal intermediário",
+        "paragraphs": [
+          "Chamamos de V(s) a saída de G e entrada de H. O comparador fornece E=R−KV; os blocos fornecem V=GE e Y=HV.",
+          "Eliminando E e V, encontramos uma malha fechada em cascata com H."
+        ],
+        "formula": "V/R=G/(1+KG)\nY/R=HG/(1+KG)"
+      },
+      {
+        "title": "Transferência racional resultante",
+        "paragraphs": [
+          "Ao substituir frações em G e H, primeiro simplifique a malha interna. Depois multiplique por H e, por último, expanda os polinômios, se as alternativas estiverem nessa forma.",
+          "A função de transferência pressupõe condições iniciais nulas."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler a topologia",
+        "paragraphs": [
+          "A linha que alimenta o ganho K parte entre G e H. Portanto, apenas G e K compõem a volta de realimentação; H fica depois da malha."
+        ]
+      },
+      {
+        "title": "Fechar a malha de G",
+        "paragraphs": [
+          "Substituímos G=5/[s(s+5)] na fórmula de realimentação negativa."
+        ],
+        "formula": "V/R = [5/(s(s+5))]/[1+5K/(s(s+5))]\nV/R = 5/(s²+5s+5K)"
+      },
+      {
+        "title": "Incluir o bloco H em cascata",
+        "paragraphs": [
+          "Como H=10/(s+10), multiplicamos a transferência intermediária por ele."
+        ],
+        "formula": "Y/R = 50/[(s+10)(s²+5s+5K)]"
+      },
+      {
+        "title": "Expandir o denominador",
+        "paragraphs": [
+          "Distribuímos o produto mantendo todos os termos de grau três, dois, um e zero."
+        ],
+        "formula": "(s+10)(s²+5s+5K)\n=s³+15s²+(5K+50)s+50K"
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "O numerador permanece 50, sem um fator extra s+10. A alternativa C é a expressão obtida."
+        ]
+      }
+    ],
+    "answer": "C — 50/[s³+15s²+(5K+50)s+50K]",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.1 — realimentação linear; p. 489 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/realimentacao.pdf#page=2"
+      }
+    ]
+  },
+  {
+    "qid": "356766",
+    "title": "Q107 — Limite de estabilidade pelo critério de Routh",
+    "theory": [
+      {
+        "title": "Routh e polos no semiplano direito",
+        "paragraphs": [
+          "O critério de Routh verifica a estabilidade de um polinômio real sem calcular explicitamente todas as raízes. Quando não há casos singulares, o número de trocas de sinal na primeira coluna da tabela corresponde ao número de raízes no semiplano direito.",
+          "Para estabilidade estrita, todos os elementos da primeira coluna precisam ter o mesmo sinal e ser não nulos."
+        ]
+      },
+      {
+        "title": "Tabela para um polinômio cúbico",
+        "paragraphs": [
+          "Para s³+a₂s²+a₁s+a₀, as duas primeiras linhas vêm dos coeficientes alternados. A terceira linha é calculada por combinação dessas duas linhas."
+        ],
+        "table": {
+          "headers": [
+            "Linha",
+            "1ª coluna",
+            "2ª coluna"
+          ],
+          "rows": [
+            [
+              "s³",
+              "1",
+              "a₁"
+            ],
+            [
+              "s²",
+              "a₂",
+              "a₀"
+            ],
+            [
+              "s¹",
+              "(a₂a₁−a₀)/a₂",
+              "0"
+            ],
+            [
+              "s⁰",
+              "a₀",
+              "0"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Fronteira de estabilidade",
+        "paragraphs": [
+          "Quando a terceira linha se anula, podemos usar o polinômio auxiliar da linha anterior para identificar polos no eixo imaginário. A fronteira não é uma situação de estabilidade assintótica.",
+          "No caso cúbico com coeficientes positivos, a condição adicional é a₂a₁>a₀."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar os coeficientes",
+        "paragraphs": [
+          "O denominador é s³+9s²+23s+(15+K). Portanto, a₂=9, a₁=23 e a₀=15+K."
+        ]
+      },
+      {
+        "title": "Construir a tabela",
+        "paragraphs": [
+          "Substituímos os coeficientes na fórmula de Routh."
+        ],
+        "table": {
+          "headers": [
+            "Linha",
+            "1ª coluna",
+            "2ª coluna"
+          ],
+          "rows": [
+            [
+              "s³",
+              "1",
+              "23"
+            ],
+            [
+              "s²",
+              "9",
+              "15+K"
+            ],
+            [
+              "s¹",
+              "(192−K)/9",
+              "0"
+            ],
+            [
+              "s⁰",
+              "15+K",
+              "0"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Impor os sinais positivos",
+        "paragraphs": [
+          "Como K cresce a partir de zero, 15+K é positivo. A condição que limita o ganho está na linha s¹."
+        ],
+        "formula": "(192−K)/9>0 ⇒ K<192\nFaixa estritamente estável, para K≥0: 0≤K<192"
+      },
+      {
+        "title": "Examinar o ponto crítico",
+        "paragraphs": [
+          "Em K=192, o polinômio fatora em um polo negativo e um par puramente imaginário. Esse é o limite de estabilidade."
+        ],
+        "formula": "s³+9s²+23s+207=(s+9)(s²+23)\ns=−9 e s=±j√23"
+      },
+      {
+        "title": "Concluir",
+        "paragraphs": [
+          "Para K>192, a primeira coluna tem sinais +,+,−,+, com duas trocas de sinal e dois polos no semiplano direito. O limiar procurado é 192, alternativa B."
+        ]
+      }
+    ],
+    "answer": "B — K crítico = 192; instabilidade no semiplano direito para K > 192",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 9.7 — polos, estabilidade e equações; p. 415 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/polos_estabilidade.pdf#page=1"
+      }
+    ]
+  },
+  {
+    "qid": "356769",
+    "title": "Q108 — Transformada Z de duas equações de diferenças em cascata",
+    "theory": [
+      {
+        "title": "Atraso de uma amostra",
+        "paragraphs": [
+          "A variável n indica o índice de tempo discreto. Com repouso inicial, atrasar uma sequência em uma amostra corresponde a multiplicar sua transformada por z⁻¹.",
+          "A hipótese de condições iniciais nulas é necessária ao formar a função de transferência; caso contrário, termos de estado inicial apareceriam nas equações."
+        ],
+        "formula": "Z{x[n−1]}=z⁻¹X(z), em repouso inicial"
+      },
+      {
+        "title": "Bloco recursivo de primeira ordem",
+        "paragraphs": [
+          "Uma relação x[n]−a·x[n−1]=r[n] indica que a saída atual depende da entrada atual e de uma fração a da saída anterior. Aplicando Z, obtemos um fator de primeira ordem."
+        ],
+        "formula": "X−az⁻¹X=R\nX/R=1/(1−az⁻¹)=z/(z−a)"
+      },
+      {
+        "title": "Cascata e estabilidade discreta",
+        "paragraphs": [
+          "Se a primeira equação gera x a partir de r e a segunda gera y a partir de x, as duas transferências se multiplicam.",
+          "Para uma realização causal racional, polos estritamente dentro do círculo unitário permitem estabilidade BIBO. Aqui os valores 0,5 e 0,8 estão dentro dele."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Transformar a primeira equação",
+        "paragraphs": [
+          "Aplicamos Z a x[n]−0,5x[n−1]=r[n] e isolamos X/R."
+        ],
+        "formula": "(1−0,5z⁻¹)X=R\nX/R=z/(z−0,5)"
+      },
+      {
+        "title": "Transformar a segunda equação",
+        "paragraphs": [
+          "Aplicamos Z a y[n]−0,8y[n−1]=x[n] e isolamos Y/X."
+        ],
+        "formula": "(1−0,8z⁻¹)Y=X\nY/X=z/(z−0,8)"
+      },
+      {
+        "title": "Multiplicar a cascata",
+        "paragraphs": [
+          "A sequência intermediária X é eliminada pela multiplicação."
+        ],
+        "formula": "H(z)=Y/R=[Y/X][X/R]\nH(z)=z²/[(z−0,5)(z−0,8)]"
+      },
+      {
+        "title": "Expandir e conferir",
+        "paragraphs": [
+          "A soma dos polos é 1,3 e o produto é 0,4. A expansão produz a alternativa E."
+        ],
+        "formula": "H(z)=z²/(z²−1,3z+0,4)\nRDC causal: |z|>0,8"
+      }
+    ],
+    "answer": "E — z²/(z²−1,3z+0,4)",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 10.1, 10.5, 10.7 e 10.9 — transformada Z; p. 465 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/transformada_z.pdf#page=4"
+      }
+    ]
+  },
+  {
+    "qid": "356770",
+    "title": "Q109 — Do tempo de acomodação ao número de amostras",
+    "theory": [
+      {
+        "title": "Parâmetros do sistema de segunda ordem",
+        "paragraphs": [
+          "O denominador padrão s²+2ζωₙs+ωₙ² permite identificar a frequência natural ωₙ e a razão de amortecimento ζ por comparação de coeficientes.",
+          "A taxa de decaimento da envoltória de um modo subamortecido é ζωₙ, em s⁻¹."
+        ],
+        "formula": "ωₙ²=a₀\n2ζωₙ=a₁"
+      },
+      {
+        "title": "Tempo de acomodação",
+        "paragraphs": [
+          "O tempo de acomodação depende da tolerância exigida para a aproximação ao valor final. A questão fornece explicitamente a aproximação T_s=5/(ζωₙ), que deve ser a utilizada.",
+          "Outras convenções usam constantes diferentes, como 4 para um critério aproximado de 2%. Não se deve trocar a fórmula fornecida por uma fórmula memorizada."
+        ]
+      },
+      {
+        "title": "Período de amostragem e retenção de ordem zero",
+        "paragraphs": [
+          "O período T_a é o intervalo entre duas amostras. Um retentor de ordem zero mantém um valor constante entre atualizações.",
+          "Sob a hipótese dada de desempenho aproximadamente preservado, o número de intervalos de amostragem até a acomodação é T_s/T_a. Se necessário, arredondamos para cima."
+        ],
+        "formula": "N≈T_s/T_a\nT_a=10 ms=0,01 s"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Comparar o denominador",
+        "paragraphs": [
+          "Na transferência 100/(s²+10s+100), temos ωₙ²=100 e 2ζωₙ=10."
+        ],
+        "formula": "ωₙ=10 rad/s\nζ=10/(2·10)=0,5"
+      },
+      {
+        "title": "Calcular o tempo fornecido pela questão",
+        "paragraphs": [
+          "O produto ζωₙ é 0,5·10=5 s⁻¹."
+        ],
+        "formula": "T_s=5/(0,5·10)=1 s"
+      },
+      {
+        "title": "Converter o período de amostragem",
+        "paragraphs": [
+          "Dez milissegundos equivalem a 0,01 segundo. Dividimos grandezas na mesma unidade."
+        ],
+        "formula": "N=1/0,01=100"
+      },
+      {
+        "title": "Concluir e interpretar a contagem",
+        "paragraphs": [
+          "São aproximadamente 100 períodos de amostragem, alternativa C. Se a amostra de t=0 for contada como um ponto armazenado, t=1 s corresponde ao índice n=100; a questão usa a duração expressa em intervalos."
+        ]
+      }
+    ],
+    "answer": "C — aproximadamente 100 amostras",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.5 — sistemas de primeira e segunda ordem; p. 265 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/primeira_segunda_ordem.pdf#page=3"
+      }
+    ]
+  },
+  {
+    "qid": "356772",
+    "title": "Q110 — Solução de uma recorrência causal",
+    "theory": [
+      {
+        "title": "Causalidade e condição anterior",
+        "paragraphs": [
+          "A sequência é nula para n<0, de modo que y[−1]=0. A equação no instante n=0 fornece a condição inicial da recorrência.",
+          "Para n>0, a entrada é nula e resta a evolução livre y[n]=5y[n−1]."
+        ]
+      },
+      {
+        "title": "Progressão geométrica",
+        "paragraphs": [
+          "Uma sequência que multiplica o valor anterior por uma constante a é uma progressão geométrica. A solução de y[n]=a·y[n−1], a partir de y[0], é y[n]=aⁿy[0].",
+          "Isso é crescimento exponencial discreto, não crescimento linear. A notação 5ⁿ deve ser distinguida de 5n."
+        ],
+        "formula": "y[n]=aⁿy[0], n≥0"
+      },
+      {
+        "title": "Interpretação pela transformada Z",
+        "paragraphs": [
+          "Juntando as condições, a equação é y[n]−5y[n−1]=δ[n]. A transferência causal correspondente tem polo em z=5, fora do círculo unitário, coerente com uma sequência que cresce."
+        ],
+        "formula": "Y(z)=1/(1−5z⁻¹)=z/(z−5), |z|>5"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Usar a equação em n=0",
+        "paragraphs": [
+          "Substituímos y[−1]=0 na condição y[0]−5y[−1]=1."
+        ],
+        "formula": "y[0]=1"
+      },
+      {
+        "title": "Calcular os primeiros termos",
+        "paragraphs": [
+          "Para cada índice positivo, multiplicamos o valor anterior por 5."
+        ],
+        "table": {
+          "headers": [
+            "n",
+            "y[n]"
+          ],
+          "rows": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "5"
+            ],
+            [
+              "2",
+              "25"
+            ],
+            [
+              "3",
+              "125"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Reconhecer a expressão geral",
+        "paragraphs": [
+          "Com razão 5 e termo inicial 1, obtemos y[n]=5ⁿ."
+        ]
+      },
+      {
+        "title": "Verificar diretamente",
+        "paragraphs": [
+          "A substituição satisfaz a equação homogênea para n>0 e a condição inicial em n=0. A alternativa A é correta."
+        ],
+        "formula": "5ⁿ−5·5ⁿ⁻¹=0\n5⁰=1"
+      }
+    ],
+    "answer": "A — y[n] = 5ⁿ para n ≥ 0",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 10.1, 10.5, 10.7 e 10.9 — transformada Z; p. 474 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/transformada_z.pdf#page=5"
+      }
+    ]
+  },
+  {
+    "qid": "2684134",
+    "title": "Q111 — Polo de um compensador ativo com redes RC",
+    "theory": [
+      {
+        "title": "Amplificador operacional ideal em realimentação negativa",
+        "paragraphs": [
+          "No regime linear ideal, as correntes de entrada do amplificador operacional são nulas e as tensões nas entradas são iguais. Como a entrada não inversora está aterrada, o nó inversor fica em terra virtual.",
+          "Aplicar a lei dos nós nesse ponto fornece a transferência do amplificador inversor com impedâncias: −Z_f/Z_in."
+        ],
+        "formula": "V₂/V₁=−Z_f/Z_in"
+      },
+      {
+        "title": "Impedância de um paralelo RC",
+        "paragraphs": [
+          "No domínio de Laplace, um capacitor tem impedância 1/(sC). Em paralelo com R, somamos as admitâncias: 1/Z=1/R+sC."
+        ],
+        "formula": "Z_RC=1/(1/R+sC)=R/(1+sRC)"
+      },
+      {
+        "title": "Polo e constante de tempo",
+        "paragraphs": [
+          "Um fator 1+sRC no denominador tem raiz s=−1/(RC). O produto RC tem unidade de segundo, e seu inverso determina a frequência de quebra em rad/s.",
+          "Na configuração dada, a rede de realimentação determina o polo; a rede de entrada contribui com o zero."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler os componentes da figura",
+        "paragraphs": [
+          "Na entrada há 1 kΩ em paralelo com 20 μF. Na realimentação há R em paralelo com 40 μF."
+        ]
+      },
+      {
+        "title": "Escrever as impedâncias",
+        "paragraphs": [
+          "Usamos a fórmula do paralelo RC em cada ramo."
+        ],
+        "formula": "Z_in=1000/(1+s·1000·20×10⁻⁶)=1000/(1+0,02s)\nZ_f=R/(1+sR·40×10⁻⁶)"
+      },
+      {
+        "title": "Formar a transferência e identificar o polo",
+        "paragraphs": [
+          "Na razão −Z_f/Z_in, o fator da entrada vai ao numerador e o da realimentação permanece no denominador."
+        ],
+        "formula": "V₂/V₁=−(R/1000)(1+0,02s)/(1+40×10⁻⁶Rs)\np=−1/(40×10⁻⁶R)"
+      },
+      {
+        "title": "Impor p=−5",
+        "paragraphs": [
+          "Igualamos a frequência do polo à solicitada e isolamos R."
+        ],
+        "formula": "1/(40×10⁻⁶R)=5\nR=1/(5·40×10⁻⁶)=5000 Ω=5 kΩ"
+      },
+      {
+        "title": "Conferir",
+        "paragraphs": [
+          "O zero está em −1/0,02=−50, distinto do polo −5, então não há cancelamento. A resistência é 5,0 kΩ, alternativa D."
+        ]
+      }
+    ],
+    "answer": "D — R = 5,0 kΩ",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.1 — realimentação linear; p. 489 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/realimentacao.pdf#page=2"
+      }
+    ]
+  },
+  {
+    "qid": "2684164",
+    "title": "Q112 — Pré-compensador para erro nulo ao degrau",
+    "theory": [
+      {
+        "title": "Realimentação de estado e pré-compensação",
+        "paragraphs": [
+          "A lei u=−Kx+Mr possui duas partes: −Kx modifica a dinâmica, enquanto Mr ajusta o ganho entre referência e saída. Substituindo-a no modelo, obtemos A_f=A−BK.",
+          "Para que um degrau seja seguido sem erro permanente, o ganho estático da transferência fechada de r para y deve ser 1, supondo estabilidade."
+        ],
+        "formula": "ẋ=(A−BK)x+BMr\ny=Cx"
+      },
+      {
+        "title": "Equilíbrio de estado",
+        "paragraphs": [
+          "Em regime permanente para referência constante, ẋ=0. Se A_f é invertível, podemos resolver o estado de equilíbrio e daí calcular a saída."
+        ],
+        "formula": "0=A_fx_ss+BMr\nx_ss=−A_f⁻¹BMr\ny_ss=−CA_f⁻¹BM·r"
+      },
+      {
+        "title": "Escolha do ganho M",
+        "paragraphs": [
+          "Impor y_ss=r leva à expressão do pré-compensador. O sinal negativo surge da equação de equilíbrio, e não de uma convenção arbitrária.",
+          "Essa compensação pressupõe o modelo fornecido e referência constante; não garante rejeição perfeita de toda perturbação ou erro de parâmetro."
+        ],
+        "formula": "M=−1/[C(A−BK)⁻¹B]"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Calcular BK e a matriz fechada",
+        "paragraphs": [
+          "Usamos A=[0 1; −8 −6], B=[0;1] e K=[6 3]. O produto BK modifica apenas a segunda linha de A."
+        ],
+        "code": "BK = [ 0  0 ]      A − BK = [  0   1 ]\n     [ 6  3 ]               [ −14 −9 ]"
+      },
+      {
+        "title": "Conferir a estabilidade",
+        "paragraphs": [
+          "O polinômio de A−BK é s²+9s+14=(s+2)(s+7). Os polos −2 e −7 permitem um regime permanente estável."
+        ]
+      },
+      {
+        "title": "Resolver as equações de equilíbrio",
+        "paragraphs": [
+          "A primeira equação fornece x₂=0. A segunda fica −14x₁−9x₂+Mr=0, logo x₁=Mr/14."
+        ],
+        "formula": "x₂,ss=0\nx₁,ss=Mr/14"
+      },
+      {
+        "title": "Usar a equação de saída",
+        "paragraphs": [
+          "Como C=[10 0], a saída é y=10x₁. Portanto, seu ganho estático é 10M/14."
+        ],
+        "formula": "y_ss=(10M/14)r"
+      },
+      {
+        "title": "Impor erro nulo",
+        "paragraphs": [
+          "Para y_ss=r, exigimos 10M/14=1. Assim, M=14/10=1,40, alternativa D."
+        ]
+      }
+    ],
+    "answer": "D — M = 1,40",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2712559",
+    "title": "Q113 — Dedução nodal de um filtro passa-banda ativo",
+    "theory": [
+      {
+        "title": "Regras do amplificador operacional ideal",
+        "paragraphs": [
+          "No regime linear ideal, as correntes nas entradas são nulas e v₊=v₋. Essas condições permitem relacionar as tensões dos nós sem conhecer as correntes de saída dos amplificadores.",
+          "O capacitor é representado por sua admitância sC: a corrente de um nó V_a para outro V_b é sC(V_a−V_b). Para um resistor, a corrente é (V_a−V_b)/R."
+        ]
+      },
+      {
+        "title": "Divisor de tensão e lei dos nós",
+        "paragraphs": [
+          "Os dois resistores R₃ iguais formam um divisor entre V_o e terra. Como a entrada do amplificador superior não consome corrente, a tensão em seu terminal positivo é V_o/2.",
+          "A lei de Kirchhoff das correntes exige que a soma das correntes saindo de cada nó de entrada seja zero. Isso permite eliminar a tensão de saída do amplificador superior."
+        ]
+      },
+      {
+        "title": "Forma esperada de um passa-banda de segunda ordem",
+        "paragraphs": [
+          "Uma transferência passa-banda deve tender a zero tanto em s→0 quanto para frequência muito alta. Sua forma típica contém numerador proporcional a s e denominador de grau dois.",
+          "A constante ω₀ define a frequência central; Q é o fator de qualidade. Um numerador proporcional a s² teria comportamento diferente e não seria o passa-banda desta análise."
+        ],
+        "formula": "H(s)=A·s/[s²+(ω₀/Q)s+ω₀²]"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Nomear as tensões e usar os curtos virtuais",
+        "paragraphs": [
+          "Chamamos de V_a o nó inferior ligado a V_i por R₁ e ao capacitor para terra; V_b é o nó central ligado ao capacitor horizontal e ao R₂ da direita; V_c é a saída do amplificador superior.",
+          "O amplificador superior impõe V_b=V_o/2; o inferior impõe V_a=V_b. Chamando ambas as tensões de V, obtemos V_o=2V."
+        ],
+        "formula": "V_a=V_b=V=V_o/2"
+      },
+      {
+        "title": "Aplicar Kirchhoff no nó central",
+        "paragraphs": [
+          "A corrente para V_c passa pelo capacitor horizontal; a corrente para V_o passa pelo resistor R₂. Nenhuma entra no amplificador."
+        ],
+        "formula": "sC(V−V_c)+(V−V_o)/R₂=0\nV_o=2V ⇒ sC(V−V_c)=V/R₂\nV−V_c=V/(sCR₂)"
+      },
+      {
+        "title": "Aplicar Kirchhoff no nó inferior",
+        "paragraphs": [
+          "As três correntes saem para a entrada V_i por R₁, para V_c pelo R₂ vertical e para terra pelo capacitor. Substituímos a diferença V−V_c obtida no passo anterior."
+        ],
+        "formula": "(V−V_i)/R₁+(V−V_c)/R₂+sCV=0\n(V−V_i)/R₁+V/(sCR₂²)+sCV=0"
+      },
+      {
+        "title": "Isolar a razão de tensões",
+        "paragraphs": [
+          "Agrupamos os termos em V e multiplicamos por s/C. Depois usamos V_o=2V."
+        ],
+        "formula": "V[1/R₁+1/(sCR₂²)+sC]=V_i/R₁\nV/V_i=[s/(R₁C)]/[s²+s/(R₁C)+1/(R₂²C²)]\nV_o/V_i=[2s/(R₁C)]/[s²+s/(R₁C)+1/(R₂²C²)]"
+      },
+      {
+        "title": "Conferir a resposta e a impressão da alternativa",
+        "paragraphs": [
+          "A transferência calculada zera em baixa frequência e decai em alta frequência, como exige um passa-banda. Seu denominador fornece ω₀=1/(R₂C) e Q=R₁/R₂.",
+          "O caderno indica C e imprime o numerador como “s2/R₁C”, com o 2 na mesma linha. A dedução exige 2s/(R₁C), não s²/(R₁C). A alternativa C corresponde ao resultado se esse “s2” for lido como o produto 2s; a escrita no PDF é ambígua."
+        ]
+      }
+    ],
+    "answer": "C no caderno — [2s/(R₁C)]/[s²+s/(R₁C)+1/(R₂²C²)]; atenção à impressão “s2”",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 6.2.3 e 6.5.3 — magnitude e diagramas de Bode; p. 268 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/bode.pdf#page=2"
+      }
+    ]
+  },
+  {
+    "qid": "2712589",
+    "title": "Q114 — Grau relativo e zeros no infinito",
+    "theory": [
+      {
+        "title": "Função racional e ordem",
+        "paragraphs": [
+          "Uma função de transferência racional pode ser escrita G(s)=N(s)/D(s), com polinômios em s. Em uma representação reduzida, a ordem é o grau do denominador.",
+          "A planta da questão é de terceira ordem, portanto deg(D)=3. Isso não obriga seus três polos a serem reais: eles podem incluir um par complexo conjugado."
+        ]
+      },
+      {
+        "title": "Própria, estritamente própria e grau relativo",
+        "paragraphs": [
+          "O grau relativo é r=deg(D)−deg(N). Uma transferência é própria se r≥0 e estritamente própria se r>0.",
+          "Assim, em uma transferência estritamente própria de terceira ordem, o numerador tem grau no máximo dois."
+        ],
+        "formula": "r=3−deg(N)>0\nG(s)≈c/sʳ quando |s|→∞"
+      },
+      {
+        "title": "Zeros no infinito e estabilidade",
+        "paragraphs": [
+          "Se G(s) decai como 1/sʳ, ela possui r zeros no infinito, contados com multiplicidade, na descrição estendida de polos e zeros. A desigualdade r>0 garante pelo menos um.",
+          "Estabilidade da transferência causal exige polos no semiplano esquerdo, mas não determina a posição de seus zeros finitos. Os zeros podem estar em diferentes regiões sem contrariar, por si sós, essa condição sobre os polos."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Usar a condição de terceira ordem",
+        "paragraphs": [
+          "O denominador tem grau 3, após considerar a representação reduzida."
+        ]
+      },
+      {
+        "title": "Aplicar a definição de estritamente própria",
+        "paragraphs": [
+          "O grau do numerador é menor que 3. Logo, a diferença entre os graus é 1, 2 ou 3."
+        ],
+        "formula": "r=3−deg(N)≥1"
+      },
+      {
+        "title": "Interpretar o comportamento no infinito",
+        "paragraphs": [
+          "Como G(s) tende a zero para |s|→∞, há pelo menos um zero no infinito. Essa é a alternativa B."
+        ]
+      },
+      {
+        "title": "Conferir as demais afirmações",
+        "paragraphs": [
+          "A contradiz a estabilidade; C contradiz r>0; D impõe zeros imaginários sem que isso tenha sido dado; E exige polos reais, embora polos complexos com parte real negativa também possam ser estáveis."
+        ]
+      }
+    ],
+    "answer": "B — possui pelo menos um zero localizado no infinito",
+    "sources": [
+      {
+        "label": "Caderno local — enunciados, figuras e gabarito de Sinais e Sistemas",
+        "url": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+      },
+      {
+        "label": "Oppenheim e Willsky, Sinais e Sistemas, 2ª ed. — 11.3 — lugar das raízes; p. 499 (página impressa, recorte em PDF)",
+        "url": "assets/teoria/oppenheim/lugar_raizes.pdf#page=3"
+      }
+    ]
+  }
+]

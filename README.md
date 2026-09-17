@@ -44,3 +44,25 @@ As oito questões de Microcontroladores / Sist. Microprocessados têm ações **
 O conteúdo está em `public/data/microcontroladores_estudo.json`, associado pelo `qid` original. Cada entrada contém teoria, etapas da resolução, gabarito e fontes; os blocos aceitam parágrafos, fórmulas, código e tabelas. `materialUrl`, opcional em cada questão de `materias.json`, habilita os botões. O arquivo é carregado sob demanda e compartilhado entre as questões, com nova tentativa em caso de falha.
 
 Os gabaritos foram conferidos com o caderno. Na Q54, a resolução distingue o trecho que provoca o defeito do código corrigido. Na Q55, explicita que a banca chama de “resposta” o tempo até a conclusão, diferente da definição usual de primeira resposta.
+
+#### Sinais e Sistemas — Q66 a Q114
+
+As 49 questões também possuem **Questão**, **Teoria** e **Resolução**. O conteúdo de `public/data/sinais_sistemas_estudo.json` é associado por `qid` e carregado ao abrir o material. Cada questão tem sua base teórica (definições, hipóteses, fórmulas e critérios pertinentes) e uma resolução que aplica essa base aos dados, figuras e alternativas do enunciado.
+
+As fontes do painel incluem recortes do livro **Sinais e Sistemas**, de Oppenheim e Willsky, com Nawab, 2ª edição. Os nove PDFs de consulta ficam em `public/assets/teoria/oppenheim/`; os links apontam para a página pertinente dentro do recorte. `manifesto.json` registra as páginas impressas e sua correspondência no PDF original. Os recortes são carregados somente quando seus links são abertos.
+
+Para regenerá-los com o livro fornecido em `livros/Sinais e Sistemas/Sinais e Sistemas; Oppenheim.compressed.pdf`, instale as ferramentas Poppler (`pdfseparate` e `pdfunite`) e execute:
+
+```bash
+node layout/gerar_recortes_oppenheim.mjs
+```
+
+As resoluções identificam limitações do próprio caderno: Q93 pressupõe perturbação degrau unitário; Q103 omite condições iniciais, e a solução explica quais condições correspondem ao gabarito; Q113 distingue o numerador deduzido pelas equações do circuito da impressão ambígua “s2”. As aproximações gráficas e de tempo de acomodação também são explicitadas.
+
+Para conferir cobertura, associação das questões, gabaritos, estrutura do material e referências locais:
+
+```bash
+node layout/verificar_material_estudo.mjs
+```
+
+Essa verificação detecta falhas de dados e conteúdo genérico repetido; a correção matemática das explicações requer revisão editorial com os enunciados e as fontes.

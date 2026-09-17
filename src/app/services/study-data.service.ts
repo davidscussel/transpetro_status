@@ -24,7 +24,7 @@ export class StudyDataService {
           q: questao.num,
           d: 'medio' as const,
           link: questao.pdfUrl,
-          ...(questao.materialUrl ? { materialUrl: questao.materialUrl } : {}),
+          ...(questao.materialUrl ? { materialUrl: questao.materialUrl } : assunto.name === 'Análise de Sinais e Sistemas' ? { materialUrl: 'data/sinais_sistemas_estudo.json' } : {}),
         })),
       })),
     }))),
