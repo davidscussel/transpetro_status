@@ -34,7 +34,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular
-        run: npm run build -- --base-href /transpetro_status
+        run: npm run build -- --base-href /transpetro_status/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
