@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DashboardStats, DifficultyFilter, Materia, SortMode, StudyProgress, SubjectGroupView, TopicView } from '../models/study.models';
+import { AnswerStats, DashboardStats, DifficultyFilter, Materia, SortMode, StudyProgress, SubjectGroupView, TopicView, TopicAnswerStats } from '../models/study.models';
 
 @Injectable({ providedIn: 'root' })
 export class DashboardStateService {
@@ -33,6 +33,29 @@ export class DashboardStateService {
   topicCompletionPct(topic: TopicView, progress: StudyProgress): number {
     const complete = topic.questions.filter((question) => progress.questions[this.questionKey(topic.materiaName, topic.nome, question.prova, question.q)]?.done).length;
     return topic.questions.length ? Math.round(complete * 100 / topic.questions.length) : 0;
+  }
+
+  topicAnswerStats(materias: Materia[], progress: StudyProgress): TopicAnswerStats[] {
+    return this.getAllTopics(materias).map(topic => {
+      let correct = 0, incorrect = 0;
+      for (const question of topic.questions) {
+        const entry = progress.questions[this.questionKey(topic.materiaName, topic.nome, question.prova, question.q)];
+        if (!entry?.selectedAnswer || !entry.correctAnswer || !/^[A-E]$/.test(entry.selectedAnswer) || !/^[A-E]$/.test(entry.correctAnswer)) continue;
+        if (entry.selectedAnswer === entry.correctAnswer) correct++;
+        else incorrect++;
+      }
+      const answered = correct + incorrect;
+      return { name: topic.nome, key: this.topicKey(topic.materiaName, topic.nome), total: topic.questions.length,
+        correct, incorrect, answered, unanswered: topic.questions.length - answered,
+        percentage: answered ? correct * 100 / answered : null };
+    }).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR') || a.key.localeCompare(b.key, 'pt-BR'));
+  }
+
+  answerStats(materias: Materia[], progress: StudyProgress): AnswerStats {
+    return this.topicAnswerStats(materias, progress).reduce((sum, topic) => ({
+      correct: sum.correct + topic.correct, incorrect: sum.incorrect + topic.incorrect,
+      unanswered: sum.unanswered + topic.unanswered, answered: sum.answered + topic.answered, total: sum.total + topic.total,
+    }), { correct: 0, incorrect: 0, unanswered: 0, answered: 0, total: 0 });
   }
 
   private toTopic(materiaName: string, assunto: Materia['assuntos'][number]): TopicView { return { ...assunto, materiaName, fullCount: assunto.questions.length }; }

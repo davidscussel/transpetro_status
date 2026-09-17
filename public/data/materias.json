@@ -1,810 +1,2027 @@
 [
   {
-    "materia": "Engenharia Elétrica e Eletrônica",
-    "count": 187,
+    "materia": "Circuitos Elétricos",
+    "count": 17,
     "assuntos": [
       {
-        "name": "Análise de Sinais e Sistemas",
-        "count": 49,
+        "name": "Circuitos resistivos, potência e equivalentes de Thévenin",
+        "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/circuitos-eletricos-circuitos-resistivos-potencia-e-equivalentes-de-thevenin.pdf",
         "questions": [
           {
-            "num": 66,
-            "qid": "2697791",
-            "url": "https://www.tecconcursos.com.br/questoes/2697791",
+            "num": 1,
+            "qid": "2697780",
+            "url": "https://www.tecconcursos.com.br/questoes/2697780",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697791.pdf"
+            "pdfUrl": "assets/questoes/2697780.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Leis de Ohm, Kirchhoff, Potência"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 67,
-            "qid": "2697793",
-            "url": "https://www.tecconcursos.com.br/questoes/2697793",
+            "num": 2,
+            "qid": "356720",
+            "url": "https://www.tecconcursos.com.br/questoes/356720",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356720.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Leis de Ohm, Kirchhoff, Potência"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 3,
+            "qid": "2697786",
+            "url": "https://www.tecconcursos.com.br/questoes/2697786",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697793.pdf"
+            "pdfUrl": "assets/questoes/2697786.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Teoremas (Thevenin, Norton, Estrela)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 68,
-            "qid": "2697795",
-            "url": "https://www.tecconcursos.com.br/questoes/2697795",
+            "num": 4,
+            "qid": "2684143",
+            "url": "https://www.tecconcursos.com.br/questoes/2684143",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684143.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Teoremas (Thevenin, Norton, Estrela)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Capacitores, indutores e transitórios RC/RL",
+        "count": 5,
+        "pdfUrl": "assets/assuntos/organizados/circuitos-eletricos-capacitores-indutores-e-transitorios-rc-rl.pdf",
+        "questions": [
+          {
+            "num": 6,
+            "qid": "352797",
+            "url": "https://www.tecconcursos.com.br/questoes/352797",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352797.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Primeira e Segunda Ordem"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 7,
+            "qid": "352909",
+            "url": "https://www.tecconcursos.com.br/questoes/352909",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352909.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Primeira e Segunda Ordem"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 8,
+            "qid": "2684146",
+            "url": "https://www.tecconcursos.com.br/questoes/2684146",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684146.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Primeira e Segunda Ordem"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 9,
+            "qid": "2712585",
+            "url": "https://www.tecconcursos.com.br/questoes/2712585",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712585.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Primeira e Segunda Ordem"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 10,
+            "qid": "2712588",
+            "url": "https://www.tecconcursos.com.br/questoes/2712588",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712588.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Primeira e Segunda Ordem"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Ressonância e circuitos RLC",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/circuitos-eletricos-ressonancia-e-circuitos-rlc.pdf",
+        "questions": [
+          {
+            "num": 5,
+            "qid": "2697785",
+            "url": "https://www.tecconcursos.com.br/questoes/2697785",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697795.pdf"
+            "pdfUrl": "assets/questoes/2697785.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Primeira e Segunda Ordem"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Fasores e impedâncias em corrente alternada",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/circuitos-eletricos-fasores-e-impedancias-em-corrente-alternada.pdf",
+        "questions": [
+          {
+            "num": 14,
+            "qid": "352812",
+            "url": "https://www.tecconcursos.com.br/questoes/352812",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352812.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Excitação Senoidal / Fasores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 69,
-            "qid": "2697796",
-            "url": "https://www.tecconcursos.com.br/questoes/2697796",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697796.pdf"
+            "num": 15,
+            "qid": "352814",
+            "url": "https://www.tecconcursos.com.br/questoes/352814",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352814.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Excitação Senoidal / Fasores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 70,
-            "qid": "2697799",
-            "url": "https://www.tecconcursos.com.br/questoes/2697799",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697799.pdf"
+            "num": 17,
+            "qid": "2712564",
+            "url": "https://www.tecconcursos.com.br/questoes/2712564",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712564.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Excitação Senoidal / Fasores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Sistemas trifásicos e potência em corrente alternada",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/circuitos-eletricos-sistemas-trifasicos-e-potencia-em-corrente-alternada.pdf",
+        "questions": [
+          {
+            "num": 13,
+            "qid": "352810",
+            "url": "https://www.tecconcursos.com.br/questoes/352810",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352810.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Excitação Senoidal / Fasores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 71,
-            "qid": "2697859",
-            "url": "https://www.tecconcursos.com.br/questoes/2697859",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697859.pdf"
+            "num": 18,
+            "qid": "352813",
+            "url": "https://www.tecconcursos.com.br/questoes/352813",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352813.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Potência em C.A."
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 72,
-            "qid": "640398",
-            "url": "https://www.tecconcursos.com.br/questoes/640398",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640398.pdf"
-          },
-          {
-            "num": 73,
-            "qid": "640400",
-            "url": "https://www.tecconcursos.com.br/questoes/640400",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640400.pdf"
-          },
-          {
-            "num": 74,
-            "qid": "640401",
-            "url": "https://www.tecconcursos.com.br/questoes/640401",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640401.pdf"
-          },
-          {
-            "num": 75,
-            "qid": "640402",
-            "url": "https://www.tecconcursos.com.br/questoes/640402",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640402.pdf"
-          },
-          {
-            "num": 76,
-            "qid": "640415",
-            "url": "https://www.tecconcursos.com.br/questoes/640415",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640415.pdf"
-          },
-          {
-            "num": 77,
-            "qid": "640417",
-            "url": "https://www.tecconcursos.com.br/questoes/640417",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640417.pdf"
-          },
-          {
-            "num": 78,
-            "qid": "640425",
-            "url": "https://www.tecconcursos.com.br/questoes/640425",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640425.pdf"
-          },
-          {
-            "num": 79,
-            "qid": "640426",
-            "url": "https://www.tecconcursos.com.br/questoes/640426",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640426.pdf"
-          },
-          {
-            "num": 80,
-            "qid": "640427",
-            "url": "https://www.tecconcursos.com.br/questoes/640427",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640427.pdf"
-          },
-          {
-            "num": 81,
-            "qid": "640429",
-            "url": "https://www.tecconcursos.com.br/questoes/640429",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640429.pdf"
-          },
-          {
-            "num": 82,
-            "qid": "640436",
-            "url": "https://www.tecconcursos.com.br/questoes/640436",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640436.pdf"
-          },
-          {
-            "num": 83,
-            "qid": "640438",
-            "url": "https://www.tecconcursos.com.br/questoes/640438",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640438.pdf"
-          },
+            "num": 19,
+            "qid": "352816",
+            "url": "https://www.tecconcursos.com.br/questoes/352816",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352816.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos Trifásicos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Modelagem de circuitos no domínio de Laplace",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/circuitos-eletricos-modelagem-de-circuitos-no-dominio-de-laplace.pdf",
+        "questions": [
           {
             "num": 84,
             "qid": "352786",
             "url": "https://www.tecconcursos.com.br/questoes/352786",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352786.pdf"
+            "pdfUrl": "assets/questoes/352786.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Eletrônica",
+    "count": 25,
+    "assuntos": [
+      {
+        "name": "Diodos e circuitos com Zener",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-diodos-e-circuitos-com-zener.pdf",
+        "questions": [
+          {
+            "num": 27,
+            "qid": "640412",
+            "url": "https://www.tecconcursos.com.br/questoes/640412",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640412.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Diodos (Retificador, Zener, Schottky, LED)",
+              "Engenharia Elétrica e Eletrônica::Diodos (Retificador, Zener, Schottky, LED)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 85,
-            "qid": "352788",
-            "url": "https://www.tecconcursos.com.br/questoes/352788",
+            "num": 28,
+            "qid": "356722",
+            "url": "https://www.tecconcursos.com.br/questoes/356722",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356722.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Diodos (Retificador, Zener, Schottky, LED)",
+              "Engenharia Elétrica e Eletrônica::Diodos (Retificador, Zener, Schottky, LED)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Retificadores e multiplicadores de tensão",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-retificadores-e-multiplicadores-de-tensao.pdf",
+        "questions": [
+          {
+            "num": 29,
+            "qid": "2684248",
+            "url": "https://www.tecconcursos.com.br/questoes/2684248",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684248.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Diodos (Retificador, Zener, Schottky, LED)",
+              "Engenharia Elétrica e Eletrônica::Diodos (Retificador, Zener, Schottky, LED)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 31,
+            "qid": "640451",
+            "url": "https://www.tecconcursos.com.br/questoes/640451",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640451.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Retificadores Onda Completa / Meia Onda",
+              "Engenharia Elétrica e Eletrônica::Retificadores Onda Completa / Meia Onda"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Reguladores lineares e dissipação de potência",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-reguladores-lineares-e-dissipacao-de-potencia.pdf",
+        "questions": [
+          {
+            "num": 32,
+            "qid": "640409",
+            "url": "https://www.tecconcursos.com.br/questoes/640409",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640409.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Circuitos Reguladores de Tensão",
+              "Engenharia Elétrica e Eletrônica::Circuitos Reguladores de Tensão"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Amplificadores operacionais: modelos, ganho e integração",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-amplificadores-operacionais-modelos-ganho-e-integracao.pdf",
+        "questions": [
+          {
+            "num": 33,
+            "qid": "2697779",
+            "url": "https://www.tecconcursos.com.br/questoes/2697779",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697779.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Amplificadores Operacionais / Potência",
+              "Engenharia Elétrica e Eletrônica::Amplificadores Operacionais / Potência"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 34,
+            "qid": "640439",
+            "url": "https://www.tecconcursos.com.br/questoes/640439",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640439.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Amplificadores Operacionais / Potência",
+              "Engenharia Elétrica e Eletrônica::Amplificadores Operacionais / Potência"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 35,
+            "qid": "352854",
+            "url": "https://www.tecconcursos.com.br/questoes/352854",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352788.pdf"
-          },
+            "pdfUrl": "assets/questoes/352854.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Amplificadores Operacionais / Potência",
+              "Engenharia Elétrica e Eletrônica::Amplificadores Operacionais / Potência"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Comparadores e acionamento de LEDs",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-comparadores-e-acionamento-de-leds.pdf",
+        "questions": [
           {
-            "num": 86,
-            "qid": "352792",
-            "url": "https://www.tecconcursos.com.br/questoes/352792",
+            "num": 36,
+            "qid": "352855",
+            "url": "https://www.tecconcursos.com.br/questoes/352855",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352792.pdf"
-          },
+            "pdfUrl": "assets/questoes/352855.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Amplificadores Operacionais / Potência",
+              "Engenharia Elétrica e Eletrônica::Amplificadores Operacionais / Potência"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Controladores e compensadores com amplificadores operacionais",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-controladores-e-compensadores-com-amplificadores-operacionais.pdf",
+        "questions": [
           {
-            "num": 87,
-            "qid": "352793",
-            "url": "https://www.tecconcursos.com.br/questoes/352793",
+            "num": 37,
+            "qid": "352902",
+            "url": "https://www.tecconcursos.com.br/questoes/352902",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352793.pdf"
+            "pdfUrl": "assets/questoes/352902.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Amplificadores Operacionais / Potência",
+              "Engenharia Elétrica e Eletrônica::Amplificadores Operacionais / Potência"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 88,
-            "qid": "352796",
-            "url": "https://www.tecconcursos.com.br/questoes/352796",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352796.pdf"
-          },
-          {
-            "num": 89,
-            "qid": "352801",
-            "url": "https://www.tecconcursos.com.br/questoes/352801",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352801.pdf"
-          },
-          {
-            "num": 90,
-            "qid": "352889",
-            "url": "https://www.tecconcursos.com.br/questoes/352889",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352889.pdf"
-          },
-          {
-            "num": 91,
-            "qid": "352895",
-            "url": "https://www.tecconcursos.com.br/questoes/352895",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352895.pdf"
-          },
-          {
-            "num": 92,
-            "qid": "352903",
-            "url": "https://www.tecconcursos.com.br/questoes/352903",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352903.pdf"
-          },
-          {
-            "num": 93,
-            "qid": "352905",
-            "url": "https://www.tecconcursos.com.br/questoes/352905",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352905.pdf"
-          },
-          {
-            "num": 94,
-            "qid": "352906",
-            "url": "https://www.tecconcursos.com.br/questoes/352906",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352906.pdf"
-          },
-          {
-            "num": 95,
-            "qid": "352910",
-            "url": "https://www.tecconcursos.com.br/questoes/352910",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352910.pdf"
-          },
-          {
-            "num": 96,
-            "qid": "356710",
-            "url": "https://www.tecconcursos.com.br/questoes/356710",
+            "num": 38,
+            "qid": "356709",
+            "url": "https://www.tecconcursos.com.br/questoes/356709",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356710.pdf"
-          },
-          {
-            "num": 97,
-            "qid": "356711",
-            "url": "https://www.tecconcursos.com.br/questoes/356711",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356711.pdf"
-          },
-          {
-            "num": 98,
-            "qid": "356712",
-            "url": "https://www.tecconcursos.com.br/questoes/356712",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356712.pdf"
-          },
-          {
-            "num": 99,
-            "qid": "356713",
-            "url": "https://www.tecconcursos.com.br/questoes/356713",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356713.pdf"
-          },
-          {
-            "num": 100,
-            "qid": "356714",
-            "url": "https://www.tecconcursos.com.br/questoes/356714",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356714.pdf"
-          },
-          {
-            "num": 101,
-            "qid": "356719",
-            "url": "https://www.tecconcursos.com.br/questoes/356719",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356719.pdf"
-          },
-          {
-            "num": 102,
-            "qid": "356742",
-            "url": "https://www.tecconcursos.com.br/questoes/356742",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356742.pdf"
-          },
-          {
-            "num": 103,
-            "qid": "356746",
-            "url": "https://www.tecconcursos.com.br/questoes/356746",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356746.pdf"
-          },
-          {
-            "num": 104,
-            "qid": "356748",
-            "url": "https://www.tecconcursos.com.br/questoes/356748",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356748.pdf"
-          },
-          {
-            "num": 105,
-            "qid": "356754",
-            "url": "https://www.tecconcursos.com.br/questoes/356754",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356754.pdf"
-          },
-          {
-            "num": 106,
-            "qid": "356756",
-            "url": "https://www.tecconcursos.com.br/questoes/356756",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356756.pdf"
-          },
-          {
-            "num": 107,
-            "qid": "356766",
-            "url": "https://www.tecconcursos.com.br/questoes/356766",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356766.pdf"
-          },
-          {
-            "num": 108,
-            "qid": "356769",
-            "url": "https://www.tecconcursos.com.br/questoes/356769",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356769.pdf"
-          },
-          {
-            "num": 109,
-            "qid": "356770",
-            "url": "https://www.tecconcursos.com.br/questoes/356770",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356770.pdf"
-          },
-          {
-            "num": 110,
-            "qid": "356772",
-            "url": "https://www.tecconcursos.com.br/questoes/356772",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356772.pdf"
+            "pdfUrl": "assets/questoes/356709.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Amplificadores Operacionais / Potência",
+              "Engenharia Elétrica e Eletrônica::Amplificadores Operacionais / Potência"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
             "num": 111,
             "qid": "2684134",
             "url": "https://www.tecconcursos.com.br/questoes/2684134",
             "ano": "2008",
-            "pdfUrl": "assets/questoes/2684134.pdf"
+            "pdfUrl": "assets/questoes/2684134.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Filtros ativos e passivos",
+        "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-filtros-ativos-e-passivos.pdf",
+        "questions": [
+          {
+            "num": 39,
+            "qid": "352795",
+            "url": "https://www.tecconcursos.com.br/questoes/352795",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352795.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Filtros Ativos e Passivos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 112,
-            "qid": "2684164",
-            "url": "https://www.tecconcursos.com.br/questoes/2684164",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684164.pdf"
+            "num": 40,
+            "qid": "352817",
+            "url": "https://www.tecconcursos.com.br/questoes/352817",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352817.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Filtros Ativos e Passivos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 41,
+            "qid": "356715",
+            "url": "https://www.tecconcursos.com.br/questoes/356715",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356715.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Filtros Ativos e Passivos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
             "num": 113,
             "qid": "2712559",
             "url": "https://www.tecconcursos.com.br/questoes/2712559",
             "ano": "2006",
-            "pdfUrl": "assets/questoes/2712559.pdf"
-          },
-          {
-            "num": 114,
-            "qid": "2712589",
-            "url": "https://www.tecconcursos.com.br/questoes/2712589",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712589.pdf"
+            "pdfUrl": "assets/questoes/2712559.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-sinais-e-sistemas.pdf"
+        ]
       },
       {
-        "name": "Controles Lógicos Programáveis - CLP e SCADA",
-        "count": 17,
+        "name": "Conversores A/D e D/A",
+        "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-conversores-a-d-e-d-a.pdf",
         "questions": [
           {
-            "num": 121,
-            "qid": "2697769",
-            "url": "https://www.tecconcursos.com.br/questoes/2697769",
+            "num": 56,
+            "qid": "2697781",
+            "url": "https://www.tecconcursos.com.br/questoes/2697781",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697769.pdf"
+            "pdfUrl": "assets/questoes/2697781.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Conversores AD e DAC"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 122,
-            "qid": "2697776",
-            "url": "https://www.tecconcursos.com.br/questoes/2697776",
+            "num": 57,
+            "qid": "2697792",
+            "url": "https://www.tecconcursos.com.br/questoes/2697792",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697776.pdf"
+            "pdfUrl": "assets/questoes/2697792.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Conversores AD e DAC"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 123,
-            "qid": "640443",
-            "url": "https://www.tecconcursos.com.br/questoes/640443",
+            "num": 58,
+            "qid": "640433",
+            "url": "https://www.tecconcursos.com.br/questoes/640433",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640443.pdf"
+            "pdfUrl": "assets/questoes/640433.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Conversores AD e DAC"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 124,
-            "qid": "640447",
-            "url": "https://www.tecconcursos.com.br/questoes/640447",
+            "num": 59,
+            "qid": "640453",
+            "url": "https://www.tecconcursos.com.br/questoes/640453",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640447.pdf"
-          },
+            "pdfUrl": "assets/questoes/640453.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Conversores AD e DAC"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Tiristores, DIAC, TRIAC e proteção de chaveamento",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-tiristores-diac-triac-e-protecao-de-chaveamento.pdf",
+        "questions": [
           {
-            "num": 125,
-            "qid": "352791",
-            "url": "https://www.tecconcursos.com.br/questoes/352791",
+            "num": 60,
+            "qid": "352856",
+            "url": "https://www.tecconcursos.com.br/questoes/352856",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352791.pdf"
+            "pdfUrl": "assets/questoes/352856.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Semicondutores de Potência (DIAC, TRIAC...)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 126,
-            "qid": "356729",
-            "url": "https://www.tecconcursos.com.br/questoes/356729",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356729.pdf"
-          },
-          {
-            "num": 127,
-            "qid": "356731",
-            "url": "https://www.tecconcursos.com.br/questoes/356731",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356731.pdf"
-          },
-          {
-            "num": 128,
-            "qid": "356732",
-            "url": "https://www.tecconcursos.com.br/questoes/356732",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356732.pdf"
-          },
-          {
-            "num": 129,
-            "qid": "356733",
-            "url": "https://www.tecconcursos.com.br/questoes/356733",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356733.pdf"
-          },
-          {
-            "num": 130,
-            "qid": "356734",
-            "url": "https://www.tecconcursos.com.br/questoes/356734",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356734.pdf"
-          },
-          {
-            "num": 131,
-            "qid": "356736",
-            "url": "https://www.tecconcursos.com.br/questoes/356736",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356736.pdf"
-          },
-          {
-            "num": 132,
-            "qid": "2684203",
-            "url": "https://www.tecconcursos.com.br/questoes/2684203",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684203.pdf"
-          },
-          {
-            "num": 133,
-            "qid": "2684237",
-            "url": "https://www.tecconcursos.com.br/questoes/2684237",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684237.pdf"
-          },
-          {
-            "num": 134,
-            "qid": "2684245",
-            "url": "https://www.tecconcursos.com.br/questoes/2684245",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684245.pdf"
-          },
-          {
-            "num": 135,
-            "qid": "2712544",
-            "url": "https://www.tecconcursos.com.br/questoes/2712544",
+            "num": 61,
+            "qid": "2712562",
+            "url": "https://www.tecconcursos.com.br/questoes/2712562",
             "ano": "2006",
-            "pdfUrl": "assets/questoes/2712544.pdf"
-          },
-          {
-            "num": 136,
-            "qid": "2712961",
-            "url": "https://www.tecconcursos.com.br/questoes/2712961",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712961.pdf"
-          },
-          {
-            "num": 137,
-            "qid": "2712963",
-            "url": "https://www.tecconcursos.com.br/questoes/2712963",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712963.pdf"
+            "pdfUrl": "assets/questoes/2712562.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Semicondutores de Potência (DIAC, TRIAC...)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-controles-logicos-programaveis-clp-e-scada.pdf"
+        ]
       },
       {
-        "name": "Tópicos Mesclados de Controle e Automação",
-        "count": 11,
+        "name": "Conversores CC–CC e inversores CC–CA",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-conversores-cccc-e-inversores-ccca.pdf",
         "questions": [
           {
-            "num": 159,
-            "qid": "2697778",
-            "url": "https://www.tecconcursos.com.br/questoes/2697778",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697778.pdf"
+            "num": 62,
+            "qid": "2684141",
+            "url": "https://www.tecconcursos.com.br/questoes/2684141",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684141.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Circuitos Conversores (CC-CC)",
+              "Engenharia Elétrica e Eletrônica::Circuitos Conversores (CC-CC)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 160,
-            "qid": "2697803",
-            "url": "https://www.tecconcursos.com.br/questoes/2697803",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697803.pdf"
+            "num": 63,
+            "qid": "352884",
+            "url": "https://www.tecconcursos.com.br/questoes/352884",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352884.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos Inversores (CC-CA)"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Proteção contra descargas eletrostáticas (ESD)",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-protecao-contra-descargas-eletrostaticas-esd.pdf",
+        "questions": [
+          {
+            "num": 64,
+            "qid": "640536",
+            "url": "https://www.tecconcursos.com.br/questoes/640536",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640536.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Tópicos Mesclados de Eletrônica",
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Eletrônica"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Sinais e Sistemas",
+    "count": 25,
+    "assuntos": [
+      {
+        "name": "Sinais periódicos: harmônicos, amplitude, fase e valor médio",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/sinais-e-sistemas-sinais-periodicos-harmonicos-amplitude-fase-e-valor-medio.pdf",
+        "questions": [
+          {
+            "num": 11,
+            "qid": "640432",
+            "url": "https://www.tecconcursos.com.br/questoes/640432",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640432.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Excitação Senoidal / Fasores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 161,
-            "qid": "2697804",
-            "url": "https://www.tecconcursos.com.br/questoes/2697804",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697804.pdf"
-          },
-          {
-            "num": 162,
-            "qid": "2697806",
-            "url": "https://www.tecconcursos.com.br/questoes/2697806",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697806.pdf"
-          },
-          {
-            "num": 163,
-            "qid": "2697810",
-            "url": "https://www.tecconcursos.com.br/questoes/2697810",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697810.pdf"
-          },
-          {
-            "num": 164,
-            "qid": "2697887",
-            "url": "https://www.tecconcursos.com.br/questoes/2697887",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697887.pdf"
+            "num": 16,
+            "qid": "356741",
+            "url": "https://www.tecconcursos.com.br/questoes/356741",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356741.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Excitação Senoidal / Fasores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
             "num": 165,
             "qid": "640407",
             "url": "https://www.tecconcursos.com.br/questoes/640407",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640407.pdf"
-          },
+            "pdfUrl": "assets/questoes/640407.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Transformada de Laplace e teoremas dos valores inicial e final",
+        "count": 5,
+        "pdfUrl": "assets/assuntos/organizados/sinais-e-sistemas-transformada-de-laplace-e-teoremas-dos-valores-inicial-e-final.pdf",
+        "questions": [
           {
-            "num": 166,
-            "qid": "640422",
-            "url": "https://www.tecconcursos.com.br/questoes/640422",
+            "num": 77,
+            "qid": "640417",
+            "url": "https://www.tecconcursos.com.br/questoes/640417",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640422.pdf"
+            "pdfUrl": "assets/questoes/640417.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 167,
-            "qid": "640424",
-            "url": "https://www.tecconcursos.com.br/questoes/640424",
+            "num": 102,
+            "qid": "356742",
+            "url": "https://www.tecconcursos.com.br/questoes/356742",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356742.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 170,
+            "qid": "2697807",
+            "url": "https://www.tecconcursos.com.br/questoes/2697807",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697807.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Transformadas (Laplace, Fourier, Dirac)"
+            ]
+          },
+          {
+            "num": 171,
+            "qid": "2697843",
+            "url": "https://www.tecconcursos.com.br/questoes/2697843",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697843.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Transformadas (Laplace, Fourier, Dirac)"
+            ]
+          },
+          {
+            "num": 174,
+            "qid": "2712630",
+            "url": "https://www.tecconcursos.com.br/questoes/2712630",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712630.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Transformadas (Laplace, Fourier, Dirac)"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Transformada de Fourier e análise espectral",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/sinais-e-sistemas-transformada-de-fourier-e-analise-espectral.pdf",
+        "questions": [
+          {
+            "num": 80,
+            "qid": "640427",
+            "url": "https://www.tecconcursos.com.br/questoes/640427",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640424.pdf"
-          },
-          {
-            "num": 168,
-            "qid": "352901",
-            "url": "https://www.tecconcursos.com.br/questoes/352901",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352901.pdf"
+            "pdfUrl": "assets/questoes/640427.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
             "num": 169,
             "qid": "356721",
             "url": "https://www.tecconcursos.com.br/questoes/356721",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356721.pdf"
+            "pdfUrl": "assets/questoes/356721.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          },
+          {
+            "num": 173,
+            "qid": "2712621",
+            "url": "https://www.tecconcursos.com.br/questoes/2712621",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712621.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Transformadas (Laplace, Fourier, Dirac)"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-topicos-mesclados-de-controle-e-automacao.pdf"
+        ]
       },
       {
-        "name": "Instrumentação Industrial",
-        "count": 10,
+        "name": "Amostragem, FFT e codificação PCM",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/sinais-e-sistemas-amostragem-fft-e-codificacao-pcm.pdf",
         "questions": [
           {
-            "num": 138,
-            "qid": "2697770",
-            "url": "https://www.tecconcursos.com.br/questoes/2697770",
+            "num": 172,
+            "qid": "2684169",
+            "url": "https://www.tecconcursos.com.br/questoes/2684169",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684169.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Transformadas (Laplace, Fourier, Dirac)"
+            ]
+          },
+          {
+            "num": 176,
+            "qid": "640544",
+            "url": "https://www.tecconcursos.com.br/questoes/640544",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640544.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Modulação por Codificação de Pulso (PCM)"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Transformada Z e equações de diferenças",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/sinais-e-sistemas-transformada-z-e-equacoes-de-diferencas.pdf",
+        "questions": [
+          {
+            "num": 71,
+            "qid": "2697859",
+            "url": "https://www.tecconcursos.com.br/questoes/2697859",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697770.pdf"
+            "pdfUrl": "assets/questoes/2697859.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 139,
-            "qid": "2697798",
-            "url": "https://www.tecconcursos.com.br/questoes/2697798",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697798.pdf"
+            "num": 108,
+            "qid": "356769",
+            "url": "https://www.tecconcursos.com.br/questoes/356769",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356769.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 140,
-            "qid": "640410",
-            "url": "https://www.tecconcursos.com.br/questoes/640410",
+            "num": 110,
+            "qid": "356772",
+            "url": "https://www.tecconcursos.com.br/questoes/356772",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356772.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Sistemas lineares: polos, zeros e funções de transferência",
+        "count": 5,
+        "pdfUrl": "assets/assuntos/organizados/sinais-e-sistemas-sistemas-lineares-polos-zeros-e-funcoes-de-transferencia.pdf",
+        "questions": [
+          {
+            "num": 78,
+            "qid": "640425",
+            "url": "https://www.tecconcursos.com.br/questoes/640425",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640410.pdf"
+            "pdfUrl": "assets/questoes/640425.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 141,
-            "qid": "640428",
-            "url": "https://www.tecconcursos.com.br/questoes/640428",
+            "num": 79,
+            "qid": "640426",
+            "url": "https://www.tecconcursos.com.br/questoes/640426",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640428.pdf"
+            "pdfUrl": "assets/questoes/640426.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 142,
-            "qid": "640444",
-            "url": "https://www.tecconcursos.com.br/questoes/640444",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640444.pdf"
-          },
-          {
-            "num": 143,
-            "qid": "352900",
-            "url": "https://www.tecconcursos.com.br/questoes/352900",
+            "num": 90,
+            "qid": "352889",
+            "url": "https://www.tecconcursos.com.br/questoes/352889",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352900.pdf"
+            "pdfUrl": "assets/questoes/352889.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 144,
-            "qid": "356707",
-            "url": "https://www.tecconcursos.com.br/questoes/356707",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356707.pdf"
+            "num": 114,
+            "qid": "2712589",
+            "url": "https://www.tecconcursos.com.br/questoes/2712589",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712589.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 145,
-            "qid": "356716",
-            "url": "https://www.tecconcursos.com.br/questoes/356716",
+            "num": 191,
+            "qid": "2684219",
+            "url": "https://www.tecconcursos.com.br/questoes/2684219",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684219.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Mecânica::Controle e Automação (Mecânica)"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Resposta de sistemas de primeira e segunda ordem",
+        "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/sinais-e-sistemas-resposta-de-sistemas-de-primeira-e-segunda-ordem.pdf",
+        "questions": [
+          {
+            "num": 98,
+            "qid": "356712",
+            "url": "https://www.tecconcursos.com.br/questoes/356712",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356716.pdf"
+            "pdfUrl": "assets/questoes/356712.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 146,
-            "qid": "356725",
-            "url": "https://www.tecconcursos.com.br/questoes/356725",
+            "num": 99,
+            "qid": "356713",
+            "url": "https://www.tecconcursos.com.br/questoes/356713",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356725.pdf"
+            "pdfUrl": "assets/questoes/356713.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 100,
+            "qid": "356714",
+            "url": "https://www.tecconcursos.com.br/questoes/356714",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356714.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 120,
+            "qid": "2697809",
+            "url": "https://www.tecconcursos.com.br/questoes/2697809",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697809.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Resposta Temporal / Transitórios"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Sistemas de Controle",
+    "count": 44,
+    "assuntos": [
+      {
+        "name": "Malhas de controle: planta, referência, sensor e atuador",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-malhas-de-controle-planta-referencia-sensor-e-atuador.pdf",
+        "questions": [
+          {
+            "num": 96,
+            "qid": "356710",
+            "url": "https://www.tecconcursos.com.br/questoes/356710",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356710.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 130,
+            "qid": "356734",
+            "url": "https://www.tecconcursos.com.br/questoes/356734",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356734.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 159,
+            "qid": "2697778",
+            "url": "https://www.tecconcursos.com.br/questoes/2697778",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697778.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Modelagem de sistemas físicos e analogias de energia",
+        "count": 9,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-modelagem-de-sistemas-fisicos-e-analogias-de-energia.pdf",
+        "questions": [
+          {
+            "num": 76,
+            "qid": "640415",
+            "url": "https://www.tecconcursos.com.br/questoes/640415",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640415.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 85,
+            "qid": "352788",
+            "url": "https://www.tecconcursos.com.br/questoes/352788",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352788.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 92,
+            "qid": "352903",
+            "url": "https://www.tecconcursos.com.br/questoes/352903",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352903.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 95,
+            "qid": "352910",
+            "url": "https://www.tecconcursos.com.br/questoes/352910",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352910.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 116,
+            "qid": "2697805",
+            "url": "https://www.tecconcursos.com.br/questoes/2697805",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697805.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Diagrama de Blocos / Funções Transferência"
+            ]
+          },
+          {
+            "num": 161,
+            "qid": "2697804",
+            "url": "https://www.tecconcursos.com.br/questoes/2697804",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697804.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          },
+          {
+            "num": 162,
+            "qid": "2697806",
+            "url": "https://www.tecconcursos.com.br/questoes/2697806",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697806.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          },
+          {
+            "num": 163,
+            "qid": "2697810",
+            "url": "https://www.tecconcursos.com.br/questoes/2697810",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697810.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          },
+          {
+            "num": 164,
+            "qid": "2697887",
+            "url": "https://www.tecconcursos.com.br/questoes/2697887",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697887.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Linearização e controle de sistemas não lineares",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-linearizacao-e-controle-de-sistemas-nao-lineares.pdf",
+        "questions": [
+          {
+            "num": 86,
+            "qid": "352792",
+            "url": "https://www.tecconcursos.com.br/questoes/352792",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352792.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
             "num": 147,
             "qid": "356743",
             "url": "https://www.tecconcursos.com.br/questoes/356743",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356743.pdf"
+            "pdfUrl": "assets/questoes/356743.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          },
+          {
+            "num": 166,
+            "qid": "640422",
+            "url": "https://www.tecconcursos.com.br/questoes/640422",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640422.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-instrumentacao-industrial.pdf"
+        ]
       },
       {
-        "name": "Redes de Comunicação Industrial",
-        "count": 10,
+        "name": "Diagramas de blocos e realimentação",
+        "count": 5,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-diagramas-de-blocos-e-realimentacao.pdf",
         "questions": [
           {
-            "num": 148,
-            "qid": "352787",
-            "url": "https://www.tecconcursos.com.br/questoes/352787",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352787.pdf"
+            "num": 67,
+            "qid": "2697793",
+            "url": "https://www.tecconcursos.com.br/questoes/2697793",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697793.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 149,
-            "qid": "352789",
-            "url": "https://www.tecconcursos.com.br/questoes/352789",
+            "num": 91,
+            "qid": "352895",
+            "url": "https://www.tecconcursos.com.br/questoes/352895",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352789.pdf"
+            "pdfUrl": "assets/questoes/352895.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 150,
-            "qid": "352790",
-            "url": "https://www.tecconcursos.com.br/questoes/352790",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352790.pdf"
-          },
-          {
-            "num": 151,
-            "qid": "356703",
-            "url": "https://www.tecconcursos.com.br/questoes/356703",
+            "num": 97,
+            "qid": "356711",
+            "url": "https://www.tecconcursos.com.br/questoes/356711",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356703.pdf"
+            "pdfUrl": "assets/questoes/356711.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
           {
-            "num": 152,
-            "qid": "356705",
-            "url": "https://www.tecconcursos.com.br/questoes/356705",
+            "num": 106,
+            "qid": "356756",
+            "url": "https://www.tecconcursos.com.br/questoes/356756",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356705.pdf"
+            "pdfUrl": "assets/questoes/356756.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
           },
+          {
+            "num": 175,
+            "qid": "2712645",
+            "url": "https://www.tecconcursos.com.br/questoes/2712645",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712645.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Transformadas (Laplace, Fourier, Dirac)"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Espaço de estados, controlabilidade e observabilidade",
+        "count": 8,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-espaco-de-estados-controlabilidade-e-observabilidade.pdf",
+        "questions": [
+          {
+            "num": 66,
+            "qid": "2697791",
+            "url": "https://www.tecconcursos.com.br/questoes/2697791",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697791.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 70,
+            "qid": "2697799",
+            "url": "https://www.tecconcursos.com.br/questoes/2697799",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697799.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 74,
+            "qid": "640401",
+            "url": "https://www.tecconcursos.com.br/questoes/640401",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640401.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 75,
+            "qid": "640402",
+            "url": "https://www.tecconcursos.com.br/questoes/640402",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640402.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 104,
+            "qid": "356748",
+            "url": "https://www.tecconcursos.com.br/questoes/356748",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356748.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 112,
+            "qid": "2684164",
+            "url": "https://www.tecconcursos.com.br/questoes/2684164",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684164.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 115,
+            "qid": "2697802",
+            "url": "https://www.tecconcursos.com.br/questoes/2697802",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697802.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Diagrama de Blocos / Funções Transferência"
+            ]
+          },
+          {
+            "num": 167,
+            "qid": "640424",
+            "url": "https://www.tecconcursos.com.br/questoes/640424",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640424.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Estabilidade: critérios algébricos e lugar das raízes",
+        "count": 8,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-estabilidade-criterios-algebricos-e-lugar-das-raizes.pdf",
+        "questions": [
+          {
+            "num": 69,
+            "qid": "2697796",
+            "url": "https://www.tecconcursos.com.br/questoes/2697796",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697796.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 72,
+            "qid": "640398",
+            "url": "https://www.tecconcursos.com.br/questoes/640398",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640398.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 73,
+            "qid": "640400",
+            "url": "https://www.tecconcursos.com.br/questoes/640400",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640400.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 88,
+            "qid": "352796",
+            "url": "https://www.tecconcursos.com.br/questoes/352796",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352796.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 101,
+            "qid": "356719",
+            "url": "https://www.tecconcursos.com.br/questoes/356719",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356719.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 107,
+            "qid": "356766",
+            "url": "https://www.tecconcursos.com.br/questoes/356766",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356766.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 118,
+            "qid": "2697794",
+            "url": "https://www.tecconcursos.com.br/questoes/2697794",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697794.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Estabilidade (Routh-Hurwitz, LGR, etc.)"
+            ]
+          },
+          {
+            "num": 119,
+            "qid": "2697797",
+            "url": "https://www.tecconcursos.com.br/questoes/2697797",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697797.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Resposta Temporal / Transitórios"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Controladores P, PI, PD e PID",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-controladores-p-pi-pd-e-pid.pdf",
+        "questions": [
+          {
+            "num": 68,
+            "qid": "2697795",
+            "url": "https://www.tecconcursos.com.br/questoes/2697795",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697795.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 81,
+            "qid": "640429",
+            "url": "https://www.tecconcursos.com.br/questoes/640429",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640429.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 89,
+            "qid": "352801",
+            "url": "https://www.tecconcursos.com.br/questoes/352801",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352801.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Erro estacionário e especificações de desempenho",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-erro-estacionario-e-especificacoes-de-desempenho.pdf",
+        "questions": [
+          {
+            "num": 93,
+            "qid": "352905",
+            "url": "https://www.tecconcursos.com.br/questoes/352905",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352905.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 94,
+            "qid": "352906",
+            "url": "https://www.tecconcursos.com.br/questoes/352906",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352906.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Controle digital: discretização, estabilidade e amostragem",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/sistemas-de-controle-controle-digital-discretizacao-estabilidade-e-amostragem.pdf",
+        "questions": [
+          {
+            "num": 105,
+            "qid": "356754",
+            "url": "https://www.tecconcursos.com.br/questoes/356754",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356754.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 109,
+            "qid": "356770",
+            "url": "https://www.tecconcursos.com.br/questoes/356770",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356770.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 117,
+            "qid": "2697800",
+            "url": "https://www.tecconcursos.com.br/questoes/2697800",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697800.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controladores (P, PI, PD, PID, etc)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Instrumentação e Medidas",
+    "count": 14,
+    "assuntos": [
+      {
+        "name": "Sensores e transdutores: posição, aceleração e medição inercial",
+        "count": 5,
+        "pdfUrl": "assets/assuntos/organizados/instrumentacao-e-medidas-sensores-e-transdutores-posicao-aceleracao-e-medicao-inercial.pdf",
+        "questions": [
+          {
+            "num": 30,
+            "qid": "2697774",
+            "url": "https://www.tecconcursos.com.br/questoes/2697774",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697774.pdf",
+            "legacyTopicKeys": [
+              "Eletrônica::Outros Componentes Eletrônicos",
+              "Engenharia Elétrica e Eletrônica::Outros Componentes Eletrônicos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 138,
+            "qid": "2697770",
+            "url": "https://www.tecconcursos.com.br/questoes/2697770",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697770.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          },
+          {
+            "num": 139,
+            "qid": "2697798",
+            "url": "https://www.tecconcursos.com.br/questoes/2697798",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697798.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          },
+          {
+            "num": 141,
+            "qid": "640428",
+            "url": "https://www.tecconcursos.com.br/questoes/640428",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640428.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          },
+          {
+            "num": 145,
+            "qid": "356716",
+            "url": "https://www.tecconcursos.com.br/questoes/356716",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356716.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Resposta em frequência e condicionamento de transdutores",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/instrumentacao-e-medidas-resposta-em-frequencia-e-condicionamento-de-transdutores.pdf",
+        "questions": [
+          {
+            "num": 82,
+            "qid": "640436",
+            "url": "https://www.tecconcursos.com.br/questoes/640436",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640436.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 83,
+            "qid": "640438",
+            "url": "https://www.tecconcursos.com.br/questoes/640438",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640438.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 160,
+            "qid": "2697803",
+            "url": "https://www.tecconcursos.com.br/questoes/2697803",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697803.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Osciloscópios, valor eficaz e erros de medição",
+        "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/instrumentacao-e-medidas-osciloscopios-valor-eficaz-e-erros-de-medicao.pdf",
+        "questions": [
+          {
+            "num": 12,
+            "qid": "640440",
+            "url": "https://www.tecconcursos.com.br/questoes/640440",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640440.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos de Excitação Senoidal / Fasores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 20,
+            "qid": "2697783",
+            "url": "https://www.tecconcursos.com.br/questoes/2697783",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697783.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Medidas Elétricas / Instrumentos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 21,
+            "qid": "2697784",
+            "url": "https://www.tecconcursos.com.br/questoes/2697784",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697784.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Medidas Elétricas / Instrumentos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 142,
+            "qid": "640444",
+            "url": "https://www.tecconcursos.com.br/questoes/640444",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640444.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Extensometria e pontes de medição",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/instrumentacao-e-medidas-extensometria-e-pontes-de-medicao.pdf",
+        "questions": [
+          {
+            "num": 188,
+            "qid": "2712944",
+            "url": "https://www.tecconcursos.com.br/questoes/2712944",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712944.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Mecânica::Resistência dos Materiais"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Padrões de sinais analógicos industriais",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/instrumentacao-e-medidas-padroes-de-sinais-analogicos-industriais.pdf",
+        "questions": [
           {
             "num": 153,
             "qid": "356706",
             "url": "https://www.tecconcursos.com.br/questoes/356706",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356706.pdf"
-          },
-          {
-            "num": 154,
-            "qid": "356708",
-            "url": "https://www.tecconcursos.com.br/questoes/356708",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356708.pdf"
-          },
-          {
-            "num": 155,
-            "qid": "356726",
-            "url": "https://www.tecconcursos.com.br/questoes/356726",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356726.pdf"
-          },
-          {
-            "num": 156,
-            "qid": "356727",
-            "url": "https://www.tecconcursos.com.br/questoes/356727",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356727.pdf"
-          },
-          {
-            "num": 157,
-            "qid": "356735",
-            "url": "https://www.tecconcursos.com.br/questoes/356735",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356735.pdf"
+            "pdfUrl": "assets/questoes/356706.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-redes-de-comunicacao-industrial.pdf"
-      },
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Automação Industrial",
+    "count": 24,
+    "assuntos": [
       {
-        "name": "Outros Temas de Eng. Elétrica",
-        "count": 10,
+        "name": "Fundamentos de automação, manufatura flexível e CNC",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/automacao-industrial-fundamentos-de-automacao-manufatura-flexivel-e-cnc.pdf",
         "questions": [
+          {
+            "num": 65,
+            "qid": "2697772",
+            "url": "https://www.tecconcursos.com.br/questoes/2697772",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697772.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Automação - Definições"
+            ]
+          },
           {
             "num": 178,
             "qid": "2697771",
             "url": "https://www.tecconcursos.com.br/questoes/2697771",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697771.pdf"
-          },
-          {
-            "num": 179,
-            "qid": "2697775",
-            "url": "https://www.tecconcursos.com.br/questoes/2697775",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697775.pdf"
+            "pdfUrl": "assets/questoes/2697771.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
           },
           {
             "num": 180,
             "qid": "2697777",
             "url": "https://www.tecconcursos.com.br/questoes/2697777",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697777.pdf"
-          },
-          {
-            "num": 181,
-            "qid": "2697787",
-            "url": "https://www.tecconcursos.com.br/questoes/2697787",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697787.pdf"
-          },
-          {
-            "num": 182,
-            "qid": "2697788",
-            "url": "https://www.tecconcursos.com.br/questoes/2697788",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697788.pdf"
-          },
-          {
-            "num": 183,
-            "qid": "2697808",
-            "url": "https://www.tecconcursos.com.br/questoes/2697808",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697808.pdf"
-          },
-          {
-            "num": 184,
-            "qid": "2697811",
-            "url": "https://www.tecconcursos.com.br/questoes/2697811",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697811.pdf"
-          },
-          {
-            "num": 185,
-            "qid": "2697812",
-            "url": "https://www.tecconcursos.com.br/questoes/2697812",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697812.pdf"
-          },
-          {
-            "num": 186,
-            "qid": "2697865",
-            "url": "https://www.tecconcursos.com.br/questoes/2697865",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697865.pdf"
-          },
-          {
-            "num": 187,
-            "qid": "2697878",
-            "url": "https://www.tecconcursos.com.br/questoes/2697878",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697878.pdf"
+            "pdfUrl": "assets/questoes/2697777.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-outros-temas-de-eng-eletrica.pdf"
+        ]
       },
       {
-        "name": "Microcontroladores / Sist. Microprocessados",
-        "count": 8,
+        "name": "CLP: arquitetura, varredura e dimensionamento de entradas",
+        "count": 5,
+        "pdfUrl": "assets/assuntos/organizados/automacao-industrial-clp-arquitetura-varredura-e-dimensionamento-de-entradas.pdf",
         "questions": [
           {
-            "num": 48,
-            "qid": "2697782",
-            "url": "https://www.tecconcursos.com.br/questoes/2697782",
+            "num": 122,
+            "qid": "2697776",
+            "url": "https://www.tecconcursos.com.br/questoes/2697776",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697782.pdf",
-            "materialUrl": "data/microcontroladores_estudo.json"
+            "pdfUrl": "assets/questoes/2697776.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 124,
+            "qid": "640447",
+            "url": "https://www.tecconcursos.com.br/questoes/640447",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640447.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 125,
+            "qid": "352791",
+            "url": "https://www.tecconcursos.com.br/questoes/352791",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352791.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 126,
+            "qid": "356729",
+            "url": "https://www.tecconcursos.com.br/questoes/356729",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356729.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 132,
+            "qid": "2684203",
+            "url": "https://www.tecconcursos.com.br/questoes/2684203",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684203.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Programação de CLP: Ladder, temporizadores e intertravamentos",
+        "count": 6,
+        "pdfUrl": "assets/assuntos/organizados/automacao-industrial-programacao-de-clp-ladder-temporizadores-e-intertravamentos.pdf",
+        "questions": [
+          {
+            "num": 121,
+            "qid": "2697769",
+            "url": "https://www.tecconcursos.com.br/questoes/2697769",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697769.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 123,
+            "qid": "640443",
+            "url": "https://www.tecconcursos.com.br/questoes/640443",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640443.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 127,
+            "qid": "356731",
+            "url": "https://www.tecconcursos.com.br/questoes/356731",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356731.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 128,
+            "qid": "356732",
+            "url": "https://www.tecconcursos.com.br/questoes/356732",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356732.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 129,
+            "qid": "356733",
+            "url": "https://www.tecconcursos.com.br/questoes/356733",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356733.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 134,
+            "qid": "2684245",
+            "url": "https://www.tecconcursos.com.br/questoes/2684245",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684245.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SCADA, supervisão e níveis de automação",
+        "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/automacao-industrial-scada-supervisao-e-niveis-de-automacao.pdf",
+        "questions": [
+          {
+            "num": 131,
+            "qid": "356736",
+            "url": "https://www.tecconcursos.com.br/questoes/356736",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356736.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 143,
+            "qid": "352900",
+            "url": "https://www.tecconcursos.com.br/questoes/352900",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352900.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          },
+          {
+            "num": 144,
+            "qid": "356707",
+            "url": "https://www.tecconcursos.com.br/questoes/356707",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356707.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          },
+          {
+            "num": 179,
+            "qid": "2697775",
+            "url": "https://www.tecconcursos.com.br/questoes/2697775",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697775.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Automação sequencial: atuadores, esteiras e movimentação",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/automacao-industrial-automacao-sequencial-atuadores-esteiras-e-movimentacao.pdf",
+        "questions": [
+          {
+            "num": 22,
+            "qid": "2697768",
+            "url": "https://www.tecconcursos.com.br/questoes/2697768",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697768.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Acionamentos Pneumáticos e Hidráulicos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 192,
+            "qid": "2712661",
+            "url": "https://www.tecconcursos.com.br/questoes/2712661",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712661.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Mecânica::Controle e Automação (Mecânica)"
+            ]
+          },
+          {
+            "num": 193,
+            "qid": "2712673",
+            "url": "https://www.tecconcursos.com.br/questoes/2712673",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712673.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Mecânica::Controle e Automação (Mecânica)"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Atuação pneumática e hidráulica: válvulas e aplicações",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/automacao-industrial-atuacao-pneumatica-e-hidraulica-valvulas-e-aplicacoes.pdf",
+        "questions": [
+          {
+            "num": 23,
+            "qid": "2697773",
+            "url": "https://www.tecconcursos.com.br/questoes/2697773",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697773.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Acionamentos Pneumáticos e Hidráulicos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 154,
+            "qid": "356708",
+            "url": "https://www.tecconcursos.com.br/questoes/356708",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356708.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
+          },
+          {
+            "num": 190,
+            "qid": "640430",
+            "url": "https://www.tecconcursos.com.br/questoes/640430",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640430.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Mecânica::Sistemas Hidráulicos e Pneumáticos (Mecânica)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Eletrônica Digital e Computação",
+    "count": 19,
+    "assuntos": [
+      {
+        "name": "Lógica combinacional, álgebra booleana e multiplexadores",
+        "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-digital-e-computacao-logica-combinacional-algebra-booleana-e-multiplexadores.pdf",
+        "questions": [
+          {
+            "num": 42,
+            "qid": "352871",
+            "url": "https://www.tecconcursos.com.br/questoes/352871",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352871.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Sistemas de Numeração"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 43,
+            "qid": "356723",
+            "url": "https://www.tecconcursos.com.br/questoes/356723",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356723.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Álgebra Booleana e Circuitos Lógicos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 44,
+            "qid": "2712539",
+            "url": "https://www.tecconcursos.com.br/questoes/2712539",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712539.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Álgebra Booleana e Circuitos Lógicos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 45,
+            "qid": "352866",
+            "url": "https://www.tecconcursos.com.br/questoes/352866",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352866.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Circuitos Multiplexadores / Demultiplexadores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Contadores, memórias e representação binária",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-digital-e-computacao-contadores-memorias-e-representacao-binaria.pdf",
+        "questions": [
+          {
+            "num": 46,
+            "qid": "352858",
+            "url": "https://www.tecconcursos.com.br/questoes/352858",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352858.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Contadores e Registradores"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
+          },
+          {
+            "num": 47,
+            "qid": "2684127",
+            "url": "https://www.tecconcursos.com.br/questoes/2684127",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2684127.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Memórias"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
             "num": 49,
@@ -812,7 +2029,28 @@
             "url": "https://www.tecconcursos.com.br/questoes/2697789",
             "ano": "2023",
             "pdfUrl": "assets/questoes/2697789.pdf",
-            "materialUrl": "data/microcontroladores_estudo.json"
+            "materialUrl": "data/microcontroladores_estudo.json",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Microcontroladores / Sist. Microprocessados"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Microcontroladores: GPIO, PWM, conversão A/D e displays",
+        "count": 6,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-digital-e-computacao-microcontroladores-gpio-pwm-conversao-a-d-e-displays.pdf",
+        "questions": [
+          {
+            "num": 48,
+            "qid": "2697782",
+            "url": "https://www.tecconcursos.com.br/questoes/2697782",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697782.pdf",
+            "materialUrl": "data/microcontroladores_estudo.json",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Microcontroladores / Sist. Microprocessados"
+            ]
           },
           {
             "num": 50,
@@ -820,7 +2058,10 @@
             "url": "https://www.tecconcursos.com.br/questoes/640403",
             "ano": "2018",
             "pdfUrl": "assets/questoes/640403.pdf",
-            "materialUrl": "data/microcontroladores_estudo.json"
+            "materialUrl": "data/microcontroladores_estudo.json",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Microcontroladores / Sist. Microprocessados"
+            ]
           },
           {
             "num": 51,
@@ -828,7 +2069,10 @@
             "url": "https://www.tecconcursos.com.br/questoes/640405",
             "ano": "2018",
             "pdfUrl": "assets/questoes/640405.pdf",
-            "materialUrl": "data/microcontroladores_estudo.json"
+            "materialUrl": "data/microcontroladores_estudo.json",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Microcontroladores / Sist. Microprocessados"
+            ]
           },
           {
             "num": 52,
@@ -836,7 +2080,10 @@
             "url": "https://www.tecconcursos.com.br/questoes/640448",
             "ano": "2018",
             "pdfUrl": "assets/questoes/640448.pdf",
-            "materialUrl": "data/microcontroladores_estudo.json"
+            "materialUrl": "data/microcontroladores_estudo.json",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Microcontroladores / Sist. Microprocessados"
+            ]
           },
           {
             "num": 53,
@@ -844,7 +2091,10 @@
             "url": "https://www.tecconcursos.com.br/questoes/356724",
             "ano": "2011",
             "pdfUrl": "assets/questoes/356724.pdf",
-            "materialUrl": "data/microcontroladores_estudo.json"
+            "materialUrl": "data/microcontroladores_estudo.json",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Microcontroladores / Sist. Microprocessados"
+            ]
           },
           {
             "num": 54,
@@ -852,947 +2102,528 @@
             "url": "https://www.tecconcursos.com.br/questoes/356728",
             "ano": "2011",
             "pdfUrl": "assets/questoes/356728.pdf",
-            "materialUrl": "data/microcontroladores_estudo.json"
+            "materialUrl": "data/microcontroladores_estudo.json",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Microcontroladores / Sist. Microprocessados"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Interfaces I²C e SPI: circuitos e análise lógica",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-digital-e-computacao-interfaces-i2c-e-spi-circuitos-e-analise-logica.pdf",
+        "questions": [
+          {
+            "num": 140,
+            "qid": "640410",
+            "url": "https://www.tecconcursos.com.br/questoes/640410",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640410.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
           },
+          {
+            "num": 146,
+            "qid": "356725",
+            "url": "https://www.tecconcursos.com.br/questoes/356725",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356725.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Instrumentação Industrial"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sistemas operacionais e escalonamento em tempo real",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-digital-e-computacao-sistemas-operacionais-e-escalonamento-em-tempo-real.pdf",
+        "questions": [
           {
             "num": 55,
             "qid": "2712634",
             "url": "https://www.tecconcursos.com.br/questoes/2712634",
             "ano": "2006",
             "pdfUrl": "assets/questoes/2712634.pdf",
-            "materialUrl": "data/microcontroladores_estudo.json"
+            "materialUrl": "data/microcontroladores_estudo.json",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Microcontroladores / Sist. Microprocessados"
+            ]
+          },
+          {
+            "num": 135,
+            "qid": "2712544",
+            "url": "https://www.tecconcursos.com.br/questoes/2712544",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712544.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-microcontroladores-sist-microprocessados.pdf"
+        ]
       },
       {
-        "name": "Circuitos de Excitação Senoidal / Fasores",
-        "count": 7,
+        "name": "Programação em C/C++: tipos, vetores e laços",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/eletronica-digital-e-computacao-programacao-em-c-c-tipos-vetores-e-lacos.pdf",
         "questions": [
           {
-            "num": 11,
-            "qid": "640432",
-            "url": "https://www.tecconcursos.com.br/questoes/640432",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640432.pdf"
-          },
-          {
-            "num": 12,
-            "qid": "640440",
-            "url": "https://www.tecconcursos.com.br/questoes/640440",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640440.pdf"
-          },
-          {
-            "num": 13,
-            "qid": "352810",
-            "url": "https://www.tecconcursos.com.br/questoes/352810",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352810.pdf"
-          },
-          {
-            "num": 14,
-            "qid": "352812",
-            "url": "https://www.tecconcursos.com.br/questoes/352812",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352812.pdf"
-          },
-          {
-            "num": 15,
-            "qid": "352814",
-            "url": "https://www.tecconcursos.com.br/questoes/352814",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352814.pdf"
-          },
-          {
-            "num": 16,
-            "qid": "356741",
-            "url": "https://www.tecconcursos.com.br/questoes/356741",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356741.pdf"
-          },
-          {
-            "num": 17,
-            "qid": "2712564",
-            "url": "https://www.tecconcursos.com.br/questoes/2712564",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712564.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-circuitos-de-excitacao-senoidal-fasores.pdf"
-      },
-      {
-        "name": "Circuitos de Primeira e Segunda Ordem",
-        "count": 6,
-        "questions": [
-          {
-            "num": 5,
-            "qid": "2697785",
-            "url": "https://www.tecconcursos.com.br/questoes/2697785",
+            "num": 181,
+            "qid": "2697787",
+            "url": "https://www.tecconcursos.com.br/questoes/2697787",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697785.pdf"
+            "pdfUrl": "assets/questoes/2697787.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
           },
           {
-            "num": 6,
-            "qid": "352797",
-            "url": "https://www.tecconcursos.com.br/questoes/352797",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352797.pdf"
-          },
-          {
-            "num": 7,
-            "qid": "352909",
-            "url": "https://www.tecconcursos.com.br/questoes/352909",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352909.pdf"
-          },
-          {
-            "num": 8,
-            "qid": "2684146",
-            "url": "https://www.tecconcursos.com.br/questoes/2684146",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684146.pdf"
-          },
-          {
-            "num": 9,
-            "qid": "2712585",
-            "url": "https://www.tecconcursos.com.br/questoes/2712585",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712585.pdf"
-          },
-          {
-            "num": 10,
-            "qid": "2712588",
-            "url": "https://www.tecconcursos.com.br/questoes/2712588",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712588.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-circuitos-de-primeira-e-segunda-ordem.pdf"
-      },
-      {
-        "name": "Amplificadores Operacionais / Potência",
-        "count": 6,
-        "questions": [
-          {
-            "num": 33,
-            "qid": "2697779",
-            "url": "https://www.tecconcursos.com.br/questoes/2697779",
+            "num": 182,
+            "qid": "2697788",
+            "url": "https://www.tecconcursos.com.br/questoes/2697788",
             "ano": "2023",
-            "pdfUrl": "assets/questoes/2697779.pdf"
-          },
-          {
-            "num": 34,
-            "qid": "640439",
-            "url": "https://www.tecconcursos.com.br/questoes/640439",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640439.pdf"
-          },
-          {
-            "num": 35,
-            "qid": "352854",
-            "url": "https://www.tecconcursos.com.br/questoes/352854",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352854.pdf"
-          },
-          {
-            "num": 36,
-            "qid": "352855",
-            "url": "https://www.tecconcursos.com.br/questoes/352855",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352855.pdf"
-          },
-          {
-            "num": 37,
-            "qid": "352902",
-            "url": "https://www.tecconcursos.com.br/questoes/352902",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352902.pdf"
-          },
-          {
-            "num": 38,
-            "qid": "356709",
-            "url": "https://www.tecconcursos.com.br/questoes/356709",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356709.pdf"
+            "pdfUrl": "assets/questoes/2697788.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-amplificadores-operacionais-potencia.pdf"
-      },
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Redes e Comunicação",
+    "count": 14,
+    "assuntos": [
       {
-        "name": "Transformadas (Laplace, Fourier, Dirac)",
-        "count": 6,
-        "questions": [
-          {
-            "num": 170,
-            "qid": "2697807",
-            "url": "https://www.tecconcursos.com.br/questoes/2697807",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697807.pdf"
-          },
-          {
-            "num": 171,
-            "qid": "2697843",
-            "url": "https://www.tecconcursos.com.br/questoes/2697843",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697843.pdf"
-          },
-          {
-            "num": 172,
-            "qid": "2684169",
-            "url": "https://www.tecconcursos.com.br/questoes/2684169",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684169.pdf"
-          },
-          {
-            "num": 173,
-            "qid": "2712621",
-            "url": "https://www.tecconcursos.com.br/questoes/2712621",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712621.pdf"
-          },
-          {
-            "num": 174,
-            "qid": "2712630",
-            "url": "https://www.tecconcursos.com.br/questoes/2712630",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712630.pdf"
-          },
-          {
-            "num": 175,
-            "qid": "2712645",
-            "url": "https://www.tecconcursos.com.br/questoes/2712645",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712645.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-transformadas-laplace-fourier-dirac.pdf"
-      },
-      {
-        "name": "Conversores AD e DAC",
+        "name": "Redes industriais: barramentos de campo e integração",
         "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/redes-e-comunicacao-redes-industriais-barramentos-de-campo-e-integracao.pdf",
         "questions": [
           {
-            "num": 56,
-            "qid": "2697781",
-            "url": "https://www.tecconcursos.com.br/questoes/2697781",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697781.pdf"
+            "num": 149,
+            "qid": "352789",
+            "url": "https://www.tecconcursos.com.br/questoes/352789",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352789.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
           },
           {
-            "num": 57,
-            "qid": "2697792",
-            "url": "https://www.tecconcursos.com.br/questoes/2697792",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697792.pdf"
+            "num": 151,
+            "qid": "356703",
+            "url": "https://www.tecconcursos.com.br/questoes/356703",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356703.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
           },
           {
-            "num": 58,
-            "qid": "640433",
-            "url": "https://www.tecconcursos.com.br/questoes/640433",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640433.pdf"
+            "num": 152,
+            "qid": "356705",
+            "url": "https://www.tecconcursos.com.br/questoes/356705",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356705.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
           },
           {
-            "num": 59,
-            "qid": "640453",
-            "url": "https://www.tecconcursos.com.br/questoes/640453",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640453.pdf"
+            "num": 156,
+            "qid": "356727",
+            "url": "https://www.tecconcursos.com.br/questoes/356727",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356727.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-conversores-ad-e-dac.pdf"
+        ]
       },
       {
-        "name": "Diodos (Retificador, Zener, Schottky, LED)",
+        "name": "Comunicação entre CLPs: varredura, sincronização e latência",
         "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/redes-e-comunicacao-comunicacao-entre-clps-varredura-sincronizacao-e-latencia.pdf",
         "questions": [
           {
-            "num": 27,
-            "qid": "640412",
-            "url": "https://www.tecconcursos.com.br/questoes/640412",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640412.pdf"
-          },
-          {
-            "num": 28,
-            "qid": "356722",
-            "url": "https://www.tecconcursos.com.br/questoes/356722",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356722.pdf"
-          },
-          {
-            "num": 29,
-            "qid": "2684248",
-            "url": "https://www.tecconcursos.com.br/questoes/2684248",
+            "num": 133,
+            "qid": "2684237",
+            "url": "https://www.tecconcursos.com.br/questoes/2684237",
             "ano": "2008",
-            "pdfUrl": "assets/questoes/2684248.pdf"
+            "pdfUrl": "assets/questoes/2684237.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 136,
+            "qid": "2712961",
+            "url": "https://www.tecconcursos.com.br/questoes/2712961",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712961.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
+          },
+          {
+            "num": 137,
+            "qid": "2712963",
+            "url": "https://www.tecconcursos.com.br/questoes/2712963",
+            "ano": "2006",
+            "pdfUrl": "assets/questoes/2712963.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Controles Lógicos Programáveis - CLP e SCADA"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-diodos-retificador-zener-schottky-led.pdf"
+        ]
       },
       {
-        "name": "Filtros Ativos e Passivos",
+        "name": "Meios de transmissão, interfaces e propagação de ondas",
+        "count": 4,
+        "pdfUrl": "assets/assuntos/organizados/redes-e-comunicacao-meios-de-transmissao-interfaces-e-propagacao-de-ondas.pdf",
+        "questions": [
+          {
+            "num": 148,
+            "qid": "352787",
+            "url": "https://www.tecconcursos.com.br/questoes/352787",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352787.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
+          },
+          {
+            "num": 155,
+            "qid": "356726",
+            "url": "https://www.tecconcursos.com.br/questoes/356726",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356726.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
+          },
+          {
+            "num": 168,
+            "qid": "352901",
+            "url": "https://www.tecconcursos.com.br/questoes/352901",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352901.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Tópicos Mesclados de Controle e Automação"
+            ]
+          },
+          {
+            "num": 177,
+            "qid": "352803",
+            "url": "https://www.tecconcursos.com.br/questoes/352803",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352803.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Transmissão Guiada (Fibra Óptica / Guias)"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Roteamento e segurança de redes industriais",
         "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/redes-e-comunicacao-roteamento-e-seguranca-de-redes-industriais.pdf",
         "questions": [
           {
-            "num": 39,
-            "qid": "352795",
-            "url": "https://www.tecconcursos.com.br/questoes/352795",
+            "num": 150,
+            "qid": "352790",
+            "url": "https://www.tecconcursos.com.br/questoes/352790",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352795.pdf"
+            "pdfUrl": "assets/questoes/352790.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
           },
           {
-            "num": 40,
-            "qid": "352817",
-            "url": "https://www.tecconcursos.com.br/questoes/352817",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352817.pdf"
-          },
-          {
-            "num": 41,
-            "qid": "356715",
-            "url": "https://www.tecconcursos.com.br/questoes/356715",
+            "num": 157,
+            "qid": "356735",
+            "url": "https://www.tecconcursos.com.br/questoes/356735",
             "ano": "2011",
-            "pdfUrl": "assets/questoes/356715.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-filtros-ativos-e-passivos.pdf"
-      },
-      {
-        "name": "Leis de Ohm, Kirchhoff, Potência",
-        "count": 2,
-        "questions": [
-          {
-            "num": 1,
-            "qid": "2697780",
-            "url": "https://www.tecconcursos.com.br/questoes/2697780",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697780.pdf"
+            "pdfUrl": "assets/questoes/356735.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Comunicação Industrial"
+            ]
           },
           {
-            "num": 2,
-            "qid": "356720",
-            "url": "https://www.tecconcursos.com.br/questoes/356720",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356720.pdf"
+            "num": 158,
+            "qid": "640445",
+            "url": "https://www.tecconcursos.com.br/questoes/640445",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640445.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Redes de Dados e Comunicação"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-leis-de-ohm-kirchhoff-potencia.pdf"
-      },
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Máquinas Elétricas e Sistemas Hidráulicos",
+    "count": 4,
+    "assuntos": [
       {
-        "name": "Teoremas (Thevenin, Norton, Estrela)",
-        "count": 2,
-        "questions": [
-          {
-            "num": 3,
-            "qid": "2697786",
-            "url": "https://www.tecconcursos.com.br/questoes/2697786",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697786.pdf"
-          },
-          {
-            "num": 4,
-            "qid": "2684143",
-            "url": "https://www.tecconcursos.com.br/questoes/2684143",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684143.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-teoremas-thevenin-norton-estrela.pdf"
-      },
-      {
-        "name": "Medidas Elétricas / Instrumentos",
-        "count": 2,
-        "questions": [
-          {
-            "num": 20,
-            "qid": "2697783",
-            "url": "https://www.tecconcursos.com.br/questoes/2697783",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697783.pdf"
-          },
-          {
-            "num": 21,
-            "qid": "2697784",
-            "url": "https://www.tecconcursos.com.br/questoes/2697784",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697784.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-medidas-eletricas-instrumentos.pdf"
-      },
-      {
-        "name": "Acionamentos Pneumáticos e Hidráulicos",
-        "count": 2,
-        "questions": [
-          {
-            "num": 22,
-            "qid": "2697768",
-            "url": "https://www.tecconcursos.com.br/questoes/2697768",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697768.pdf"
-          },
-          {
-            "num": 23,
-            "qid": "2697773",
-            "url": "https://www.tecconcursos.com.br/questoes/2697773",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697773.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-acionamentos-pneumaticos-e-hidraulicos.pdf"
-      },
-      {
-        "name": "Máquinas de Corrente Contínua",
-        "count": 2,
-        "questions": [
-          {
-            "num": 25,
-            "qid": "2697790",
-            "url": "https://www.tecconcursos.com.br/questoes/2697790",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697790.pdf"
-          },
-          {
-            "num": 26,
-            "qid": "2697801",
-            "url": "https://www.tecconcursos.com.br/questoes/2697801",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697801.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-maquinas-de-corrente-continua.pdf"
-      },
-      {
-        "name": "Álgebra Booleana e Circuitos Lógicos",
-        "count": 2,
-        "questions": [
-          {
-            "num": 43,
-            "qid": "356723",
-            "url": "https://www.tecconcursos.com.br/questoes/356723",
-            "ano": "2011",
-            "pdfUrl": "assets/questoes/356723.pdf"
-          },
-          {
-            "num": 44,
-            "qid": "2712539",
-            "url": "https://www.tecconcursos.com.br/questoes/2712539",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712539.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-algebra-booleana-e-circuitos-logicos.pdf"
-      },
-      {
-        "name": "Semicondutores de Potência (DIAC, TRIAC...)",
-        "count": 2,
-        "questions": [
-          {
-            "num": 60,
-            "qid": "352856",
-            "url": "https://www.tecconcursos.com.br/questoes/352856",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352856.pdf"
-          },
-          {
-            "num": 61,
-            "qid": "2712562",
-            "url": "https://www.tecconcursos.com.br/questoes/2712562",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712562.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-semicondutores-de-potencia-diac-triac.pdf"
-      },
-      {
-        "name": "Diagrama de Blocos / Funções Transferência",
-        "count": 2,
-        "questions": [
-          {
-            "num": 115,
-            "qid": "2697802",
-            "url": "https://www.tecconcursos.com.br/questoes/2697802",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697802.pdf"
-          },
-          {
-            "num": 116,
-            "qid": "2697805",
-            "url": "https://www.tecconcursos.com.br/questoes/2697805",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697805.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-diagrama-de-blocos-funcoes-transferencia.pdf"
-      },
-      {
-        "name": "Resposta Temporal / Transitórios",
-        "count": 2,
-        "questions": [
-          {
-            "num": 119,
-            "qid": "2697797",
-            "url": "https://www.tecconcursos.com.br/questoes/2697797",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697797.pdf"
-          },
-          {
-            "num": 120,
-            "qid": "2697809",
-            "url": "https://www.tecconcursos.com.br/questoes/2697809",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697809.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-resposta-temporal-transitorios.pdf"
-      },
-      {
-        "name": "Análise de Potência em C.A.",
-        "count": 1,
-        "questions": [
-          {
-            "num": 18,
-            "qid": "352813",
-            "url": "https://www.tecconcursos.com.br/questoes/352813",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352813.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-analise-de-potencia-em-c-a.pdf"
-      },
-      {
-        "name": "Circuitos Trifásicos",
-        "count": 1,
-        "questions": [
-          {
-            "num": 19,
-            "qid": "352816",
-            "url": "https://www.tecconcursos.com.br/questoes/352816",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352816.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-circuitos-trifasicos.pdf"
-      },
-      {
-        "name": "Transformadores Monofásicos",
-        "count": 1,
+        "name": "Transformadores e máquinas de corrente contínua",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/maquinas-eletricas-e-sistemas-hidraulicos-transformadores-e-maquinas-de-corrente-continua.pdf",
         "questions": [
           {
             "num": 24,
             "qid": "640411",
             "url": "https://www.tecconcursos.com.br/questoes/640411",
             "ano": "2018",
-            "pdfUrl": "assets/questoes/640411.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-transformadores-monofasicos.pdf"
-      },
-      {
-        "name": "Outros Componentes Eletrônicos",
-        "count": 1,
-        "questions": [
-          {
-            "num": 30,
-            "qid": "2697774",
-            "url": "https://www.tecconcursos.com.br/questoes/2697774",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697774.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-outros-componentes-eletronicos.pdf"
-      },
-      {
-        "name": "Retificadores Onda Completa / Meia Onda",
-        "count": 1,
-        "questions": [
-          {
-            "num": 31,
-            "qid": "640451",
-            "url": "https://www.tecconcursos.com.br/questoes/640451",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640451.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-retificadores-onda-completa-meia-onda.pdf"
-      },
-      {
-        "name": "Circuitos Reguladores de Tensão",
-        "count": 1,
-        "questions": [
-          {
-            "num": 32,
-            "qid": "640409",
-            "url": "https://www.tecconcursos.com.br/questoes/640409",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640409.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-circuitos-reguladores-de-tensao.pdf"
-      },
-      {
-        "name": "Sistemas de Numeração",
-        "count": 1,
-        "questions": [
-          {
-            "num": 42,
-            "qid": "352871",
-            "url": "https://www.tecconcursos.com.br/questoes/352871",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352871.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-sistemas-de-numeracao.pdf"
-      },
-      {
-        "name": "Circuitos Multiplexadores / Demultiplexadores",
-        "count": 1,
-        "questions": [
-          {
-            "num": 45,
-            "qid": "352866",
-            "url": "https://www.tecconcursos.com.br/questoes/352866",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352866.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-circuitos-multiplexadores-demultiplexadores.pdf"
-      },
-      {
-        "name": "Contadores e Registradores",
-        "count": 1,
-        "questions": [
-          {
-            "num": 46,
-            "qid": "352858",
-            "url": "https://www.tecconcursos.com.br/questoes/352858",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352858.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-contadores-e-registradores.pdf"
-      },
-      {
-        "name": "Memórias",
-        "count": 1,
-        "questions": [
-          {
-            "num": 47,
-            "qid": "2684127",
-            "url": "https://www.tecconcursos.com.br/questoes/2684127",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684127.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-memorias.pdf"
-      },
-      {
-        "name": "Circuitos Conversores (CC-CC)",
-        "count": 1,
-        "questions": [
-          {
-            "num": 62,
-            "qid": "2684141",
-            "url": "https://www.tecconcursos.com.br/questoes/2684141",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684141.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-circuitos-conversores-cc-cc.pdf"
-      },
-      {
-        "name": "Circuitos Inversores (CC-CA)",
-        "count": 1,
-        "questions": [
-          {
-            "num": 63,
-            "qid": "352884",
-            "url": "https://www.tecconcursos.com.br/questoes/352884",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352884.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-circuitos-inversores-cc-ca.pdf"
-      },
-      {
-        "name": "Tópicos Mesclados de Eletrônica",
-        "count": 1,
-        "questions": [
-          {
-            "num": 64,
-            "qid": "640536",
-            "url": "https://www.tecconcursos.com.br/questoes/640536",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640536.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-topicos-mesclados-de-eletronica.pdf"
-      },
-      {
-        "name": "Automação - Definições",
-        "count": 1,
-        "questions": [
-          {
-            "num": 65,
-            "qid": "2697772",
-            "url": "https://www.tecconcursos.com.br/questoes/2697772",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697772.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-automacao-definicoes.pdf"
-      },
-      {
-        "name": "Controladores (P, PI, PD, PID, etc)",
-        "count": 1,
-        "questions": [
-          {
-            "num": 117,
-            "qid": "2697800",
-            "url": "https://www.tecconcursos.com.br/questoes/2697800",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697800.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-controladores-p-pi-pd-pid-etc.pdf"
-      },
-      {
-        "name": "Estabilidade (Routh-Hurwitz, LGR, etc.)",
-        "count": 1,
-        "questions": [
-          {
-            "num": 118,
-            "qid": "2697794",
-            "url": "https://www.tecconcursos.com.br/questoes/2697794",
-            "ano": "2023",
-            "pdfUrl": "assets/questoes/2697794.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-estabilidade-routh-hurwitz-lgr-etc.pdf"
-      },
-      {
-        "name": "Redes de Dados e Comunicação",
-        "count": 1,
-        "questions": [
-          {
-            "num": 158,
-            "qid": "640445",
-            "url": "https://www.tecconcursos.com.br/questoes/640445",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640445.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-redes-de-dados-e-comunicacao.pdf"
-      },
-      {
-        "name": "Modulação por Codificação de Pulso (PCM)",
-        "count": 1,
-        "questions": [
-          {
-            "num": 176,
-            "qid": "640544",
-            "url": "https://www.tecconcursos.com.br/questoes/640544",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640544.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-modulacao-por-codificacao-de-pulso-pcm.pdf"
-      },
-      {
-        "name": "Transmissão Guiada (Fibra Óptica / Guias)",
-        "count": 1,
-        "questions": [
-          {
-            "num": 177,
-            "qid": "352803",
-            "url": "https://www.tecconcursos.com.br/questoes/352803",
-            "ano": "2012",
-            "pdfUrl": "assets/questoes/352803.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-eletrica-e-eletronica-transmissao-guiada-fibra-optica-guias.pdf"
-      }
-    ]
-  },
-  {
-    "materia": "Matemática",
-    "count": 7,
-    "assuntos": [
-      {
-        "name": "Definição, Subconjuntos e Operações",
-        "count": 1,
-        "questions": [
-          {
-            "num": 194,
-            "qid": "2683872",
-            "url": "https://www.tecconcursos.com.br/questoes/2683872",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2683872.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/matematica-definicao-subconjuntos-e-operacoes.pdf"
-      },
-      {
-        "name": "Análise Combinatória",
-        "count": 1,
-        "questions": [
-          {
-            "num": 195,
-            "qid": "2683766",
-            "url": "https://www.tecconcursos.com.br/questoes/2683766",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2683766.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/matematica-analise-combinatoria.pdf"
-      },
-      {
-        "name": "Equações Logarítmicas",
-        "count": 1,
-        "questions": [
-          {
-            "num": 196,
-            "qid": "2683846",
-            "url": "https://www.tecconcursos.com.br/questoes/2683846",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2683846.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/matematica-equacoes-logaritmicas.pdf"
-      },
-      {
-        "name": "Razões e Funções Trigonométricas",
-        "count": 1,
-        "questions": [
-          {
-            "num": 197,
-            "qid": "2683831",
-            "url": "https://www.tecconcursos.com.br/questoes/2683831",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2683831.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/matematica-razoes-e-funcoes-trigonometricas.pdf"
-      },
-      {
-        "name": "Sistemas Lineares",
-        "count": 1,
-        "questions": [
-          {
-            "num": 198,
-            "qid": "2683825",
-            "url": "https://www.tecconcursos.com.br/questoes/2683825",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2683825.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/matematica-sistemas-lineares.pdf"
-      },
-      {
-        "name": "Números Complexos",
-        "count": 1,
-        "questions": [
-          {
-            "num": 199,
-            "qid": "640434",
-            "url": "https://www.tecconcursos.com.br/questoes/640434",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640434.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/matematica-numeros-complexos.pdf"
-      },
-      {
-        "name": "Métodos Numéricos",
-        "count": 1,
-        "questions": [
-          {
-            "num": 200,
-            "qid": "2683875",
-            "url": "https://www.tecconcursos.com.br/questoes/2683875",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2683875.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/matematica-metodos-numericos.pdf"
-      }
-    ]
-  },
-  {
-    "materia": "Engenharia Mecânica",
-    "count": 6,
-    "assuntos": [
-      {
-        "name": "Controle e Automação (Mecânica)",
-        "count": 3,
-        "questions": [
-          {
-            "num": 191,
-            "qid": "2684219",
-            "url": "https://www.tecconcursos.com.br/questoes/2684219",
-            "ano": "2008",
-            "pdfUrl": "assets/questoes/2684219.pdf"
+            "pdfUrl": "assets/questoes/640411.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Transformadores Monofásicos"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 192,
-            "qid": "2712661",
-            "url": "https://www.tecconcursos.com.br/questoes/2712661",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712661.pdf"
+            "num": 25,
+            "qid": "2697790",
+            "url": "https://www.tecconcursos.com.br/questoes/2697790",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697790.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Máquinas de Corrente Contínua"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           },
           {
-            "num": 193,
-            "qid": "2712673",
-            "url": "https://www.tecconcursos.com.br/questoes/2712673",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712673.pdf"
+            "num": 26,
+            "qid": "2697801",
+            "url": "https://www.tecconcursos.com.br/questoes/2697801",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697801.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Máquinas de Corrente Contínua"
+            ],
+            "materialUrl": "data/eletronica_estudo.json"
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-mecanica-controle-e-automacao-mecanica.pdf"
+        ]
       },
       {
-        "name": "Resistência dos Materiais",
+        "name": "Bombas: vazão, potência e rendimento",
         "count": 1,
-        "questions": [
-          {
-            "num": 188,
-            "qid": "2712944",
-            "url": "https://www.tecconcursos.com.br/questoes/2712944",
-            "ano": "2006",
-            "pdfUrl": "assets/questoes/2712944.pdf"
-          }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-mecanica-resistencia-dos-materiais.pdf"
-      },
-      {
-        "name": "Máquinas de Fluxo e Instalações",
-        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/maquinas-eletricas-e-sistemas-hidraulicos-bombas-vazao-potencia-e-rendimento.pdf",
         "questions": [
           {
             "num": 189,
             "qid": "352805",
             "url": "https://www.tecconcursos.com.br/questoes/352805",
             "ano": "2012",
-            "pdfUrl": "assets/questoes/352805.pdf"
+            "pdfUrl": "assets/questoes/352805.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Mecânica::Máquinas de Fluxo e Instalações"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-mecanica-maquinas-de-fluxo-e-instalacoes.pdf"
-      },
+        ]
+      }
+    ]
+  },
+  {
+    "materia": "Matemática",
+    "count": 14,
+    "assuntos": [
       {
-        "name": "Sistemas Hidráulicos e Pneumáticos (Mecânica)",
+        "name": "Conjuntos e operações",
         "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/matematica-conjuntos-e-operacoes.pdf",
         "questions": [
           {
-            "num": 190,
-            "qid": "640430",
-            "url": "https://www.tecconcursos.com.br/questoes/640430",
-            "ano": "2018",
-            "pdfUrl": "assets/questoes/640430.pdf"
+            "num": 194,
+            "qid": "2683872",
+            "url": "https://www.tecconcursos.com.br/questoes/2683872",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2683872.pdf",
+            "legacyTopicKeys": [
+              "Matemática::Definição, Subconjuntos e Operações"
+            ]
           }
-        ],
-        "pdfUrl": "assets/assuntos/engenharia-mecanica-sistemas-hidraulicos-e-pneumaticos-mecanica.pdf"
+        ]
+      },
+      {
+        "name": "Análise combinatória",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/matematica-analise-combinatoria.pdf",
+        "questions": [
+          {
+            "num": 195,
+            "qid": "2683766",
+            "url": "https://www.tecconcursos.com.br/questoes/2683766",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2683766.pdf",
+            "legacyTopicKeys": [
+              "Matemática::Análise Combinatória"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Exponenciais e logaritmos",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/matematica-exponenciais-e-logaritmos.pdf",
+        "questions": [
+          {
+            "num": 196,
+            "qid": "2683846",
+            "url": "https://www.tecconcursos.com.br/questoes/2683846",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2683846.pdf",
+            "legacyTopicKeys": [
+              "Matemática::Equações Logarítmicas"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Trigonometria e números complexos",
+        "count": 2,
+        "pdfUrl": "assets/assuntos/organizados/matematica-trigonometria-e-numeros-complexos.pdf",
+        "questions": [
+          {
+            "num": 197,
+            "qid": "2683831",
+            "url": "https://www.tecconcursos.com.br/questoes/2683831",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2683831.pdf",
+            "legacyTopicKeys": [
+              "Matemática::Razões e Funções Trigonométricas"
+            ]
+          },
+          {
+            "num": 199,
+            "qid": "640434",
+            "url": "https://www.tecconcursos.com.br/questoes/640434",
+            "ano": "2018",
+            "pdfUrl": "assets/questoes/640434.pdf",
+            "legacyTopicKeys": [
+              "Matemática::Números Complexos"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Álgebra linear: matrizes, determinantes e sistemas",
+        "count": 5,
+        "pdfUrl": "assets/assuntos/organizados/matematica-algebra-linear-matrizes-determinantes-e-sistemas.pdf",
+        "questions": [
+          {
+            "num": 87,
+            "qid": "352793",
+            "url": "https://www.tecconcursos.com.br/questoes/352793",
+            "ano": "2012",
+            "pdfUrl": "assets/questoes/352793.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          },
+          {
+            "num": 184,
+            "qid": "2697811",
+            "url": "https://www.tecconcursos.com.br/questoes/2697811",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697811.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
+          },
+          {
+            "num": 186,
+            "qid": "2697865",
+            "url": "https://www.tecconcursos.com.br/questoes/2697865",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697865.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
+          },
+          {
+            "num": 187,
+            "qid": "2697878",
+            "url": "https://www.tecconcursos.com.br/questoes/2697878",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697878.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
+          },
+          {
+            "num": 198,
+            "qid": "2683825",
+            "url": "https://www.tecconcursos.com.br/questoes/2683825",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2683825.pdf",
+            "legacyTopicKeys": [
+              "Matemática::Sistemas Lineares"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Equações diferenciais ordinárias",
+        "count": 1,
+        "pdfUrl": "assets/assuntos/organizados/matematica-equacoes-diferenciais-ordinarias.pdf",
+        "questions": [
+          {
+            "num": 103,
+            "qid": "356746",
+            "url": "https://www.tecconcursos.com.br/questoes/356746",
+            "ano": "2011",
+            "pdfUrl": "assets/questoes/356746.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Análise de Sinais e Sistemas"
+            ],
+            "materialUrl": "data/sinais_sistemas_estudo.json"
+          }
+        ]
+      },
+      {
+        "name": "Métodos numéricos: raízes, integração e equações diferenciais",
+        "count": 3,
+        "pdfUrl": "assets/assuntos/organizados/matematica-metodos-numericos-raizes-integracao-e-equacoes-diferenciais.pdf",
+        "questions": [
+          {
+            "num": 183,
+            "qid": "2697808",
+            "url": "https://www.tecconcursos.com.br/questoes/2697808",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697808.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
+          },
+          {
+            "num": 185,
+            "qid": "2697812",
+            "url": "https://www.tecconcursos.com.br/questoes/2697812",
+            "ano": "2023",
+            "pdfUrl": "assets/questoes/2697812.pdf",
+            "legacyTopicKeys": [
+              "Engenharia Elétrica e Eletrônica::Outros Temas de Eng. Elétrica"
+            ]
+          },
+          {
+            "num": 200,
+            "qid": "2683875",
+            "url": "https://www.tecconcursos.com.br/questoes/2683875",
+            "ano": "2008",
+            "pdfUrl": "assets/questoes/2683875.pdf",
+            "legacyTopicKeys": [
+              "Matemática::Métodos Numéricos"
+            ]
+          }
+        ]
       }
     ]
   }

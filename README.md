@@ -39,11 +39,17 @@ Para verificar os PDFs existentes, inclusive comparando cada trecho renderizado 
 
 ### Teoria e resolução
 
-As oito questões de Microcontroladores / Sist. Microprocessados têm ações **Questão**, **Teoria** e **Resolução**. A questão abre o PDF; o material abre em um modal com abas, navegação por teclado e fechamento por Escape, sem alterar o progresso salvo.
+As oito questões de Microcontroladores / Sist. Microprocessados têm ações **Questão**, **Teoria** e **Resolução**. As ações abrem a mesma janela na aba correspondente, com navegação por teclado e fechamento por Escape.
 
 O conteúdo está em `public/data/microcontroladores_estudo.json`, associado pelo `qid` original. Cada entrada contém teoria, etapas da resolução, gabarito e fontes; os blocos aceitam parágrafos, fórmulas, código e tabelas. `materialUrl`, opcional em cada questão de `materias.json`, habilita os botões. O arquivo é carregado sob demanda e compartilhado entre as questões, com nova tentativa em caso de falha.
 
 Os gabaritos foram conferidos com o caderno. Na Q54, a resolução distingue o trecho que provoca o defeito do código corrigido. Na Q55, explicita que a banca chama de “resposta” o tempo até a conclusão, diferente da definição usual de primeira resposta.
+
+#### Eletrônica — área refinada
+
+Os sete tópicos solicitados — Amplificadores Operacionais / Potência, Diodos, Outros Componentes Eletrônicos, Retificadores, Reguladores de Tensão, Conversores CC–CC e Tópicos Mesclados — foram movidos para a área **Eletrônica**, com 14 questões. Cada questão tem **Questão**, **Teoria** e **Resolução**. O conteúdo de `public/data/eletronica_estudo.json` reúne definições, fórmulas, hipóteses de modelo e etapas de aplicação associadas ao `qid` de cada questão.
+
+As fontes incluem recortes precisos do livro **Dispositivos Eletrônicos e Teoria de Circuitos**, de Boylestad, 8ª edição, em `public/assets/teoria/boylestad/`. O sumário do PDF-imagem foi lido com RapidOCR; `manifesto.json` registra o deslocamento entre páginas impressas e páginas do PDF e os temas cobertos. O procedimento reproduzível fica em `layout/ocr_boylestad.py` e suas dependências em `layout/requirements-ocr.txt`.
 
 #### Sinais e Sistemas — Q66 a Q114
 
@@ -66,3 +72,17 @@ node layout/verificar_material_estudo.mjs
 ```
 
 Essa verificação detecta falhas de dados e conteúdo genérico repetido; a correção matemática das explicações requer revisão editorial com os enunciados e as fontes.
+
+### Respostas e desempenho
+
+A ação **Questão** está disponível para as 200 questões. Ela exibe o PDF individual e alternativas A–E, com correção imediata. É possível trocar ou limpar a resposta. Os links do título e da janela continuam permitindo abrir o PDF separadamente.
+
+A correção usa a letra de `answer` da resolução quando existe material. Nas demais questões, usa `public/data/gabaritos.json`, extraído de `layout/recortes_manifesto.json`. Ao atualizar o caderno ou as resoluções, mantenha esses gabaritos sincronizados e confira:
+
+```bash
+node layout/verificar_respostas.mjs
+```
+
+As respostas são salvas na chave de progresso existente, independentes da conclusão manual e da dificuldade. A última seleção determina o resultado; limpar uma resposta a devolve à contagem de não respondidas. Limpar todo o progresso também remove as respostas.
+
+O dashboard mostra quantidades absolutas de acertos, erros e não respondidas, uma pizza relativa apenas às respondidas e um radar por assunto. O radar usa acertos/respondidas, escala de 0% a 100% com intervalos de 10% e não atribui 0% aos assuntos sem respostas. A tabela complementar traz os nomes e valores completos. Os gráficos usam todo o caderno, independentemente dos filtros da lista.

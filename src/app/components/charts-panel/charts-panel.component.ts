@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Materia, StudyProgress, TopicView } from '../../models/study.models';
 import { DashboardStateService } from '../../services/dashboard-state.service';
-@Component({ selector: 'app-charts-panel', standalone: true, templateUrl: './charts-panel.component.html', styleUrl: './charts-panel.component.css' })
+import { PerformanceChartsComponent } from '../performance-charts/performance-charts.component';
+@Component({ selector: 'app-charts-panel', standalone: true, imports: [PerformanceChartsComponent], templateUrl: './charts-panel.component.html', styleUrl: './charts-panel.component.css' })
 export class ChartsPanelComponent {
   @Input() materias: Materia[] = []; @Input() progress: StudyProgress = { topics: {}, questions: {} };
   constructor(private readonly state: DashboardStateService) {}

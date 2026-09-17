@@ -12,6 +12,7 @@ import { QuestionStudyComponent } from '../question-study/question-study.compone
 export class QuestionRowComponent {
   @Input({ required: true }) question!: Questao;
   @Input() done = false;
+  @Input() progressKey = '';
   @Input() selectedDifficulty?: DifficultyLevel;
   @Output() doneChange = new EventEmitter<boolean>();
   @Output() difficultyChange = new EventEmitter<DifficultyLevel | undefined>();

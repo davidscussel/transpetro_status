@@ -1,0 +1,81 @@
+<section class="performance" aria-label="Desempenho nas questões">
+  <h2>Desempenho nas questões</h2>
+  <p>Última resposta de cada questão · estatísticas de todo o caderno</p>
+  <div class="answer-stats">
+    <article><h3>Não respondidas</h3><strong>{{ stats.unanswered }}</strong></article>
+    <article><h3>Acertos</h3><strong class="correct">{{ stats.correct }}</strong></article>
+    <article><h3>Erros</h3><strong class="incorrect">{{ stats.incorrect }}</strong></article>
+  </div>
+  <div class="pies">
+    <article>
+      <h3>Resultados absolutos</h3>
+      <p>Base: {{ stats.total }} questões do caderno</p>
+      <div class="pie" [style.background]="absoluteBackground" role="img" [attr.aria-label]="stats.correct + ' acertos, ' + stats.incorrect + ' erros e ' + stats.unanswered + ' não respondidas'"></div>
+      <ul>
+        <li><i class="green"></i>Acertos: {{ stats.correct }}</li>
+        <li><i class="red"></i>Erros: {{ stats.incorrect }}</li>
+        <li><i class="gray"></i>Não respondidas: {{ stats.unanswered }}</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Resultados relativos</h3>
+      <p>Base: {{ stats.answered }} questões respondidas</p>
+      @if (stats.answered) {
+        <div class="pie" [style.background]="relativeBackground" role="img" [attr.aria-label]="percent(stats.correct, stats.answered) + ' de acertos e ' + percent(stats.incorrect, stats.answered) + ' de erros'"></div>
+        <ul>
+          <li><i class="green"></i>Acertos: {{ percent(stats.correct, stats.answered) }}</li>
+          <li><i class="red"></i>Erros: {{ percent(stats.incorrect, stats.answered) }}</li>
+        </ul>
+      } @else {
+        <p class="empty">Responda uma questão para visualizar os percentuais.</p>
+      }
+    </article>
+  </div>
+  <article class="radar-card">
+    <h3>Acertos relativos por assunto</h3>
+    <p>Acertos ÷ respondidas de cada assunto. Escala de 0% a 100%, em intervalos de 10%.</p>
+    <p>Assuntos sem respostas não recebem ponto. A linha conecta somente assuntos vizinhos com respostas. Consulte os nomes completos na tabela.</p>
+    @if (!stats.answered) { <p class="empty">Nenhum assunto respondido ainda.</p> }
+    <div class="radar-scroll" tabindex="0" aria-label="Gráfico de teia de aranha; role horizontalmente em telas pequenas">
+      <svg viewBox="0 0 960 960" role="img" aria-labelledby="radar-title radar-description">
+        <title id="radar-title">Acertos relativos por assunto</title>
+        <desc id="radar-description">Escala de 0 a 100 por cento, com intervalos de 10 por cento. Valores exatos e assuntos sem respostas estão na tabela abaixo.</desc>
+        @for (tick of ticks; track tick) {
+          <polygon [attr.points]="ring(tick)" class="radar-ring"></polygon>
+        }
+        @for (topic of topics; track topic.key; let i = $index) {
+          <line x1="480" y1="480" [attr.x2]="point(i, 100).x" [attr.y2]="point(i, 100).y" class="radar-axis"></line>
+          <text [attr.x]="point(i, 106).x" [attr.y]="point(i, 106).y" [attr.text-anchor]="anchor(i)" [attr.transform]="labelTransform(i)" dominant-baseline="middle" class="radar-label">
+            {{ label(topic, i) }}
+            <title>{{ topic.name }}: {{ topic.percentage === null ? 'Sem respostas' : percent(topic.correct, topic.answered) }}</title>
+          </text>
+        }
+        @for (segment of segments; track $index) {
+          <line [attr.x1]="segment.x1" [attr.y1]="segment.y1" [attr.x2]="segment.x2" [attr.y2]="segment.y2" class="radar-result"></line>
+        }
+        @for (topic of topics; track topic.key; let i = $index) {
+          @if (topic.percentage !== null) {
+            <circle [attr.cx]="point(i, topic.percentage).x" [attr.cy]="point(i, topic.percentage).y" r="4" class="radar-point">
+              <title>{{ topic.name }}: {{ percent(topic.correct, topic.answered) }} ({{ topic.correct }}/{{ topic.answered }})</title>
+            </circle>
+          }
+        }
+        <text x="488" y="494" class="radar-tick">0%</text>
+        @for (tick of ticks; track tick) {
+          <text x="488" [attr.y]="480 - 310 * tick / 100" class="radar-tick">{{ tick }}%</text>
+        }
+      </svg>
+    </div>
+    <div class="table-scroll" tabindex="0" aria-label="Tabela de desempenho por assunto">
+      <table>
+        <caption>Desempenho por assunto — valores do radar</caption>
+        <thead><tr><th scope="col">Assunto</th><th scope="col">Acertos</th><th scope="col">Respondidas</th><th scope="col">Acertos relativos</th></tr></thead>
+        <tbody>
+          @for (topic of topics; track topic.key; let i = $index) {
+            <tr><th scope="row">{{ i + 1 }}. {{ topic.name }}</th><td>{{ topic.correct }}</td><td>{{ topic.answered }}</td><td>{{ topic.percentage === null ? 'Sem respostas' : percent(topic.correct, topic.answered) }}</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section>

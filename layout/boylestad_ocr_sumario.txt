@@ -1,0 +1,13 @@
+OCR do sumário — Boylestad, 8ª edição
+
+Capítulo 1 — Diodos semicondutores: páginas impressas 1–34
+Capítulo 2 — Aplicações do diodo: páginas impressas 40–82
+Capítulo 13 — Amplificadores operacionais: páginas impressas 453–471
+Capítulo 14 — Aplicações do amp-op: páginas impressas 478–496
+Capítulo 15 — Amplificadores de potência: páginas impressas 497–520
+Capítulo 18 — Fontes de tensão/reguladores: páginas impressas 567–583
+Capítulo 19 — Outros dispositivos de dois terminais: páginas impressas 586–607
+Capítulo 20 — Dispositivos PNPN e outros: páginas impressas 610–636
+
+O PDF começa 19 páginas antes da numeração impressa principal; por isso os recortes registram
+as páginas PDF correspondentes no manifesto.

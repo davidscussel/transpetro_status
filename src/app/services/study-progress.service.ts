@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { DifficultyLevel, StudyProgress } from '../models/study.models';
+import { AnswerOption, DifficultyLevel, Materia, StudyProgress } from '../models/study.models';
 
 const STORAGE_KEY = 'transpetro_study_progress_v1';
 const EMPTY: StudyProgress = { topics: {}, questions: {} };
@@ -7,6 +7,43 @@ const EMPTY: StudyProgress = { topics: {}, questions: {} };
 @Injectable({ providedIn: 'root' })
 export class StudyProgressService {
   readonly progress = signal<StudyProgress>(this.load());
+
+  reconcileClassification(materias: Materia[]): void {
+    const previous = this.progress();
+    if ((previous.classificationVersion ?? 0) >= 2 || !materias.length) return;
+    const next: StudyProgress = {
+      ...previous, classificationVersion: 2,
+      topics: { ...previous.topics }, questions: { ...previous.questions },
+    };
+    for (const materia of materias) {
+      for (const topic of materia.assuntos) {
+        const topicKey = materia.materia + '::' + topic.nome;
+        let hasTopicHistory = false;
+        const sourceCompletion = topic.questions.map((question) => {
+          const oldTopics = question.legacyTopicKeys ?? [];
+          const suffix = '::' + question.prova + '::' + question.q;
+          const newKey = topicKey + suffix;
+          const oldKeys = oldTopics.map((key) => key + suffix);
+          const oldQuestionKey = oldKeys.find((key) => previous.questions[key] !== undefined);
+          if (next.questions[newKey] === undefined && oldQuestionKey) {
+            next.questions[newKey] = { ...previous.questions[oldQuestionKey] };
+          }
+          const oldNoteKey = oldKeys.find((key) => previous.notes?.[key] !== undefined);
+          if (oldNoteKey && !next.notes?.[newKey]) {
+            next.notes = { ...next.notes, [newKey]: { ...previous.notes![oldNoteKey] } };
+          }
+          // Prefer the most recent classification, including explicit false values.
+          const sourceKey = oldTopics.find((key) => previous.topics[key] !== undefined);
+          if (sourceKey) hasTopicHistory = true;
+          return sourceKey ? previous.topics[sourceKey].done : false;
+        });
+        // A split inherits its source; a merge is complete only if ALL source parts were complete.
+        if (hasTopicHistory) next.topics[topicKey] = { done: sourceCompletion.every(Boolean) };
+      }
+    }
+    this.progress.set(next);
+    this.persist();
+  }
 
   markTopic(key: string, done: boolean): void {
     this.update((progress) => ({ ...progress, topics: { ...progress.topics, [key]: { done } } }));
@@ -30,6 +67,16 @@ export class StudyProgressService {
   }
 
   reset(): void { this.progress.set({ topics: {}, questions: {} }); this.persist(); }
+
+  answerQuestion(key: string, selectedAnswer: AnswerOption | undefined, correctAnswer?: AnswerOption): void {
+    if (selectedAnswer && (!/^[A-E]$/.test(selectedAnswer) || !correctAnswer || !/^[A-E]$/.test(correctAnswer))) return;
+    this.update((progress) => {
+      const next = { ...(progress.questions[key] ?? { done: false }) };
+      if (selectedAnswer) { next.selectedAnswer = selectedAnswer; next.correctAnswer = correctAnswer; }
+      else { delete next.selectedAnswer; delete next.correctAnswer; }
+      return { ...progress, questions: { ...progress.questions, [key]: next } };
+    });
+  }
 
   private update(mutator: (progress: StudyProgress) => StudyProgress): void {
     this.progress.update(mutator);

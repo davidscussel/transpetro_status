@@ -18,7 +18,7 @@ export class QuestionMaterialService {
     }
     return request.pipe(map((materials) => {
       const material = materials.find((entry) => entry.qid === question.qid);
-      if (!material || !material.theory?.length || !material.steps?.length || !material.answer) {
+      if (!material || !material.theory?.length || !material.steps?.length || !/^\s*[A-E](?:\s|$|[—–-])/.test(material.answer ?? '')) {
         this.cache.delete(url);
         throw new Error('Material da questão não encontrado.');
       }

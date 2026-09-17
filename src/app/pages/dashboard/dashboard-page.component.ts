@@ -15,7 +15,7 @@ export class DashboardPageComponent {
   private readonly progressService = inject(StudyProgressService);
   private readonly state = inject(DashboardStateService);
   materias = signal<Materia[]>([]); loading = signal(true); error = signal(false); search = signal(''); difficulty = signal<DifficultyFilter>('todas'); sort = signal<SortMode>('area'); expandAllOpen = signal(true); expandAllVersion = signal(0); readonly progress = this.progressService.progress; readonly stats = computed(() => this.state.stats(this.materias(), this.progress())); readonly groups = computed(() => this.state.getFilteredGroups(this.materias(), this.search(), this.difficulty())); readonly flatTopics = computed(() => this.state.getFlatSorted(this.materias(), this.search(), this.difficulty(), this.sort())); readonly pdfPath = 'assets/caderno-ultimas-provas-transpetro.pdf';
-  constructor() { this.data.getMaterias().subscribe({ next: (materias) => { this.materias.set(materias); this.loading.set(false); }, error: () => { this.error.set(true); this.loading.set(false); } }); }
+  constructor() { this.data.getMaterias().subscribe({ next: (materias) => { this.progressService.reconcileClassification(materias); this.materias.set(materias); this.loading.set(false); }, error: () => { this.error.set(true); this.loading.set(false); } }); }
   toggleExpandAll(): void { this.expandAllOpen.update((open) => !open); this.expandAllVersion.update((version) => version + 1); }
   resetProgress(): void { if (confirm('Limpar todo o progresso salvo neste navegador?')) this.progressService.reset(); }
   markTopic(event: { topic: TopicView; done: boolean }): void { this.progressService.markTopic(this.state.topicKey(event.topic.materiaName, event.topic.nome), event.done); }

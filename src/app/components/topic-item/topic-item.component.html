@@ -7,7 +7,7 @@
   <a class="topic-pdf" [href]="topic.pdfUrl" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Abrir PDF do assunto: ' + topic.nome">Abrir PDF do assunto</a>
   <div class="qgrid">
     @for (question of topic.questions; track question.prova + question.q) {
-      <app-question-row [question]="question" [done]="isQuestionDone(question)" [selectedDifficulty]="difficulty(question)" (doneChange)="questionDone.emit({ key: questionKey(question), done: $event })" (difficultyChange)="difficultyChanged.emit({ key: questionKey(question), difficulty: $event })"></app-question-row>
+      <app-question-row [question]="question" [progressKey]="questionKey(question)" [done]="isQuestionDone(question)" [selectedDifficulty]="difficulty(question)" (doneChange)="questionDone.emit({ key: questionKey(question), done: $event })" (difficultyChange)="difficultyChanged.emit({ key: questionKey(question), difficulty: $event })"></app-question-row>
     }
   </div>
 </div>

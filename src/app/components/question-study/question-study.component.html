@@ -4,12 +4,42 @@
     <button type="button" class="close" autofocus (click)="close()" aria-label="Fechar material de estudo">Fechar ×</button>
   </header>
   <div class="tabs" role="tablist" aria-label="Conteúdo da questão" (keydown)="navigateTabs($event)">
+    <button type="button" id="study-tab-question" role="tab" aria-controls="study-panel" [attr.aria-selected]="tab === 'question'" [tabIndex]="tab === 'question' ? 0 : -1" (click)="selectTab('question')">Questão</button>
     <button type="button" id="study-tab-theory" role="tab" aria-controls="study-panel" [attr.aria-selected]="tab === 'theory'" [tabIndex]="tab === 'theory' ? 0 : -1" (click)="selectTab('theory')">Teoria</button>
     <button type="button" id="study-tab-solution" role="tab" aria-controls="study-panel" [attr.aria-selected]="tab === 'solution'" [tabIndex]="tab === 'solution' ? 0 : -1" (click)="selectTab('solution')">Resolução</button>
     <a [href]="question.link" target="_blank" rel="noopener noreferrer">Abrir questão ↗</a>
   </div>
   <div #content id="study-panel" class="content" role="tabpanel" tabindex="0" [attr.aria-labelledby]="'study-tab-' + tab" [attr.aria-busy]="loading">
-    @if (loading) {
+    @if (tab === 'question') {
+      @if (pdfUrl) {
+        <iframe class="question-pdf" [src]="pdfUrl" [title]="'PDF da questão ' + question.q"></iframe>
+      }
+      <p class="pdf-help">Se o PDF não aparecer, <a [href]="question.link" target="_blank" rel="noopener noreferrer">abra a questão em outra janela</a>.</p>
+      <fieldset [disabled]="loading || error || !correctAnswer">
+        <legend>Escolha sua alternativa</legend>
+        <div class="answer-options">
+          @for (option of options; track option) {
+            <label [class.selected]="selectedAnswer === option">
+              <input type="radio" name="question-answer" [value]="option" [checked]="selectedAnswer === option" (change)="answer(option)">
+              {{ option }}
+            </label>
+          }
+        </div>
+      </fieldset>
+      @if (loading) { <p role="status">Carregando gabarito…</p> }
+      @else if (error) {
+        <p role="alert">Não foi possível carregar o gabarito desta questão.</p>
+        <button type="button" (click)="load()">Tentar novamente</button>
+      } @else if (selectedAnswer) {
+        <p class="answer" role="status" [class.incorrect]="selectedAnswer !== correctAnswer">
+          <strong>{{ selectedAnswer === correctAnswer ? 'Acertou!' : 'Errou.' }}</strong>
+          Sua resposta: {{ selectedAnswer }}. Alternativa correta: {{ correctAnswer }}.
+        </p>
+        <button type="button" (click)="answer()">Limpar resposta</button>
+      }
+    } @else if (!question.materialUrl) {
+      <p>Material de {{ tab === 'theory' ? 'teoria' : 'resolução' }} ainda indisponível para esta questão.</p>
+    } @else if (loading) {
       <p role="status">Carregando material…</p>
     } @else if (error) {
       <p role="alert">Não foi possível carregar o material desta questão.</p>

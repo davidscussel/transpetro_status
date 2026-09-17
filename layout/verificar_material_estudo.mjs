@@ -9,7 +9,7 @@ const subjects = readJson('public/data/materias.json').flatMap((area) => area.as
 const manifest = readJson('layout/recortes_manifesto.json').questions;
 const excerpts = readJson('public/assets/teoria/oppenheim/manifesto.json').excerpts;
 const lessons = readJson('public/data/sinais_sistemas_estudo.json');
-const questions = subjects.find((subject) => subject.name === 'Análise de Sinais e Sistemas').questions;
+const questions = subjects.flatMap((subject) => subject.questions).filter((q) => q.materialUrl === 'data/sinais_sistemas_estudo.json');
 const ids = lessons.map((lesson) => lesson.qid);
 assert.equal(new Set(ids).size, ids.length, 'qid duplicado');
 assert.deepEqual([...ids].sort(), questions.map((q) => q.qid).sort(), 'Cobertura do assunto divergente');
@@ -48,3 +48,23 @@ for (const lesson of lessons) {
   }
 }
 console.log(`${lessons.length} questões: cobertura, gabaritos, conteúdo individual e referências locais conferidos.`);
+
+const electronicsLessons = readJson('public/data/eletronica_estudo.json');
+const electronicsQuestions = subjects
+  .flatMap((subject) => subject.questions.map((question) => ({ question, subject: subject.name })))
+  .filter(({ question }) => question.materialUrl === 'data/eletronica_estudo.json');
+const electronicsById = new Map(electronicsLessons.map((lesson) => [lesson.qid, lesson]));
+const gabaritos = readJson('public/data/gabaritos.json');
+assert.equal(electronicsLessons.length, electronicsQuestions.length, 'Quantidade de questões de eletrônica divergente');
+for (const { question } of electronicsQuestions) {
+  const lesson = electronicsById.get(question.qid);
+  assert.ok(lesson, `Q${question.num}: material de eletrônica ausente`);
+  assert.ok(lesson.title.startsWith(`Q${question.num} — `), `Q${question.num}: título incorreto`);
+  assert.equal(lesson.answer[0], gabaritos[question.qid], `Q${question.num}: gabarito divergente`);
+  assert.ok(lesson.theory.length >= 2 && lesson.steps.length >= 3, `Q${question.num}: material incompleto`);
+  for (const source of lesson.sources) {
+    if (/^https:\/\//.test(source.url)) continue;
+    assert.ok(existsSync(resolve(root, 'public', source.url)), `Q${question.num}: fonte local inexistente`);
+  }
+}
+console.log(`${electronicsLessons.length} questões de eletrônica: cobertura, gabaritos e recortes locais conferidos.`);

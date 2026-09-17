@@ -1,0 +1,570 @@
+{
+  "criterion": "Classificação pelo conceito principal exigido na solução, independentemente do contexto industrial do enunciado. Cada questão pertence a um único assunto.",
+  "areas": [
+    {
+      "materia": "Circuitos Elétricos",
+      "assuntos": [
+        {
+          "name": "Circuitos resistivos, potência e equivalentes de Thévenin",
+          "questions": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "name": "Capacitores, indutores e transitórios RC/RL",
+          "questions": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "name": "Ressonância e circuitos RLC",
+          "questions": [
+            5
+          ]
+        },
+        {
+          "name": "Fasores e impedâncias em corrente alternada",
+          "questions": [
+            14,
+            15,
+            17
+          ]
+        },
+        {
+          "name": "Sistemas trifásicos e potência em corrente alternada",
+          "questions": [
+            13,
+            18,
+            19
+          ]
+        },
+        {
+          "name": "Modelagem de circuitos no domínio de Laplace",
+          "questions": [
+            84
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Eletrônica",
+      "assuntos": [
+        {
+          "name": "Diodos e circuitos com Zener",
+          "questions": [
+            27,
+            28
+          ]
+        },
+        {
+          "name": "Retificadores e multiplicadores de tensão",
+          "questions": [
+            29,
+            31
+          ]
+        },
+        {
+          "name": "Reguladores lineares e dissipação de potência",
+          "questions": [
+            32
+          ]
+        },
+        {
+          "name": "Amplificadores operacionais: modelos, ganho e integração",
+          "questions": [
+            33,
+            34,
+            35
+          ]
+        },
+        {
+          "name": "Comparadores e acionamento de LEDs",
+          "questions": [
+            36
+          ]
+        },
+        {
+          "name": "Controladores e compensadores com amplificadores operacionais",
+          "questions": [
+            37,
+            38,
+            111
+          ]
+        },
+        {
+          "name": "Filtros ativos e passivos",
+          "questions": [
+            39,
+            40,
+            41,
+            113
+          ]
+        },
+        {
+          "name": "Conversores A/D e D/A",
+          "questions": [
+            56,
+            57,
+            58,
+            59
+          ]
+        },
+        {
+          "name": "Tiristores, DIAC, TRIAC e proteção de chaveamento",
+          "questions": [
+            60,
+            61
+          ]
+        },
+        {
+          "name": "Conversores CC–CC e inversores CC–CA",
+          "questions": [
+            62,
+            63
+          ]
+        },
+        {
+          "name": "Proteção contra descargas eletrostáticas (ESD)",
+          "questions": [
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Sinais e Sistemas",
+      "assuntos": [
+        {
+          "name": "Sinais periódicos: harmônicos, amplitude, fase e valor médio",
+          "questions": [
+            11,
+            16,
+            165
+          ]
+        },
+        {
+          "name": "Transformada de Laplace e teoremas dos valores inicial e final",
+          "questions": [
+            77,
+            102,
+            170,
+            171,
+            174
+          ]
+        },
+        {
+          "name": "Transformada de Fourier e análise espectral",
+          "questions": [
+            80,
+            169,
+            173
+          ]
+        },
+        {
+          "name": "Amostragem, FFT e codificação PCM",
+          "questions": [
+            172,
+            176
+          ]
+        },
+        {
+          "name": "Transformada Z e equações de diferenças",
+          "questions": [
+            71,
+            108,
+            110
+          ]
+        },
+        {
+          "name": "Sistemas lineares: polos, zeros e funções de transferência",
+          "questions": [
+            78,
+            79,
+            90,
+            114,
+            191
+          ]
+        },
+        {
+          "name": "Resposta de sistemas de primeira e segunda ordem",
+          "questions": [
+            98,
+            99,
+            100,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Sistemas de Controle",
+      "assuntos": [
+        {
+          "name": "Malhas de controle: planta, referência, sensor e atuador",
+          "questions": [
+            96,
+            130,
+            159
+          ]
+        },
+        {
+          "name": "Modelagem de sistemas físicos e analogias de energia",
+          "questions": [
+            76,
+            85,
+            92,
+            95,
+            116,
+            161,
+            162,
+            163,
+            164
+          ]
+        },
+        {
+          "name": "Linearização e controle de sistemas não lineares",
+          "questions": [
+            86,
+            147,
+            166
+          ]
+        },
+        {
+          "name": "Diagramas de blocos e realimentação",
+          "questions": [
+            67,
+            91,
+            97,
+            106,
+            175
+          ]
+        },
+        {
+          "name": "Espaço de estados, controlabilidade e observabilidade",
+          "questions": [
+            66,
+            70,
+            74,
+            75,
+            104,
+            112,
+            115,
+            167
+          ]
+        },
+        {
+          "name": "Estabilidade: critérios algébricos e lugar das raízes",
+          "questions": [
+            69,
+            72,
+            73,
+            88,
+            101,
+            107,
+            118,
+            119
+          ]
+        },
+        {
+          "name": "Controladores P, PI, PD e PID",
+          "questions": [
+            68,
+            81,
+            89
+          ]
+        },
+        {
+          "name": "Erro estacionário e especificações de desempenho",
+          "questions": [
+            93,
+            94
+          ]
+        },
+        {
+          "name": "Controle digital: discretização, estabilidade e amostragem",
+          "questions": [
+            105,
+            109,
+            117
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Instrumentação e Medidas",
+      "assuntos": [
+        {
+          "name": "Sensores e transdutores: posição, aceleração e medição inercial",
+          "questions": [
+            30,
+            138,
+            139,
+            141,
+            145
+          ]
+        },
+        {
+          "name": "Resposta em frequência e condicionamento de transdutores",
+          "questions": [
+            82,
+            83,
+            160
+          ]
+        },
+        {
+          "name": "Osciloscópios, valor eficaz e erros de medição",
+          "questions": [
+            12,
+            20,
+            21,
+            142
+          ]
+        },
+        {
+          "name": "Extensometria e pontes de medição",
+          "questions": [
+            188
+          ]
+        },
+        {
+          "name": "Padrões de sinais analógicos industriais",
+          "questions": [
+            153
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Automação Industrial",
+      "assuntos": [
+        {
+          "name": "Fundamentos de automação, manufatura flexível e CNC",
+          "questions": [
+            65,
+            178,
+            180
+          ]
+        },
+        {
+          "name": "CLP: arquitetura, varredura e dimensionamento de entradas",
+          "questions": [
+            122,
+            124,
+            125,
+            126,
+            132
+          ]
+        },
+        {
+          "name": "Programação de CLP: Ladder, temporizadores e intertravamentos",
+          "questions": [
+            121,
+            123,
+            127,
+            128,
+            129,
+            134
+          ]
+        },
+        {
+          "name": "SCADA, supervisão e níveis de automação",
+          "questions": [
+            131,
+            143,
+            144,
+            179
+          ]
+        },
+        {
+          "name": "Automação sequencial: atuadores, esteiras e movimentação",
+          "questions": [
+            22,
+            192,
+            193
+          ]
+        },
+        {
+          "name": "Atuação pneumática e hidráulica: válvulas e aplicações",
+          "questions": [
+            23,
+            154,
+            190
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Eletrônica Digital e Computação",
+      "assuntos": [
+        {
+          "name": "Lógica combinacional, álgebra booleana e multiplexadores",
+          "questions": [
+            42,
+            43,
+            44,
+            45
+          ]
+        },
+        {
+          "name": "Contadores, memórias e representação binária",
+          "questions": [
+            46,
+            47,
+            49
+          ]
+        },
+        {
+          "name": "Microcontroladores: GPIO, PWM, conversão A/D e displays",
+          "questions": [
+            48,
+            50,
+            51,
+            52,
+            53,
+            54
+          ]
+        },
+        {
+          "name": "Interfaces I²C e SPI: circuitos e análise lógica",
+          "questions": [
+            140,
+            146
+          ]
+        },
+        {
+          "name": "Sistemas operacionais e escalonamento em tempo real",
+          "questions": [
+            55,
+            135
+          ]
+        },
+        {
+          "name": "Programação em C/C++: tipos, vetores e laços",
+          "questions": [
+            181,
+            182
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Redes e Comunicação",
+      "assuntos": [
+        {
+          "name": "Redes industriais: barramentos de campo e integração",
+          "questions": [
+            149,
+            151,
+            152,
+            156
+          ]
+        },
+        {
+          "name": "Comunicação entre CLPs: varredura, sincronização e latência",
+          "questions": [
+            133,
+            136,
+            137
+          ]
+        },
+        {
+          "name": "Meios de transmissão, interfaces e propagação de ondas",
+          "questions": [
+            148,
+            155,
+            168,
+            177
+          ]
+        },
+        {
+          "name": "Roteamento e segurança de redes industriais",
+          "questions": [
+            150,
+            157,
+            158
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Máquinas Elétricas e Sistemas Hidráulicos",
+      "assuntos": [
+        {
+          "name": "Transformadores e máquinas de corrente contínua",
+          "questions": [
+            24,
+            25,
+            26
+          ]
+        },
+        {
+          "name": "Bombas: vazão, potência e rendimento",
+          "questions": [
+            189
+          ]
+        }
+      ]
+    },
+    {
+      "materia": "Matemática",
+      "assuntos": [
+        {
+          "name": "Conjuntos e operações",
+          "questions": [
+            194
+          ]
+        },
+        {
+          "name": "Análise combinatória",
+          "questions": [
+            195
+          ]
+        },
+        {
+          "name": "Exponenciais e logaritmos",
+          "questions": [
+            196
+          ]
+        },
+        {
+          "name": "Trigonometria e números complexos",
+          "questions": [
+            197,
+            199
+          ]
+        },
+        {
+          "name": "Álgebra linear: matrizes, determinantes e sistemas",
+          "questions": [
+            87,
+            184,
+            186,
+            187,
+            198
+          ]
+        },
+        {
+          "name": "Equações diferenciais ordinárias",
+          "questions": [
+            103
+          ]
+        },
+        {
+          "name": "Métodos numéricos: raízes, integração e equações diferenciais",
+          "questions": [
+            183,
+            185,
+            200
+          ]
+        }
+      ]
+    }
+  ]
+}

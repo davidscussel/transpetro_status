@@ -6,14 +6,14 @@
     <button type="button" title="Média" [attr.aria-label]="'Questão ' + question.q + ': média'" [attr.aria-pressed]="selectedDifficulty === 'medio'" [class.selected]="selectedDifficulty === 'medio'" (click)="difficultyChange.emit(selectedDifficulty === 'medio' ? undefined : 'medio')"></button>
     <button type="button" title="Difícil" [attr.aria-label]="'Questão ' + question.q + ': difícil'" [attr.aria-pressed]="selectedDifficulty === 'dificil'" [class.selected]="selectedDifficulty === 'dificil'" (click)="difficultyChange.emit(selectedDifficulty === 'dificil' ? undefined : 'dificil')"></button>
   </div>
-  @if (question.materialUrl) {
     <div class="question-actions" role="group" [attr.aria-label]="'Conteúdo da questão ' + question.q">
-      <a [href]="question.link" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Abrir questão ' + question.q + ' em PDF'">Questão</a>
+      <button type="button" aria-haspopup="dialog" [attr.aria-label]="'Abrir questão ' + question.q" (click)="studyTab = 'question'">Questão</button>
+      @if (question.materialUrl) {
       <button type="button" aria-haspopup="dialog" [attr.aria-label]="'Abrir teoria da questão ' + question.q" (click)="studyTab = 'theory'">Teoria</button>
       <button type="button" aria-haspopup="dialog" [attr.aria-label]="'Abrir resolução da questão ' + question.q" (click)="studyTab = 'solution'">Resolução</button>
+      }
     </div>
-  }
 </div>
 @if (studyTab) {
-  <app-question-study [question]="question" [tab]="studyTab" (dismissed)="studyTab = undefined"></app-question-study>
+  <app-question-study [question]="question" [progressKey]="progressKey" [tab]="studyTab" (dismissed)="studyTab = undefined"></app-question-study>
 }

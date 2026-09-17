@@ -3,7 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { Observable, map, shareReplay } from 'rxjs';
 import { Materia } from '../models/study.models';
 
-interface RawQuestion { num: number; qid: string; url: string; pdfUrl: string; ano: string; materialUrl?: string; }
+interface RawQuestion { num: number; qid: string; url: string; pdfUrl: string; ano: string; materialUrl?: string; legacyTopicKeys?: string[]; }
 interface RawTopic { name: string; count: number; pdfUrl: string; questions: RawQuestion[]; }
 interface RawSubject { materia: string; assuntos: RawTopic[]; }
 
@@ -24,7 +24,8 @@ export class StudyDataService {
           q: questao.num,
           d: 'medio' as const,
           link: questao.pdfUrl,
-          ...(questao.materialUrl ? { materialUrl: questao.materialUrl } : assunto.name === 'Análise de Sinais e Sistemas' ? { materialUrl: 'data/sinais_sistemas_estudo.json' } : {}),
+          ...(questao.materialUrl ? { materialUrl: questao.materialUrl } : {}),
+          ...(questao.legacyTopicKeys ? { legacyTopicKeys: questao.legacyTopicKeys } : {}),
         })),
       })),
     }))),

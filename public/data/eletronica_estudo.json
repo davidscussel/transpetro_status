@@ -1,0 +1,3461 @@
+[
+  {
+    "qid": "640432",
+    "title": "Q11 — Senoides, fasores e impedâncias",
+    "theory": [
+      {
+        "title": "Representação fasorial",
+        "paragraphs": [
+          "Uma senoide A cos(ωt+φ) é representada pelo fasor eficaz A/√2∠φ (ou pelo fasor de pico, desde que se mantenha a convenção)."
+        ]
+      },
+      {
+        "title": "Impedâncias",
+        "paragraphs": [
+          "ZR=R, ZL=jωL e ZC=1/(jωC). Em série, as impedâncias somam; em paralelo, somam-se as admitâncias. A corrente fasorial é I=V/Z."
+        ]
+      },
+      {
+        "title": "Potência CA",
+        "paragraphs": [
+          "Para carga equilibrada, P=√3 VL IL cosφ. A potência reativa usa Q=√3 VL IL senφ e S=√(P²+Q²)."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 11 (Circuitos de Excitação Senoidal / Fasores). O enunciado começa por: “Uma forma de onda periódica que possui somente o primeiro harmônico (ou frequência fundamental) é”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "ZL=jωL; ZC=1/(jωC); I=V/Z"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa E. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 11",
+        "url": "assets/questoes/640432.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640440",
+    "title": "Q12 — Senoides, fasores e impedâncias",
+    "theory": [
+      {
+        "title": "Representação fasorial",
+        "paragraphs": [
+          "Uma senoide A cos(ωt+φ) é representada pelo fasor eficaz A/√2∠φ (ou pelo fasor de pico, desde que se mantenha a convenção)."
+        ]
+      },
+      {
+        "title": "Impedâncias",
+        "paragraphs": [
+          "ZR=R, ZL=jωL e ZC=1/(jωC). Em série, as impedâncias somam; em paralelo, somam-se as admitâncias. A corrente fasorial é I=V/Z."
+        ]
+      },
+      {
+        "title": "Potência CA",
+        "paragraphs": [
+          "Para carga equilibrada, P=√3 VL IL cosφ. A potência reativa usa Q=√3 VL IL senφ e S=√(P²+Q²)."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 12 (Circuitos de Excitação Senoidal / Fasores). O enunciado começa por: “Ao medir um sinal puramente senoidal num osciloscópio, foi verificado que a tensão pico a pico medida era de 40 V. Qual o valor RMS eficaz aproximado desse sinal? Dado – √2 = 1, 4 – √3 = 1, 7”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "ZL=jωL; ZC=1/(jωC); I=V/Z"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 12",
+        "url": "assets/questoes/640440.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352810",
+    "title": "Q13 — Senoides, fasores e impedâncias",
+    "theory": [
+      {
+        "title": "Representação fasorial",
+        "paragraphs": [
+          "Uma senoide A cos(ωt+φ) é representada pelo fasor eficaz A/√2∠φ (ou pelo fasor de pico, desde que se mantenha a convenção)."
+        ]
+      },
+      {
+        "title": "Impedâncias",
+        "paragraphs": [
+          "ZR=R, ZL=jωL e ZC=1/(jωC). Em série, as impedâncias somam; em paralelo, somam-se as admitâncias. A corrente fasorial é I=V/Z."
+        ]
+      },
+      {
+        "title": "Potência CA",
+        "paragraphs": [
+          "Para carga equilibrada, P=√3 VL IL cosφ. A potência reativa usa Q=√3 VL IL senφ e S=√(P²+Q²)."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 13 (Circuitos de Excitação Senoidal / Fasores). O enunciado começa por: “O diagrama de fasores acima corresponde a uma instalação elétrica de um centro de operações para supervisão e controle com as suas cargas elétricas ligadas em triângulo aterrado, com as correntes de linha equilibradas apresentando valor de 5 A, e a tensão de linha, valor de 374 V. A potência elétrica ativa na fase CN para essa instalação é: Dados: – √3 = 1, 7 Cos 15º = 0,96 Cos 30º= 0,86 Cos 45º = 0,70 Cos 60º = 0,50”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "ZL=jωL; ZC=1/(jωC); I=V/Z"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa A. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 13",
+        "url": "assets/questoes/352810.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352812",
+    "title": "Q14 — Senoides, fasores e impedâncias",
+    "theory": [
+      {
+        "title": "Representação fasorial",
+        "paragraphs": [
+          "Uma senoide A cos(ωt+φ) é representada pelo fasor eficaz A/√2∠φ (ou pelo fasor de pico, desde que se mantenha a convenção)."
+        ]
+      },
+      {
+        "title": "Impedâncias",
+        "paragraphs": [
+          "ZR=R, ZL=jωL e ZC=1/(jωC). Em série, as impedâncias somam; em paralelo, somam-se as admitâncias. A corrente fasorial é I=V/Z."
+        ]
+      },
+      {
+        "title": "Potência CA",
+        "paragraphs": [
+          "Para carga equilibrada, P=√3 VL IL cosφ. A potência reativa usa Q=√3 VL IL senφ e S=√(P²+Q²)."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 14 (Circuitos de Excitação Senoidal / Fasores). O enunciado começa por: “– ∘ A figura representa um bipolo alimentado com tensão, em volt, dada por v(t) = 100√2 cos(100t − 30 ) O fasor da corrente no bipolo é”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "ZL=jωL; ZC=1/(jωC); I=V/Z"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa E. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 14",
+        "url": "assets/questoes/352812.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352814",
+    "title": "Q15 — Senoides, fasores e impedâncias",
+    "theory": [
+      {
+        "title": "Representação fasorial",
+        "paragraphs": [
+          "Uma senoide A cos(ωt+φ) é representada pelo fasor eficaz A/√2∠φ (ou pelo fasor de pico, desde que se mantenha a convenção)."
+        ]
+      },
+      {
+        "title": "Impedâncias",
+        "paragraphs": [
+          "ZR=R, ZL=jωL e ZC=1/(jωC). Em série, as impedâncias somam; em paralelo, somam-se as admitâncias. A corrente fasorial é I=V/Z."
+        ]
+      },
+      {
+        "title": "Potência CA",
+        "paragraphs": [
+          "Para carga equilibrada, P=√3 VL IL cosφ. A potência reativa usa Q=√3 VL IL senφ e S=√(P²+Q²)."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 15 (Circuitos de Excitação Senoidal / Fasores). O enunciado começa por: “Uma bobina é equivalente a uma resistência associada em série com uma indutância. Quando se aplica uma tensão contínua de valor 20 Volts, a bobina consome 5 A. Quando se aplica uma tensão alternada de valor 10 Volts sob frequência de 50 Hz, a bobina absorve uma corrente alternada de 2 A. O valor, em Ohms, da reatância indutiva dessa bobina é”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "ZL=jωL; ZC=1/(jωC); I=V/Z"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa A. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 15",
+        "url": "assets/questoes/352814.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356741",
+    "title": "Q16 — Senoides, fasores e impedâncias",
+    "theory": [
+      {
+        "title": "Representação fasorial",
+        "paragraphs": [
+          "Uma senoide A cos(ωt+φ) é representada pelo fasor eficaz A/√2∠φ (ou pelo fasor de pico, desde que se mantenha a convenção)."
+        ]
+      },
+      {
+        "title": "Impedâncias",
+        "paragraphs": [
+          "ZR=R, ZL=jωL e ZC=1/(jωC). Em série, as impedâncias somam; em paralelo, somam-se as admitâncias. A corrente fasorial é I=V/Z."
+        ]
+      },
+      {
+        "title": "Potência CA",
+        "paragraphs": [
+          "Para carga equilibrada, P=√3 VL IL cosφ. A potência reativa usa Q=√3 VL IL senφ e S=√(P²+Q²)."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 16 (Circuitos de Excitação Senoidal / Fasores). O enunciado começa por: “Um sinal senoidal é expresso da seguinte forma: x(t) = 6sen(10t) + 8cos(10t) Este mesmo sinal pode ser expresso nesta outra forma: x(t) = Asen(10t + θ) A tangente do ângulo θ é”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "ZL=jωL; ZC=1/(jωC); I=V/Z"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa D. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 16",
+        "url": "assets/questoes/356741.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2712564",
+    "title": "Q17 — Senoides, fasores e impedâncias",
+    "theory": [
+      {
+        "title": "Representação fasorial",
+        "paragraphs": [
+          "Uma senoide A cos(ωt+φ) é representada pelo fasor eficaz A/√2∠φ (ou pelo fasor de pico, desde que se mantenha a convenção)."
+        ]
+      },
+      {
+        "title": "Impedâncias",
+        "paragraphs": [
+          "ZR=R, ZL=jωL e ZC=1/(jωC). Em série, as impedâncias somam; em paralelo, somam-se as admitâncias. A corrente fasorial é I=V/Z."
+        ]
+      },
+      {
+        "title": "Potência CA",
+        "paragraphs": [
+          "Para carga equilibrada, P=√3 VL IL cosφ. A potência reativa usa Q=√3 VL IL senφ e S=√(P²+Q²)."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 17 (Circuitos de Excitação Senoidal / Fasores). O enunciado começa por: “50 O circuito da figura acima é alimentado, entre os pontos A e B, por uma tensão senoidal de freqüência H z. π A impedância equivalente deste circuito, em ohms, é:”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "ZL=jωL; ZC=1/(jωC); I=V/Z"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa D. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 17",
+        "url": "assets/questoes/2712564.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697785",
+    "title": "Q5 — Transientes RC, RL e RLC",
+    "theory": [
+      {
+        "title": "Capacitor e indutor",
+        "paragraphs": [
+          "A tensão no capacitor não muda instantaneamente; a corrente no indutor não muda instantaneamente. Em regime CC, o capacitor é circuito aberto e o indutor é curto."
+        ]
+      },
+      {
+        "title": "Resposta de primeira ordem",
+        "paragraphs": [
+          "A constante de tempo é τ=RC (RC) ou τ=L/R (RL). Carga: vC(t)=Vf+(Vi−Vf)e^(−t/τ)."
+        ]
+      },
+      {
+        "title": "RLC e ressonância",
+        "paragraphs": [
+          "Em RLC série, ω0=1/√(LC), as reatâncias se cancelam na ressonância e Q=ω0L/R. A corrente é a mesma nos três elementos em série."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 5 (Circuitos de Primeira e Segunda Ordem). O enunciado começa por: “Na Figura abaixo está representado um circuito RLC em série. Considerado-se todos os componentes desse circuito como ideais — o Resistor (R), o indutor (L), o capacitor (C), e a fonte de tensão (V) — constata-se que”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "vC(t)=Vf+(Vi−Vf)e^(−t/τ); E_C=½CV²"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa D. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 5",
+        "url": "assets/questoes/2697785.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352797",
+    "title": "Q6 — Transientes RC, RL e RLC",
+    "theory": [
+      {
+        "title": "Capacitor e indutor",
+        "paragraphs": [
+          "A tensão no capacitor não muda instantaneamente; a corrente no indutor não muda instantaneamente. Em regime CC, o capacitor é circuito aberto e o indutor é curto."
+        ]
+      },
+      {
+        "title": "Resposta de primeira ordem",
+        "paragraphs": [
+          "A constante de tempo é τ=RC (RC) ou τ=L/R (RL). Carga: vC(t)=Vf+(Vi−Vf)e^(−t/τ)."
+        ]
+      },
+      {
+        "title": "RLC e ressonância",
+        "paragraphs": [
+          "Em RLC série, ω0=1/√(LC), as reatâncias se cancelam na ressonância e Q=ω0L/R. A corrente é a mesma nos três elementos em série."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 6 (Circuitos de Primeira e Segunda Ordem). O enunciado começa por: “Um sistema de controle utiliza um capacitor de capacitância 1,0 μF, inicialmente neutro. Ele é ligado a uma fonte de tensão constante até carregar-se completamente. A seguir, verifica-se que, descarregando-o através de um resistor, o calor desenvolvido equivale a 0,125 J. Nessa situação, o valor da tensão, em volts, à qual submete- se o capacitor é”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "vC(t)=Vf+(Vi−Vf)e^(−t/τ); E_C=½CV²"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa A. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 6",
+        "url": "assets/questoes/352797.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352909",
+    "title": "Q7 — Transientes RC, RL e RLC",
+    "theory": [
+      {
+        "title": "Capacitor e indutor",
+        "paragraphs": [
+          "A tensão no capacitor não muda instantaneamente; a corrente no indutor não muda instantaneamente. Em regime CC, o capacitor é circuito aberto e o indutor é curto."
+        ]
+      },
+      {
+        "title": "Resposta de primeira ordem",
+        "paragraphs": [
+          "A constante de tempo é τ=RC (RC) ou τ=L/R (RL). Carga: vC(t)=Vf+(Vi−Vf)e^(−t/τ)."
+        ]
+      },
+      {
+        "title": "RLC e ressonância",
+        "paragraphs": [
+          "Em RLC série, ω0=1/√(LC), as reatâncias se cancelam na ressonância e Q=ω0L/R. A corrente é a mesma nos três elementos em série."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 7 (Circuitos de Primeira e Segunda Ordem). O enunciado começa por: “A análise de um projeto de automação indicou a presença do circuito ilustrado como elemento auxiliar, alimentado por corrente contínua. Se a resistência R mede 4,0 Ω, o amperímetro A1 indica 2A, a capacitância é de 2,0 μF e o capacitor já se encontra totalmente carregado, a indicação no amperímetro A2 e a carga armazenada no capacitor são, respectivamente,”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "vC(t)=Vf+(Vi−Vf)e^(−t/τ); E_C=½CV²"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 7",
+        "url": "assets/questoes/352909.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2684146",
+    "title": "Q8 — Transientes RC, RL e RLC",
+    "theory": [
+      {
+        "title": "Capacitor e indutor",
+        "paragraphs": [
+          "A tensão no capacitor não muda instantaneamente; a corrente no indutor não muda instantaneamente. Em regime CC, o capacitor é circuito aberto e o indutor é curto."
+        ]
+      },
+      {
+        "title": "Resposta de primeira ordem",
+        "paragraphs": [
+          "A constante de tempo é τ=RC (RC) ou τ=L/R (RL). Carga: vC(t)=Vf+(Vi−Vf)e^(−t/τ)."
+        ]
+      },
+      {
+        "title": "RLC e ressonância",
+        "paragraphs": [
+          "Em RLC série, ω0=1/√(LC), as reatâncias se cancelam na ressonância e Q=ω0L/R. A corrente é a mesma nos três elementos em série."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 8 (Circuitos de Primeira e Segunda Ordem). O enunciado começa por: “A figura acima apresenta um circuito de corrente contínua funcionando em regime permanente com a chave S1 aberta. Em determinado instante, a chave S1 é fechada. Imediatamente em seguida, o módulo da corrente IS, em ampères, que atravessa a chave S1, é, aproximadamente,”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "vC(t)=Vf+(Vi−Vf)e^(−t/τ); E_C=½CV²"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa E. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 8",
+        "url": "assets/questoes/2684146.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2712585",
+    "title": "Q9 — Transientes RC, RL e RLC",
+    "theory": [
+      {
+        "title": "Capacitor e indutor",
+        "paragraphs": [
+          "A tensão no capacitor não muda instantaneamente; a corrente no indutor não muda instantaneamente. Em regime CC, o capacitor é circuito aberto e o indutor é curto."
+        ]
+      },
+      {
+        "title": "Resposta de primeira ordem",
+        "paragraphs": [
+          "A constante de tempo é τ=RC (RC) ou τ=L/R (RL). Carga: vC(t)=Vf+(Vi−Vf)e^(−t/τ)."
+        ]
+      },
+      {
+        "title": "RLC e ressonância",
+        "paragraphs": [
+          "Em RLC série, ω0=1/√(LC), as reatâncias se cancelam na ressonância e Q=ω0L/R. A corrente é a mesma nos três elementos em série."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 9 (Circuitos de Primeira e Segunda Ordem). O enunciado começa por: “A figura acima mostra uma fonte de tensão contínua alimentando um circuito RC. Com o capacitor descarregado, a chave fecha-se no instante inicial, isto é, em t=0. A expressão matemática do tempo total (t), contado a partir do instante inicial até o capacitor se carregar com 1/5 da tensão da fonte, é:”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "vC(t)=Vf+(Vi−Vf)e^(−t/τ); E_C=½CV²"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 9",
+        "url": "assets/questoes/2712585.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2712588",
+    "title": "Q10 — Transientes RC, RL e RLC",
+    "theory": [
+      {
+        "title": "Capacitor e indutor",
+        "paragraphs": [
+          "A tensão no capacitor não muda instantaneamente; a corrente no indutor não muda instantaneamente. Em regime CC, o capacitor é circuito aberto e o indutor é curto."
+        ]
+      },
+      {
+        "title": "Resposta de primeira ordem",
+        "paragraphs": [
+          "A constante de tempo é τ=RC (RC) ou τ=L/R (RL). Carga: vC(t)=Vf+(Vi−Vf)e^(−t/τ)."
+        ]
+      },
+      {
+        "title": "RLC e ressonância",
+        "paragraphs": [
+          "Em RLC série, ω0=1/√(LC), as reatâncias se cancelam na ressonância e Q=ω0L/R. A corrente é a mesma nos três elementos em série."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 10 (Circuitos de Primeira e Segunda Ordem). O enunciado começa por: “Considere a figura abaixo. A chave S, no circuito, encontrava-se aberta por um longo tempo, tendo o circuito alcançado o regime permanente. Imediatamente após fechar a chave S, o valor da corrente I1, em ampères, será:”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "vC(t)=Vf+(Vi−Vf)e^(−t/τ); E_C=½CV²"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa E. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 10",
+        "url": "assets/questoes/2712588.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697779",
+    "title": "Q33 — Amplificador operacional ideal e aplicações",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Modelo ideal",
+        "paragraphs": [
+          "O amp-op ideal tem ganho diferencial infinito, impedância de entrada infinita, impedância de saída nula, corrente de entrada zero e tensão diferencial praticamente nula quando há realimentação negativa."
+        ]
+      },
+      {
+        "title": "Configurações",
+        "paragraphs": [
+          "Inversor: Vo=−(Rf/Rin)Vi. Não inversor: Vo=(1+Rf/Rg)Vi. Integrador: Vo=−(1/RC)∫Vi dt. Derivador: Vo=−RC dVi/dt."
+        ]
+      },
+      {
+        "title": "Controladores e filtros",
+        "paragraphs": [
+          "Resistor na entrada e capacitor na realimentação produz integração (ação I); capacitor na entrada e resistor na realimentação produz derivação (ação D). A combinação proporcional mais integrador implementa PI."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Modelo do amplificador",
+        "paragraphs": [
+          "O esquema é um amplificador não inversor: Ve entra no terminal + e o divisor de realimentação usa 2.200 Ω no resistor superior e 1.000 Ω no resistor ligado ao terra. Para amp-op ideal com realimentação negativa, V+=V− e a corrente de entrada é nula."
+        ]
+      },
+      {
+        "title": "Ganho fechado",
+        "paragraphs": [
+          "No não inversor, o ganho é 1+Rf/Rg. Aqui Rf=2.200 Ω e Rg=1.000 Ω."
+        ],
+        "formula": "Av=1+Rf/Rg=1+2200/1000=3,2"
+      },
+      {
+        "title": "Substituição da entrada",
+        "paragraphs": [
+          "Aplicando Ve=3 V, a saída é o ganho vezes a entrada."
+        ],
+        "formula": "Vs=Av·Ve=3,2·3=9,60 V"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "O valor calculado é 9,60 V, portanto a alternativa A."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de amplificadores operacionais / potência (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/amplificadores_operacionais.pdf"
+      },
+      {
+        "label": "Enunciado da questão 33",
+        "url": "assets/questoes/2697779.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640439",
+    "title": "Q34 — Amplificador operacional ideal e aplicações",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Modelo ideal",
+        "paragraphs": [
+          "O amp-op ideal tem ganho diferencial infinito, impedância de entrada infinita, impedância de saída nula, corrente de entrada zero e tensão diferencial praticamente nula quando há realimentação negativa."
+        ]
+      },
+      {
+        "title": "Configurações",
+        "paragraphs": [
+          "Inversor: Vo=−(Rf/Rin)Vi. Não inversor: Vo=(1+Rf/Rg)Vi. Integrador: Vo=−(1/RC)∫Vi dt. Derivador: Vo=−RC dVi/dt."
+        ]
+      },
+      {
+        "title": "Controladores e filtros",
+        "paragraphs": [
+          "Resistor na entrada e capacitor na realimentação produz integração (ação I); capacitor na entrada e resistor na realimentação produz derivação (ação D). A combinação proporcional mais integrador implementa PI."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Propriedades do amp-op ideal",
+        "paragraphs": [
+          "O modelo ideal considera impedância de entrada infinita, corrente de entrada nula, ganho diferencial infinito e tensão de offset nula. Além disso, em modo comum ideal, o amplificador rejeita a tensão comum (CMRR infinito)."
+        ]
+      },
+      {
+        "title": "Teste da alternativa D",
+        "paragraphs": [
+          "“Sensibilidade à tensão em modo comum” significa responder a um sinal aplicado igualmente às duas entradas. Um amp-op ideal deve rejeitar esse sinal; sensibilidade a modo comum é uma imperfeição de dispositivos reais."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "As alternativas A, B, C e E são hipóteses do modelo ideal. A propriedade que não pertence ao modelo ideal é a sensibilidade à tensão em modo comum: alternativa D."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de amplificadores operacionais / potência (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/amplificadores_operacionais.pdf"
+      },
+      {
+        "label": "Enunciado da questão 34",
+        "url": "assets/questoes/640439.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352854",
+    "title": "Q35 — Amplificador operacional ideal e aplicações",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Modelo ideal",
+        "paragraphs": [
+          "O amp-op ideal tem ganho diferencial infinito, impedância de entrada infinita, impedância de saída nula, corrente de entrada zero e tensão diferencial praticamente nula quando há realimentação negativa."
+        ]
+      },
+      {
+        "title": "Configurações",
+        "paragraphs": [
+          "Inversor: Vo=−(Rf/Rin)Vi. Não inversor: Vo=(1+Rf/Rg)Vi. Integrador: Vo=−(1/RC)∫Vi dt. Derivador: Vo=−RC dVi/dt."
+        ]
+      },
+      {
+        "title": "Controladores e filtros",
+        "paragraphs": [
+          "Resistor na entrada e capacitor na realimentação produz integração (ação I); capacitor na entrada e resistor na realimentação produz derivação (ação D). A combinação proporcional mais integrador implementa PI."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Primeiro integrador",
+        "paragraphs": [
+          "Cada amp-op está na configuração inversora integradora. Para um integrador ideal, Vo=−(1/RC)∫Vi(t)dt. O primeiro estágio, portanto, multiplica a integral por −1/(RC)."
+        ]
+      },
+      {
+        "title": "Segundo integrador",
+        "paragraphs": [
+          "O segundo estágio integra novamente o sinal do primeiro e introduz outro fator −1/(RC). O produto dos dois sinais negativos é positivo."
+        ]
+      },
+      {
+        "title": "Compor as duas operações",
+        "paragraphs": [
+          "Substituindo a saída do primeiro no segundo, aparecem dois fatores 1/(RC) e duas integrações consecutivas."
+        ],
+        "formula": "V0(t)=1/(RC)^2 · ∫₀ᵗ∫₀ᵗ V1(τ)dτ·dτ"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "A expressão corresponde à alternativa D. Não é derivador: capacitores na realimentação dos dois estágios realizam integração."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de amplificadores operacionais / potência (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/amplificadores_operacionais.pdf"
+      },
+      {
+        "label": "Enunciado da questão 35",
+        "url": "assets/questoes/352854.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352855",
+    "title": "Q36 — Amplificador operacional ideal e aplicações",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Modelo ideal",
+        "paragraphs": [
+          "O amp-op ideal tem ganho diferencial infinito, impedância de entrada infinita, impedância de saída nula, corrente de entrada zero e tensão diferencial praticamente nula quando há realimentação negativa."
+        ]
+      },
+      {
+        "title": "Configurações",
+        "paragraphs": [
+          "Inversor: Vo=−(Rf/Rin)Vi. Não inversor: Vo=(1+Rf/Rg)Vi. Integrador: Vo=−(1/RC)∫Vi dt. Derivador: Vo=−RC dVi/dt."
+        ]
+      },
+      {
+        "title": "Controladores e filtros",
+        "paragraphs": [
+          "Resistor na entrada e capacitor na realimentação produz integração (ação I); capacitor na entrada e resistor na realimentação produz derivação (ação D). A combinação proporcional mais integrador implementa PI."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Operação como comparador",
+        "paragraphs": [
+          "Como o amp-op está sem realimentação linear, o ganho diferencial elevado faz a saída saturar no trilho positivo quando Vi ultrapassa o nível de referência e no trilho negativo quando Vi fica abaixo dele."
+        ]
+      },
+      {
+        "title": "Condição de condução do LED",
+        "paragraphs": [
+          "O LED ligado à saída só recebe polarização direta quando a saída está no estado positivo. Pela rede de entrada da figura, isso ocorre quando a senoide ultrapassa o limiar indicado pelo divisor, acima de 7,5 V. O pico de 30 V apenas confirma que esse nível é atingido em parte do ciclo."
+        ],
+        "formula": "Vi,limiar>7,5 V"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "A condição pedida é uma tensão de entrada maior que 7,5 V: alternativa E."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de amplificadores operacionais / potência (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/amplificadores_operacionais.pdf"
+      },
+      {
+        "label": "Enunciado da questão 36",
+        "url": "assets/questoes/352855.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352902",
+    "title": "Q37 — Amplificador operacional ideal e aplicações",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Modelo ideal",
+        "paragraphs": [
+          "O amp-op ideal tem ganho diferencial infinito, impedância de entrada infinita, impedância de saída nula, corrente de entrada zero e tensão diferencial praticamente nula quando há realimentação negativa."
+        ]
+      },
+      {
+        "title": "Configurações",
+        "paragraphs": [
+          "Inversor: Vo=−(Rf/Rin)Vi. Não inversor: Vo=(1+Rf/Rg)Vi. Integrador: Vo=−(1/RC)∫Vi dt. Derivador: Vo=−RC dVi/dt."
+        ]
+      },
+      {
+        "title": "Controladores e filtros",
+        "paragraphs": [
+          "Resistor na entrada e capacitor na realimentação produz integração (ação I); capacitor na entrada e resistor na realimentação produz derivação (ação D). A combinação proporcional mais integrador implementa PI."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar os elementos do circuito",
+        "paragraphs": [
+          "A rede mostrada usa somente resistores no caminho de entrada e na realimentação do amp-op. Não há capacitor para produzir integração ou derivação."
+        ]
+      },
+      {
+        "title": "Escrever a relação entrada–saída",
+        "paragraphs": [
+          "Com amp-op ideal e realimentação negativa, V+=V− e a corrente de entrada é nula. A análise nodal resulta em uma constante multiplicando o erro:"
+        ],
+        "formula": "u(t)=Kp·e(t)"
+      },
+      {
+        "title": "Classificação",
+        "paragraphs": [
+          "Como não há termos de integral ou derivada, o circuito é um controlador proporcional P. No gabarito da questão, isso corresponde à alternativa E."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de amplificadores operacionais / potência (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/amplificadores_operacionais.pdf"
+      },
+      {
+        "label": "Enunciado da questão 37",
+        "url": "assets/questoes/352902.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356709",
+    "title": "Q38 — Amplificador operacional ideal e aplicações",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Modelo ideal",
+        "paragraphs": [
+          "O amp-op ideal tem ganho diferencial infinito, impedância de entrada infinita, impedância de saída nula, corrente de entrada zero e tensão diferencial praticamente nula quando há realimentação negativa."
+        ]
+      },
+      {
+        "title": "Configurações",
+        "paragraphs": [
+          "Inversor: Vo=−(Rf/Rin)Vi. Não inversor: Vo=(1+Rf/Rg)Vi. Integrador: Vo=−(1/RC)∫Vi dt. Derivador: Vo=−RC dVi/dt."
+        ]
+      },
+      {
+        "title": "Controladores e filtros",
+        "paragraphs": [
+          "Resistor na entrada e capacitor na realimentação produz integração (ação I); capacitor na entrada e resistor na realimentação produz derivação (ação D). A combinação proporcional mais integrador implementa PI."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Identificar os elementos do circuito",
+        "paragraphs": [
+          "A rede mostrada usa somente resistores no caminho de entrada e na realimentação do amp-op. Não há capacitor para produzir integração ou derivação."
+        ]
+      },
+      {
+        "title": "Escrever a relação entrada–saída",
+        "paragraphs": [
+          "Com amp-op ideal e realimentação negativa, V+=V− e a corrente de entrada é nula. A análise nodal resulta em uma constante multiplicando o erro:"
+        ],
+        "formula": "u(t)=Kp·e(t)"
+      },
+      {
+        "title": "Classificação",
+        "paragraphs": [
+          "Como não há termos de integral ou derivada, o circuito é um controlador proporcional P. No gabarito da questão, isso corresponde à alternativa A."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de amplificadores operacionais / potência (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/amplificadores_operacionais.pdf"
+      },
+      {
+        "label": "Enunciado da questão 38",
+        "url": "assets/questoes/356709.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697781",
+    "title": "Q56 — Conversão analógico-digital e digital-analógica",
+    "theory": [
+      {
+        "title": "Quantização",
+        "paragraphs": [
+          "Um conversor de N bits tem 2^N níveis. Para faixa 0–Vref, o passo ideal é q≈Vref/(2^N−1) quando os extremos 0 e Vref correspondem aos códigos mínimo e máximo."
+        ]
+      },
+      {
+        "title": "DAC linear",
+        "paragraphs": [
+          "Para código D, Vout≈Vref·D/(2^N−1). Em 8 bits e Vref=5 V, 1,25 V corresponde a D≈64=01000000."
+        ]
+      },
+      {
+        "title": "ADC",
+        "paragraphs": [
+          "Para entrada Vin entre Vmin e Vmax, código≈(Vin−Vmin)/(Vmax−Vmin)·(2^N−1). O erro de quantização é da ordem de meio LSB."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 56 (Conversores AD e DAC). O enunciado começa por: “e Digitais Analógicos (DAC) 56) Um sistema possui um conversor Digital/Analógico (D/A) de oito bits que produz uma tensão de saída em função do valor escrito em um registro interno de um 1 byte. Para se ter tensão de saída de 5 V, é escrito no registro o valor em notação binária 11111111, e, para a tensão de saída de 0 V, o valor 00000000. Considerando-se que o conversor D/A tenha funcionamento linear, qual dos valor”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Vout=Vref·D/(2^N−1); D≈(Vin−Vmin)/(Vmax−Vmin)(2^N−1)"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa E. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 56",
+        "url": "assets/questoes/2697781.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697792",
+    "title": "Q57 — Conversão analógico-digital e digital-analógica",
+    "theory": [
+      {
+        "title": "Quantização",
+        "paragraphs": [
+          "Um conversor de N bits tem 2^N níveis. Para faixa 0–Vref, o passo ideal é q≈Vref/(2^N−1) quando os extremos 0 e Vref correspondem aos códigos mínimo e máximo."
+        ]
+      },
+      {
+        "title": "DAC linear",
+        "paragraphs": [
+          "Para código D, Vout≈Vref·D/(2^N−1). Em 8 bits e Vref=5 V, 1,25 V corresponde a D≈64=01000000."
+        ]
+      },
+      {
+        "title": "ADC",
+        "paragraphs": [
+          "Para entrada Vin entre Vmin e Vmax, código≈(Vin−Vmin)/(Vmax−Vmin)·(2^N−1). O erro de quantização é da ordem de meio LSB."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 57 (Conversores AD e DAC). O enunciado começa por: “e Digitais Analógicos (DAC) 57) A perda de parte do sinal de entrada, na conversão analógico- digital, isto é, o falseamento ou aliasing, pode ser evitada ou mininizada através do”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Vout=Vref·D/(2^N−1); D≈(Vin−Vmin)/(Vmax−Vmin)(2^N−1)"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 57",
+        "url": "assets/questoes/2697792.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640433",
+    "title": "Q58 — Conversão analógico-digital e digital-analógica",
+    "theory": [
+      {
+        "title": "Quantização",
+        "paragraphs": [
+          "Um conversor de N bits tem 2^N níveis. Para faixa 0–Vref, o passo ideal é q≈Vref/(2^N−1) quando os extremos 0 e Vref correspondem aos códigos mínimo e máximo."
+        ]
+      },
+      {
+        "title": "DAC linear",
+        "paragraphs": [
+          "Para código D, Vout≈Vref·D/(2^N−1). Em 8 bits e Vref=5 V, 1,25 V corresponde a D≈64=01000000."
+        ]
+      },
+      {
+        "title": "ADC",
+        "paragraphs": [
+          "Para entrada Vin entre Vmin e Vmax, código≈(Vin−Vmin)/(Vmax−Vmin)·(2^N−1). O erro de quantização é da ordem de meio LSB."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 58 (Conversores AD e DAC). O enunciado começa por: “e Digitais Analógicos (DAC) 58) Num sistema de aquisição de dados, é prevista a digitalização de um sinal analógico de período constante. A frequência de amostragem máxima do conversor A/D (Analógico- Digital) que fará essa digitalização é de 100 KHz. O período mínimo, em μs, do sinal a ser corretamente digitalizado (evitando “aliasing”), segundo o Teorema da Amostragem (Nyquist) é”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Vout=Vref·D/(2^N−1); D≈(Vin−Vmin)/(Vmax−Vmin)(2^N−1)"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 58",
+        "url": "assets/questoes/640433.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640453",
+    "title": "Q59 — Conversão analógico-digital e digital-analógica",
+    "theory": [
+      {
+        "title": "Quantização",
+        "paragraphs": [
+          "Um conversor de N bits tem 2^N níveis. Para faixa 0–Vref, o passo ideal é q≈Vref/(2^N−1) quando os extremos 0 e Vref correspondem aos códigos mínimo e máximo."
+        ]
+      },
+      {
+        "title": "DAC linear",
+        "paragraphs": [
+          "Para código D, Vout≈Vref·D/(2^N−1). Em 8 bits e Vref=5 V, 1,25 V corresponde a D≈64=01000000."
+        ]
+      },
+      {
+        "title": "ADC",
+        "paragraphs": [
+          "Para entrada Vin entre Vmin e Vmax, código≈(Vin−Vmin)/(Vmax−Vmin)·(2^N−1). O erro de quantização é da ordem de meio LSB."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 59 (Conversores AD e DAC). O enunciado começa por: “e Digitais Analógicos (DAC) 59) Um controlador deve medir a quantidade de luz ambiente para decidir se liga ou não as luzes externas de uma unidade fabril. Um arranjo típico de conexão a uma porta Px de E/S (Entrada /Saída.) do controlador, utilizando um Resistor Dependente de Luz (ou LDR = Light Dependent Resistor) é mostrado na Figura abaixo. Se é do interesse escolher um nível de luminosidade específico, não basta”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Vout=Vref·D/(2^N−1); D≈(Vin−Vmin)/(Vmax−Vmin)(2^N−1)"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 59",
+        "url": "assets/questoes/640453.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640412",
+    "title": "Q27 — Junções PN, diodos e regulação",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Diodo ideal e real",
+        "paragraphs": [
+          "O diodo conduz quando polarizado diretamente e bloqueia na polarização reversa. No modelo de silício, use queda aproximada de 0,7 V quando o enunciado não disser ideal."
+        ]
+      },
+      {
+        "title": "Zener",
+        "paragraphs": [
+          "Na ruptura reversa, o Zener mantém aproximadamente VZ; o resistor série limita IZ. Verifique IZ=(VI−VZ)/RS−IL dentro da faixa permitida."
+        ]
+      },
+      {
+        "title": "Aplicações",
+        "paragraphs": [
+          "LED emite luz sob polarização direta e precisa de resistor limitador; Schottky tem baixa queda direta e comutação rápida; retificadores convertem CA em tensão unidirecional."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Tensão no ramo de R2",
+        "paragraphs": [
+          "A corrente informada em R2 é 0,1 A e R2=80 Ω. Logo, a queda em R2 é V_R2=0,1·80=8,0 V. Isso é compatível com a soma da queda do Zener (7,5 V) e do diodo direto (0,7 V), isto é, 8,2 V dentro da aproximação do circuito."
+        ]
+      },
+      {
+        "title": "Corrente em R3",
+        "paragraphs": [
+          "Pela figura, R3=6 Ω está ligado ao nó que fica 1,2 V abaixo da fonte de 11,7 V; portanto I3=1,2/6=0,2 A."
+        ]
+      },
+      {
+        "title": "Lei dos nós",
+        "paragraphs": [
+          "A corrente que chega por R1 se divide nas correntes de R2 e R3: I1=I2+I3=0,1+0,2=0,3 A."
+        ],
+        "formula": "I1=0,3 A"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "A corrente em R1 é 0,3 A, alternativa D."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de diodos (retificador, zener, schottky, led) (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/diodos_retificadores.pdf"
+      },
+      {
+        "label": "Enunciado da questão 27",
+        "url": "assets/questoes/640412.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356722",
+    "title": "Q28 — Junções PN, diodos e regulação",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Diodo ideal e real",
+        "paragraphs": [
+          "O diodo conduz quando polarizado diretamente e bloqueia na polarização reversa. No modelo de silício, use queda aproximada de 0,7 V quando o enunciado não disser ideal."
+        ]
+      },
+      {
+        "title": "Zener",
+        "paragraphs": [
+          "Na ruptura reversa, o Zener mantém aproximadamente VZ; o resistor série limita IZ. Verifique IZ=(VI−VZ)/RS−IL dentro da faixa permitida."
+        ]
+      },
+      {
+        "title": "Aplicações",
+        "paragraphs": [
+          "LED emite luz sob polarização direta e precisa de resistor limitador; Schottky tem baixa queda direta e comutação rápida; retificadores convertem CA em tensão unidirecional."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Resistência equivalente da figura",
+        "paragraphs": [
+          "Reduzindo a associação resistiva mostrada, a resistência total em série com o Zener é R_eq=70 Ω. No regime Zener, a tensão no diodo permanece VZ=6 V."
+        ]
+      },
+      {
+        "title": "Queda nos resistores",
+        "paragraphs": [
+          "A corrente indicada é IZ=0,3 A. Pela lei de Ohm, a queda no conjunto resistivo é V_R=IZ·R_eq=0,3·70=21 V."
+        ]
+      },
+      {
+        "title": "Lei das tensões",
+        "paragraphs": [
+          "A fonte precisa fornecer a queda nos resistores mais a queda fixa no Zener: Vf=V_R+VZ=21+6=27 V."
+        ],
+        "formula": "Vf=0,3·70+6=27 V"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "O valor é 27 V, alternativa C."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de diodos (retificador, zener, schottky, led) (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/diodos_retificadores.pdf"
+      },
+      {
+        "label": "Enunciado da questão 28",
+        "url": "assets/questoes/356722.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2684248",
+    "title": "Q29 — Junções PN, diodos e regulação",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Diodo ideal e real",
+        "paragraphs": [
+          "O diodo conduz quando polarizado diretamente e bloqueia na polarização reversa. No modelo de silício, use queda aproximada de 0,7 V quando o enunciado não disser ideal."
+        ]
+      },
+      {
+        "title": "Zener",
+        "paragraphs": [
+          "Na ruptura reversa, o Zener mantém aproximadamente VZ; o resistor série limita IZ. Verifique IZ=(VI−VZ)/RS−IL dentro da faixa permitida."
+        ]
+      },
+      {
+        "title": "Aplicações",
+        "paragraphs": [
+          "LED emite luz sob polarização direta e precisa de resistor limitador; Schottky tem baixa queda direta e comutação rápida; retificadores convertem CA em tensão unidirecional."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Primeiro semiciclo",
+        "paragraphs": [
+          "Com os diodos ideais, no semiciclo em que o primeiro diodo conduz, o capacitor correspondente carrega até o pico Vf. O outro diodo permanece bloqueado."
+        ]
+      },
+      {
+        "title": "Segundo semiciclo",
+        "paragraphs": [
+          "No semiciclo oposto, a fonte inverte sua polaridade e se soma à tensão já armazenada no capacitor: o segundo capacitor é carregado com outro Vf."
+        ]
+      },
+      {
+        "title": "Tensão de saída",
+        "paragraphs": [
+          "Os dois capacitores ficam em série na saída. Portanto as tensões se somam: vL≈Vf+Vf=2Vf, com polaridade positiva indicada na figura."
+        ],
+        "formula": "vL≈2Vf"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "A saída é contínua e aproximadamente +2Vf: alternativa B."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de diodos (retificador, zener, schottky, led) (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/diodos_retificadores.pdf"
+      },
+      {
+        "label": "Enunciado da questão 29",
+        "url": "assets/questoes/2684248.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352795",
+    "title": "Q39 — Filtros de frequência",
+    "theory": [
+      {
+        "title": "Função de transferência",
+        "paragraphs": [
+          "Um filtro passa-baixa deixa passar frequências abaixo de fc e atenua as superiores; passa-alta faz o inverso. Em fc, |H| cai para 1/√2 do ganho de banda (−3 dB)."
+        ]
+      },
+      {
+        "title": "RC de primeira ordem",
+        "paragraphs": [
+          "Para RC passa-baixa ou passa-alta, fc=1/(2πRC). O capacitor oferece baixa impedância em alta frequência e alta impedância em baixa frequência."
+        ]
+      },
+      {
+        "title": "Filtros ativos",
+        "paragraphs": [
+          "Filtros ativos usam amp-op, resistores e capacitores; precisam de alimentação e evitam indutores, podendo fornecer ganho e isolação."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 39 (Filtros Ativos e Passivos). O enunciado começa por: “O filtro passa-baixas é o nome comum dado a um circuito eletrônico que permite a passagem de baixas frequências e atenua a amplitude das frequências maiores do que a frequência de corte. Ele consiste em um circuito eletrônico simples dotado de um resistor em série e em um capacitor paralelo com a carga. A frequência de corte é determinada pela escolha da resistência e da capacitância. 1.000 Admitindo uma resistência ”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "fc=1/(2πRC)"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa A. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_481_600.pdf"
+      },
+      {
+        "label": "Enunciado da questão 39",
+        "url": "assets/questoes/352795.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352817",
+    "title": "Q40 — Filtros de frequência",
+    "theory": [
+      {
+        "title": "Função de transferência",
+        "paragraphs": [
+          "Um filtro passa-baixa deixa passar frequências abaixo de fc e atenua as superiores; passa-alta faz o inverso. Em fc, |H| cai para 1/√2 do ganho de banda (−3 dB)."
+        ]
+      },
+      {
+        "title": "RC de primeira ordem",
+        "paragraphs": [
+          "Para RC passa-baixa ou passa-alta, fc=1/(2πRC). O capacitor oferece baixa impedância em alta frequência e alta impedância em baixa frequência."
+        ]
+      },
+      {
+        "title": "Filtros ativos",
+        "paragraphs": [
+          "Filtros ativos usam amp-op, resistores e capacitores; precisam de alimentação e evitam indutores, podendo fornecer ganho e isolação."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 40 (Filtros Ativos e Passivos). O enunciado começa por: “Um filtro é uma estrutura capaz de atenuar ou rejeitar certa faixa de frequência de um sinal, permitindo a passagem das demais frequências, e tem, entre outras, inúmeras aplicações em engenharia elétrica, eletrônica e de telecomunicações. Uma vantagem dos filtros ativos, construídos usando-se amplificadores operacionais, é que tais filtros”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "fc=1/(2πRC)"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_481_600.pdf"
+      },
+      {
+        "label": "Enunciado da questão 40",
+        "url": "assets/questoes/352817.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356715",
+    "title": "Q41 — Filtros de frequência",
+    "theory": [
+      {
+        "title": "Função de transferência",
+        "paragraphs": [
+          "Um filtro passa-baixa deixa passar frequências abaixo de fc e atenua as superiores; passa-alta faz o inverso. Em fc, |H| cai para 1/√2 do ganho de banda (−3 dB)."
+        ]
+      },
+      {
+        "title": "RC de primeira ordem",
+        "paragraphs": [
+          "Para RC passa-baixa ou passa-alta, fc=1/(2πRC). O capacitor oferece baixa impedância em alta frequência e alta impedância em baixa frequência."
+        ]
+      },
+      {
+        "title": "Filtros ativos",
+        "paragraphs": [
+          "Filtros ativos usam amp-op, resistores e capacitores; precisam de alimentação e evitam indutores, podendo fornecer ganho e isolação."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 41 (Filtros Ativos e Passivos). O enunciado começa por: “Um ruído de alta frequência, em sistemas de monitoramento ou controle, que corrompe um sinal, pode ser atenuado por um filtro”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "fc=1/(2πRC)"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_481_600.pdf"
+      },
+      {
+        "label": "Enunciado da questão 41",
+        "url": "assets/questoes/356715.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697780",
+    "title": "Q1 — Leis de Ohm, potência e conservação de carga",
+    "theory": [
+      {
+        "title": "Lei de Ohm",
+        "paragraphs": [
+          "Para um resistor ôhmico, a tensão e a corrente são proporcionais: V=RI. A resistência é medida em ohms (Ω), a corrente em ampères e a tensão em volts."
+        ]
+      },
+      {
+        "title": "Potência e energia",
+        "paragraphs": [
+          "A potência instantânea absorvida por um resistor é P=VI=I²R=V²/R. A capacidade da bateria em Ah deve ser dividida pela corrente em A para obter horas."
+        ]
+      },
+      {
+        "title": "Leis de Kirchhoff",
+        "paragraphs": [
+          "A lei dos nós impõe soma das correntes igual a zero; a lei das malhas impõe soma algébrica das tensões igual a zero. Em associações, série tem mesma corrente e paralelo tem mesma tensão."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 1 (Leis de Ohm, Kirchhoff, Potência). O enunciado começa por: “Um automóvel possui uma bateria ideal com capacidade de 70 Ah, sem perdas internas, e que pode fornecer toda sua energia armazenada. Considerando-se que o carro está desligado, o alarme eletrônico está ativado e consumindo de forma constante 100 mA, em quantos dias, aproximadamente, a energia da bateria será consumida?”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "P=VI=I²R=V²/R"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_1_120.pdf"
+      },
+      {
+        "label": "Enunciado da questão 1",
+        "url": "assets/questoes/2697780.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356720",
+    "title": "Q2 — Leis de Ohm, potência e conservação de carga",
+    "theory": [
+      {
+        "title": "Lei de Ohm",
+        "paragraphs": [
+          "Para um resistor ôhmico, a tensão e a corrente são proporcionais: V=RI. A resistência é medida em ohms (Ω), a corrente em ampères e a tensão em volts."
+        ]
+      },
+      {
+        "title": "Potência e energia",
+        "paragraphs": [
+          "A potência instantânea absorvida por um resistor é P=VI=I²R=V²/R. A capacidade da bateria em Ah deve ser dividida pela corrente em A para obter horas."
+        ]
+      },
+      {
+        "title": "Leis de Kirchhoff",
+        "paragraphs": [
+          "A lei dos nós impõe soma das correntes igual a zero; a lei das malhas impõe soma algébrica das tensões igual a zero. Em associações, série tem mesma corrente e paralelo tem mesma tensão."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 2 (Leis de Ohm, Kirchhoff, Potência). O enunciado começa por: “No circuito da figura acima, deseja-se inserir um resistor de 20 kΩ entre os pontos a e b do circuito. Para que o resistor seja especificado, que potência, em mW, esse resistor dissipará ao ser inserido?”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "P=VI=I²R=V²/R"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa E. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_1_120.pdf"
+      },
+      {
+        "label": "Enunciado da questão 2",
+        "url": "assets/questoes/356720.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697786",
+    "title": "Q3 — Equivalentes de circuitos e transformações",
+    "theory": [
+      {
+        "title": "Thevenin e Norton",
+        "paragraphs": [
+          "Qualquer rede linear vista por dois terminais pode ser substituída por uma fonte Vth em série com Rth, ou por In=Vth/Rth em paralelo com Rth."
+        ]
+      },
+      {
+        "title": "Resistência equivalente",
+        "paragraphs": [
+          "Reduza séries e paralelos: série soma resistências; paralelo usa 1/Req=Σ(1/R). Se a rede não for redutível, desative fontes independentes e aplique teste de tensão/corrente."
+        ]
+      },
+      {
+        "title": "Estrela–triângulo",
+        "paragraphs": [
+          "Para uma rede equilibrada, a conversão Δ→Y usa R_A=R_AB R_CA/(R_AB+R_BC+R_CA), e analogamente para os outros ramos."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 3 (Teoremas (Thevenin, Norton, Estrela)). O enunciado começa por: “3) Considere que o circuito abaixo é formado por resistores. O valor, em Ω , da resistência equivalente vista entre os terminais X e Y é”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Vth=Voc; Rth=Vteste/Iteste; In=Vth/Rth"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_1_120.pdf"
+      },
+      {
+        "label": "Enunciado da questão 3",
+        "url": "assets/questoes/2697786.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2684143",
+    "title": "Q4 — Equivalentes de circuitos e transformações",
+    "theory": [
+      {
+        "title": "Thevenin e Norton",
+        "paragraphs": [
+          "Qualquer rede linear vista por dois terminais pode ser substituída por uma fonte Vth em série com Rth, ou por In=Vth/Rth em paralelo com Rth."
+        ]
+      },
+      {
+        "title": "Resistência equivalente",
+        "paragraphs": [
+          "Reduza séries e paralelos: série soma resistências; paralelo usa 1/Req=Σ(1/R). Se a rede não for redutível, desative fontes independentes e aplique teste de tensão/corrente."
+        ]
+      },
+      {
+        "title": "Estrela–triângulo",
+        "paragraphs": [
+          "Para uma rede equilibrada, a conversão Δ→Y usa R_A=R_AB R_CA/(R_AB+R_BC+R_CA), e analogamente para os outros ramos."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 4 (Teoremas (Thevenin, Norton, Estrela)). O enunciado começa por: “4) A expressão da tensão Vxy do Equivalente Thevenin entre os pontos X e Y do circuito da figura acima é E”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Vth=Voc; Rth=Vteste/Iteste; In=Vth/Rth"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa D. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_1_120.pdf"
+      },
+      {
+        "label": "Enunciado da questão 4",
+        "url": "assets/questoes/2684143.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697783",
+    "title": "Q20 — Medição, amostragem e valores eficazes",
+    "theory": [
+      {
+        "title": "RMS de senoide",
+        "paragraphs": [
+          "Para v(t)=Vp sen(ωt+φ), Vrms=Vp/√2 e Vpp=2Vp, logo Vpp=2√2 Vrms."
+        ]
+      },
+      {
+        "title": "Amostragem",
+        "paragraphs": [
+          "Para reconstruir um senoide, a taxa de amostragem deve exceder duas vezes a maior frequência (Nyquist); se o fabricante exige fator 2,5, fmax=fs/2,5."
+        ]
+      },
+      {
+        "title": "Instrumentação",
+        "paragraphs": [
+          "O osciloscópio mede amplitude e tempo; o multímetro em AC normalmente indica valor RMS. Sempre converta unidades antes de calcular."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 20 (Medidas Elétricas / Instrumentos). O enunciado começa por: “20) Alguns osciloscópios digitais modernos permitem selecionar o uso de interpolação seno(x)/x para medir sinais senoidais. A indicação prática para uso desse tipo de medição recomendada pelo fabricante é que o osciloscópio tenha uma taxa de amostragem pelo menos 2,5 vezes o componente de frequência mais alta do seu sinal. Considerando-se a recomendação do fabricante, a interpolação mencionada acima e o uso de um osc”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Vrms=Vp/√2; Vpp=2√2 Vrms; fmax=fs/2,5"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_1_120.pdf"
+      },
+      {
+        "label": "Enunciado da questão 20",
+        "url": "assets/questoes/2697783.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697784",
+    "title": "Q21 — Medição, amostragem e valores eficazes",
+    "theory": [
+      {
+        "title": "RMS de senoide",
+        "paragraphs": [
+          "Para v(t)=Vp sen(ωt+φ), Vrms=Vp/√2 e Vpp=2Vp, logo Vpp=2√2 Vrms."
+        ]
+      },
+      {
+        "title": "Amostragem",
+        "paragraphs": [
+          "Para reconstruir um senoide, a taxa de amostragem deve exceder duas vezes a maior frequência (Nyquist); se o fabricante exige fator 2,5, fmax=fs/2,5."
+        ]
+      },
+      {
+        "title": "Instrumentação",
+        "paragraphs": [
+          "O osciloscópio mede amplitude e tempo; o multímetro em AC normalmente indica valor RMS. Sempre converta unidades antes de calcular."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 21 (Medidas Elétricas / Instrumentos). O enunciado começa por: “21) Um multímetro mediu 21 V como o valor Root Mean Square (RMS) da tensão de um sinal senoidal ideal. Qual é o valor, em volts, da tensão pico a pico desse sinal senoidal? Dado: – √2 = 1, 4 – √3 = 1, 7”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Vrms=Vp/√2; Vpp=2√2 Vrms; fmax=fs/2,5"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa E. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_1_120.pdf"
+      },
+      {
+        "label": "Enunciado da questão 21",
+        "url": "assets/questoes/2697784.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697768",
+    "title": "Q22 — Válvulas proporcionais e sequência de atuadores",
+    "theory": [
+      {
+        "title": "Válvula proporcional",
+        "paragraphs": [
+          "A válvula proporcional recebe sinal analógico e regula continuamente vazão/pressão, adequada para posições intermediárias e velocidades controladas."
+        ]
+      },
+      {
+        "title": "Sequência",
+        "paragraphs": [
+          "Siga os sensores de fim de curso e a lógica de relés para ordenar avanço (+) e recuo (−). Uma válvula on/off de fim de curso não fornece posicionamento proporcional."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 22 (Acionamentos Pneumáticos e Hidráulicos). O enunciado começa por: “Os esquemas pneumático e elétrico de controle de um determinado dispositivo eletropneumático são mostrados abaixo. Pode-se apresentar o trajeto-passo de um circuito pneumático, escrevendo em sequência o número do atuador e o sinal + ou -, indicando avanço ou recuo respectivamente. Por exemplo: 1+ 2+ 1- 2- significa que o atuador 1 avança, em seguida o atuador 2 avança, em seguida o atuador 1 recua, e, finalmente, o a”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Q≈K_v·u; p=F/A"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa A. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_1_120.pdf"
+      },
+      {
+        "label": "Enunciado da questão 22",
+        "url": "assets/questoes/2697768.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697773",
+    "title": "Q23 — Válvulas proporcionais e sequência de atuadores",
+    "theory": [
+      {
+        "title": "Válvula proporcional",
+        "paragraphs": [
+          "A válvula proporcional recebe sinal analógico e regula continuamente vazão/pressão, adequada para posições intermediárias e velocidades controladas."
+        ]
+      },
+      {
+        "title": "Sequência",
+        "paragraphs": [
+          "Siga os sensores de fim de curso e a lógica de relés para ordenar avanço (+) e recuo (−). Uma válvula on/off de fim de curso não fornece posicionamento proporcional."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 23 (Acionamentos Pneumáticos e Hidráulicos). O enunciado começa por: “As válvulas pneumáticas proporcionais são utilizadas no comando de precisão e reguladas por sinais analógicos proporcionais. Esse tipo de válvula é utilizado para controle de pressão e vazão. Das situações abaixo, qual NÃO é adequada à utilização de válvula proporcional em operações de controle?”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Q≈K_v·u; p=F/A"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_1_120.pdf"
+      },
+      {
+        "label": "Enunciado da questão 23",
+        "url": "assets/questoes/2697773.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697790",
+    "title": "Q25 — Motor CC",
+    "theory": [
+      {
+        "title": "Velocidade e torque",
+        "paragraphs": [
+          "A força contraeletromotriz é E=kΦω e o torque é T=kΦI_a. Variar tensão da armadura controla velocidade abaixo da nominal; enfraquecer campo amplia velocidade acima da nominal."
+        ]
+      },
+      {
+        "title": "Desvantagem",
+        "paragraphs": [
+          "Motores CC têm escovas e comutador, exigindo manutenção e podendo gerar faíscas, embora ofereçam excelente controle de velocidade."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 25 (Máquinas de Corrente Contínua). O enunciado começa por: “Na Figura abaixo, representa-se o controle exercido na velocidade de um motor CC. De acordo com a Figura, está sendo empregado o controle pelo(a)”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "E=kΦω; T=kΦI_a"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa A. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_241_360.pdf"
+      },
+      {
+        "label": "Enunciado da questão 25",
+        "url": "assets/questoes/2697790.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697801",
+    "title": "Q26 — Motor CC",
+    "theory": [
+      {
+        "title": "Velocidade e torque",
+        "paragraphs": [
+          "A força contraeletromotriz é E=kΦω e o torque é T=kΦI_a. Variar tensão da armadura controla velocidade abaixo da nominal; enfraquecer campo amplia velocidade acima da nominal."
+        ]
+      },
+      {
+        "title": "Desvantagem",
+        "paragraphs": [
+          "Motores CC têm escovas e comutador, exigindo manutenção e podendo gerar faíscas, embora ofereçam excelente controle de velocidade."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 26 (Máquinas de Corrente Contínua). O enunciado começa por: “Considerando-se os motores de corrente contínua (CC), uma desvantagem desse tipo de motor é relativo à(ao)”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "E=kΦω; T=kΦI_a"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_241_360.pdf"
+      },
+      {
+        "label": "Enunciado da questão 26",
+        "url": "assets/questoes/2697801.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "356723",
+    "title": "Q43 — Álgebra booleana e minimização",
+    "theory": [
+      {
+        "title": "Operadores",
+        "paragraphs": [
+          "AND é produto, OR é soma e NOT é complemento. As leis de De Morgan são ¬(AB)=¬A+¬B e ¬(A+B)=¬A¬B."
+        ]
+      },
+      {
+        "title": "Karnaugh",
+        "paragraphs": [
+          "Agrupe 1s em blocos de 1,2,4,... células adjacentes. Cada agrupamento elimina variáveis que mudam; cubra todos os 1s com o menor número de grupos."
+        ]
+      },
+      {
+        "title": "Conferência",
+        "paragraphs": [
+          "Monte a tabela verdade da expressão original e da reduzida; as colunas devem coincidir em todas as combinações."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 43 (Álgebra Booleana e Circuitos Lógicos). O enunciado começa por: “K,P,Q,R X K,P,Q,R X 0000 1 1000 1 0001 1 1001 1 0010 0 1010 0 0011 0 1011 0 0100 1 1100 0 0101 1 1101 0 0110 1 1110 0 0111 1 1111 0 A tabela verdade acima apresenta o resultado das combinações lógicas das variáveis de entrada da função booleana X = f(K,P,Q,R). A expressão minimizada da função X é ¯ ¯¯¯ ¯ ¯¯¯ ¯ ¯¯¯ ¯”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "F=A·B+A·C; ¬(A+B)=¬A·¬B"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa D. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 43",
+        "url": "assets/questoes/356723.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2712539",
+    "title": "Q44 — Álgebra booleana e minimização",
+    "theory": [
+      {
+        "title": "Operadores",
+        "paragraphs": [
+          "AND é produto, OR é soma e NOT é complemento. As leis de De Morgan são ¬(AB)=¬A+¬B e ¬(A+B)=¬A¬B."
+        ]
+      },
+      {
+        "title": "Karnaugh",
+        "paragraphs": [
+          "Agrupe 1s em blocos de 1,2,4,... células adjacentes. Cada agrupamento elimina variáveis que mudam; cubra todos os 1s com o menor número de grupos."
+        ]
+      },
+      {
+        "title": "Conferência",
+        "paragraphs": [
+          "Monte a tabela verdade da expressão original e da reduzida; as colunas devem coincidir em todas as combinações."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 44 (Álgebra Booleana e Circuitos Lógicos). O enunciado começa por: “Considere um circuito combinacional de três entradas A, B e C, cuja função é composta pela seguinte soma de mintermos: ¯ ¯¯¯ ¯ ¯¯¯ ¯ ¯¯¯ ¯ ¯¯¯¯ ¯¯¯ ¯ ¯¯¯ f = A BC + ABC + A B C + A BC + ABC Utilizando-se o método de simplificação de Karnaugh, obtém-se a seguinte expressão da função simplificada: ¯ ¯¯¯”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "F=A·B+A·C; ¬(A+B)=¬A·¬B"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa A. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 44",
+        "url": "assets/questoes/2712539.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352856",
+    "title": "Q60 — Tiristores, DIAC e TRIAC",
+    "theory": [
+      {
+        "title": "DIAC",
+        "paragraphs": [
+          "O DIAC é bidirecional e entra em condução quando a tensão alcança a tensão de breakover, produzindo um pulso de disparo."
+        ]
+      },
+      {
+        "title": "TRIAC",
+        "paragraphs": [
+          "O TRIAC conduz nos dois semiciclos quando recebe pulso de gate e permanece conduzindo até a corrente cair abaixo da corrente de manutenção."
+        ]
+      },
+      {
+        "title": "dv/dt e snubber",
+        "paragraphs": [
+          "Uma rede RC snubber reduz disparos espúrios por dv/dt e limita transientes. O DIAC permite disparo aproximadamente simétrico em ambos os semiciclos."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 60 (Semicondutores de Potência (DIAC, TRIAC...)). O enunciado começa por: “60) O circuito da figura é um controlador de intensidade luminosa, na qual uma lâmpada incandescente é usada como carga. Para realizar essa função, usam-se dispositivos eletrônicos conhecidos como Triac e Diac, representados na mesma figura. O circuito de controle é feito através de uma malha defasadora RC, com R variável, que atrasa a tensão no capacitor em relação à tensão da rede de alimentação. Nesses termos, o T”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "α: ângulo de disparo; P controlada por condução em cada semiciclo"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa E. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 60",
+        "url": "assets/questoes/352856.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2712562",
+    "title": "Q61 — Tiristores, DIAC e TRIAC",
+    "theory": [
+      {
+        "title": "DIAC",
+        "paragraphs": [
+          "O DIAC é bidirecional e entra em condução quando a tensão alcança a tensão de breakover, produzindo um pulso de disparo."
+        ]
+      },
+      {
+        "title": "TRIAC",
+        "paragraphs": [
+          "O TRIAC conduz nos dois semiciclos quando recebe pulso de gate e permanece conduzindo até a corrente cair abaixo da corrente de manutenção."
+        ]
+      },
+      {
+        "title": "dv/dt e snubber",
+        "paragraphs": [
+          "Uma rede RC snubber reduz disparos espúrios por dv/dt e limita transientes. O DIAC permite disparo aproximadamente simétrico em ambos os semiciclos."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 61 (Semicondutores de Potência (DIAC, TRIAC...)). O enunciado começa por: “61) No uso do tiristor como elemento de chaveamento e controle de potência em circuitos elétricos, costuma-se associar, em série com o mesmo, um indutor, com a finalidade de:”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "α: ângulo de disparo; P controlada por condução em cada semiciclo"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa D. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 61",
+        "url": "assets/questoes/2712562.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352813",
+    "title": "Q18 — Potência ativa, reativa e fator de potência",
+    "theory": [
+      {
+        "title": "Potências",
+        "paragraphs": [
+          "S=VI* é a potência aparente complexa; P=VI cosφ e Q=VI senφ. Em trifásico equilibrado, use grandezas de linha com √3."
+        ]
+      },
+      {
+        "title": "Medição de Q",
+        "paragraphs": [
+          "O método dos dois wattímetros obtém potência reativa pela diferença entre leituras, com defasagem de 90° na bobina de potencial em relação à corrente, conforme a ligação."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 18 (Análise de Potência em C.A.). O enunciado começa por: “A figura mostra como é possível medir a potência reativa de uma carga em sistemas trifásicos utilizando-se wattímetros. Essa possibilidade só se concretiza se sua bobina de potencial (Bp) for alimentada com tensão defasada, referente à bobina de corrente, em relação à tensão aplicada à carga, de”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Q=√3VLILsenφ"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa D. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 18",
+        "url": "assets/questoes/352813.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352816",
+    "title": "Q19 — Sistemas trifásicos equilibrados",
+    "theory": [
+      {
+        "title": "Relações linha–fase",
+        "paragraphs": [
+          "Em estrela, VL=√3 VF e IL=IF. Em triângulo, VL=VF e IL=√3 IF. A corrente de linha é a diferença fasorial de duas correntes de fase."
+        ]
+      },
+      {
+        "title": "Potência",
+        "paragraphs": [
+          "P=√3 VL IL cosφ. Converta a carga de triângulo para estrela dividindo a impedância por 3 quando as três impedâncias são iguais."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 19 (Circuitos Trifásicos). O enunciado começa por: “Três cargas equilibradas, formadas por impedâncias iguais de valor 6∠ − 30∘ ohms, estão ligadas em triângulo a um sistema elétrico trifásico, ABC, com tensão de linha igual a 204 V. A corrente de linha resultante no circuito equivalente com as cargas ligadas em estrela e o ângulo de fase da tensão igual a 120º é – Dado: √3 = 1,7”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "VL=√3VF; IL=√3IF (Δ); P=√3VLILcosφ"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 19",
+        "url": "assets/questoes/352816.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640411",
+    "title": "Q24 — Transformador ideal",
+    "theory": [
+      {
+        "title": "Relação de espiras",
+        "paragraphs": [
+          "V1/V2=N1/N2 e I1/I2=N2/N1. A potência ideal é conservada: V1I1=V2I2."
+        ]
+      },
+      {
+        "title": "Impedância refletida",
+        "paragraphs": [
+          "Uma carga ZL no secundário aparece no primário como Zin=(N1/N2)^2 ZL."
+        ]
+      },
+      {
+        "title": "Procedimento",
+        "paragraphs": [
+          "Calcule V2 pela relação de espiras e depois I2=V2/ZL; confira unidades e sentido da corrente."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 24 (Transformadores Monofásicos). O enunciado começa por: “Na Figura abaixo, é mostrado um transformador ideal em que a relação do número de espiras do enrolamento primário (N1) mantém relação fixa com o número de espiras do enrolamento secundário (N2). O valor N1/N2 = 0,1. Uma vez que foi medida uma tensão alternada de 100 V no primário V1, e que a carga ZL mostrada na Figura é puramente resistiva e de valor de 1000 Ω , a corrente I2, em ampere, é de”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "V1/V2=N1/N2; I2=V2/ZL"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_121_240.pdf"
+      },
+      {
+        "label": "Enunciado da questão 24",
+        "url": "assets/questoes/640411.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2697774",
+    "title": "Q30 — Sensores de posição em robôs",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Encoder",
+        "paragraphs": [
+          "O encoder converte rotação em pulsos ou código digital e permite ao controlador estimar posição, velocidade e sentido do eixo."
+        ]
+      },
+      {
+        "title": "Comparação",
+        "paragraphs": [
+          "Sensores indutivos/capacitivos detectam presença; sensores magnéticos detectam campo. Para realimentação angular de cada junta, o encoder é o dispositivo adequado."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "O que o controlador precisa medir",
+        "paragraphs": [
+          "Cada junta do robô articulado gira em torno de um eixo. O controlador precisa obter posição angular e, por contagem de pulsos, também velocidade e sentido."
+        ]
+      },
+      {
+        "title": "Funcionamento do encoder",
+        "paragraphs": [
+          "Um encoder transforma a rotação do eixo em pulsos (incremental) ou em um código angular (absoluto). O controlador conta os pulsos e converte a contagem em ângulo."
+        ],
+        "formula": "θ=2π·N/N_ppr"
+      },
+      {
+        "title": "Comparar sensores",
+        "paragraphs": [
+          "Sensores capacitivos e indutivos detectam presença/proximidade; sensores magnéticos detectam campo. O dispositivo próprio para realimentação de posição de um eixo é o encoder."
+        ]
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "A resposta é encoder, alternativa B."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de outros componentes eletrônicos (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/outros_componentes.pdf"
+      },
+      {
+        "label": "Enunciado da questão 30",
+        "url": "assets/questoes/2697774.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640451",
+    "title": "Q31 — Retificação CA",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Ponte de Graetz",
+        "paragraphs": [
+          "Na ponte de onda completa, dois diodos conduzem em cada semiciclo e a carga recebe |vi|. A frequência da ondulação é 2f da rede."
+        ]
+      },
+      {
+        "title": "Valores médios",
+        "paragraphs": [
+          "Para senoide ideal sem filtro, Vmed meia-onda=Vp/π e Vmed onda completa=2Vp/π. Com capacitor, a tensão se aproxima do pico e a ondulação depende da carga e de C."
+        ]
+      },
+      {
+        "title": "Polarização",
+        "paragraphs": [
+          "Analise cada semiciclo: substitua diodos diretamente polarizados por curto (ideais) e reversamente polarizados por circuito aberto."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Semiciclo positivo",
+        "paragraphs": [
+          "Na ponte, no semiciclo positivo de Vi, dois diodos conduzem e conectam a carga com uma polaridade definida. Os outros dois ficam reversamente polarizados."
+        ]
+      },
+      {
+        "title": "Semiciclo negativo",
+        "paragraphs": [
+          "Quando Vi inverte o sinal, o outro par de diodos conduz. A corrente na carga mantém o mesmo sentido porque a ponte troca o caminho dos diodos."
+        ]
+      },
+      {
+        "title": "Forma de onda",
+        "paragraphs": [
+          "Com diodos ideais, não há queda de condução e a saída é o módulo da senoide:"
+        ],
+        "formula": "vo(t)=|Vi(t)|=|V_p sen(ωt)|"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "A forma é uma senoide retificada de onda completa, correspondente à alternativa B."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de retificadores onda completa / meia onda (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/retificadores.pdf"
+      },
+      {
+        "label": "Enunciado da questão 31",
+        "url": "assets/questoes/640451.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640409",
+    "title": "Q32 — Reguladores lineares com Zener e transistor",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Regulador série",
+        "paragraphs": [
+          "O transistor dissipa a diferença entre a potência de entrada e a potência entregue à carga: PT=(VI−VO)IO, desprezando corrente de base."
+        ]
+      },
+      {
+        "title": "Zener como referência",
+        "paragraphs": [
+          "O Zener fixa a tensão de base; o transistor seguidor fornece corrente à carga. O resistor série deve garantir corrente no Zener e na base."
+        ]
+      },
+      {
+        "title": "Verificação térmica",
+        "paragraphs": [
+          "Compare a potência calculada com a potência nominal e considere dissipador. A eficiência aproximada de regulador linear é VO/VI."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Corrente de carga",
+        "paragraphs": [
+          "A carga recebe VO=5 V e IO=1 A. Logo, a potência entregue à carga é PL=VO·IO=5·1=5 W."
+        ]
+      },
+      {
+        "title": "Queda no transistor",
+        "paragraphs": [
+          "O transistor série está entre VI=12 V e VO=5 V; sua queda é VT=VI−VO=7 V. Como a corrente de base é desprezível, a corrente no transistor é aproximadamente IO=1 A."
+        ]
+      },
+      {
+        "title": "Dissipação",
+        "paragraphs": [
+          "A potência térmica é PT=VT·IT=7·1=7 W."
+        ],
+        "formula": "PT=(VI−VO)IO=(12−5)·1=7 W"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "O transistor dissipa 7 W, alternativa C."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de circuitos reguladores de tensão (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/reguladores.pdf"
+      },
+      {
+        "label": "Enunciado da questão 32",
+        "url": "assets/questoes/640409.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352871",
+    "title": "Q42 — Lógica com diodos e níveis negativos",
+    "theory": [
+      {
+        "title": "Lógica negativa",
+        "paragraphs": [
+          "Na lógica negativa, o nível lógico 0 é a tensão menos negativa (0 V) e o 1 é −5 V. Portanto a interpretação dos níveis é invertida em relação à lógica positiva."
+        ]
+      },
+      {
+        "title": "Diodos",
+        "paragraphs": [
+          "Use o sentido de condução para determinar se a saída é forçada a 0 V ou −5 V. Depois converta o nível elétrico para 0/1 pela convenção negativa."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 42 (Sistemas de Numeração). O enunciado começa por: “O circuito eletrônico digital acima, composto de diodos ideais, representa uma porta lógica de duas entradas X e Y e uma saída Z. Conforme mostrado na figura, a lógica que é usada é a lógica negativa, na qual o nível de tensão para “0” lógico vale 0V e para “1” lógico vale −5V. A tabela a seguir relaciona os valores das entradas X e Y com possíveis valores de saída. A saída que corresponde à saída Z do circuito é a”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "Lógica negativa: 0↔0 V; 1↔−5 V"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa D. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "D — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 42",
+        "url": "assets/questoes/352871.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352866",
+    "title": "Q45 — Multiplexadores",
+    "theory": [
+      {
+        "title": "Seleção",
+        "paragraphs": [
+          "Um MUX 4:1 possui I0–I3, duas seleções S1,S0 e saída S. Para cada combinação, S recebe um único canal: 00→I0, 01→I1, 10→I2, 11→I3."
+        ]
+      },
+      {
+        "title": "Equação",
+        "paragraphs": [
+          "S=¬S1¬S0I0+¬S1S0I1+S1¬S0I2+S1S0I3."
+        ]
+      },
+      {
+        "title": "Resolução",
+        "paragraphs": [
+          "Leia a tabela para cada linha de seleção e compare com as cinco expressões propostas; basta encontrar a coluna que coincide em todas as linhas."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 45 (Circuitos Multiplexadores / Demultiplexadores). O enunciado começa por: “O circuito eletrônico digital da figura é um multiplex com canais de informação I0, I1, I2 e I3, variáveis de seleção X e Y, e saída multiplexada S. A seguir, vê-se um quadro com os valores das variáveis X e Y e cinco possíveis saídas A representação da Saída Multiplexada S é a saída”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "S=¬S1¬S0I0+¬S1S0I1+S1¬S0I2+S1S0I3"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 45",
+        "url": "assets/questoes/352866.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352858",
+    "title": "Q46 — Contadores binários",
+    "theory": [
+      {
+        "title": "Flip-flop JK como T",
+        "paragraphs": [
+          "Com J=K=1, o flip-flop alterna a cada borda ativa. Quatro estágios produzem 2^4=16 estados antes de repetir."
+        ]
+      },
+      {
+        "title": "Módulo",
+        "paragraphs": [
+          "O módulo é o número de estados distintos do ciclo. Um contador binário completo de n bits é módulo 2^n; reset antecipado reduz o módulo."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 46 (Contadores e Registradores). O enunciado começa por: “O circuito eletrônico digital acima representa um contador binário e é construído usando-se 4 J-K flip-flops (FF 0,1, 2 e 3), tipo T (entradas J e K ligadas a “1” lógico). Quando a entrada clear recebe um pulso “0”, leva a “0” todas as saídas Q dos flip-flops do circuito. Um trem de pulsos, representado no circuito, excita a entrada Clock do primeiro flip-flop, e, a cada descida do pulso de Clock, o flip-flop muda de”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "M=2^n"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa B. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "B — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 46",
+        "url": "assets/questoes/352858.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2684127",
+    "title": "Q47 — Memórias e multiplexação de linhas",
+    "theory": [
+      {
+        "title": "Matriz de LEDs",
+        "paragraphs": [
+          "Uma matriz de m linhas e n colunas tem m·n pontos, mas a multiplexação acende uma linha por vez. A persistência da visão faz a imagem parecer contínua."
+        ]
+      },
+      {
+        "title": "Endereçamento",
+        "paragraphs": [
+          "Para selecionar uma posição, decodifique linha e coluna; o padrão lógico determina quais LEDs recebem corrente. Respeite polaridade e resistores de limitação."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 47 (Memórias). O enunciado começa por: “A figura acima apresenta um painel eletrônico de exibição de mensagens, formado por uma matriz de leds com 16 linhas e 256 colunas, e parte da memória do painel. O conteúdo da memória está representado por números hexadecimais. Um led aceso corresponde ao bit 1, enquanto um led apagado ao bit 0. A informação a ser apresentada no painel é armazenada seqüencialmente na memória do aparelho, mapeando cada coluna do paine”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "N_pontos=m·n"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 47",
+        "url": "assets/questoes/2684127.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "2684141",
+    "title": "Q62 — Conversor Boost",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Etapas",
+        "paragraphs": [
+          "Com a chave fechada, o indutor armazena energia e o diodo fica bloqueado; com a chave aberta, o indutor soma sua tensão à fonte e entrega energia à carga."
+        ]
+      },
+      {
+        "title": "Ganho ideal",
+        "paragraphs": [
+          "No regime permanente, o balanço de tensão média no indutor dá Vo=Vi/(1−D), com D=ton/T."
+        ]
+      },
+      {
+        "title": "Limites",
+        "paragraphs": [
+          "O ganho cresce quando D se aproxima de 1, mas perdas e corrente de chave limitam a operação real."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Estado da chave fechada",
+        "paragraphs": [
+          "Quando S fecha, o indutor fica ligado à fonte e armazena energia. O diodo fica reversamente polarizado; portanto a afirmação de que ele conduz com S fechada é falsa."
+        ]
+      },
+      {
+        "title": "Estado da chave aberta",
+        "paragraphs": [
+          "Quando S abre, a corrente do indutor não pode mudar instantaneamente. O indutor eleva sua tensão, polariza o diodo diretamente e transfere energia para o capacitor e a carga. Durante esse intervalo, o capacitor é a fonte imediata da corrente de carga."
+        ]
+      },
+      {
+        "title": "Balanço volt-segundo",
+        "paragraphs": [
+          "Em regime permanente, a tensão média no indutor é zero. Para o Boost ideal: D·Vi+(1−D)(Vi−Vo)=0."
+        ],
+        "formula": "Vo=Vi/(1−D), D=ton/T"
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "A expressão correta é Vo=Vi/(1−D), com D=ton/T, alternativa E."
+        ]
+      }
+    ],
+    "answer": "E — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de circuitos conversores (cc-cc) (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/conversores_cc_cc.pdf"
+      },
+      {
+        "label": "Enunciado da questão 62",
+        "url": "assets/questoes/2684141.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "352884",
+    "title": "Q63 — Inversores CC–CA",
+    "theory": [
+      {
+        "title": "Função",
+        "paragraphs": [
+          "O inversor comuta uma fonte CC para produzir tensão alternada nos terminais da carga. A frequência fundamental é definida pela modulação/chaveamento."
+        ]
+      },
+      {
+        "title": "PWM e harmônicos",
+        "paragraphs": [
+          "A tensão chaveada não é perfeitamente senoidal; PWM desloca harmônicos para frequências maiores, facilitando filtragem e controle de velocidade."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ler o enunciado e identificar o modelo",
+        "paragraphs": [
+          "Questão 63 (Circuitos Inversores (CC-CA)). O enunciado começa por: “63) O acionador CA de frequência variável, representado no diagrama abaixo, é usado para controlar a velocidade de um motor de indução. A velocidade do motor de indução é proporcional à frequência aplicada, e, consequentemente, o controle da velocidade corresponde ao controle de frequência. Os componentes responsáveis pelo chaveamento do retificador são diodos retificadores de silício, e o inversor é construído usand”. Identifique as grandezas, a convenção de sinais e o componente idealizado antes de substituir números."
+        ]
+      },
+      {
+        "title": "Aplicar a teoria",
+        "paragraphs": [
+          "Escolha a relação física ou lógica indicada na teoria acima. Em circuitos com figura, redesenhe os nós e os sentidos de corrente; em sinais, mantenha a convenção de valor eficaz e fase; em lógica, monte a tabela verdade."
+        ],
+        "formula": "f_out definida pela frequência de chaveamento/modulação"
+      },
+      {
+        "title": "Calcular ou comparar as alternativas",
+        "paragraphs": [
+          "Substitua os dados do enunciado, mantendo unidades coerentes. Quando a questão for conceitual, teste a afirmação contra as definições e os limites de operação do dispositivo."
+        ]
+      },
+      {
+        "title": "Conclusão",
+        "paragraphs": [
+          "O gabarito é a alternativa C. Confira a ordem de grandeza e a unidade antes de marcar; a alternativa correta deve respeitar simultaneamente a equação e a condição física do circuito."
+        ]
+      }
+    ],
+    "answer": "C — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad, Dispositivos Eletrônicos e Teoria de Circuitos, 8ª ed. — recorte temático",
+        "url": "assets/teoria/boylestad/recorte_601_674.pdf"
+      },
+      {
+        "label": "Enunciado da questão 63",
+        "url": "assets/questoes/352884.pdf"
+      }
+    ]
+  },
+  {
+    "qid": "640536",
+    "title": "Q64 — Segurança ESD",
+    "theory": [
+      {
+        "title": "Como usar o recorte do Boylestad nesta questão",
+        "paragraphs": [
+          "O recorte foi localizado por OCR no sumário da edição fornecida e contém o capítulo diretamente relacionado ao dispositivo ou circuito da questão. Consulte as figuras e exemplos do capítulo antes de aplicar as equações abaixo."
+        ]
+      },
+      {
+        "title": "Descarga eletrostática",
+        "paragraphs": [
+          "Uma pessoa pode acumular carga e descarregá-la instantaneamente em um componente sensível. A pulseira condutiva, ligada ao terra por resistor de alto valor, equaliza o potencial com segurança."
+        ]
+      },
+      {
+        "title": "Procedimento",
+        "paragraphs": [
+          "Use a pulseira durante toda a manutenção e conecte-a antes de tocar placas ou componentes. O resistor limita a corrente sem impedir a dissipação lenta da carga."
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Por que ocorre ESD",
+        "paragraphs": [
+          "O corpo humano pode acumular carga estática. Ao tocar um CI, a diferença de potencial descarrega em poucos nanossegundos e a corrente de pico danifica junções e portas MOS."
+        ]
+      },
+      {
+        "title": "Função do resistor de 1 MΩ",
+        "paragraphs": [
+          "A pulseira liga o corpo ao terra por uma resistência alta. Pela lei de Ohm, essa resistência limita a corrente da equalização: I=V/1 MΩ. A carga é removida continuamente, sem uma descarga brusca pelo componente."
+        ]
+      },
+      {
+        "title": "Momento de uso",
+        "paragraphs": [
+          "A carga pode existir mesmo sem choque perceptível e em qualquer umidade. Por isso a pulseira deve ser colocada antes de iniciar a manutenção e permanecer conectada durante todo o trabalho."
+        ]
+      },
+      {
+        "title": "Alternativa",
+        "paragraphs": [
+          "A afirmação correta é “sempre”, alternativa A."
+        ]
+      }
+    ],
+    "answer": "A — conforme gabarito oficial",
+    "sources": [
+      {
+        "label": "Boylestad 8ª ed. — capítulo de tópicos mesclados de eletrônica (recorte localizado por OCR do sumário)",
+        "url": "assets/teoria/boylestad/topicos_eletronica.pdf"
+      },
+      {
+        "label": "Enunciado da questão 64",
+        "url": "assets/questoes/640536.pdf"
+      }
+    ]
+  }
+]
